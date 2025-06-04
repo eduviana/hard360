@@ -10,7 +10,7 @@ interface DesktopDrawerProps {
 
 export const DesktopDrawer = ({ categories }: DesktopDrawerProps) => {
   return (
-    <div className="hidden bg-background py-3 lg:block shadow-2xl">
+    <div className="hidden bg-slate-100 py-3 lg:block shadow-2xl">
       <div className="custom-container">
         <nav>
           <ul className="flex w-full items-center justify-between">
@@ -20,48 +20,48 @@ export const DesktopDrawer = ({ categories }: DesktopDrawerProps) => {
 
             <li>
               <Link
-                href="/plantas/interior/begonias"
-                className="font-normal text-dark hover:text-dark/70 transition-colors duration-300"
+                href="/equipos/pcs-de-escritorio"
+                className="font-normal text-text-muted hover:text-text-muted/50 transition-colors duration-300"
               >
                 PCs de Escritorio
               </Link>
             </li>
             <li>
               <Link
-                href="/plantas/interior/bromelias"
-                className="font-normal text-dark hover:text-dark/70 transition-colors duration-300"
+                href="/equipos/notebooks"
+                className="font-normal text-text-muted hover:text-text-muted/50 transition-colors duration-300"
               >
                 Notebooks
               </Link>
             </li>
             <li>
               <Link
-                href="/plantas/interior/calatheas"
-                className="font-normal text-dark hover:text-dark/70 transition-colors duration-300"
+                href="/placas-de-video"
+                className="font-normal text-text-muted hover:text-text-muted/50 transition-colors duration-300"
               >
                 Placas de Video
               </Link>
             </li>
             <li>
               <Link
-                href="/plantas/interior/colgantes"
-                className="font-normal text-dark hover:text-dark/70 transition-colors duration-300"
+                href="/pantallas"
+                className="font-normal text-text-muted hover:text-text-muted/50 transition-colors duration-300"
               >
-                Monitores
+                Pantallas
               </Link>
             </li>
             <li>
               <Link
-                href="/plantas/interior/helechos"
-                className="font-normal text-dark hover:text-dark/70 transition-colors duration-300"
+                href="/procesadores"
+                className="font-normal text-text-muted hover:text-text-muted/50 transition-colors duration-300"
               >
                 Micros
               </Link>
             </li>
               <li>
               <Link
-                href="/plantas/interior/helechos"
-                className="font-normal text-dark hover:text-dark/70 transition-colors duration-300"
+                href="/ofertas"
+                className="font-normal text-text-muted hover:text-text-muted/50 transition-colors duration-300"
               >
                 Ofertas
               </Link>

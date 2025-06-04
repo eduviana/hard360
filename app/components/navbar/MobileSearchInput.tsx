@@ -20,7 +20,7 @@ export const MobileSearchInput = ({ setMobileSearchOpen }: MobileSearchPanelProp
         <input
           type="search"
           placeholder="Buscar..."
-          className="h-full flex-1 px-4 text-textDark placeholder-muted focus:outline-none"
+          className="h-full flex-1 px-4 text-primary placeholder-secondary focus:outline-none"
           autoFocus
         />
         <button

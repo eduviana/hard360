@@ -28,7 +28,7 @@ const CategoryItem = ({
   // const bgClass = open ? "bg-gray-300 shadow-sm" : "";
   const textClass = open
     ? "text-accent font-semibold"
-    : "text-dark/ hover:text-dark/70";
+    : "text-primary";
 
   return (
     <li className="relative">

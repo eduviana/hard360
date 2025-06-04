@@ -62,7 +62,7 @@ const BottomBar = ({ categories }: BottomBarProps) => {
       onMouseLeave={() => setIsCategoriesMenuOpen(false)}
     >
       <div className="flex items-center cursor-pointer gap-2">
-        <button className="text-[15px] font-semibold text-dark">
+        <button className="text-base font-semibold text-secondary">
           CATEGORÍAS
         </button>
         <FiChevronDown className="h-7 w-7 text-accent" />
@@ -70,7 +70,7 @@ const BottomBar = ({ categories }: BottomBarProps) => {
 
       {isCategoriesMenuOpen && (
         <div className="absolute top-full left-0 z-50 py-4">
-          <CategoriesMenu categories={categories} />
+          <CategoriesMenu categories={categories} onLinkClick={() => setIsCategoriesMenuOpen(false)}/>
         </div>
       )}
     </div>

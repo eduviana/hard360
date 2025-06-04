@@ -4,7 +4,7 @@ export const categoriesData = [
     name: "Equipos",
     slug: "equipos",
     children: [
-      { id: "1-1", name: "De escritorio", slug: "de-escritorio" },
+      { id: "1-1", name: "De escritorio", slug: "pcs-de-escritorio" },
       { id: "1-2", name: "Notebooks", slug: "notebooks" },
     ],
   },
@@ -62,8 +62,8 @@ export const categoriesData = [
     name: "Placas de Video",
     slug: "placas-de-video",
     children: [
-      { id: "7-1", name: "AMD Radeon", slug: "amd-radeon" },
-      { id: "7-2", name: "Nvidia GeForce", slug: "nvidia-geforce" },
+      { id: "7-1", name: "AMD Radeon", slug: "radeon" },
+      { id: "7-2", name: "Nvidia GeForce", slug: "nvidia" },
     ],
   },
   {

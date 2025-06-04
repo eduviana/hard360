@@ -2,7 +2,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export const TopBar = () => {
   return (
-    <div className="w-full bg-black text-textDark">
+    <div className="w-full bg-secondary">
       <div className="custom-container flex items-center justify-end py-2">
         <div className="flex items-start gap-8 text-white">
           <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">

@@ -8,6 +8,7 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
 import { MobileSearchInput } from "./MobileSearchInput";
+import Image from "next/image";
 
 interface MiddleBarProps {
   mobileSearchOpen: boolean;
@@ -21,7 +22,7 @@ const MiddleBar = ({
   setDrawerOpen,
 }: MiddleBarProps) => {
   return (
-    <div className="bg-[#2c2c31]">
+    <div className="bg-primary">
       <div className="custom-container relative flex items-center justify-between gap-6 py-6">
         {/* --- Hamburguesa + Logo --- */}
         <div className="flex items-center justify-start gap-4">
@@ -33,10 +34,11 @@ const MiddleBar = ({
             <Bars3Icon className="h-8 w-8" />
           </button>
           <Link href="/">
-            <h1 className="flex flex-col items-start">
-              <span className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-white">
-                HARD 360
+            <h1 className="relative flex flex-col items-start leading-none">
+              <span className="text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase text-white tracking-wide">
+                HARD <span className="text-orange-500">360</span>
               </span>
+              <span className="block h-1 w-full max-w-[120px] bg-gradient-to-r from-orange-500 via-orange-400/80 to-transparent rounded-sm mt-1"></span>
             </h1>
           </Link>
         </div>
@@ -44,11 +46,11 @@ const MiddleBar = ({
         {/* --- Search Desktop --- */}
         <div className="hidden lg:block w-[350px] xl:w-[450px]">
           <div className="relative">
-            <MagnifyingGlassIcon className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-dark" />
+            <MagnifyingGlassIcon className="absolute left-3 top-1/2 h-6 w-6 -translate-y-1/2 text-secondary" />
             <input
               type="search"
               placeholder="Buscar..."
-              className="text-md w-full rounded-md bg-white py-2 pl-12 pr-4 placeholder-dark shadow-inner focus:outline-none"
+              className="text-md w-full rounded-md bg-white py-2 pl-12 pr-4 placeholder-primary shadow-inner focus:outline-none"
             />
           </div>
         </div>
@@ -57,7 +59,7 @@ const MiddleBar = ({
         <div className="flex items-center space-x-2 text-white">
           {/* Lupa Mobile */}
           <button
-            className="p-1 transition-colors duration-200 hover:accent-accent focus:outline-none lg:hidden"
+            className="p-1 transition-colors duration-200 hover:text-accent focus:outline-none lg:hidden"
             onClick={() => setMobileSearchOpen(!mobileSearchOpen)}
             aria-label="Abrir/cerrar búsqueda"
           >
@@ -65,12 +67,12 @@ const MiddleBar = ({
           </button>
 
           {/* Favoritos */}
-          <button className="p-1 transition-colors duration-200 hover:accent focus:outline-none">
+          <button className="p-1 transition-colors duration-200 hover:text-accent focus:outline-none">
             <HeartIcon className="h-6 w-6 md:h-8 md:w-8" />
           </button>
 
           {/* Carrito */}
-          <button className="p-1 transition-colors duration-200 hover:accent focus:outline-none">
+          <button className="p-1 transition-colors duration-200 hover:text-accent focus:outline-none">
             <ShoppingCartIcon className="h-6 w-6 md:h-8 md:w-8" />
           </button>
         </div>

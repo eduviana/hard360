@@ -1,16 +1,34 @@
 @import "tailwindcss";
 
-@theme {
+/* @theme {
   --color-accent: #88C426;
-  --color-dark: #37373f;
-}
+  --color-dark: #343636;
+} */
 
+@theme {
+  /* Identidad */
+  --color-primary: #37373F;      /* Color principal (navbar, links) */
+  --color-secondary: #000000;    /* Color secundario (barra de redes) */
+  --color-accent: #88C426;         /* Verde para íconos o títulos destacados */
+
+  /* Superficies (fondos) */
+  --color-surface-primary: #000000;   /* Fondo de top bar (redes) */
+  --color-surface-secondary: #37373F; /* Fondo de navbar con logo */
+
+  /* Texto */
+  --color-text-primary: #333333;   /* Precio final del producto */
+  --color-text-secondary: #343636; /* Título de sección */
+  --color-text-tertiary: #706F6F;  /* Título de card, precio tachado */
+  --color-text-muted: #37373F;     /* Links en navbar (similar a primary) */
+
+  
+}
 body {
   font-family: var(--font-montserrat);
 }
 
 .custom-container {
-  @apply w-[96%] lg:w-[80%] xl:w-[70%] mx-auto;
+  @apply w-[96%] md:w-[90%] lg:w-[80%] xl:w-[70%] mx-auto;
 }
 
 @layer utilities {
@@ -26,6 +44,19 @@ body {
     100% {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.25s ease-out both;
+  }
+
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
     }
   }
 }
