@@ -1,130 +1,53 @@
-// // Capacidad de RAM
-// export type RamCapacity = "4GB" | "8GB" | "16GB" | "32GB";
-
-// // Versión/estándar de RAM
-// export type RamVersion = "DDR3" | "DDR4" | "DDR5";
-
-// // Categorías
-// export type Category =
-//   | "notebooks"
-//   | "pcs-de-escritorio"
-//   | "almacenamiento"
-//   | "placas-de-video"
-//   | "pantallas";
-
-// // Subcategorías
-// export type StorageSubcategory = "hdd" | "ssd" | "ssd-m2" | "disco-externo";
-// export type GPUSubcategory = "Radeon" | "Nvidia";
-// export type DisplaySubcategory = "monitores" | "televisores"; // quitaste "proyectores"
-// export type Subcategory =
-//   | StorageSubcategory
-//   | GPUSubcategory
-//   | DisplaySubcategory;
-
-// // Marcas
-// export type NotebookBrand = "Lenovo" | "Asus" | "Dell" | "HP";
-// export type PCBrand = "Armada" | "GamerTech" | "OfiTech" | "Creativa";
-// export type StorageBrand =
-//   | "Kingston"
-//   | "Seagate"
-//   | "Western Digital"
-//   | "Crucial";
-// export type GPUBrand = "MSI" | "Gigabyte" | "Asus" | "XFX";
-// export type DisplayBrand =
-//   | "AOC"
-//   | "Asus"
-//   | "Corsair"
-//   | "Dell"
-//   | "Gigabyte"
-//   | "LG"
-//   | "Samsung";
-// export type Brand =
-//   | NotebookBrand
-//   | PCBrand
-//   | StorageBrand
-//   | GPUBrand
-//   | DisplayBrand;
-
-// // Procesadores
-// export type Processor =
-//   | "Intel i3"
-//   | "Intel i5"
-//   | "Intel i7"
-//   | "Ryzen 3"
-//   | "Ryzen 5"
-//   | "Ryzen 7";
-
-// // Pantalla y almacenamiento
-// export type ScreenSize = "14" | "15.6" | "16";
-// export type StorageSize = "240GB" | "480GB" | "1TB" | "2TB";
-
-// // Tipo de panel para pantallas
-// export type PanelType = "IPS" | "VA" | "TN" | "OLED" | "LED";
-
-// // Producto
-// export type Product = {
-//   id: string;
-//   title: string;
-//   image: string;
-//   price: string;
-//   discount?: number;
-//   slug: string;
-//   category: Category;
-//   subcategory?: Subcategory;
-//   brand?: Brand;
-//   processor?: Processor;
-//   ramCapacity?: RamCapacity;
-//   ramVersion?: RamVersion;
-//   screenSize?: ScreenSize;
-//   storageSize?: StorageSize;
-//   panelType?: PanelType;
-// };
-
 export type Category =
   | "almacenamiento"
-  | "equipos" // nueva categoría principal
+  | "equipos"
   | "pantallas"
   | "placas-de-video";
 
 export type ComputersSubcategory = "notebooks" | "pcs-de-escritorio";
-
-export type StorageSubcategory = "hdd" | "ssd" | "ssd-m2" | "disco-externo";
-
+export type StorageSubcategory = "hdd" | "ssd" | "ssd m2" | "disco externo";
 export type DisplaySubcategory = "monitores" | "televisores";
-
-export type GPUSubcategory = "radeon" | "nvidia"; // minúsculas
+export type GPUSubcategory = "radeon" | "nvidia";
 
 export type Subcategory =
-  | ComputersSubcategory // subcategorías de equipos
+  | ComputersSubcategory
+  | StorageSubcategory
   | DisplaySubcategory
-  | GPUSubcategory
-  | StorageSubcategory;
+  | GPUSubcategory;
 
 // ==============================
-// Marcas
+// Marcas por categoría
 // ==============================
 
-export type DisplayBrand =
-  | "aoc"
-  | "asus"
-  | "corsair"
-  | "dell"
-  | "gigabyte"
-  | "lg"
-  | "samsung";
+export const displayBrands = [
+  "aoc",
+  "asus",
+  "corsair",
+  "dell",
+  "gigabyte",
+  "lg",
+  "samsung",
+] as const;
+export type DisplayBrand = typeof displayBrands[number];
 
-export type GPUBrand = "asus" | "gigabyte" | "msi" | "xfx";
+export const gpuBrands = ["asus", "gigabyte", "msi", "xfx"] as const;
+export type GPUBrand = typeof gpuBrands[number];
 
-export type NotebookBrand = "asus" | "dell" | "hp" | "lenovo";
+export const notebookBrands = ["asus", "dell", "hp", "lenovo"] as const;
+export type NotebookBrand = typeof notebookBrands[number];
 
-export type PCBrand = "armada" | "creativa" | "gamertech" | "ofitech";
+export const pcBrands = ["dell", "lenovo", "hp"] as const;
+export type PCBrand = typeof pcBrands[number];
 
-export type StorageBrand =
-  | "crucial"
-  | "kingston"
-  | "seagate"
-  | "western-digital";
+export const storageBrands = [
+  "crucial",
+  "kingston",
+  "seagate",
+  "western digital",
+] as const;
+export type StorageBrand = typeof storageBrands[number];
 
+// Marca general
 export type Brand =
   | DisplayBrand
   | GPUBrand
@@ -136,23 +59,30 @@ export type Brand =
 // Especificaciones Técnicas
 // ==============================
 
-export type PanelType = "ips" | "led" | "oled" | "tn" | "va";
+export const panelTypes = ["ips", "led", "oled", "tn", "va"] as const;
+export type PanelType = typeof panelTypes[number];
 
-export type Processor =
-  | "intel i3"
-  | "intel i5"
-  | "intel i7"
-  | "ryzen 3"
-  | "ryzen 5"
-  | "ryzen 7";
+export const processors = [
+  "intel i3",
+  "intel i5",
+  "intel i7",
+  "ryzen 3",
+  "ryzen 5",
+  "ryzen 7",
+] as const;
+export type Processor = typeof processors[number];
 
-export type RamCapacity = "4gb" | "8gb" | "16gb" | "32gb";
+export const ramCapacities = ["4gb", "8gb", "16gb", "32gb"] as const;
+export type RamCapacity = typeof ramCapacities[number];
 
-export type RamVersion = "ddr3" | "ddr4" | "ddr5";
+export const ramVersions = ["ddr3", "ddr4", "ddr5"] as const;
+export type RamVersion = typeof ramVersions[number];
 
-export type ScreenSize = "14" | "15.6" | "16";
+export const screenSizes = ["14", "15.6", "16"] as const;
+export type ScreenSize = typeof screenSizes[number];
 
-export type StorageSize = "240gb" | "480gb" | "1tb" | "2tb";
+export const storageSizes = ["240gb", "480gb", "1tb", "2tb"] as const;
+export type StorageSize = typeof storageSizes[number];
 
 // ==============================
 // Producto
@@ -166,7 +96,7 @@ export type Product = {
   discount?: number;
   slug: string;
   category: Category;
-  subcategory?: Subcategory; // ahora puede ser notebooks o pcs-de-escritorio si category es "equipos"
+  subcategory?: Subcategory;
   brand?: Brand;
   processor?: Processor;
   ramCapacity?: RamCapacity;

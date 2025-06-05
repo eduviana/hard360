@@ -1,9 +1,9 @@
 import { products } from "../data/data";
-import { Product } from "../data/types";
+import { Product, Category, Subcategory } from "../data/types";
 
 export const getProductBySlug = (
-  category: string,
-  subcategory: string,
+  category: Category,
+  subcategory: Subcategory,
   slug: string
 ): Product | undefined => {
   return products.find(

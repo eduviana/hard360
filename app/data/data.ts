@@ -9,8 +9,8 @@ export const products: Product[] = [
     price: "599999",
     discount: 20,
     slug: "notebook-lenovo-ideapad-3",
-    category: "equipos", // cambio aquí
-    subcategory: "notebooks", // y aquí
+    category: "equipos",
+    subcategory: "notebooks",
     brand: "lenovo",
     processor: "ryzen 5",
     ramCapacity: "8gb",
@@ -147,8 +147,8 @@ export const products: Product[] = [
     price: "64999",
     slug: "disco-externo-wd-elements-2tb",
     category: "almacenamiento",
-    subcategory: "disco-externo",
-    brand: "western-digital",
+    subcategory: "disco externo",
+    brand: "western digital",
     storageSize: "2tb",
   },
   {
@@ -158,7 +158,7 @@ export const products: Product[] = [
     price: "69999",
     slug: "ssd-m2-crucial-p3-1tb",
     category: "almacenamiento",
-    subcategory: "ssd-m2",
+    subcategory: "ssd m2",
     brand: "crucial",
     storageSize: "1tb",
   },
