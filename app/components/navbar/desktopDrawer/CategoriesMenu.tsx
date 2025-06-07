@@ -44,14 +44,16 @@ interface CategoriesMenuProps {
 }
 
 const CategoriesMenu = ({ categories, onLinkClick }: CategoriesMenuProps) => {
-  console.log(categories, "SDSADASD")
   return (
     <div className="py-8 px-8 lg:w-[824px] xl:w-[980px] rounded-lg bg-white shadow-lg animate-fade-down">
       <div className="grid grid-cols-4 gap-8">
         {categories.map((cat) => (
           <div key={cat.id}>
-            {/* ✅ Categoría primaria como título no clickeable */}
-            <Link href={cat.slug} className="mb-3 text-[15px] font-bold text-accent" onClick={onLinkClick}>
+            <Link
+              href={`/${cat.slug}`}
+              className="mb-3 text-[15px] font-bold text-accent"
+              onClick={onLinkClick}
+            >
               {cat.name}
             </Link>
 

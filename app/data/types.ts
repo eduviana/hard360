@@ -106,11 +106,6 @@
 //   panelType?: PanelType;
 // };
 
-
-
-
-
-
 export const categories = [
   "equipos",
   "combos-de-actualizacion",
@@ -124,7 +119,7 @@ export const categories = [
   "pantallas",
 ] as const;
 
-export type Category = typeof categories[number];
+export type Category = (typeof categories)[number];
 
 export const subcategoriesByCategory = {
   equipos: ["notebooks", "pcs-de-escritorio"],
@@ -135,13 +130,17 @@ export const subcategoriesByCategory = {
   almacenamiento: ["hdd", "ssd", "ssd-m2", "disco-externo"],
   "placas-de-video": ["nvidia", "radeon"],
   gabinetes: ["mini-tower", "mid-tower", "full-tower"],
-  refrigeracion: ["air-cooling", "water-cooling", "pasta-termica", "fan-cooler"],
+  refrigeracion: [
+    "air-cooling",
+    "water-cooling",
+    "pasta-termica",
+    "fan-cooler",
+  ],
   pantallas: ["monitores", "televisores", "proyectores"],
 } as const;
 
 export const subcategories = Object.values(subcategoriesByCategory).flat();
 export type Subcategory = (typeof subcategories)[number];
-
 
 // ==============================
 // Marcas por categoría
@@ -156,16 +155,20 @@ export const displayBrands = [
   "lg",
   "samsung",
 ] as const;
-export type DisplayBrand = typeof displayBrands[number];
+export type DisplayBrand = (typeof displayBrands)[number];
 
 export const gpuBrands = ["asus", "gigabyte", "msi", "xfx"] as const;
-export type GPUBrand = typeof gpuBrands[number];
+export type GPUBrand = (typeof gpuBrands)[number];
 
-export const notebookBrands = ["asus", "dell", "hp", "lenovo"] as const;
-export type NotebookBrand = typeof notebookBrands[number];
+// export const notebookBrands = ["asus", "dell", "hp", "lenovo"] as const;
+// export type NotebookBrand = (typeof notebookBrands)[number];
 
-export const pcBrands = ["dell", "lenovo", "hp"] as const;
-export type PCBrand = typeof pcBrands[number];
+// export const pcBrands = ["dell", "lenovo", "hp"] as const;
+// export type PCBrand = (typeof pcBrands)[number];
+
+
+export const computerBrands = ["asus", "dell", "hp", "lenovo"] as const;
+export type ComputerBrand = (typeof computerBrands)[number];
 
 export const storageBrands = [
   "crucial",
@@ -173,24 +176,22 @@ export const storageBrands = [
   "seagate",
   "western digital",
 ] as const;
-export type StorageBrand = typeof storageBrands[number];
+export type StorageBrand = (typeof storageBrands)[number];
 
 export const brands = [
   ...displayBrands,
   ...gpuBrands,
-  ...notebookBrands,
-  ...pcBrands,
+  ...computerBrands,
   ...storageBrands,
 ] as const;
-export type Brand = typeof brands[number];
-
+export type Brand = (typeof brands)[number];
 
 // ==============================
 // Especificaciones Técnicas
 // ==============================
 
 export const panelTypes = ["ips", "led", "oled", "tn", "va"] as const;
-export type PanelType = typeof panelTypes[number];
+export type PanelType = (typeof panelTypes)[number];
 
 export const processors = [
   "intel i3",
@@ -200,20 +201,19 @@ export const processors = [
   "ryzen 5",
   "ryzen 7",
 ] as const;
-export type Processor = typeof processors[number];
+export type Processor = (typeof processors)[number];
 
 export const ramCapacities = ["4gb", "8gb", "16gb", "32gb"] as const;
-export type RamCapacity = typeof ramCapacities[number];
+export type RamCapacity = (typeof ramCapacities)[number];
 
 export const ramVersions = ["ddr3", "ddr4", "ddr5"] as const;
-export type RamVersion = typeof ramVersions[number];
+export type RamVersion = (typeof ramVersions)[number];
 
 export const screenSizes = ["14", "15.6", "16"] as const;
-export type ScreenSize = typeof screenSizes[number];
+export type ScreenSize = (typeof screenSizes)[number];
 
 export const storageSizes = ["240gb", "480gb", "1tb", "2tb"] as const;
-export type StorageSize = typeof storageSizes[number];
-
+export type StorageSize = (typeof storageSizes)[number];
 
 // ==============================
 // Producto
@@ -235,4 +235,61 @@ export type Product = {
   screenSize?: ScreenSize;
   storageSize?: StorageSize;
   panelType?: PanelType;
+};
+
+export const filtersByCategory: {
+  [key in Category]?: {
+    label: string; // Texto que se verá en la UI
+    field: keyof Product; // Campo del producto
+    values: readonly string[];
+  }[];
+} = {
+  equipos: [
+     {
+      label: "Marca",
+      field: "brand",
+      values: computerBrands,
+    },
+    {
+      label: "Procesador",
+      field: "processor",
+      values: processors,
+    },
+  ],
+  pantallas: [
+    {
+      label: "Marca",
+      field: "brand",
+      values: displayBrands,
+    },
+    {
+      label: "Panel",
+      field: "panelType",
+      values: panelTypes,
+    },
+    {
+      label: "Tamaño",
+      field: "screenSize",
+      values: screenSizes,
+    },
+  ],
+  "memoria-ram": [
+    {
+      label: "Capacidad RAM",
+      field: "ramCapacity",
+      values: ramCapacities,
+    },
+    {
+      label: "Tipo RAM",
+      field: "ramVersion",
+      values: ramVersions,
+    },
+  ],
+  almacenamiento: [
+    {
+      label: "Capacidad",
+      field: "storageSize",
+      values: storageSizes,
+    },
+  ],
 };

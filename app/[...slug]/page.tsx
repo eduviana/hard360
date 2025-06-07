@@ -4,10 +4,12 @@ import { products } from "../data/data";
 import { ProductCard } from "../components/productCard/ProductCard";
 import ProductDetail from "../components/productDetail/ProductDetail";
 import { FilterSidebar } from "../components/filter-sidebar/FilterSidebar";
+import { FilterHeader } from "../components/filter-sidebar/FilterHeader";
+import { Category, filtersByCategory } from "../data/types";
 
 interface PageProps {
   params: { slug: string[] };
-  searchParams?: { brand?: string };
+  searchParams?: Record<string, string>;
 }
 
 export async function generateMetadata({
@@ -24,118 +26,80 @@ export async function generateMetadata({
 
 export default async function Page({ params, searchParams }: PageProps) {
   const { slug } = params;
-  const brandFilter = searchParams?.brand;
 
   if (slug.length < 1 || slug.length > 3) return notFound();
 
-  // 🟩 Vista de Categoría: /equipos
-  if (slug.length === 1) {
-    const [category] = slug;
+  const [category] = slug;
+  let subcategory: string | undefined = undefined;
 
-    const categoryProducts = products.filter((p) => p.category === category);
-    if (categoryProducts.length === 0) return notFound();
-
-    // Aplico filtro de marca si existe
-    const filteredProducts = brandFilter
-      ? categoryProducts.filter((p) => p.brand === brandFilter)
-      : categoryProducts;
-
-    const subcategories = [...new Set(categoryProducts.map((p) => p.subcategory))];
-
-    const brands = [
-      ...new Set(
-        categoryProducts
-          .map((p) => p.brand)
-          .filter((b): b is Exclude<typeof b, undefined> => b !== undefined)
-      ),
-    ];
-
-    return (
-      <section className="custom-container py-16">
-        <h1 className="text-3xl font-semibold capitalize mb-8">
-          {category.replaceAll("-", " ")}
-          {brandFilter && (
-            <span className="ml-4 text-sm text-gray-600">
-              (Marca: {brandFilter.replaceAll("-", " ")})
-            </span>
-          )}
-        </h1>
-
-        <div className="flex flex-col md:flex-row gap-8">
-          {/* Filtros */}
-          <FilterSidebar
-            category={category}
-            subcategories={subcategories}
-            brands={brands as string[]}
-          />
-
-          {/* Productos */}
-          <div className="md:w-3/4 grid grid-cols-2 sm:grid-cols-3 gap-6">
-            {filteredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </div>
-      </section>
-    );
+  if (slug.length === 2) {
+    subcategory = slug[1];
   }
 
-  // 🟦 Vista de Subcategoría: /equipos/notebooks
-  if (slug.length === 2) {
-    const [category, subcategory] = slug;
-
+  // Vista de categoría o subcategoría
+  if (slug.length === 1 || slug.length === 2) {
     const categoryProducts = products.filter((p) => p.category === category);
+
     if (categoryProducts.length === 0) return notFound();
 
-    let filtered = categoryProducts.filter((p) => p.subcategory === subcategory);
-    if (filtered.length === 0) return notFound();
+    let filteredProducts = categoryProducts;
 
-    // Aplico filtro de marca si existe
-    if (brandFilter) {
-      filtered = filtered.filter((p) => p.brand === brandFilter);
+    // Filtro por subcategoría
+    if (subcategory) {
+      filteredProducts = filteredProducts.filter(
+        (p) => p.subcategory === subcategory
+      );
     }
 
-    const subcategories = [...new Set(categoryProducts.map((p) => p.subcategory))];
+    // Filtros dinámicos
+    const categoryFilters = filtersByCategory[category as Category];
+    if (categoryFilters && searchParams) {
+      for (const filter of categoryFilters) {
+        const value = searchParams[filter.field as string];
+        if (value) {
+          filteredProducts = filteredProducts.filter(
+            (p) => p[filter.field] === value
+          );
+        }
+      }
+    }
 
-    const brands = [
-      ...new Set(
-        categoryProducts
-          .map((p) => p.brand)
-          .filter((b): b is Exclude<typeof b, undefined> => b !== undefined)
-      ),
+    // Subcategorías únicas
+    const subcategories = [
+      ...new Set(categoryProducts.map((p) => p.subcategory)),
     ];
+
+   
 
     return (
       <section className="custom-container py-16">
-        <h1 className="text-3xl font-semibold capitalize mb-8">
-          {subcategory.replaceAll("-", " ")}
-          {brandFilter && (
-            <span className="ml-4 text-sm text-gray-600">
-              (Marca: {brandFilter.replaceAll("-", " ")})
-            </span>
-          )}
-        </h1>
+        <FilterHeader category={category} subcategory={subcategory} />
 
         <div className="flex flex-col md:flex-row gap-8">
-          {/* Filtros */}
           <FilterSidebar
             category={category}
             subcategories={subcategories}
-            brands={brands as string[]}
+            subcategory={subcategory}
           />
 
           {/* Productos */}
           <div className="md:w-3/4 grid grid-cols-2 sm:grid-cols-3 gap-6">
-            {filtered.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
+            {filteredProducts.length > 0 ? (
+              filteredProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))
+            ) : (
+              <div className="col-span-full text-center text-gray-500 font-medium">
+                No se encontraron productos.
+              </div>
+            )}
           </div>
         </div>
       </section>
     );
   }
 
-  // 🟨 Vista de Producto: /equipos/notebooks/producto-xyz
+  // Vista de producto individual
   if (slug.length === 3) {
     const [category, subcategory, productSlug] = slug;
     const product = products.find(
@@ -148,7 +112,7 @@ export default async function Page({ params, searchParams }: PageProps) {
     if (!product) return notFound();
 
     return (
-      <div className="container py-8">
+      <div className="custom-container py-8">
         <ProductDetail product={product} />
       </div>
     );

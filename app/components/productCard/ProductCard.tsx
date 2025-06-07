@@ -22,6 +22,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         <span className="text-text-primary text-[22px] font-semibold">
           ${product.price}
         </span>
+        <span>{product.brand}</span>
       </div>
     </Link>
   );

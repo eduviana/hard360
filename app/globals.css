@@ -31,7 +31,13 @@ body {
   @apply w-[96%] md:w-[90%] lg:w-[80%] xl:w-[70%] mx-auto;
 }
 
+
+
 @layer utilities {
+
+  .text-xl {
+    font-size: 20px;
+  }
   .animate-fade-down {
     animation: fade-down 0.25s ease-out both;
   }
