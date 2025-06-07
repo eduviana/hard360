@@ -1,203 +1,157 @@
 import { notFound } from "next/navigation";
-import CategoryLayout from "@/app/components/layouts/CategoryLayout";
-import ProductDetail from "@/app/components/productDetail/ProductDetail";
+import { Metadata } from "next";
 import { products } from "../data/data";
-
-import {
-  Category,
-  Subcategory,
-  Product,
-  Brand,
-  Processor,
-  ScreenSize,
-} from "@/app/data/types";
+import { ProductCard } from "../components/productCard/ProductCard";
+import ProductDetail from "../components/productDetail/ProductDetail";
+import { FilterSidebar } from "../components/filter-sidebar/FilterSidebar";
 
 interface PageProps {
-  params: {
-    slug: string[];
-  };
+  params: { slug: string[] };
+  searchParams?: { brand?: string };
 }
 
-// =======================
-// Dummy DB simulada
-// =======================
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = params;
 
+  if (slug.length === 1) return { title: `${slug[0]}` };
+  if (slug.length === 2) return { title: `${slug[1]}` };
+  if (slug.length === 3) return { title: `Detalle de ${slug[2]}` };
 
-
-// =======================
-// Helpers válidos
-// =======================
-
-const validCategories: Category[] = [
-  "almacenamiento",
-  "equipos",
-  "pantallas",
-  "placas-de-video",
-];
-
-const validSubcategories: Subcategory[] = [
-  "notebooks",
-  "pcs-de-escritorio",
-  "hdd",
-  "ssd",
-  "ssd m2",
-  "disco externo",
-  "monitores",
-  "televisores",
-  "radeon",
-  "nvidia",
-];
-
-// =======================
-// Funciones utilitarias
-// =======================
-
-async function getProductsByCategory(
-  category: Category,
-  subcategory?: Subcategory
-): Promise<Product[]> {
-  return products.filter(
-    (p) =>
-      p.category === category &&
-      (subcategory ? p.subcategory === subcategory : true)
-  );
+  return { title: "No encontrado" };
 }
 
-async function getProductBySlug(
-  category: Category,
-  subcategory: Subcategory,
-  slug: string
-): Promise<Product | undefined> {
-  return products.find(
-    (p) =>
-      p.category === category &&
-      p.subcategory === subcategory &&
-      p.slug === slug
-  );
-}
+export default async function Page({ params, searchParams }: PageProps) {
+  const { slug } = params;
+  const brandFilter = searchParams?.brand;
 
-type Filter = {
-  name: string;
-  options: string[];
-};
+  if (slug.length < 1 || slug.length > 3) return notFound();
 
-async function getFiltersByCategory(category: Category): Promise<Filter[]> {
-  // Filtros simulados
-  const filtersByCategory: Record<Category, Filter[]> = {
-    equipos: [
-      {
-        name: "brand",
-        options: ["asus", "dell", "hp", "lenovo"],
-      },
-      {
-        name: "processor",
-        options: ["intel i3", "intel i5", "intel i7", "ryzen 3", "ryzen 5", "ryzen 7"],
-      },
-      {
-        name: "screenSize",
-        options: ["14", "15.6", "16"],
-      },
-    ],
-    almacenamiento: [
-      {
-        name: "brand",
-        options: ["crucial", "kingston", "seagate", "western digital"],
-      },
-      {
-        name: "storageSize",
-        options: ["240gb", "480gb", "1tb", "2tb"],
-      },
-    ],
-    pantallas: [
-      {
-        name: "brand",
-        options: ["aoc", "asus", "dell", "gigabyte", "lg", "samsung"],
-      },
-      {
-        name: "panelType",
-        options: ["ips", "led", "oled", "tn", "va"],
-      },
-    ],
-    "placas-de-video": [
-      {
-        name: "brand",
-        options: ["asus", "gigabyte", "msi", "xfx"],
-      },
-    ],
-  };
+  // 🟩 Vista de Categoría: /equipos
+  if (slug.length === 1) {
+    const [category] = slug;
 
-  return filtersByCategory[category] || [];
-}
+    const categoryProducts = products.filter((p) => p.category === category);
+    if (categoryProducts.length === 0) return notFound();
 
-// =======================
-// Componente principal
-// =======================
+    // Aplico filtro de marca si existe
+    const filteredProducts = brandFilter
+      ? categoryProducts.filter((p) => p.brand === brandFilter)
+      : categoryProducts;
 
-export default async function Page({ params }: PageProps) {
-  const slugArray = params.slug;
+    const subcategories = [...new Set(categoryProducts.map((p) => p.subcategory))];
 
-  if (slugArray.length === 1) {
-    const category = slugArray[0] as Category;
-
-    if (!validCategories.includes(category)) return notFound();
-
-    const products = await getProductsByCategory(category);
-    if (!products || products.length === 0) return notFound();
-
-    const filters = await getFiltersByCategory(category);
-
-    return (
-      <CategoryLayout
-        title={category}
-        products={products}
-        category={category}
-        filters={filters}
-      />
-    );
-  }
-
-  if (slugArray.length === 2) {
-    const [category, subcategory] = slugArray as [Category, Subcategory];
-
-    if (
-      !validCategories.includes(category) ||
-      !validSubcategories.includes(subcategory)
-    )
-      return notFound();
-
-    const products = await getProductsByCategory(category, subcategory);
-    if (!products || products.length === 0) return notFound();
-
-    const filters = await getFiltersByCategory(category);
-
-    return (
-      <CategoryLayout
-        title={`${category} / ${subcategory}`}
-        products={products}
-        category={category}
-        subcategory={subcategory}
-        filters={filters}
-      />
-    );
-  }
-
-  if (slugArray.length === 3) {
-    const [category, subcategory, productSlug] = slugArray as [
-      Category,
-      Subcategory,
-      string
+    const brands = [
+      ...new Set(
+        categoryProducts
+          .map((p) => p.brand)
+          .filter((b): b is Exclude<typeof b, undefined> => b !== undefined)
+      ),
     ];
 
-    if (
-      !validCategories.includes(category) ||
-      !validSubcategories.includes(subcategory)
-    )
-      return notFound();
+    return (
+      <section className="custom-container py-16">
+        <h1 className="text-3xl font-semibold capitalize mb-8">
+          {category.replaceAll("-", " ")}
+          {brandFilter && (
+            <span className="ml-4 text-sm text-gray-600">
+              (Marca: {brandFilter.replaceAll("-", " ")})
+            </span>
+          )}
+        </h1>
 
-    const product = await getProductBySlug(category, subcategory, productSlug);
+        <div className="flex flex-col md:flex-row gap-8">
+          {/* Filtros */}
+          <FilterSidebar
+            category={category}
+            subcategories={subcategories}
+            brands={brands as string[]}
+          />
+
+          {/* Productos */}
+          <div className="md:w-3/4 grid grid-cols-2 sm:grid-cols-3 gap-6">
+            {filteredProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // 🟦 Vista de Subcategoría: /equipos/notebooks
+  if (slug.length === 2) {
+    const [category, subcategory] = slug;
+
+    const categoryProducts = products.filter((p) => p.category === category);
+    if (categoryProducts.length === 0) return notFound();
+
+    let filtered = categoryProducts.filter((p) => p.subcategory === subcategory);
+    if (filtered.length === 0) return notFound();
+
+    // Aplico filtro de marca si existe
+    if (brandFilter) {
+      filtered = filtered.filter((p) => p.brand === brandFilter);
+    }
+
+    const subcategories = [...new Set(categoryProducts.map((p) => p.subcategory))];
+
+    const brands = [
+      ...new Set(
+        categoryProducts
+          .map((p) => p.brand)
+          .filter((b): b is Exclude<typeof b, undefined> => b !== undefined)
+      ),
+    ];
+
+    return (
+      <section className="custom-container py-16">
+        <h1 className="text-3xl font-semibold capitalize mb-8">
+          {subcategory.replaceAll("-", " ")}
+          {brandFilter && (
+            <span className="ml-4 text-sm text-gray-600">
+              (Marca: {brandFilter.replaceAll("-", " ")})
+            </span>
+          )}
+        </h1>
+
+        <div className="flex flex-col md:flex-row gap-8">
+          {/* Filtros */}
+          <FilterSidebar
+            category={category}
+            subcategories={subcategories}
+            brands={brands as string[]}
+          />
+
+          {/* Productos */}
+          <div className="md:w-3/4 grid grid-cols-2 sm:grid-cols-3 gap-6">
+            {filtered.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // 🟨 Vista de Producto: /equipos/notebooks/producto-xyz
+  if (slug.length === 3) {
+    const [category, subcategory, productSlug] = slug;
+    const product = products.find(
+      (p) =>
+        p.slug === productSlug &&
+        p.category === category &&
+        p.subcategory === subcategory
+    );
+
     if (!product) return notFound();
 
-    return <ProductDetail product={product} />;
+    return (
+      <div className="container py-8">
+        <ProductDetail product={product} />
+      </div>
+    );
   }
 
   return notFound();

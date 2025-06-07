@@ -1,15 +1,8 @@
 import { products } from "../data/data";
-import { Product, Category, Subcategory } from "../data/types";
+import { Product } from "../data/types";
 
-export const getProductBySlug = (
-  category: Category,
-  subcategory: Subcategory,
-  slug: string
-): Product | undefined => {
-  return products.find(
-    (product) =>
-      product.category === category &&
-      product.subcategory === subcategory &&
-      product.slug === slug
-  );
-};
+
+
+export async function getProductBySlug(slug: string): Promise<Product | undefined> {
+  return products.find(product => product.slug === slug);
+}
