@@ -34,16 +34,6 @@ export function FilterSidebar({
             const isActive = sub === subcategory;
             return (
               <li key={sub}>
-                {/* <Link
-                  href={`/${category}/${sub}`}
-                  className={`hover:underline capitalize ${
-                    isActive
-                      ? "text-accent font-semibold"
-                      : "text-text-tertiary font-medium"
-                  }`}
-                >
-                  {sub.replaceAll("-", " ")}
-                </Link> */}
                 <Link
                   href={`/${category}/${sub}`}
                   scroll={false}

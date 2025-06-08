@@ -41,9 +41,8 @@ export const categoriesData = [
     name: "Memoria RAM",
     slug: "memoria-ram",
     children: [
-      { id: "5-1", name: "DDR5", slug: "ddr5" },
-      { id: "5-2", name: "DDR4", slug: "ddr4" },
-      { id: "5-3", name: "SODIMM DDR4", slug: "sodimm-ddr4" },
+      { id: "5-1", name: "De Escritorio", slug: "de-escritorio" },
+      { id: "5-2", name: "De Notebook", slug: "de-notebook" },
     ],
   },
   {
