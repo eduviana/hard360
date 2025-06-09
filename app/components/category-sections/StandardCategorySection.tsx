@@ -1,5 +1,6 @@
 import { Product } from "@/app/data/types";
 import ViewMore from "../view-more/ViewMore";
+import { ProductCard } from "../productCard/ProductCard";
 
 interface StandardCategorySectionProps {
   title?: string;
@@ -54,22 +55,7 @@ export const StandardCategorySection = ({
           </div>
 
           {products.map((product) => (
-            <div
-              key={product.id}
-              className="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col items-center p-4"
-            >
-              <img
-                src={product.image}
-                alt={product.title}
-                className="w-full h-40 object-contain mb-4"
-              />
-              <h3 className="text-sm text-text-tertiary font-light text-center mb-2">
-                {product.title}
-              </h3>
-              <span className="text-text-primary text-[22px] font-semibold">
-                ${product.price}
-              </span>
-            </div>
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </div>
