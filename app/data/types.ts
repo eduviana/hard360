@@ -1,3 +1,6 @@
+import { NotebookSpecs } from "./notebookSpecs";
+
+
 export const categories = [
   "equipos",
   "combos-de-actualizacion",
@@ -126,8 +129,7 @@ export type StorageSize = (typeof storageSizes)[number];
 export const motherboardSockets = ["AM4", "AM5", "LGA 1200", "LGA 1700"] as const;
 export type MotherboardSocket = (typeof motherboardSockets)[number];
 
-// export const coolingTypes = ["aire", "liquida"] as const;
-// export type CoolingType = (typeof coolingTypes)[number];
+
 
 // ==============================
 // Producto
@@ -150,6 +152,9 @@ export type Product = {
   storageSize?: StorageSize;
   panelType?: PanelType;
   socket?: MotherboardSocket;
+
+   // 👇 Nueva propiedad
+  specs?: NotebookSpecs;
 };
 
 export const filtersByCategory: {
@@ -171,6 +176,12 @@ export const filtersByCategory: {
       label: "Procesador",
       field: "processor",
       values: processors,
+      activeFilter: (val) => val, // Se mostrará "I5"
+    },
+    {
+      label: "Memoria Ram",
+      field: "ramCapacity",
+      values: ramCapacities,
       activeFilter: (val) => val, // Se mostrará "I5"
     },
   ],

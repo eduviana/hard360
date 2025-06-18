@@ -1,4 +1,5 @@
 import { Product } from "./types";
+import {NotebookSpecs} from "./notebookSpecs"
 
 export const products: Product[] = [
   // Notebooks
@@ -16,6 +17,51 @@ export const products: Product[] = [
     ramCapacity: "8gb",
     ramVersion: "ddr4",
     screenSize: "15.6",
+    specs: {
+      almacenamiento: {
+        disco: "128Gb",
+      },
+      conectividad: {
+        wifi: "Sí",
+        bluetooth: "Sí",
+      },
+      garantia: {
+        tipo: "Oficial",
+        plazo: "12 Meses",
+      },
+      memoriaRam: {
+        capacidad: "4 Gigas",
+        formato: "SODIMM",
+        expandible: "No",
+      },
+      otrasCaracteristicas: {
+        sensorDactilar: "No",
+        tecladoNumerico: "Sí",
+        camaraWeb: "Sí",
+        teclado: "Español",
+        touchscreen: "No",
+      },
+      pantalla: {
+        resolucion: "1366x768",
+        tecnologia: "HD",
+      },
+      procesador: {
+        marca: "Intel",
+        modelo: "N4020C",
+        nucleos: "2 (2 Subprocesos)",
+        frecuencia: "2.80Ghz",
+        cache: "4Mb Cache",
+      },
+      puertos: {
+        usb2: "Sí",
+        hdmi: "Sí",
+        audioMic: "Sí",
+      },
+      sistemaOperativo: {
+        nombre: "Windows 11",
+        version: "64-bits",
+      },
+    },
   },
   {
     id: "2",
@@ -30,6 +76,51 @@ export const products: Product[] = [
     ramCapacity: "8gb",
     ramVersion: "ddr4",
     screenSize: "15.6",
+    specs: {
+      almacenamiento: {
+        disco: "256Gb SSD",
+      },
+      conectividad: {
+        wifi: "Sí",
+        bluetooth: "Sí",
+      },
+      garantia: {
+        tipo: "Oficial",
+        plazo: "12 Meses",
+      },
+      memoriaRam: {
+        capacidad: "8 Gigas",
+        formato: "SODIMM",
+        expandible: "Sí",
+      },
+      otrasCaracteristicas: {
+        sensorDactilar: "Sí",
+        tecladoNumerico: "Sí",
+        camaraWeb: "Sí",
+        teclado: "Español",
+        touchscreen: "No",
+      },
+      pantalla: {
+        resolucion: "1920x1080",
+        tecnologia: "Full HD",
+      },
+      procesador: {
+        marca: "Intel",
+        modelo: "Core i5-1135G7",
+        nucleos: "4 (8 Subprocesos)",
+        frecuencia: "2.40Ghz",
+        cache: "8Mb Cache",
+      },
+      puertos: {
+        usb2: "Sí",
+        hdmi: "Sí",
+        audioMic: "Sí",
+      },
+      sistemaOperativo: {
+        nombre: "Windows 11",
+        version: "64-bits",
+      },
+    },
   },
   {
     id: "3",
@@ -45,6 +136,51 @@ export const products: Product[] = [
     ramCapacity: "16gb",
     ramVersion: "ddr4",
     screenSize: "14",
+    specs: {
+      almacenamiento: {
+        disco: "512Gb SSD",
+      },
+      conectividad: {
+        wifi: "Sí",
+        bluetooth: "Sí",
+      },
+      garantia: {
+        tipo: "Oficial",
+        plazo: "24 Meses",
+      },
+      memoriaRam: {
+        capacidad: "16 Gigas",
+        formato: "SODIMM",
+        expandible: "Sí",
+      },
+      otrasCaracteristicas: {
+        sensorDactilar: "Sí",
+        tecladoNumerico: "No",
+        camaraWeb: "Sí",
+        teclado: "Español",
+        touchscreen: "No",
+      },
+      pantalla: {
+        resolucion: "1920x1080",
+        tecnologia: "Full HD",
+      },
+      procesador: {
+        marca: "Intel",
+        modelo: "Core i7-1165G7",
+        nucleos: "4 (8 Subprocesos)",
+        frecuencia: "2.80Ghz",
+        cache: "12Mb Cache",
+      },
+      puertos: {
+        usb2: "Sí",
+        hdmi: "Sí",
+        audioMic: "Sí",
+      },
+      sistemaOperativo: {
+        nombre: "Windows 11",
+        version: "64-bits",
+      },
+    },
   },
   {
     id: "4",
@@ -59,6 +195,51 @@ export const products: Product[] = [
     ramCapacity: "16gb",
     ramVersion: "ddr4",
     screenSize: "16",
+    specs: {
+      almacenamiento: {
+        disco: "1Tb SSD",
+      },
+      conectividad: {
+        wifi: "Sí",
+        bluetooth: "Sí",
+      },
+      garantia: {
+        tipo: "Oficial",
+        plazo: "24 Meses",
+      },
+      memoriaRam: {
+        capacidad: "16 Gigas",
+        formato: "SODIMM",
+        expandible: "Sí",
+      },
+      otrasCaracteristicas: {
+        sensorDactilar: "Sí",
+        tecladoNumerico: "Sí",
+        camaraWeb: "Sí",
+        teclado: "Español",
+        touchscreen: "Sí",
+      },
+      pantalla: {
+        resolucion: "1920x1080",
+        tecnologia: "Full HD IPS",
+      },
+      procesador: {
+        marca: "AMD",
+        modelo: "Ryzen 7 5800H",
+        nucleos: "8 (16 Subprocesos)",
+        frecuencia: "3.20Ghz",
+        cache: "16Mb Cache",
+      },
+      puertos: {
+        usb2: "Sí",
+        hdmi: "Sí",
+        audioMic: "Sí",
+      },
+      sistemaOperativo: {
+        nombre: "Windows 11",
+        version: "64-bits",
+      },
+    },
   },
 
   // PCs de escritorio

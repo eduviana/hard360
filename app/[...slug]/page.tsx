@@ -69,8 +69,6 @@ export default async function Page({ params, searchParams }: PageProps) {
       ...new Set(categoryProducts.map((p) => p.subcategory)),
     ];
 
-   
-
     return (
       <section className="custom-container py-16">
         <FilterHeader category={category} subcategory={subcategory} />
