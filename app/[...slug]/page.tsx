@@ -8,14 +8,14 @@ import { FilterHeader } from "../components/filter-sidebar/FilterHeader";
 import { Category, filtersByCategory } from "../data/types";
 
 interface PageProps {
-  params: { slug: string[] };
+  params: Promise<{ slug: string[] }>; // corregido si estás usando promesa
   searchParams?: Record<string, string>;
 }
 
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
 
   if (slug.length === 1) return { title: `${slug[0]}` };
   if (slug.length === 2) return { title: `${slug[1]}` };
@@ -25,7 +25,7 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params, searchParams }: PageProps) {
-  const { slug } = params;
+  const { slug } = await params;
 
   if (slug.length < 1 || slug.length > 3) return notFound();
 

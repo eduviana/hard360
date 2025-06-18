@@ -1,4 +1,6 @@
-import { NotebookSpecs } from "./notebookSpecs";
+import { NotebookSpecs } from "./notebook-specs/notebookSpecs";
+import { PcSpecs } from "./pc-specs/pcSpecs";
+import { RamSpecs } from "./ram-specs/ramSpecs";
 
 
 export const categories = [
@@ -154,7 +156,7 @@ export type Product = {
   socket?: MotherboardSocket;
 
    // 👇 Nueva propiedad
-  specs?: NotebookSpecs;
+  specs?: NotebookSpecs | PcSpecs | RamSpecs;
 };
 
 export const filtersByCategory: {
