@@ -65,14 +65,14 @@ export default async function Page({ params, searchParams }: PageProps) {
     }
   }
 
-  console.log(categoryFilters, "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP")
+  
 
     // Subcategorías únicas
     const subcategories = [
       ...new Set(categoryProducts.map((p) => p.subcategory)),
     ];
 
-    console.log(filteredProducts, "asdasdsd")
+    
 
     return (
       <section className="custom-container py-16">

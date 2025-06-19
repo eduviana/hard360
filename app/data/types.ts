@@ -7,7 +7,19 @@ import { ComboIntelSpecs } from "../components/productDetail/_components/specs/c
 import { GabineteYFuenteSpecs } from "../components/productDetail/_components/specs/combos-actualizacion/gabinete-y-fuente/gabineteYfuenteSpecs";
 import { NotebookSpecs } from "../components/productDetail/_components/specs/equipos/notebooks/notebookSpecs";
 import { PcSpecs } from "../components/productDetail/_components/specs/equipos/pcs-de-escritorio/pcSpecs";
+import { FullTowerSpecs } from "../components/productDetail/_components/specs/gabinetes/full-tower/fullTowerSpecs";
+import { MidTowerSpecs } from "../components/productDetail/_components/specs/gabinetes/mid-tower/midTowerSpecs";
+import { MiniTowerSpecs } from "../components/productDetail/_components/specs/gabinetes/mini-tower/miniTowerSpecs";
 import { RamSpecs } from "../components/productDetail/_components/specs/memoria-ram/ramSpecs";
+import { MotherAmdSpecs } from "../components/productDetail/_components/specs/motherboards/mother-amd/motherAmdSpecs";
+import { MotherIntelSpecs } from "../components/productDetail/_components/specs/motherboards/mother-intel/motherIntelSpecs";
+import { MonitoresSpecs } from "../components/productDetail/_components/specs/pantallas/monitores/monitoresSpecs";
+import { ProyectoresSpecs } from "../components/productDetail/_components/specs/pantallas/proyectores/proyectoresSpecs";
+import { TelevisoresSpecs } from "../components/productDetail/_components/specs/pantallas/televisores/televisoresSpecs";
+import { NvidiaSpecs } from "../components/productDetail/_components/specs/placas-de-video/nvidia/nvidiaSpecs";
+import { RadeonSpecs } from "../components/productDetail/_components/specs/placas-de-video/radeon/radeonSpecs";
+import { AmdSpecs } from "../components/productDetail/_components/specs/procesadores/amd/amdSpecs";
+import { IntelSpecs } from "../components/productDetail/_components/specs/procesadores/intel/intelSpecs";
 import { AirCoolingSpecs } from "../components/productDetail/_components/specs/refrigeracion/air-cooling/airCoolingSpecs";
 import { FanCoolerSpecs } from "../components/productDetail/_components/specs/refrigeracion/fan-cooler/fanCoolerSpecs";
 import { PastaTermicaSpecs } from "../components/productDetail/_components/specs/refrigeracion/pasta-termica/pastaTermicaSpecs";
@@ -63,6 +75,8 @@ export const displayBrands = [
   "gigabyte",
   "lg",
   "samsung",
+  "epson",
+  "benq"
 ] as const;
 export type DisplayBrand = (typeof displayBrands)[number];
 
@@ -93,8 +107,16 @@ export const storageBrands = [
 export type StorageBrand = (typeof storageBrands)[number];
 
 export const motherboardBrands = ["asus", "msi", "gigabyte", "asrock"] as const;
-
 export type MotherboardBrand = (typeof motherboardBrands)[number];
+
+export const caseBrands = [
+  "cooler master",
+  "corsair",
+  "nzxt",
+  "thermaltake",
+  "phanteks",
+];
+export type CaseBrand = (typeof caseBrands)[number];
 
 export const brands = [
   ...displayBrands,
@@ -103,6 +125,7 @@ export const brands = [
   ...storageBrands,
   ...coolingBrands,
   ...motherboardBrands,
+  ...caseBrands
 ] as const;
 export type Brand = (typeof brands)[number];
 
@@ -187,7 +210,19 @@ export type Product = {
     | HddSpecs
     | SsdSpecs
     | SsdM2Specs
-    | DiscoExternoSpecs;
+    | DiscoExternoSpecs
+    | MonitoresSpecs
+    | TelevisoresSpecs
+    | ProyectoresSpecs
+    | IntelSpecs
+    | AmdSpecs
+    | NvidiaSpecs
+    | RadeonSpecs
+    | MotherAmdSpecs
+    | MotherIntelSpecs
+    | FullTowerSpecs
+    | MidTowerSpecs
+    | MiniTowerSpecs
 };
 
 export const filtersByCategory: {
@@ -290,4 +325,12 @@ export const filtersByCategory: {
       activeFilter: (val) => val, // se muestra tal cual: asus, msi, etc.
     },
   ],
+  gabinetes: [
+    {
+      label: "Marca",
+      field: "brand",
+      values: caseBrands,
+      activeFilter: (val) => val
+    }
+  ]
 };

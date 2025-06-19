@@ -7,7 +7,19 @@ import ComboIntelSpecsView from "./combos-actualizacion/combo-intel/ComboIntelSp
 import GabineteYFuenteSpecsView from "./combos-actualizacion/gabinete-y-fuente/GabineteYFuenteSpecsView";
 import NotebookSpecsView from "./equipos/notebooks/NotebookSpecsView";
 import PcSpecsView from "./equipos/pcs-de-escritorio/PcSpecsView";
+import FullTowerSpecsView from "./gabinetes/full-tower/FullTowerSpecsView";
+import MidTowerSpecsView from "./gabinetes/mid-tower/MidTowerSpecsView";
+import MiniTowerSpecsView from "./gabinetes/mini-tower/MiniTowerSpecsView";
 import RamSpecsView from "./memoria-ram/RamSpecsView";
+import MotherAmdSpecsView from "./motherboards/mother-amd/MotherAmdSpecsView";
+import MotherIntelSpecsView from "./motherboards/mother-intel/MotherIntelSpecsView";
+import MonitoresSpecsView from "./pantallas/monitores/MonitoresSpecsView";
+import ProyectoresSpecsView from "./pantallas/proyectores/ProyectoresSpecsView";
+import TelevisoresSpecsView from "./pantallas/televisores/TelevisoresSpecsView";
+import NvidiaSpecsView from "./placas-de-video/nvidia/NvidiaSpecsView";
+import RadeonSpecsView from "./placas-de-video/radeon/RadeonSpecsView";
+import AmdSpecsView from "./procesadores/amd/AmdSpecsView";
+import IntelSpecsView from "./procesadores/intel/IntelSpecsView";
 import AirCoolingSpecsView from "./refrigeracion/air-cooling/AirCoolingSpecsView";
 import FanCoolerSpecsView from "./refrigeracion/fan-cooler/FanCoolerSpecsView";
 import PastaTermicaSpecsView from "./refrigeracion/pasta-termica/PastaTermicaSpecsView";
@@ -29,6 +41,18 @@ export const specsComponentMap: Record<string, any> = {
   "ssd": ({ specs }: any) => <SsdSpecsView specs={specs} />,
   "ssd-m2": ({ specs }: any) => <SsdM2SpecsView specs={specs} />,
   "disco-externo": ({ specs }: any) => <DiscoExternoSpecsView specs={specs} />,
+  "monitores": ({ specs }: any) => <MonitoresSpecsView specs={specs} />,
+  "televisores": ({ specs }: any) => <TelevisoresSpecsView specs={specs} />,
+  "proyectores": ({ specs }: any) => <ProyectoresSpecsView specs={specs} />,
+  "intel": ({ specs }: any) => <IntelSpecsView specs={specs} />,
+  "amd": ({ specs }: any) => <AmdSpecsView specs={specs} />,
+  "nvidia": ({ specs }: any) => <NvidiaSpecsView specs={specs} />,
+  "radeon": ({ specs }: any) => <RadeonSpecsView specs={specs} />,
+  "motherboards-amd": ({ specs }: any) => <MotherAmdSpecsView specs={specs} />,
+  "motherboards-intel": ({ specs }: any) => <MotherIntelSpecsView specs={specs} />,
+  "full-tower": ({ specs }: any) => <FullTowerSpecsView specs={specs} />,
+  "mid-tower": ({ specs }: any) => <MidTowerSpecsView specs={specs} />,
+  "mini-tower": ({ specs }: any) => <MiniTowerSpecsView specs={specs} />,
 };
 
 

@@ -748,7 +748,7 @@ export const products: Product[] = [
   },
 
   //disco externo
-   {
+  {
     id: "ext-001",
     title: "Disco Externo Seagate Backup Plus 2TB",
     image: "/products/seagate-backup-plus-2tb.jpg",
@@ -762,7 +762,7 @@ export const products: Product[] = [
       capacidad: "2 TB",
       tipo: "HDD",
       interfaz: "USB 3.0",
-      formato: "2.5\"",
+      formato: '2.5"',
       alimentacion: "USB",
       compatibilidad: "Windows, macOS",
       resistenciaGolpes: "No",
@@ -789,7 +789,7 @@ export const products: Product[] = [
       capacidad: "1 TB",
       tipo: "HDD",
       interfaz: "USB 3.0",
-      formato: "2.5\"",
+      formato: '2.5"',
       alimentacion: "USB",
       compatibilidad: "Windows, macOS",
       resistenciaGolpes: "Resistente a golpes hasta 1.2m",
@@ -816,7 +816,7 @@ export const products: Product[] = [
       capacidad: "500 GB",
       tipo: "SSD",
       interfaz: "USB-C",
-      formato: "2.5\"",
+      formato: '2.5"',
       alimentacion: "USB",
       compatibilidad: "Windows, macOS",
       resistenciaGolpes: "Resistente a golpes hasta 2m",
@@ -843,7 +843,7 @@ export const products: Product[] = [
       capacidad: "1 TB",
       tipo: "SSD",
       interfaz: "USB-C",
-      formato: "2.5\"",
+      formato: '2.5"',
       alimentacion: "USB",
       compatibilidad: "Windows, macOS",
       resistenciaGolpes: "Resistente a golpes hasta 2m",
@@ -857,7 +857,7 @@ export const products: Product[] = [
     },
   },
 
-  // Placas de video
+  // Placas de video - nvidia
   {
     id: "13",
     title: "MSI GeForce RTX 3060 Ventus 2X 12GB GDDR6",
@@ -867,7 +867,66 @@ export const products: Product[] = [
     category: "placas-de-video",
     subcategory: "nvidia",
     brand: "msi",
+    specs: {
+      // Memoria y Rendimiento
+      memoria: "12 GB GDDR6",
+      interfaz: "192 bits",
+      relojBase: "1320 MHz",
+      relojBoost: "1807 MHz",
+      velocidadMemoria: "15 Gbps",
+      anchoBanda: "360 GB/s",
+      cudaCores: "3584",
+
+      // Puertos y Conectividad
+      pcie: "PCIe 4.0",
+      hdmi: "1 x 2.1",
+      displayPort: "3 x 1.4a",
+      resolucionMaxima: "7680 x 4320 (8K UHD)",
+      monitoresSoportados: "4",
+
+      // Tamaño y Consumo
+      dimensiones: "235 x 124 x 42 mm",
+      altura: "2 Slot",
+      consumo: "170 W",
+      fuenteRecomendada: "550 W",
+      conector: "1 x 8-pin",
+    },
   },
+  {
+    id: "14",
+    title: "MSI GeForce RTX 4060 Ventus 2X 8GB GDDR6",
+    image: "/images/gpu-rtx4060-msi.jpg",
+    price: "520000",
+    slug: "msi-rtx-4060-ventus-8gb",
+    category: "placas-de-video",
+    subcategory: "nvidia",
+    brand: "msi",
+    specs: {
+      // Memoria y Rendimiento
+      memoria: "8 GB GDDR6",
+      interfaz: "128 bits",
+      relojBase: "1830 MHz",
+      relojBoost: "2460 MHz",
+      velocidadMemoria: "17 Gbps",
+      anchoBanda: "272 GB/s",
+      cudaCores: "3072",
+
+      // Puertos y Conectividad
+      pcie: "PCIe 4.0",
+      hdmi: "1 x 2.1",
+      displayPort: "3 x 1.4a",
+      resolucionMaxima: "7680 x 4320 (8K UHD)",
+      monitoresSoportados: "4",
+
+      // Tamaño y Consumo
+      dimensiones: "199 x 120 x 41 mm",
+      altura: "2 Slot",
+      consumo: "115 W",
+      fuenteRecomendada: "550 W",
+      conector: "1 x 8-pin",
+    },
+  },
+  // Placas de video - radeon
   {
     id: "14",
     title: "XFX Radeon RX 6600 Speedster SWFT 8GB GDDR6",
@@ -877,17 +936,27 @@ export const products: Product[] = [
     category: "placas-de-video",
     subcategory: "radeon",
     brand: "xfx",
+    specs: {
+      memoria: "8 GB GDDR6",
+      interfaz: "128 bits",
+      relojBase: "2044 MHz",
+      relojBoost: "2491 MHz",
+      velocidadMemoria: "14 Gbps",
+      anchoBanda: "224 GB/s",
+      streamProcessors: "1792", // para AMD sería "Stream Processors", pero usamos misma key para reutilizar UI
+      pcie: "4.0",
+      hdmi: "1 x 2.1",
+      displayPort: "3 x 1.4a",
+      resolucionMaxima: "8K a 60Hz",
+      monitoresSoportados: "4",
+      dimensiones: "240 x 110 x 40 mm",
+      altura: "2 Slot",
+      consumo: "132 W",
+      fuenteRecomendada: "500 W",
+      conector: "1 x 8-pin",
+    },
   },
-  {
-    id: "15",
-    title: "Gigabyte GeForce RTX 4060 Eagle OC 8GB GDDR6",
-    image: "/images/gpu-rtx4060-gigabyte.jpg",
-    price: "560000",
-    slug: "gigabyte-rtx-4060-eagle-8gb",
-    category: "placas-de-video",
-    subcategory: "nvidia",
-    brand: "gigabyte",
-  },
+
   {
     id: "16",
     title: "Asus Radeon RX 6750 XT Dual OC 12GB GDDR6",
@@ -897,6 +966,25 @@ export const products: Product[] = [
     category: "placas-de-video",
     subcategory: "radeon",
     brand: "asus",
+    specs: {
+      memoria: "12 GB GDDR6",
+      interfaz: "192 bits",
+      relojBase: "2150 MHz",
+      relojBoost: "2623 MHz",
+      velocidadMemoria: "18 Gbps",
+      anchoBanda: "432 GB/s",
+      streamProcessors: "2560",
+      pcie: "4.0",
+      hdmi: "1 x 2.1",
+      displayPort: "3 x 1.4a",
+      resolucionMaxima: "8K a 60Hz",
+      monitoresSoportados: "4",
+      dimensiones: "295 x 139 x 54 mm",
+      altura: "2.7 Slot",
+      consumo: "250 W",
+      fuenteRecomendada: "650 W",
+      conector: "2 x 8-pin",
+    },
   },
 
   // Pantallas - Monitores
@@ -911,6 +999,21 @@ export const products: Product[] = [
     screenSize: "14",
     brand: "gigabyte",
     panelType: "ips",
+    specs: {
+      tipoPanel: "IPS",
+      frecuenciaActualizacion: "165 Hz",
+      conectividad: "HDMI x2, DisplayPort x1",
+      tiempoRespuesta: "1 ms",
+      colores: "16.7M",
+      tipoUso: "Gaming",
+      softwareIncluido: "OSD Sidekick",
+      curvo: "No",
+      resolucion: "1920 x 1080",
+      parlantes: "No",
+      contenidoCaja: "HDMI x1, DisplayPort x1",
+      hdr: "Sí",
+      freesync: "Sí",
+    },
   },
   {
     id: "18",
@@ -923,7 +1026,23 @@ export const products: Product[] = [
     screenSize: "15.6",
     brand: "samsung",
     panelType: "ips",
+    specs: {
+      tipoPanel: "IPS",
+      frecuenciaActualizacion: "75 Hz",
+      conectividad: "HDMI x1, D-Sub x1",
+      tiempoRespuesta: "5 ms",
+      colores: "16.7M",
+      tipoUso: "Oficina",
+      softwareIncluido: "Eco Saving Plus",
+      curvo: "No",
+      resolucion: "1920 x 1080",
+      parlantes: "No",
+      contenidoCaja: "HDMI x1",
+      hdr: "No",
+      freesync: "Sí",
+    },
   },
+  //pantallas - televisores
   {
     id: "19",
     title: "Smart TV LG 50'' 4K UHD webOS",
@@ -935,6 +1054,21 @@ export const products: Product[] = [
     screenSize: "16",
     brand: "lg",
     panelType: "led",
+    specs: {
+      tipoPanel: "LED",
+      frecuenciaActualizacion: "60 Hz",
+      conectividad: "HDMI x3, USB x2, Wi-Fi, LAN",
+      tiempoRespuesta: "8 ms",
+      colores: "1.07B",
+      tipoUso: "Entretenimiento",
+      softwareIncluido: "webOS",
+      curvo: "No",
+      resolucion: "3840 x 2160 (4K UHD)",
+      parlantes: "Sí",
+      contenidoCaja: "Control remoto, pilas, cable de alimentación",
+      hdr: "HDR10, HLG",
+      freesync: "No",
+    },
   },
   {
     id: "20",
@@ -947,6 +1081,63 @@ export const products: Product[] = [
     screenSize: "16",
     brand: "samsung",
     panelType: "led",
+    specs: {
+      tipoPanel: "LED",
+      frecuenciaActualizacion: "60 Hz",
+      conectividad: "HDMI x3, USB x1, Wi-Fi, LAN",
+      tiempoRespuesta: "6 ms",
+      colores: "1.07B",
+      tipoUso: "Entretenimiento",
+      softwareIncluido: "Tizen OS",
+      curvo: "No",
+      resolucion: "3840 x 2160 (4K UHD)",
+      parlantes: "Sí",
+      contenidoCaja: "Control remoto, pilas, cable de alimentación",
+      hdr: "HDR10+, HLG",
+      freesync: "No",
+    },
+  },
+
+  //pantallas - proyectores
+  {
+    id: "21",
+    title: "Proyector Epson EB-X05",
+    image: "/images/proyector-epson-ebx05.jpg",
+    price: "85000",
+    slug: "proyector-epson-eb-x05",
+    category: "pantallas",
+    subcategory: "proyectores",
+    brand: "epson",
+    specs: {
+      resolucionNativa: "1024 x 768 (XGA)",
+      brillo: "3600 lúmenes",
+      contraste: "15000:1",
+      tipoProyector: "3LCD",
+      conectividad: "HDMI x1, VGA x1, USB",
+      vidaUtilLampara: "10,000 horas",
+      distanciaProyeccion: "1.2 - 10 m",
+      tamañoProyeccion: "30'' - 300''",
+    },
+  },
+  {
+    id: "22",
+    title: "Proyector BenQ TH585",
+    image: "/images/proyector-benq-th585.jpg",
+    price: "120000",
+    slug: "proyector-benq-th585",
+    category: "pantallas",
+    subcategory: "proyectores",
+    brand: "benq",
+    specs: {
+      resolucionNativa: "1920 x 1080 (Full HD)",
+      brillo: "3500 lúmenes",
+      contraste: "10000:1",
+      tipoProyector: "DLP",
+      conectividad: "HDMI x2, USB",
+      vidaUtilLampara: "15,000 horas",
+      distanciaProyeccion: "1.5 - 5 m",
+      tamañoProyeccion: "30'' - 300''",
+    },
   },
 
   // Memorias Ram
@@ -1796,6 +1987,19 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "amd",
     processor: "ryzen 5",
+    specs: {
+      cantidadNucleos: "6",
+      cantidadSubprocesos: "12",
+      frecuenciaBase: "3.5 GHz",
+      frecuenciaTurboMaxima: "4.4 GHz",
+      cache: "32 MB L3 Cache",
+      velocidadBus: "N/A",
+      frecuenciaTurboBoost: "N/A",
+      tdp: "65 W",
+      videoIntegrado: "No",
+      incluyeCoolerStock: true,
+      socket: "AM4",
+    },
   },
   {
     id: "cpu-amd-002",
@@ -1806,6 +2010,19 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "amd",
     processor: "ryzen 7",
+    specs: {
+      cantidadNucleos: "8",
+      cantidadSubprocesos: "16",
+      frecuenciaBase: "3.4 GHz",
+      frecuenciaTurboMaxima: "4.6 GHz",
+      cache: "32 MB L3 Cache",
+      velocidadBus: "N/A",
+      frecuenciaTurboBoost: "N/A",
+      tdp: "65 W",
+      videoIntegrado: "No",
+      incluyeCoolerStock: true,
+      socket: "AM4",
+    },
   },
   {
     id: "cpu-amd-003",
@@ -1816,6 +2033,19 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "amd",
     processor: "ryzen 3",
+    specs: {
+      cantidadNucleos: "4",
+      cantidadSubprocesos: "8",
+      frecuenciaBase: "3.8 GHz",
+      frecuenciaTurboMaxima: "4.0 GHz",
+      cache: "4 MB L3 Cache",
+      velocidadBus: "N/A",
+      frecuenciaTurboBoost: "N/A",
+      tdp: "65 W",
+      videoIntegrado: "No",
+      incluyeCoolerStock: true,
+      socket: "AM4",
+    },
   },
   {
     id: "cpu-amd-004",
@@ -1826,6 +2056,19 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "amd",
     processor: "ryzen 5",
+    specs: {
+      cantidadNucleos: "6",
+      cantidadSubprocesos: "12",
+      frecuenciaBase: "3.8 GHz",
+      frecuenciaTurboMaxima: "5.1 GHz",
+      cache: "32 MB L3 Cache",
+      velocidadBus: "N/A",
+      frecuenciaTurboBoost: "N/A",
+      tdp: "65 W",
+      videoIntegrado: "No",
+      incluyeCoolerStock: false,
+      socket: "AM5",
+    },
   },
   {
     id: "cpu-intel-001",
@@ -1836,6 +2079,19 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "intel",
     processor: "intel i3",
+    specs: {
+      cantidadNucleos: "4",
+      cantidadSubprocesos: "8",
+      frecuenciaBase: "3.30 GHz",
+      frecuenciaTurboMaxima: "4.30 GHz",
+      cache: "12 MB Intel® Smart Cache",
+      velocidadBus: "8 GT/s",
+      frecuenciaTurboBoost: "4.30 GHz",
+      tdp: "60 W",
+      videoIntegrado: "Intel UHD Graphics 730",
+      incluyeCoolerStock: true,
+      socket: "LGA1700",
+    },
   },
   {
     id: "cpu-intel-002",
@@ -1846,6 +2102,19 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "intel",
     processor: "intel i5",
+    specs: {
+      cantidadNucleos: "6",
+      cantidadSubprocesos: "12",
+      frecuenciaBase: "2.50 GHz",
+      frecuenciaTurboMaxima: "4.40 GHz",
+      cache: "18 MB Intel® Smart Cache",
+      velocidadBus: "8 GT/s",
+      frecuenciaTurboBoost: "4.40 GHz",
+      tdp: "65 W",
+      videoIntegrado: "No",
+      incluyeCoolerStock: true,
+      socket: "LGA1700",
+    },
   },
   {
     id: "cpu-intel-003",
@@ -1856,6 +2125,19 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "intel",
     processor: "intel i7",
+    specs: {
+      cantidadNucleos: "12",
+      cantidadSubprocesos: "20",
+      frecuenciaBase: "2.10 GHz",
+      frecuenciaTurboMaxima: "4.90 GHz",
+      cache: "25 MB Intel® Smart Cache",
+      velocidadBus: "8 GT/s",
+      frecuenciaTurboBoost: "4.90 GHz",
+      tdp: "65 W",
+      videoIntegrado: "Intel UHD Graphics 770",
+      incluyeCoolerStock: false,
+      socket: "LGA1700",
+    },
   },
   {
     id: "cpu-intel-004",
@@ -1866,6 +2148,19 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "intel",
     processor: "intel i5",
+    specs: {
+      cantidadNucleos: "6",
+      cantidadSubprocesos: "12",
+      frecuenciaBase: "2.60 GHz",
+      frecuenciaTurboMaxima: "4.40 GHz",
+      cache: "12 MB Intel® Smart Cache",
+      velocidadBus: "8 GT/s",
+      frecuenciaTurboBoost: "4.40 GHz",
+      tdp: "65 W",
+      videoIntegrado: "Intel UHD Graphics 730",
+      incluyeCoolerStock: true,
+      socket: "LGA1200",
+    },
   },
   // Motherboards
   {
@@ -1878,6 +2173,37 @@ export const products: Product[] = [
     subcategory: "motherboards-amd",
     brand: "asrock",
     socket: "AM4",
+    specs: {
+      procesadorChipset: {
+        socket: "AM4",
+        compatibilidad: "Ryzen 3000, 4000 G, 5000 Series",
+        chipset: "AMD B550",
+      },
+      memoria: {
+        slots: "4 DDR4",
+        capacidadMaxima: "128 GB",
+        frecuencia: "4733 MHz (OC)",
+        soporte: "Dual Channel, AMD EXPO, XMP",
+      },
+      graficosIntegrados: {
+        salidas: "HDMI 2.1, DisplayPort 1.4",
+        resolucionMaxima: "4K a 60 Hz",
+      },
+      almacenamiento: {
+        m2: "2 x M.2 PCIe 4.0/3.0",
+        sata: "4 x SATA III",
+      },
+      expansionConectividad: {
+        pciExpress: "1 x PCIe 4.0 x16, 1 x PCIe 3.0 x1",
+        redInalambrica: "No",
+        lan: "Realtek Gigabit LAN",
+      },
+      puertosAudio: {
+        usb: "USB 3.2 Gen1, USB 2.0",
+        audio: "7.1 canales HD",
+        rgb: "Conectores para tiras RGB direccionables",
+      },
+    },
   },
   {
     id: "mb2",
@@ -1889,28 +2215,37 @@ export const products: Product[] = [
     subcategory: "motherboards-amd",
     brand: "gigabyte",
     socket: "AM4",
-  },
-  {
-    id: "mb3",
-    title: "MSI B550 Tomahawk",
-    image: "/products/motherboards/msi-b550-tomahawk.jpg",
-    price: "135.000",
-    slug: "msi-b550-tomahawk",
-    category: "motherboards",
-    subcategory: "motherboards-amd",
-    brand: "msi",
-    socket: "AM4",
-  },
-  {
-    id: "mb4",
-    title: "ASUS ROG Strix X570-E",
-    image: "/products/motherboards/asus-x570e.jpg",
-    price: "195.000",
-    slug: "asus-rog-strix-x570-e",
-    category: "motherboards",
-    subcategory: "motherboards-amd",
-    brand: "asus",
-    socket: "AM4",
+    specs: {
+      procesadorChipset: {
+        socket: "AM4",
+        compatibilidad: "Ryzen 3000, 4000 G, 5000 Series",
+        chipset: "AMD A520",
+      },
+      memoria: {
+        slots: "2 DDR4",
+        capacidadMaxima: "64 GB",
+        frecuencia: "4733 MHz (OC)",
+        soporte: "Dual Channel, XMP",
+      },
+      graficosIntegrados: {
+        salidas: "HDMI 2.1, DVI-D",
+        resolucionMaxima: "4K a 60 Hz",
+      },
+      almacenamiento: {
+        m2: "1 x M.2 PCIe 3.0 x4",
+        sata: "4 x SATA III",
+      },
+      expansionConectividad: {
+        pciExpress: "1 x PCIe 3.0 x16, 2 x PCIe 3.0 x1",
+        redInalambrica: "No",
+        lan: "Realtek Gigabit LAN",
+      },
+      puertosAudio: {
+        usb: "USB 3.2 Gen1, USB 2.0",
+        audio: "7.1 canales HD",
+        rgb: "No",
+      },
+    },
   },
 
   // AM5
@@ -1924,6 +2259,37 @@ export const products: Product[] = [
     subcategory: "motherboards-amd",
     brand: "asrock",
     socket: "AM5",
+    specs: {
+      procesadorChipset: {
+        socket: "AM5",
+        compatibilidad: "Ryzen 7000, 8000, 9000 Series",
+        chipset: "AMD B650",
+      },
+      memoria: {
+        slots: "4 DDR5",
+        capacidadMaxima: "256 GB",
+        frecuencia: "8200 MHz (OC)",
+        soporte: "Dual Channel, AMD EXPO, XMP",
+      },
+      graficosIntegrados: {
+        salidas: "DisplayPort 1.4, HDMI 2.1",
+        resolucionMaxima: "8K a 60 Hz",
+      },
+      almacenamiento: {
+        m2: "2 x M.2 PCIe 5.0, 2 x M.2 PCIe 4.0",
+        sata: "4 x SATA III",
+      },
+      expansionConectividad: {
+        pciExpress: "1 x PCIe 5.0 x16 reforzado, 3 x PCIe x1",
+        redInalambrica: "No",
+        lan: "Realtek 2.5GbE",
+      },
+      puertosAudio: {
+        usb: "USB 3.2 Gen2x2 Tipo C, USB 3.2 Gen2 y USB 2.0",
+        audio: "Realtek 7.1 canales",
+        rgb: "Conectores para tiras LED y RGB direccionables",
+      },
+    },
   },
   {
     id: "mb6",
@@ -1935,6 +2301,37 @@ export const products: Product[] = [
     subcategory: "motherboards-amd",
     brand: "gigabyte",
     socket: "AM5",
+    specs: {
+      procesadorChipset: {
+        socket: "AM5",
+        compatibilidad: "Ryzen 7000, 8000, 9000 Series",
+        chipset: "AMD X670",
+      },
+      memoria: {
+        slots: "4 DDR5",
+        capacidadMaxima: "256 GB",
+        frecuencia: "8200 MHz (OC)",
+        soporte: "Dual Channel, AMD EXPO, XMP",
+      },
+      graficosIntegrados: {
+        salidas: "DisplayPort 1.4, HDMI 2.1",
+        resolucionMaxima: "8K a 60 Hz",
+      },
+      almacenamiento: {
+        m2: "2 x M.2 PCIe 5.0, 2 x M.2 PCIe 4.0",
+        sata: "4 x SATA III",
+      },
+      expansionConectividad: {
+        pciExpress: "1 x PCIe 5.0 x16 reforzado, 3 x PCIe x1",
+        redInalambrica: "Wi-Fi 6E, Bluetooth 5.2",
+        lan: "Realtek 2.5GbE",
+      },
+      puertosAudio: {
+        usb: "USB 3.2 Gen2x2 Tipo C, USB 3.2 Gen2 y USB 2.0",
+        audio: "Realtek 7.1 canales",
+        rgb: "Conectores para tiras LED y RGB direccionables",
+      },
+    },
   },
   {
     id: "mb7",
@@ -1946,6 +2343,37 @@ export const products: Product[] = [
     subcategory: "motherboards-amd",
     brand: "msi",
     socket: "AM5",
+    specs: {
+      procesadorChipset: {
+        socket: "AM5",
+        compatibilidad: "Ryzen 7000, 8000, 9000 Series",
+        chipset: "AMD X670",
+      },
+      memoria: {
+        slots: "4 DDR5",
+        capacidadMaxima: "256 GB",
+        frecuencia: "8200 MHz (OC)",
+        soporte: "Dual Channel, AMD EXPO, XMP",
+      },
+      graficosIntegrados: {
+        salidas: "DisplayPort 1.4, HDMI 2.1",
+        resolucionMaxima: "8K a 60 Hz",
+      },
+      almacenamiento: {
+        m2: "2 x M.2 PCIe 5.0, 2 x M.2 PCIe 4.0",
+        sata: "4 x SATA III",
+      },
+      expansionConectividad: {
+        pciExpress: "1 x PCIe 5.0 x16 reforzado, 3 x PCIe x1",
+        redInalambrica: "Wi-Fi 6E, Bluetooth 5.2",
+        lan: "Realtek 2.5GbE",
+      },
+      puertosAudio: {
+        usb: "USB 3.2 Gen2x2 Tipo C, USB 3.2 Gen2 y USB 2.0",
+        audio: "Realtek 7.1 canales",
+        rgb: "Conectores para tiras LED y RGB direccionables",
+      },
+    },
   },
   {
     id: "mb8",
@@ -1957,6 +2385,37 @@ export const products: Product[] = [
     subcategory: "motherboards-amd",
     brand: "asus",
     socket: "AM5",
+    specs: {
+      procesadorChipset: {
+        socket: "AM5",
+        compatibilidad: "Ryzen 7000, 8000, 9000 Series",
+        chipset: "AMD B650",
+      },
+      memoria: {
+        slots: "4 DDR5",
+        capacidadMaxima: "256 GB",
+        frecuencia: "8200 MHz (OC)",
+        soporte: "Dual Channel, AMD EXPO, XMP",
+      },
+      graficosIntegrados: {
+        salidas: "DisplayPort 1.4, HDMI 2.1",
+        resolucionMaxima: "8K a 60 Hz",
+      },
+      almacenamiento: {
+        m2: "2 x M.2 PCIe 5.0, 2 x M.2 PCIe 4.0",
+        sata: "4 x SATA III",
+      },
+      expansionConectividad: {
+        pciExpress: "1 x PCIe 5.0 x16 reforzado, 3 x PCIe x1",
+        redInalambrica: "No",
+        lan: "Realtek 2.5GbE",
+      },
+      puertosAudio: {
+        usb: "USB 3.2 Gen2x2 Tipo C, USB 3.2 Gen2 y USB 2.0",
+        audio: "Realtek 7.1 canales",
+        rgb: "Conectores para tiras LED y RGB direccionables",
+      },
+    },
   },
 
   // LGA 1200
@@ -1970,6 +2429,37 @@ export const products: Product[] = [
     subcategory: "motherboards-intel",
     brand: "msi",
     socket: "LGA 1200",
+    specs: {
+      procesadorChipset: {
+        socket: "LGA 1200",
+        compatibilidad: "10ª y 11ª Gen Intel Core",
+        chipset: "Intel H510",
+      },
+      memoria: {
+        slots: "2 DDR4",
+        capacidadMaxima: "64 GB",
+        frecuencia: "3200 MHz",
+        soporte: "Dual Channel, XMP",
+      },
+      graficosIntegrados: {
+        salidas: "HDMI 1.4, D-Sub",
+        resolucionMaxima: "4096 x 2304 a 60 Hz",
+      },
+      almacenamiento: {
+        m2: "1 x M.2 PCIe 3.0 x4",
+        sata: "4 x SATA III",
+      },
+      expansionConectividad: {
+        pciExpress: "1 x PCIe 3.0 x16, 1 x PCIe 3.0 x1",
+        redInalambrica: "No",
+        lan: "Realtek 1 GbE",
+      },
+      puertosAudio: {
+        usb: "USB 3.2 Gen1 y USB 2.0",
+        audio: "Realtek ALC887 7.1 canales",
+        rgb: "No",
+      },
+    },
   },
   {
     id: "mb10",
@@ -1981,6 +2471,37 @@ export const products: Product[] = [
     subcategory: "motherboards-intel",
     brand: "asrock",
     socket: "LGA 1200",
+    specs: {
+      procesadorChipset: {
+        socket: "LGA 1200",
+        compatibilidad: "10ª y 11ª Gen Intel Core",
+        chipset: "Intel B460",
+      },
+      memoria: {
+        slots: "2 DDR4",
+        capacidadMaxima: "128 GB",
+        frecuencia: "2933 MHz",
+        soporte: "Dual Channel, XMP",
+      },
+      graficosIntegrados: {
+        salidas: "HDMI 1.4, D-Sub",
+        resolucionMaxima: "4096 x 2304 a 60 Hz",
+      },
+      almacenamiento: {
+        m2: "1 x M.2 PCIe 3.0 x4",
+        sata: "4 x SATA III",
+      },
+      expansionConectividad: {
+        pciExpress: "1 x PCIe 3.0 x16, 1 x PCIe 3.0 x1",
+        redInalambrica: "No",
+        lan: "Intel I219V 1 GbE",
+      },
+      puertosAudio: {
+        usb: "USB 3.2 Gen1 y USB 2.0",
+        audio: "Realtek ALC887 7.1 canales",
+        rgb: "No",
+      },
+    },
   },
   {
     id: "mb11",
@@ -1992,6 +2513,37 @@ export const products: Product[] = [
     subcategory: "motherboards-intel",
     brand: "gigabyte",
     socket: "LGA 1200",
+    specs: {
+      procesadorChipset: {
+        socket: "LGA 1200",
+        compatibilidad: "10ª y 11ª Gen Intel Core",
+        chipset: "Intel B460",
+      },
+      memoria: {
+        slots: "4 DDR4",
+        capacidadMaxima: "128 GB",
+        frecuencia: "2933 MHz",
+        soporte: "Dual Channel, XMP",
+      },
+      graficosIntegrados: {
+        salidas: "HDMI 1.4, D-Sub, DisplayPort 1.2",
+        resolucionMaxima: "4096 x 2304 a 60 Hz",
+      },
+      almacenamiento: {
+        m2: "1 x M.2 PCIe 3.0 x4",
+        sata: "6 x SATA III",
+      },
+      expansionConectividad: {
+        pciExpress: "1 x PCIe 3.0 x16, 2 x PCIe 3.0 x1",
+        redInalambrica: "No",
+        lan: "Realtek 1 GbE",
+      },
+      puertosAudio: {
+        usb: "USB 3.2 Gen1 y USB 2.0",
+        audio: "Realtek ALC892 7.1 canales",
+        rgb: "No",
+      },
+    },
   },
   {
     id: "mb12",
@@ -2003,9 +2555,39 @@ export const products: Product[] = [
     subcategory: "motherboards-intel",
     brand: "asus",
     socket: "LGA 1200",
+    specs: {
+      procesadorChipset: {
+        socket: "LGA 1200",
+        compatibilidad: "10ª y 11ª Gen Intel Core",
+        chipset: "Intel H510",
+      },
+      memoria: {
+        slots: "2 DDR4",
+        capacidadMaxima: "64 GB",
+        frecuencia: "3200 MHz",
+        soporte: "Dual Channel, XMP",
+      },
+      graficosIntegrados: {
+        salidas: "HDMI 1.4, D-Sub",
+        resolucionMaxima: "4096 x 2304 a 60 Hz",
+      },
+      almacenamiento: {
+        m2: "1 x M.2 PCIe 3.0 x4",
+        sata: "4 x SATA III",
+      },
+      expansionConectividad: {
+        pciExpress: "1 x PCIe 3.0 x16, 1 x PCIe 3.0 x1",
+        redInalambrica: "No",
+        lan: "Realtek 1 GbE",
+      },
+      puertosAudio: {
+        usb: "USB 3.2 Gen1 y USB 2.0",
+        audio: "Realtek ALC887 7.1 canales",
+        rgb: "No",
+      },
+    },
   },
-
-  // LGA 1700
+  //lga 1700
   {
     id: "mb13",
     title: "Gigabyte B660M DS3H",
@@ -2016,6 +2598,37 @@ export const products: Product[] = [
     subcategory: "motherboards-intel",
     brand: "gigabyte",
     socket: "LGA 1700",
+    specs: {
+      procesadorChipset: {
+        socket: "LGA 1700",
+        compatibilidad: "12ª Gen Intel Core",
+        chipset: "Intel B660",
+      },
+      memoria: {
+        slots: "4 DDR4",
+        capacidadMaxima: "128 GB",
+        frecuencia: "3200 MHz",
+        soporte: "Dual Channel, XMP",
+      },
+      graficosIntegrados: {
+        salidas: "HDMI 2.1, DisplayPort 1.4",
+        resolucionMaxima: "4096 x 2304 a 60 Hz",
+      },
+      almacenamiento: {
+        m2: "2 x M.2 PCIe 4.0 x4",
+        sata: "4 x SATA III",
+      },
+      expansionConectividad: {
+        pciExpress: "1 x PCIe 4.0 x16, 2 x PCIe 3.0 x1",
+        redInalambrica: "No",
+        lan: "Realtek 2.5 GbE",
+      },
+      puertosAudio: {
+        usb: "USB 3.2 Gen2 y USB 2.0",
+        audio: "Realtek ALC897 7.1 canales",
+        rgb: "No",
+      },
+    },
   },
   {
     id: "mb14",
@@ -2027,6 +2640,37 @@ export const products: Product[] = [
     subcategory: "motherboards-intel",
     brand: "asus",
     socket: "LGA 1700",
+    specs: {
+      procesadorChipset: {
+        socket: "LGA 1700",
+        compatibilidad: "12ª y 13ª Gen Intel Core",
+        chipset: "Intel Z790",
+      },
+      memoria: {
+        slots: "4 DDR5",
+        capacidadMaxima: "128 GB",
+        frecuencia: "5600 MHz",
+        soporte: "Dual Channel, XMP",
+      },
+      graficosIntegrados: {
+        salidas: "HDMI 2.1, DisplayPort 1.4",
+        resolucionMaxima: "7680 x 4320 (8K) a 60 Hz",
+      },
+      almacenamiento: {
+        m2: "3 x M.2 PCIe 4.0/5.0 x4",
+        sata: "6 x SATA III",
+      },
+      expansionConectividad: {
+        pciExpress: "1 x PCIe 5.0 x16, 2 x PCIe 3.0 x1",
+        redInalambrica: "No",
+        lan: "Intel 2.5 GbE",
+      },
+      puertosAudio: {
+        usb: "USB 3.2 Gen2x2, Gen2 y USB 2.0",
+        audio: "Realtek ALC897 7.1 canales",
+        rgb: "No",
+      },
+    },
   },
   {
     id: "mb15",
@@ -2038,6 +2682,37 @@ export const products: Product[] = [
     subcategory: "motherboards-intel",
     brand: "msi",
     socket: "LGA 1700",
+    specs: {
+      procesadorChipset: {
+        socket: "LGA 1700",
+        compatibilidad: "12ª y 13ª Gen Intel Core",
+        chipset: "Intel B760",
+      },
+      memoria: {
+        slots: "4 DDR4",
+        capacidadMaxima: "128 GB",
+        frecuencia: "3200 MHz",
+        soporte: "Dual Channel, XMP",
+      },
+      graficosIntegrados: {
+        salidas: "HDMI 2.1, DisplayPort 1.4",
+        resolucionMaxima: "4096 x 2304 a 60 Hz",
+      },
+      almacenamiento: {
+        m2: "2 x M.2 PCIe 4.0 x4",
+        sata: "6 x SATA III",
+      },
+      expansionConectividad: {
+        pciExpress: "1 x PCIe 4.0 x16, 2 x PCIe 3.0 x1",
+        redInalambrica: "No",
+        lan: "Realtek 2.5 GbE",
+      },
+      puertosAudio: {
+        usb: "USB 3.2 Gen1 y USB 2.0",
+        audio: "Realtek ALC897 7.1 canales",
+        rgb: "No",
+      },
+    },
   },
   {
     id: "mb16",
@@ -2049,6 +2724,37 @@ export const products: Product[] = [
     subcategory: "motherboards-intel",
     brand: "asrock",
     socket: "LGA 1700",
+    specs: {
+      procesadorChipset: {
+        socket: "LGA 1700",
+        compatibilidad: "12ª y 13ª Gen Intel Core",
+        chipset: "Intel Z790",
+      },
+      memoria: {
+        slots: "4 DDR5",
+        capacidadMaxima: "128 GB",
+        frecuencia: "5600 MHz",
+        soporte: "Dual Channel, XMP",
+      },
+      graficosIntegrados: {
+        salidas: "HDMI 2.1, DisplayPort 1.4",
+        resolucionMaxima: "7680 x 4320 (8K) a 60 Hz",
+      },
+      almacenamiento: {
+        m2: "4 x M.2 PCIe 4.0/5.0 x4",
+        sata: "6 x SATA III",
+      },
+      expansionConectividad: {
+        pciExpress: "1 x PCIe 5.0 x16, 2 x PCIe 3.0 x1",
+        redInalambrica: "Wi-Fi 6E 802.11ax, Bluetooth 5.3",
+        lan: "Intel 2.5 GbE",
+      },
+      puertosAudio: {
+        usb: "USB 3.2 Gen2x2, Gen2 y USB 2.0",
+        audio: "Realtek ALC897 7.1 canales",
+        rgb: "Sí, direccionable",
+      },
+    },
   },
 
   // Gabinetes
@@ -2061,6 +2767,39 @@ export const products: Product[] = [
     category: "gabinetes",
     subcategory: "mini-tower",
     brand: "thermaltake",
+    specs: {
+      diseñoYCompatibilidad: {
+        tipo: "Mini Tower",
+        material: "SPCC, plástico",
+        soporteDePlacasBase: "Micro-ATX, Mini-ITX",
+        slotsDeExpansion: 4,
+      },
+      ventilacionRefrigeracion: {
+        soporteRadiadores: "Frontal: 120 mm / Trasero: 120 mm",
+        soporteVentiladores: {
+          superior: "1 x 120 mm",
+          frontal: "1 x 120 mm",
+          trasero: "1 x 120 mm",
+        },
+        ventiladoresPreinstalados: {
+          frontal: "No",
+          trasero: "1 x 120 mm",
+        },
+      },
+      almacenamientoConectividad: {
+        bahiasAlmacenamiento: '2 x 3.5", 2 x 2.5"',
+        puertosConexion: "USB 3.0 x1, USB 2.0 x1, HD Audio",
+      },
+      dimensionesEspacioInterno: {
+        dimensiones: "378 x 198 x 411 mm",
+        peso: "3.5 kg",
+        limitaciones: {
+          alturaDisipadorCPU: "155 mm",
+          longitudTarjetaGrafica: "315 mm",
+          longitudFuenteAlimentacion: "150 mm",
+        },
+      },
+    },
   },
   {
     id: "case2",
@@ -2071,6 +2810,39 @@ export const products: Product[] = [
     category: "gabinetes",
     subcategory: "mini-tower",
     brand: "cooler master",
+    specs: {
+      diseñoYCompatibilidad: {
+        tipo: "Mini Tower",
+        material: "Malla metálica, acero",
+        soporteDePlacasBase: "Mini-ITX",
+        slotsDeExpansion: 2,
+      },
+      ventilacionRefrigeracion: {
+        soporteRadiadores: "Frontal: 120 mm",
+        soporteVentiladores: {
+          superior: "No",
+          frontal: "1 x 120 mm",
+          trasero: "No",
+        },
+        ventiladoresPreinstalados: {
+          frontal: "1 x 120 mm",
+          trasero: "No",
+        },
+      },
+      almacenamientoConectividad: {
+        bahiasAlmacenamiento: '3 x 3.5", 4 x 2.5"',
+        puertosConexion: "USB 3.0 x2, Audio",
+      },
+      dimensionesEspacioInterno: {
+        dimensiones: "260 x 208 x 280 mm",
+        peso: "2.7 kg",
+        limitaciones: {
+          alturaDisipadorCPU: "76 mm",
+          longitudTarjetaGrafica: "210 mm",
+          longitudFuenteAlimentacion: "180 mm",
+        },
+      },
+    },
   },
   {
     id: "case3",
@@ -2081,6 +2853,39 @@ export const products: Product[] = [
     category: "gabinetes",
     subcategory: "mini-tower",
     brand: "corsair",
+    specs: {
+      diseñoYCompatibilidad: {
+        tipo: "Mini Tower",
+        material: "Acero, plástico",
+        soporteDePlacasBase: "Micro-ATX, Mini-ITX",
+        slotsDeExpansion: 4,
+      },
+      ventilacionRefrigeracion: {
+        soporteRadiadores: "Frontal: 240 mm / Trasero: 120 mm",
+        soporteVentiladores: {
+          superior: "No",
+          frontal: "2 x 120 mm",
+          trasero: "1 x 120 mm",
+        },
+        ventiladoresPreinstalados: {
+          frontal: "No",
+          trasero: "1 x 120 mm",
+        },
+      },
+      almacenamientoConectividad: {
+        bahiasAlmacenamiento: '1 x 3.5", 2 x 2.5"',
+        puertosConexion: "USB 3.0 x1, USB 2.0 x1, Audio",
+      },
+      dimensionesEspacioInterno: {
+        dimensiones: "378 x 198 x 423 mm",
+        peso: "3.7 kg",
+        limitaciones: {
+          alturaDisipadorCPU: "150 mm",
+          longitudTarjetaGrafica: "383 mm",
+          longitudFuenteAlimentacion: "160 mm",
+        },
+      },
+    },
   },
   {
     id: "case4",
@@ -2091,6 +2896,39 @@ export const products: Product[] = [
     category: "gabinetes",
     subcategory: "mini-tower",
     brand: "nzxt",
+    specs: {
+      diseñoYCompatibilidad: {
+        tipo: "Mini Tower",
+        material: "Acero, vidrio templado",
+        soporteDePlacasBase: "Mini-ITX",
+        slotsDeExpansion: 2,
+      },
+      ventilacionRefrigeracion: {
+        soporteRadiadores: "Frontal: 240 mm / Trasero: 120 mm",
+        soporteVentiladores: {
+          superior: "1 x 120 mm",
+          frontal: "2 x 120 mm",
+          trasero: "1 x 120 mm",
+        },
+        ventiladoresPreinstalados: {
+          frontal: "2 x 120 mm",
+          trasero: "1 x 120 mm",
+        },
+      },
+      almacenamientoConectividad: {
+        bahiasAlmacenamiento: '1 x 3.5", 2 x 2.5"',
+        puertosConexion: "USB 3.1 Gen1 x1, USB-C x1, HD Audio",
+      },
+      dimensionesEspacioInterno: {
+        dimensiones: "349 x 210 x 372 mm",
+        peso: "5.9 kg",
+        limitaciones: {
+          alturaDisipadorCPU: "165 mm",
+          longitudTarjetaGrafica: "325 mm",
+          longitudFuenteAlimentacion: "311 mm",
+        },
+      },
+    },
   },
 
   // MID TOWER
@@ -2103,6 +2941,39 @@ export const products: Product[] = [
     category: "gabinetes",
     subcategory: "mid-tower",
     brand: "cooler master",
+    specs: {
+      diseñoYCompatibilidad: {
+        tipo: "Mid Tower",
+        material: "SPCC y vidrio templado",
+        soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
+        slotsDeExpansion: 7,
+      },
+      ventilacionRefrigeracion: {
+        soporteRadiadores: "Frontal: 240 mm / Trasero: 120 mm",
+        soporteVentiladores: {
+          superior: "No",
+          frontal: "2 x 120 mm",
+          trasero: "1 x 120 mm",
+        },
+        ventiladoresPreinstalados: {
+          frontal: "1 x 120 mm",
+          trasero: "1 x 120 mm",
+        },
+      },
+      almacenamientoConectividad: {
+        bahiasAlmacenamiento: '1 x 3.5", 2 x 2.5"',
+        puertosConexion: "USB 3.0 x2, USB 2.0 x1, Audio HD",
+      },
+      dimensionesEspacioInterno: {
+        dimensiones: "387 x 230 x 378 mm",
+        peso: "4.2 kg",
+        limitaciones: {
+          alturaDisipadorCPU: "159 mm",
+          longitudTarjetaGrafica: "360 mm",
+          longitudFuenteAlimentacion: "160 mm",
+        },
+      },
+    },
   },
   {
     id: "case6",
@@ -2113,6 +2984,40 @@ export const products: Product[] = [
     category: "gabinetes",
     subcategory: "mid-tower",
     brand: "corsair",
+    specs: {
+      diseñoYCompatibilidad: {
+        tipo: "Mid Tower",
+        material: "Acero, vidrio templado",
+        soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
+        slotsDeExpansion: 7,
+      },
+      ventilacionRefrigeracion: {
+        soporteRadiadores:
+          "Frontal: 360 mm / Trasero: 120 mm / Superior: 120 mm",
+        soporteVentiladores: {
+          superior: "1 x 120 mm",
+          frontal: "3 x 120 mm",
+          trasero: "1 x 120 mm",
+        },
+        ventiladoresPreinstalados: {
+          frontal: "2 x 120 mm",
+          trasero: "1 x 120 mm",
+        },
+      },
+      almacenamientoConectividad: {
+        bahiasAlmacenamiento: '2 x 3.5", 3 x 2.5"',
+        puertosConexion: "USB 3.1 x2, USB 2.0 x1, Audio HD",
+      },
+      dimensionesEspacioInterno: {
+        dimensiones: "453 x 230 x 466 mm",
+        peso: "6.63 kg",
+        limitaciones: {
+          alturaDisipadorCPU: "170 mm",
+          longitudTarjetaGrafica: "360 mm",
+          longitudFuenteAlimentacion: "180 mm",
+        },
+      },
+    },
   },
   {
     id: "case7",
@@ -2123,6 +3028,39 @@ export const products: Product[] = [
     category: "gabinetes",
     subcategory: "mid-tower",
     brand: "nzxt",
+    specs: {
+      diseñoYCompatibilidad: {
+        tipo: "Mid Tower",
+        material: "Acero, vidrio templado",
+        soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
+        slotsDeExpansion: 7,
+      },
+      ventilacionRefrigeracion: {
+        soporteRadiadores: "Frontal: 280 mm / Trasero: 120 mm",
+        soporteVentiladores: {
+          superior: "No",
+          frontal: "2 x 120 mm",
+          trasero: "1 x 120 mm",
+        },
+        ventiladoresPreinstalados: {
+          frontal: "1 x 120 mm",
+          trasero: "1 x 120 mm",
+        },
+      },
+      almacenamientoConectividad: {
+        bahiasAlmacenamiento: '2 x 3.5", 3 x 2.5"',
+        puertosConexion: "USB 3.1 Gen 2 x1, USB 3.1 Gen 1 x1, Audio HD",
+      },
+      dimensionesEspacioInterno: {
+        dimensiones: "428 x 210 x 460 mm",
+        peso: "6.8 kg",
+        limitaciones: {
+          alturaDisipadorCPU: "165 mm",
+          longitudTarjetaGrafica: "381 mm",
+          longitudFuenteAlimentacion: "180 mm",
+        },
+      },
+    },
   },
   {
     id: "case8",
@@ -2133,6 +3071,39 @@ export const products: Product[] = [
     category: "gabinetes",
     subcategory: "mid-tower",
     brand: "thermaltake",
+    specs: {
+      diseñoYCompatibilidad: {
+        tipo: "Mid Tower",
+        material: "Acero, vidrio templado",
+        soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
+        slotsDeExpansion: 7,
+      },
+      ventilacionRefrigeracion: {
+        soporteRadiadores: "Frontal: 360 mm / Trasero: 120 mm",
+        soporteVentiladores: {
+          superior: "1 x 120 mm",
+          frontal: "3 x 120 mm",
+          trasero: "1 x 120 mm",
+        },
+        ventiladoresPreinstalados: {
+          frontal: "2 x 120 mm ARGB",
+          trasero: "1 x 120 mm ARGB",
+        },
+      },
+      almacenamientoConectividad: {
+        bahiasAlmacenamiento: '2 x 3.5", 2 x 2.5"',
+        puertosConexion: "USB 3.0 x2, USB 2.0 x2, Audio HD",
+      },
+      dimensionesEspacioInterno: {
+        dimensiones: "470 x 210 x 450 mm",
+        peso: "7.5 kg",
+        limitaciones: {
+          alturaDisipadorCPU: "165 mm",
+          longitudTarjetaGrafica: "350 mm",
+          longitudFuenteAlimentacion: "180 mm",
+        },
+      },
+    },
   },
 
   // FULL TOWER
@@ -2145,6 +3116,39 @@ export const products: Product[] = [
     category: "gabinetes",
     subcategory: "full-tower",
     brand: "corsair",
+    specs: {
+      diseñoYCompatibilidad: {
+        tipo: "Mid Tower",
+        material: "SPCC, ABS y vidrio templado",
+        soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
+        slotsDeExpansion: 7,
+      },
+      ventilacionRefrigeracion: {
+        soporteRadiadores: "Frontal: 360 mm / Trasero: 120 mm",
+        soporteVentiladores: {
+          superior: "2 x 120 mm",
+          frontal: "3 x 120 mm o 2 x 140 mm",
+          trasero: "1 x 120 mm",
+        },
+        ventiladoresPreinstalados: {
+          frontal: "3 x 120 mm ARGB",
+          trasero: "1 x 120 mm ARGB",
+        },
+      },
+      almacenamientoConectividad: {
+        bahiasAlmacenamiento: `2 x 3.5" o 1 x 3.5" + 1 x 2.5", 2 x 2.5"`,
+        puertosConexion: "USB 3.0 x1, USB 2.0 x2, HD Audio x1, Reset x1",
+      },
+      dimensionesEspacioInterno: {
+        dimensiones: "395 x 195 x 450 mm (15.5 x 7.7 x 17.8 in)",
+        peso: "4.9 kg",
+        limitaciones: {
+          alturaDisipadorCPU: "160 mm",
+          longitudTarjetaGrafica: "340 mm",
+          longitudFuenteAlimentacion: "160 mm",
+        },
+      },
+    },
   },
   {
     id: "case10",
@@ -2155,6 +3159,39 @@ export const products: Product[] = [
     category: "gabinetes",
     subcategory: "full-tower",
     brand: "cooler master",
+    specs: {
+      diseñoYCompatibilidad: {
+        tipo: "Mid Tower",
+        material: "SPCC, ABS y vidrio templado",
+        soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
+        slotsDeExpansion: 7,
+      },
+      ventilacionRefrigeracion: {
+        soporteRadiadores: "Frontal: 360 mm / Trasero: 120 mm",
+        soporteVentiladores: {
+          superior: "2 x 120 mm",
+          frontal: "3 x 120 mm o 2 x 140 mm",
+          trasero: "1 x 120 mm",
+        },
+        ventiladoresPreinstalados: {
+          frontal: "3 x 120 mm ARGB",
+          trasero: "1 x 120 mm ARGB",
+        },
+      },
+      almacenamientoConectividad: {
+        bahiasAlmacenamiento: `2 x 3.5" o 1 x 3.5" + 1 x 2.5", 2 x 2.5"`,
+        puertosConexion: "USB 3.0 x1, USB 2.0 x2, HD Audio x1, Reset x1",
+      },
+      dimensionesEspacioInterno: {
+        dimensiones: "395 x 195 x 450 mm (15.5 x 7.7 x 17.8 in)",
+        peso: "4.9 kg",
+        limitaciones: {
+          alturaDisipadorCPU: "160 mm",
+          longitudTarjetaGrafica: "340 mm",
+          longitudFuenteAlimentacion: "160 mm",
+        },
+      },
+    },
   },
   {
     id: "case11",
@@ -2165,6 +3202,39 @@ export const products: Product[] = [
     category: "gabinetes",
     subcategory: "full-tower",
     brand: "thermaltake",
+    specs: {
+      diseñoYCompatibilidad: {
+        tipo: "Mid Tower",
+        material: "SPCC, ABS y vidrio templado",
+        soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
+        slotsDeExpansion: 7,
+      },
+      ventilacionRefrigeracion: {
+        soporteRadiadores: "Frontal: 360 mm / Trasero: 120 mm",
+        soporteVentiladores: {
+          superior: "2 x 120 mm",
+          frontal: "3 x 120 mm o 2 x 140 mm",
+          trasero: "1 x 120 mm",
+        },
+        ventiladoresPreinstalados: {
+          frontal: "3 x 120 mm ARGB",
+          trasero: "1 x 120 mm ARGB",
+        },
+      },
+      almacenamientoConectividad: {
+        bahiasAlmacenamiento: `2 x 3.5" o 1 x 3.5" + 1 x 2.5", 2 x 2.5"`,
+        puertosConexion: "USB 3.0 x1, USB 2.0 x2, HD Audio x1, Reset x1",
+      },
+      dimensionesEspacioInterno: {
+        dimensiones: "395 x 195 x 450 mm (15.5 x 7.7 x 17.8 in)",
+        peso: "4.9 kg",
+        limitaciones: {
+          alturaDisipadorCPU: "160 mm",
+          longitudTarjetaGrafica: "340 mm",
+          longitudFuenteAlimentacion: "160 mm",
+        },
+      },
+    },
   },
   {
     id: "case12",
@@ -2175,5 +3245,38 @@ export const products: Product[] = [
     category: "gabinetes",
     subcategory: "full-tower",
     brand: "nzxt",
+    specs: {
+      diseñoYCompatibilidad: {
+        tipo: "Mid Tower",
+        material: "SPCC, ABS y vidrio templado",
+        soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
+        slotsDeExpansion: 7,
+      },
+      ventilacionRefrigeracion: {
+        soporteRadiadores: "Frontal: 360 mm / Trasero: 120 mm",
+        soporteVentiladores: {
+          superior: "2 x 120 mm",
+          frontal: "3 x 120 mm o 2 x 140 mm",
+          trasero: "1 x 120 mm",
+        },
+        ventiladoresPreinstalados: {
+          frontal: "3 x 120 mm ARGB",
+          trasero: "1 x 120 mm ARGB",
+        },
+      },
+      almacenamientoConectividad: {
+        bahiasAlmacenamiento: `2 x 3.5" o 1 x 3.5" + 1 x 2.5", 2 x 2.5"`,
+        puertosConexion: "USB 3.0 x1, USB 2.0 x2, HD Audio x1, Reset x1",
+      },
+      dimensionesEspacioInterno: {
+        dimensiones: "395 x 195 x 450 mm (15.5 x 7.7 x 17.8 in)",
+        peso: "4.9 kg",
+        limitaciones: {
+          alturaDisipadorCPU: "160 mm",
+          longitudTarjetaGrafica: "340 mm",
+          longitudFuenteAlimentacion: "160 mm",
+        },
+      },
+    },
   },
 ];
