@@ -17,7 +17,6 @@ export function FilterSidebar({
   const searchParams = useSearchParams();
   const basePath = subcategory ? `/${category}/${subcategory}` : `/${category}`;
 
-
   const getLinkWithParam = (key: string, value: string) => {
     const params = new URLSearchParams(searchParams.toString());
     params.set(key, value);
@@ -63,23 +62,15 @@ export function FilterSidebar({
           values: readonly string[];
         }) => {
           const current = searchParams.get(field as string);
+          console.log(values)
 
           return (
             <div key={String(field)}>
               <h2 className="text-xl font-bold mb-2">{label}</h2>
               <ul className="space-y-2">
                 {values.map((val) => (
+                  
                   <li key={val} className="capitalize">
-                    {/* <Link
-                      href={getLinkWithParam(field as string, val)}
-                      className={`hover:underline ${
-                        current === val
-                          ? "text-accent font-semibold"
-                          : "text-text-tertiary font-medium"
-                      }`}
-                    >
-                      {val}
-                    </Link> */}
                     <Link
                       href={getLinkWithParam(field as string, val)}
                       scroll={false}

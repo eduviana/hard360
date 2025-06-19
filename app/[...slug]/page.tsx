@@ -9,7 +9,7 @@ import { Category, filtersByCategory } from "../data/types";
 
 interface PageProps {
   params: Promise<{ slug: string[] }>; // corregido si estás usando promesa
-  searchParams?: Record<string, string>;
+  searchParams?: Promise<Record<string, string>>;
 }
 
 export async function generateMetadata({
@@ -26,6 +26,7 @@ export async function generateMetadata({
 
 export default async function Page({ params, searchParams }: PageProps) {
   const { slug } = await params;
+  const resolvedSearchParams = await searchParams;
 
   if (slug.length < 1 || slug.length > 3) return notFound();
 
@@ -52,22 +53,26 @@ export default async function Page({ params, searchParams }: PageProps) {
     }
 
     // Filtros dinámicos
-    const categoryFilters = filtersByCategory[category as Category];
-    if (categoryFilters && searchParams) {
-      for (const filter of categoryFilters) {
-        const value = searchParams[filter.field as string];
-        if (value) {
-          filteredProducts = filteredProducts.filter(
-            (p) => p[filter.field] === value
-          );
-        }
+ const categoryFilters = filtersByCategory[category as Category];
+  if (categoryFilters && resolvedSearchParams) {
+    for (const filter of categoryFilters) {
+      const value = resolvedSearchParams[filter.field as string];
+      if (value) {
+        filteredProducts = filteredProducts.filter(
+          (p) => p[filter.field] === value
+        );
       }
     }
+  }
+
+  console.log(categoryFilters, "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP")
 
     // Subcategorías únicas
     const subcategories = [
       ...new Set(categoryProducts.map((p) => p.subcategory)),
     ];
+
+    console.log(filteredProducts, "asdasdsd")
 
     return (
       <section className="custom-container py-16">

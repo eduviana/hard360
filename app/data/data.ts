@@ -757,6 +757,7 @@ export const products: Product[] = [
     category: "almacenamiento",
     subcategory: "disco-externo",
     brand: "seagate",
+    storageSize: "2tb",
     specs: {
       capacidad: "2 TB",
       tipo: "HDD",
@@ -783,6 +784,7 @@ export const products: Product[] = [
     category: "almacenamiento",
     subcategory: "disco-externo",
     brand: "western digital",
+    storageSize: "1tb",
     specs: {
       capacidad: "1 TB",
       tipo: "HDD",
@@ -802,13 +804,14 @@ export const products: Product[] = [
   },
   {
     id: "ext-003",
-    title: "Disco Externo Samsung T7 500GB SSD",
+    title: "Disco Externo Samsung T7 512GB SSD",
     image: "/products/samsung-t7-500gb.jpg",
     price: "159999",
     slug: "disco-externo-samsung-t7-500gb",
     category: "almacenamiento",
     subcategory: "disco-externo",
     brand: "samsung",
+    storageSize: "512gb",
     specs: {
       capacidad: "500 GB",
       tipo: "SSD",
@@ -835,6 +838,7 @@ export const products: Product[] = [
     category: "almacenamiento",
     subcategory: "disco-externo",
     brand: "sandisk",
+    storageSize: "1tb",
     specs: {
       capacidad: "1 TB",
       tipo: "SSD",
