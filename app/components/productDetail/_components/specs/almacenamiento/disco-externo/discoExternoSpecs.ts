@@ -1,0 +1,16 @@
+export type DiscoExternoSpecs = {
+  capacidad: string;            // Ej: "1 TB"
+  tipo: string;                // Ej: "HDD", "SSD"
+  interfaz: string;            // Ej: "USB 3.0", "USB-C"
+  formato: string;             // Ej: "2.5\"", "3.5\""
+  alimentacion: string;        // Ej: "USB", "Fuente externa"
+  compatibilidad: string;      // Ej: "Windows, macOS"
+  resistenciaGolpes: string;   // Ej: "Resistente a golpes hasta 1.2m"
+  cifrado: string;             // Ej: "AES de 256 bits", "No"
+  velocidadLectura: string;    // Ej: "1050 MB/s"
+  velocidadEscritura: string;  // Ej: "1000 MB/s"
+  cache: string;               // Ej: "512MB DRAM", "No DRAM"
+  tbw: string;                // Ej: "600 TBW"
+  mtbf: string;               // Ej: "1.5 millones de horas"
+  consumo: string;            // Ej: "4.0W"
+};

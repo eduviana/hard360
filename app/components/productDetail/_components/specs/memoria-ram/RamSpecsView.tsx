@@ -1,6 +1,6 @@
 import { MdMemory } from "react-icons/md";
 import SpecsSection from "../SpecsSection";
-import { RamSpecs } from "@/app/data/ram-specs/ramSpecs";
+import { RamSpecs } from "@/app/components/productDetail/_components/specs/memoria-ram/ramSpecs";
 
 
 export default function RamSpecsView({ specs }: { specs: RamSpecs }) {

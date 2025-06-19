@@ -1,7 +1,17 @@
-import { NotebookSpecs } from "./notebook-specs/notebookSpecs";
-import { PcSpecs } from "./pc-specs/pcSpecs";
-import { RamSpecs } from "./ram-specs/ramSpecs";
-
+import { DiscoExternoSpecs } from "../components/productDetail/_components/specs/almacenamiento/disco-externo/discoExternoSpecs";
+import { HddSpecs } from "../components/productDetail/_components/specs/almacenamiento/hdd/hddSpecs";
+import { SsdM2Specs } from "../components/productDetail/_components/specs/almacenamiento/ssd-m2/ssdM2Specs";
+import { SsdSpecs } from "../components/productDetail/_components/specs/almacenamiento/ssd/ssdSpecs";
+import { ComboAmdSpecs } from "../components/productDetail/_components/specs/combos-actualizacion/combo-amd/comboAmdSpecs";
+import { ComboIntelSpecs } from "../components/productDetail/_components/specs/combos-actualizacion/combo-intel/comboIntelSpecs";
+import { GabineteYFuenteSpecs } from "../components/productDetail/_components/specs/combos-actualizacion/gabinete-y-fuente/gabineteYfuenteSpecs";
+import { NotebookSpecs } from "../components/productDetail/_components/specs/equipos/notebooks/notebookSpecs";
+import { PcSpecs } from "../components/productDetail/_components/specs/equipos/pcs-de-escritorio/pcSpecs";
+import { RamSpecs } from "../components/productDetail/_components/specs/memoria-ram/ramSpecs";
+import { AirCoolingSpecs } from "../components/productDetail/_components/specs/refrigeracion/air-cooling/airCoolingSpecs";
+import { FanCoolerSpecs } from "../components/productDetail/_components/specs/refrigeracion/fan-cooler/fanCoolerSpecs";
+import { PastaTermicaSpecs } from "../components/productDetail/_components/specs/refrigeracion/pasta-termica/pastaTermicaSpecs";
+import { WaterCoolingSpecs } from "../components/productDetail/_components/specs/refrigeracion/water-cooling/waterCoolingSpecs";
 
 export const categories = [
   "equipos",
@@ -75,15 +85,14 @@ export const storageBrands = [
   "kingston",
   "seagate",
   "western digital",
+  "hitachi",
+  "toshiba",
+  "adata",
+  "sandisk"
 ] as const;
 export type StorageBrand = (typeof storageBrands)[number];
 
-export const motherboardBrands = [
-  "asus",
-  "msi",
-  "gigabyte",
-  "asrock"
-] as const;
+export const motherboardBrands = ["asus", "msi", "gigabyte", "asrock"] as const;
 
 export type MotherboardBrand = (typeof motherboardBrands)[number];
 
@@ -96,8 +105,6 @@ export const brands = [
   ...motherboardBrands,
 ] as const;
 export type Brand = (typeof brands)[number];
-
-
 
 // ==============================
 // Especificaciones Técnicas
@@ -125,13 +132,23 @@ export type RamVersion = (typeof ramVersions)[number];
 export const screenSizes = ["14", "15.6", "16"] as const;
 export type ScreenSize = (typeof screenSizes)[number];
 
-export const storageSizes = ["240gb", "480gb", "1tb", "2tb"] as const;
+export const storageSizes = [
+  "240gb",
+  "480gb",
+  "512gb",
+  "1tb",
+  "2tb",
+  "4tb",
+] as const;
 export type StorageSize = (typeof storageSizes)[number];
 
-export const motherboardSockets = ["AM4", "AM5", "LGA 1200", "LGA 1700"] as const;
+export const motherboardSockets = [
+  "AM4",
+  "AM5",
+  "LGA 1200",
+  "LGA 1700",
+] as const;
 export type MotherboardSocket = (typeof motherboardSockets)[number];
-
-
 
 // ==============================
 // Producto
@@ -155,8 +172,22 @@ export type Product = {
   panelType?: PanelType;
   socket?: MotherboardSocket;
 
-   // 👇 Nueva propiedad
-  specs?: NotebookSpecs | PcSpecs | RamSpecs;
+  // 👇 Nueva propiedad
+  specs?:
+    | NotebookSpecs
+    | PcSpecs
+    | RamSpecs
+    | AirCoolingSpecs
+    | WaterCoolingSpecs
+    | PastaTermicaSpecs
+    | FanCoolerSpecs
+    | ComboAmdSpecs
+    | ComboIntelSpecs
+    | GabineteYFuenteSpecs
+    | HddSpecs
+    | SsdSpecs
+    | SsdM2Specs
+    | DiscoExternoSpecs;
 };
 
 export const filtersByCategory: {
@@ -246,17 +277,17 @@ export const filtersByCategory: {
     },
   ],
   motherboards: [
-  {
-    label: "Socket",
-    field: "socket",
-    values: motherboardSockets,
-    activeFilter: (val) => val.toUpperCase(), // AM4, LGA 1200, etc.
-  },
-  {
-    label: "Marca",
-    field: "brand",
-    values: motherboardBrands,
-    activeFilter: (val) => val, // se muestra tal cual: asus, msi, etc.
-  },
-],
+    {
+      label: "Socket",
+      field: "socket",
+      values: motherboardSockets,
+      activeFilter: (val) => val.toUpperCase(), // AM4, LGA 1200, etc.
+    },
+    {
+      label: "Marca",
+      field: "brand",
+      values: motherboardBrands,
+      activeFilter: (val) => val, // se muestra tal cual: asus, msi, etc.
+    },
+  ],
 };

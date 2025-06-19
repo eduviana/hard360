@@ -1,4 +1,4 @@
-import { NotebookSpecs } from "@/app/data/notebook-specs/notebookSpecs";
+import { NotebookSpecs } from "@/app/components/productDetail/_components/specs/equipos/notebooks/notebookSpecs";
 import {
   MdMemory,
   MdStorage,
@@ -10,7 +10,8 @@ import {
   MdVerified,
 } from "react-icons/md";
 import { FaWindows } from "react-icons/fa";
-import SpecsSection from "../SpecsSection";
+import SpecsSection from "../../SpecsSection";
+
 
 export default function NotebookSpecsView({ specs }: { specs: NotebookSpecs }) {
   return (

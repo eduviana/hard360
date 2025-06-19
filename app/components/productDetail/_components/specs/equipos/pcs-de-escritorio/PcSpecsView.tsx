@@ -1,17 +1,8 @@
-import { PcSpecs } from "@/app/data/pc-specs/pcSpecs";
+import { PcSpecs } from "@/app/components/productDetail/_components/specs/equipos/pcs-de-escritorio/pcSpecs";
 
-import {
-  MdSdStorage,
-  MdWifi,
-  MdMemory,
-  MdUsb,
-} from "react-icons/md";
+import { MdSdStorage, MdWifi, MdMemory, MdUsb } from "react-icons/md";
 import { FaWindows } from "react-icons/fa";
-import SpecsSection from "../SpecsSection";
-
-
-
-
+import SpecsSection from "../../SpecsSection";
 
 export default function PcSpecsView({ specs }: { specs: PcSpecs }) {
   return (
