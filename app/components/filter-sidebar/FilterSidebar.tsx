@@ -24,7 +24,7 @@ export function FilterSidebar({
   };
 
   return (
-    <aside className="md:w-1/4 bg-white rounded-xl shadow p-4 space-y-6">
+    <aside className=" bg-white rounded-xl shadow p-4 space-y-6">
       {/* Subcategorías */}
       <div>
         <h2 className="text-xl font-bold mb-2">Subcategorías</h2>

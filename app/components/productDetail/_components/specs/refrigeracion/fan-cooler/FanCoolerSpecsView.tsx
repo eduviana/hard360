@@ -1,4 +1,3 @@
-
 import {
   MdPower,
   MdSpeed,
@@ -10,13 +9,13 @@ import { BsFan } from "react-icons/bs";
 import { FanCoolerSpecs } from "./fanCoolerSpecs";
 import SpecsSection from "../../SpecsSection";
 
-
-export default function FanCoolerSpecsView({ specs }: { specs: FanCoolerSpecs }) {
+export default function FanCoolerSpecsView({
+  specs,
+}: {
+  specs: FanCoolerSpecs;
+}) {
   return (
     <div className="mt-10">
-      <h2 className="text-xl font-semibold mb-4 text-gray-800">
-        Especificaciones Técnicas
-      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <SpecsSection
           title="Ventilador"

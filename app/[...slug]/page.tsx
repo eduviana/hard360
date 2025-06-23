@@ -6,6 +6,8 @@ import ProductDetail from "../components/productDetail/ProductDetail";
 import { FilterSidebar } from "../components/filter-sidebar/FilterSidebar";
 import { FilterHeader } from "../components/filter-sidebar/FilterHeader";
 import { Category, filtersByCategory } from "../data/types";
+import { CategorySection } from "./_components/CategorySection";
+
 
 interface PageProps {
   params: Promise<{ slug: string[] }>; // corregido si estás usando promesa
@@ -53,52 +55,30 @@ export default async function Page({ params, searchParams }: PageProps) {
     }
 
     // Filtros dinámicos
- const categoryFilters = filtersByCategory[category as Category];
-  if (categoryFilters && resolvedSearchParams) {
-    for (const filter of categoryFilters) {
-      const value = resolvedSearchParams[filter.field as string];
-      if (value) {
-        filteredProducts = filteredProducts.filter(
-          (p) => p[filter.field] === value
-        );
+    const categoryFilters = filtersByCategory[category as Category];
+    if (categoryFilters && resolvedSearchParams) {
+      for (const filter of categoryFilters) {
+        const value = resolvedSearchParams[filter.field as string];
+        if (value) {
+          filteredProducts = filteredProducts.filter(
+            (p) => p[filter.field] === value
+          );
+        }
       }
     }
-  }
-
-  
 
     // Subcategorías únicas
     const subcategories = [
       ...new Set(categoryProducts.map((p) => p.subcategory)),
     ];
 
-    
-
     return (
-      <section className="custom-container py-16">
-        <FilterHeader category={category} subcategory={subcategory} />
-
-        <div className="flex flex-col md:flex-row gap-8">
-          <FilterSidebar
-            category={category}
-            subcategories={subcategories}
-            subcategory={subcategory}
-          />
-
-          {/* Productos */}
-          <div className="md:w-3/4 grid grid-cols-2 sm:grid-cols-3 gap-6">
-            {filteredProducts.length > 0 ? (
-              filteredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))
-            ) : (
-              <div className="col-span-full text-center text-gray-500 font-medium">
-                No se encontraron productos.
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
+      <CategorySection
+        category={category}
+        subcategory={subcategory}
+        subcategories={subcategories}
+        filteredProducts={filteredProducts}
+      />
     );
   }
 

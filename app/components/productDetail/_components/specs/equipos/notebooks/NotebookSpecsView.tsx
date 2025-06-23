@@ -12,13 +12,9 @@ import {
 import { FaWindows } from "react-icons/fa";
 import SpecsSection from "../../SpecsSection";
 
-
 export default function NotebookSpecsView({ specs }: { specs: NotebookSpecs }) {
   return (
     <div className="mt-10">
-      <h2 className="text-xl font-semibold mb-4 text-gray-800">
-        Especificaciones
-      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <SpecsSection
           title="Procesador"
@@ -28,7 +24,11 @@ export default function NotebookSpecsView({ specs }: { specs: NotebookSpecs }) {
             { label: "Modelo", value: specs.procesador.modelo },
             { label: "Núcleos", value: specs.procesador.nucleos },
             { label: "Frecuencia", value: specs.procesador.frecuencia },
-            { label: "Cache", value: specs.procesador.cache },
+            { label: "Caché L1", value: specs.procesador.cacheL1 },
+            { label: "Caché L2", value: specs.procesador.cacheL2 },
+            { label: "Caché L3", value: specs.procesador.cacheL3 },
+            { label: "Gráficos", value: specs.procesador.graficos },
+            { label: "TDP", value: specs.procesador.tdp },
           ]}
         />
 
@@ -36,30 +36,13 @@ export default function NotebookSpecsView({ specs }: { specs: NotebookSpecs }) {
           title="Memoria RAM"
           icon={<MdStorage className="w-5 h-5" />}
           items={[
-            { label: "Capacidad", value: specs.memoriaRam.capacidad },
             { label: "Formato", value: specs.memoriaRam.formato },
+            { label: "Tipo", value: specs.memoriaRam.tipo },
+            { label: "Capacidad", value: specs.memoriaRam.capacidad },
+            { label: "Frecuencia", value: specs.memoriaRam.frecuencia },
             { label: "Expandible", value: specs.memoriaRam.expandible },
           ]}
         />
-
-        <SpecsSection
-          title="Pantalla"
-          icon={<MdDesktopMac className="w-5 h-5" />}
-          items={[
-            { label: "Resolución", value: specs.pantalla.resolucion },
-            { label: "Tecnología", value: specs.pantalla.tecnologia },
-          ]}
-        />
-
-        <SpecsSection
-          title="Conectividad"
-          icon={<MdWifi className="w-5 h-5" />}
-          items={[
-            { label: "Wi-Fi", value: specs.conectividad.wifi },
-            { label: "Bluetooth", value: specs.conectividad.bluetooth },
-          ]}
-        />
-
         <SpecsSection
           title="Almacenamiento"
           icon={<MdSdStorage className="w-5 h-5" />}
@@ -71,24 +54,41 @@ export default function NotebookSpecsView({ specs }: { specs: NotebookSpecs }) {
           ]}
         />
 
+        {/* <SpecsSection
+          title="Puertos"
+          icon={<MdUsb className="w-5 h-5" />}
+          items={[
+            { label: "USB 2.0", value: specs.puertos.usb2 },
+            { label: "USB 3.0", value: specs.puertos.usb3 },
+            { label: "USB C", value: specs.puertos.usbC },
+            { label: "HDMI", value: specs.puertos.hdmi },
+            { label: "Audio/Mic", value: specs.puertos.audioMic },
+            { label: "Ethernet", value: specs.puertos.ehternet },
+          ]}
+        /> */}
         <SpecsSection
           title="Puertos"
           icon={<MdUsb className="w-5 h-5" />}
           items={[
             { label: "USB 2.0", value: specs.puertos.usb2 },
+            { label: "USB 3.0", value: specs.puertos.usb3 },
+            ...(specs.puertos.usbC
+              ? [{ label: "USB C", value: specs.puertos.usbC }]
+              : []),
             { label: "HDMI", value: specs.puertos.hdmi },
             { label: "Audio/Mic", value: specs.puertos.audioMic },
+            { label: "Ethernet", value: specs.puertos.ehternet },
           ]}
         />
 
         <SpecsSection
-          title="Sistema Operativo"
-          icon={<FaWindows className="w-5 h-5" />}
+          title="Pantalla"
+          icon={<MdDesktopMac className="w-5 h-5" />}
           items={[
-            {
-              label: "Sistema",
-              value: `${specs.sistemaOperativo.nombre} ${specs.sistemaOperativo.version}`,
-            },
+            { label: "Panel", value: specs.pantalla.panel },
+            { label: "Frecuencia", value: specs.pantalla.frecuencia },
+            { label: "Resolución", value: specs.pantalla.resolucion },
+            { label: "Tecnología", value: specs.pantalla.tecnologia },
           ]}
         />
 
@@ -117,6 +117,30 @@ export default function NotebookSpecsView({ specs }: { specs: NotebookSpecs }) {
         />
 
         <SpecsSection
+          title="Conectividad"
+          icon={<MdWifi className="w-5 h-5" />}
+          items={[
+            { label: "Wi-Fi", value: specs.conectividad.wifi },
+            { label: "Bluetooth", value: specs.conectividad.bluetooth },
+          ]}
+        />
+
+        <SpecsSection
+          title="Sistema y Garantía"
+          icon={<FaWindows className="w-5 h-5" />}
+          items={[
+            {
+              label: "Sistema",
+              value: `${specs.sistemaOperativo.nombre} ${specs.sistemaOperativo.version}`,
+            },
+            {
+              label: "Garantía",
+              value: `${specs.garantia.tipo} - ${specs.garantia.plazo}`,
+            },
+          ]}
+        />
+
+        {/* <SpecsSection
           title="Garantía"
           icon={<MdVerified className="w-5 h-5" />}
           items={[
@@ -125,7 +149,7 @@ export default function NotebookSpecsView({ specs }: { specs: NotebookSpecs }) {
               value: `${specs.garantia.tipo} - ${specs.garantia.plazo}`,
             },
           ]}
-        />
+        /> */}
       </div>
     </div>
   );

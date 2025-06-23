@@ -6,9 +6,6 @@ import SpecsSection from "../../SpecsSection";
 export default function HddSpecsView({ specs }: { specs: HddSpecs }) {
   return (
     <div className="mt-10">
-      <h2 className="text-xl font-semibold mb-4 text-gray-800">
-        Especificaciones
-      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <SpecsSection
           title="Almacenamiento"

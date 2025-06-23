@@ -1,20 +1,30 @@
-import { MdOutlineMemory, MdSettings, MdStorage, MdOutlineRouter, MdSpeaker } from "react-icons/md";
+import {
+  MdOutlineMemory,
+  MdSettings,
+  MdStorage,
+  MdOutlineRouter,
+  MdSpeaker,
+} from "react-icons/md";
 import SpecsSection from "../../SpecsSection";
 import { MotherIntelSpecs } from "./motherIntelSpecs";
 
-
-export default function MotherIntelSpecsView({ specs }: { specs: MotherIntelSpecs }) {
+export default function MotherIntelSpecsView({
+  specs,
+}: {
+  specs: MotherIntelSpecs;
+}) {
   return (
     <div className="mt-10">
-      <h2 className="text-xl font-semibold mb-4 text-gray-800">Especificaciones</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
         <SpecsSection
           title="Procesador y Chipset"
           icon={<MdSettings className="w-5 h-5" />}
           items={[
             { label: "Socket", value: specs.procesadorChipset.socket },
-            { label: "Compatibilidad", value: specs.procesadorChipset.compatibilidad },
+            {
+              label: "Compatibilidad",
+              value: specs.procesadorChipset.compatibilidad,
+            },
             { label: "Chipset", value: specs.procesadorChipset.chipset },
           ]}
         />
@@ -35,7 +45,10 @@ export default function MotherIntelSpecsView({ specs }: { specs: MotherIntelSpec
           icon={<MdSettings className="w-5 h-5" />}
           items={[
             { label: "Salidas", value: specs.graficosIntegrados.salidas },
-            { label: "Resolución máxima", value: specs.graficosIntegrados.resolucionMaxima },
+            {
+              label: "Resolución máxima",
+              value: specs.graficosIntegrados.resolucionMaxima,
+            },
           ]}
         />
 
@@ -52,8 +65,14 @@ export default function MotherIntelSpecsView({ specs }: { specs: MotherIntelSpec
           title="Expansión y Conectividad"
           icon={<MdOutlineRouter className="w-5 h-5" />}
           items={[
-            { label: "PCI Express", value: specs.expansionConectividad.pciExpress },
-            { label: "Red Inalámbrica", value: specs.expansionConectividad.redInalambrica },
+            {
+              label: "PCI Express",
+              value: specs.expansionConectividad.pciExpress,
+            },
+            {
+              label: "Red Inalámbrica",
+              value: specs.expansionConectividad.redInalambrica,
+            },
             { label: "LAN", value: specs.expansionConectividad.lan },
           ]}
         />
@@ -67,7 +86,6 @@ export default function MotherIntelSpecsView({ specs }: { specs: MotherIntelSpec
             { label: "RGB", value: specs.puertosAudio.rgb },
           ]}
         />
-
       </div>
     </div>
   );

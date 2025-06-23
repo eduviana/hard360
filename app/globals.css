@@ -1,40 +1,30 @@
 @import "tailwindcss";
 
-/* @theme {
-  --color-accent: #88C426;
-  --color-dark: #343636;
-} */
-
 @theme {
-  /* Identidad */
-  --color-primary: #37373F;      /* Color principal (navbar, links) */
-  --color-secondary: #000000;    /* Color secundario (barra de redes) */
-  --color-accent: #88C426;         /* Verde para íconos o títulos destacados */
+  --color-primary: #37373f; /* Color principal (navbar, links) */
+  --color-secondary: #000000; /* Color secundario (barra de redes) */
+  --color-accent: #88c426; /* Verde para íconos o títulos destacados */
 
   /* Superficies (fondos) */
-  --color-surface-primary: #000000;   /* Fondo de top bar (redes) */
-  --color-surface-secondary: #37373F; /* Fondo de navbar con logo */
+  --color-surface-primary: #000000; /* Fondo de top bar (redes) */
+  --color-surface-secondary: #37373f; /* Fondo de navbar con logo */
 
   /* Texto */
-  --color-text-primary: #333333;   /* Precio final del producto */
+  --color-text-primary: #333333; /* Precio final del producto */
   --color-text-secondary: #343636; /* Título de sección */
-  --color-text-tertiary: #706F6F;  /* Título de card, precio tachado */
-  --color-text-muted: #37373F;     /* Links en navbar (similar a primary) */
-
-  
+  --color-text-tertiary: #706f6f; /* Título de card, precio tachado */
+  --color-text-muted: #37373f; /* Links en navbar (similar a primary) */
 }
+
 body {
   font-family: var(--font-montserrat);
 }
 
 .custom-container {
-  @apply w-[96%] md:w-[90%] lg:w-[80%] xl:w-[70%] mx-auto;
+  @apply w-[96%] md:w-[90%] lg:w-[80%] xl:w-[74%] mx-auto;
 }
 
-
-
 @layer utilities {
-
   .text-xl {
     font-size: 20px;
   }
@@ -63,6 +53,19 @@ body {
     }
     to {
       transform: translateX(0%);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.4s forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 }

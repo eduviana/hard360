@@ -13,6 +13,8 @@ export const StandardCategorySection = ({
   products,
   isDark,
 }: StandardCategorySectionProps) => {
+
+  const productsSlice = products.slice(0, 8)
   return (
     <section className="py-12">
       <div className="custom-container">
@@ -54,7 +56,7 @@ export const StandardCategorySection = ({
             </div>
           </div>
 
-          {products.map((product) => (
+          {productsSlice.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

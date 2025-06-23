@@ -8,22 +8,24 @@ import {
 import SpecsSection from "../../SpecsSection";
 import { AmdSpecs } from "./amdSpecs";
 
-
 export default function AmdSpecsView({ specs }: { specs: AmdSpecs }) {
   return (
     <div className="mt-10">
-      <h2 className="text-xl font-semibold mb-4 text-gray-800">Especificaciones</h2>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
         <SpecsSection
           title="Procesador"
           icon={<MdMemory className="w-5 h-5" />}
           items={[
             { label: "Cantidad de núcleos", value: specs.cantidadNucleos },
-            { label: "Cantidad de subprocesos", value: specs.cantidadSubprocesos },
+            {
+              label: "Cantidad de subprocesos",
+              value: specs.cantidadSubprocesos,
+            },
             { label: "Frecuencia base", value: specs.frecuenciaBase },
-            { label: "Frecuencia turbo máxima", value: specs.frecuenciaTurboMaxima },
+            {
+              label: "Frecuencia turbo máxima",
+              value: specs.frecuenciaTurboMaxima,
+            },
             { label: "Caché", value: specs.cache },
           ]}
         />
@@ -34,7 +36,10 @@ export default function AmdSpecsView({ specs }: { specs: AmdSpecs }) {
           items={[
             { label: "Velocidad del bus", value: specs.velocidadBus },
             { label: "TDP", value: specs.tdp },
-            { label: "Frecuencia Intel Turbo Boost 2.0", value: specs.frecuenciaTurboMaxima },
+            {
+              label: "Frecuencia Intel Turbo Boost 2.0",
+              value: specs.frecuenciaTurboMaxima,
+            },
           ]}
         />
 
@@ -42,12 +47,17 @@ export default function AmdSpecsView({ specs }: { specs: AmdSpecs }) {
           title="Otras especificaciones"
           icon={<MdDesktopWindows className="w-5 h-5" />}
           items={[
-            { label: "Opciones de video integradas", value: specs.videoIntegrado },
-            { label: "Incluye cooler stock", value: specs.incluyeCoolerStock ? "Sí" : "No" },
+            {
+              label: "Opciones de video integradas",
+              value: specs.videoIntegrado,
+            },
+            {
+              label: "Incluye cooler stock",
+              value: specs.incluyeCoolerStock ? "Sí" : "No",
+            },
             { label: "Socket", value: specs.socket },
           ]}
         />
-
       </div>
     </div>
   );

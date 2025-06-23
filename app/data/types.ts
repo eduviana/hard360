@@ -137,6 +137,8 @@ export const panelTypes = ["ips", "led", "oled", "tn", "va"] as const;
 export type PanelType = (typeof panelTypes)[number];
 
 export const processors = [
+  "intel celeron",
+  "intel pentium",
   "intel i3",
   "intel i5",
   "intel i7",
@@ -146,7 +148,7 @@ export const processors = [
 ] as const;
 export type Processor = (typeof processors)[number];
 
-export const ramCapacities = ["4gb", "8gb", "16gb", "32gb"] as const;
+export const ramCapacities = ["4gb", "8gb", "12gb", "16gb", "32gb"] as const;
 export type RamCapacity = (typeof ramCapacities)[number];
 
 export const ramVersions = ["ddr3", "ddr4", "ddr5"] as const;
@@ -180,7 +182,8 @@ export type MotherboardSocket = (typeof motherboardSockets)[number];
 export type Product = {
   id: string;
   title: string;
-  image: string;
+  thumbnail?: string;
+  images: string[];
   price: string;
   discount?: number;
   slug: string;

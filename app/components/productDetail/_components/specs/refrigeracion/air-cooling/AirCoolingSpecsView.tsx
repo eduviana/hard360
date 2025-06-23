@@ -1,4 +1,3 @@
-
 import {
   MdDeviceThermostat,
   MdOutlineNoiseAware,
@@ -17,9 +16,7 @@ export default function AirCoolingSpecsView({
 }) {
   return (
     <div className="mt-10">
-      <h2 className="text-xl font-semibold mb-4 text-gray-800">Especificaciones</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
         <SpecsSection
           title="Ventilador"
           icon={<MdDeviceThermostat className="w-5 h-5" />}
@@ -37,9 +34,18 @@ export default function AirCoolingSpecsView({
           title="Disipador"
           icon={<MdPrecisionManufacturing className="w-5 h-5" />}
           items={[
-            { label: "Material disipador", value: specs.disipador.materialDisipador },
-            { label: "Material heatpipes", value: specs.disipador.materialHeatpipes },
-            { label: "Cantidad de heatpipes", value: `${specs.disipador.cantidadHeatpipes}` },
+            {
+              label: "Material disipador",
+              value: specs.disipador.materialDisipador,
+            },
+            {
+              label: "Material heatpipes",
+              value: specs.disipador.materialHeatpipes,
+            },
+            {
+              label: "Cantidad de heatpipes",
+              value: `${specs.disipador.cantidadHeatpipes}`,
+            },
             { label: "Dimensiones", value: specs.disipador.dimensiones },
           ]}
         />
@@ -57,7 +63,8 @@ export default function AirCoolingSpecsView({
           title="Compatibilidad Intel"
           icon={<FaMicrochip className="w-5 h-5" />}
           items={specs.compatibilidad.intel.map((socket) => ({
-            label: "Socket", value: socket,
+            label: "Socket",
+            value: socket,
           }))}
         />
 
@@ -65,7 +72,8 @@ export default function AirCoolingSpecsView({
           title="Compatibilidad AMD"
           icon={<FaMicrochip className="w-5 h-5" />}
           items={specs.compatibilidad.amd.map((socket) => ({
-            label: "Socket", value: socket,
+            label: "Socket",
+            value: socket,
           }))}
         />
       </div>

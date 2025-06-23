@@ -20,8 +20,10 @@ export type PcSpecs = {
     plazo: string;
   };
   memoriaRam: {
-    capacidad: string;
     formato: string;
+    tipo: string;
+    capacidad: string;
+    frecuencia: string;
     expandible: string;
   };
   procesador: {

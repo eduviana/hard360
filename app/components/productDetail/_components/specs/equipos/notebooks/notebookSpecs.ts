@@ -14,8 +14,10 @@ export type NotebookSpecs = {
     plazo: string;
   };
   memoriaRam: {
-    capacidad: string;
     formato: string;
+    tipo: string;
+    capacidad: string;
+    frecuencia: string;
     expandible: string;
   };
   otrasCaracteristicas: {
@@ -26,6 +28,8 @@ export type NotebookSpecs = {
     touchscreen: string;
   };
   pantalla: {
+    panel: string;
+    frecuencia: string,
     resolucion: string;
     tecnologia: string;
   };
@@ -34,12 +38,19 @@ export type NotebookSpecs = {
     modelo: string;
     nucleos: string;
     frecuencia: string;
-    cache: string;
+    cacheL1: string;
+    cacheL2: string;
+    cacheL3: string;
+    graficos: string;
+    tdp: string;
   };
   puertos: {
     usb2: string;
+    usb3: string;
+    usbC?: string;
     hdmi: string;
     audioMic: string;
+    ehternet: string;
   };
   sistemaOperativo: {
     nombre: string;

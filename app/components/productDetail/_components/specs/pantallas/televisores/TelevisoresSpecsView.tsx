@@ -3,10 +3,13 @@ import { MdScreenRotation, MdColorLens, MdGraphicEq } from "react-icons/md";
 import { TelevisoresSpecs } from "./televisoresSpecs";
 import SpecsSection from "../../SpecsSection";
 
-export default function TelevisoresSpecsView({ specs }: { specs: TelevisoresSpecs }) {
+export default function TelevisoresSpecsView({
+  specs,
+}: {
+  specs: TelevisoresSpecs;
+}) {
   return (
     <div className="mt-10">
-      <h2 className="text-xl font-semibold mb-4 text-gray-800">Especificaciones</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <SpecsSection
           title="Pantalla"
@@ -21,7 +24,10 @@ export default function TelevisoresSpecsView({ specs }: { specs: TelevisoresSpec
           title="Rendimiento"
           icon={<MdGraphicEq className="w-5 h-5" />}
           items={[
-            { label: "Frecuencia de Actualización", value: specs.frecuenciaActualizacion },
+            {
+              label: "Frecuencia de Actualización",
+              value: specs.frecuenciaActualizacion,
+            },
             { label: "Tiempo de Respuesta", value: specs.tiempoRespuesta },
             { label: "Colores", value: specs.colores },
           ]}

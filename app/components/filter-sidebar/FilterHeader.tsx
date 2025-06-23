@@ -106,7 +106,7 @@ export function FilterHeader({ category, subcategory }: FilterHeaderProps) {
   };
 
   return (
-    <div className="mb-8 inline-block text-left">
+    <div className="inline-block text-left">
       {/* Breadcrumb título */}
       <h2 className="text-3xl font-semibold capitalize mb-2 flex gap-2">
         <Link

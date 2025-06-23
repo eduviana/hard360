@@ -3,38 +3,47 @@ import { Product } from "./types";
 export const products: Product[] = [
   // Notebooks
   {
-    id: "1",
-    title: "Notebook Lenovo IdeaPad 3",
-    image: "/products/notebook-lenovo.webp",
-    price: "599999",
+    id: "equipos-notebooks-1",
+    title: "Notebook Asus x515EA-EJ711 i3 4Gb 256Gb 15.6″ W10",
+    slug: "notebook-asus-x515ea-ej711-i3-4gb-256gb-15.6-w10",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: [
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_2.webp",
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_3.webp",
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_4.webp",
+    ],
+    price: "49499900",
     discount: 20,
-    slug: "notebook-lenovo-ideapad-3",
     category: "equipos",
     subcategory: "notebooks",
-    brand: "lenovo",
-    processor: "ryzen 5",
-    ramCapacity: "8gb",
+    brand: "asus",
+    processor: "intel i3",
+    ramCapacity: "4gb",
     ramVersion: "ddr4",
     screenSize: "15.6",
     specs: {
       almacenamiento: {
-        disco: "512 GB",
+        disco: "256 GB",
         tipo: "SSD NVMe Gen 3",
-        lectura: "3500 MB/s",
-        escritura: "3000 MB/s",
+        lectura: "2400 MB/s",
+        escritura: "2200 MB/s",
       },
       conectividad: {
-        wifi: "Sí",
-        bluetooth: "Sí",
+        wifi: "WiFi 5(802.11ac)",
+        bluetooth: "Bluetooth 4.1",
       },
       garantia: {
         tipo: "Oficial",
         plazo: "12 Meses",
       },
       memoriaRam: {
-        capacidad: "4 Gigas",
         formato: "SODIMM",
-        expandible: "No",
+        tipo: "DDR4",
+        capacidad: "4 Gb",
+        frecuencia: "2400Mhz",
+        expandible: "Sí",
       },
       otrasCaracteristicas: {
         sensorDactilar: "No",
@@ -44,58 +53,77 @@ export const products: Product[] = [
         touchscreen: "No",
       },
       pantalla: {
+        panel: "IPS",
+        frecuencia: "60Hz",
         resolucion: "1366x768",
         tecnologia: "HD",
       },
       procesador: {
         marca: "Intel",
-        modelo: "N4020C",
-        nucleos: "2 (2 Subprocesos)",
-        frecuencia: "2.80Ghz",
-        cache: "4Mb Cache",
+        modelo: "i3-1115G4",
+        nucleos: "2 (4 Subprocesos)",
+        frecuencia: "3GHz - 4.1GHz",
+        cacheL1: "96 KB (por núcleo)",
+        cacheL2: "1,25 MB (por núcleo)",
+        cacheL3: "6 MB (compartido)",
+        graficos: "Intel® Iris™ Plus",
+        tdp: "28 W",
       },
       puertos: {
-        usb2: "Sí",
+        usb2: "2 x Tipo A",
+        usb3: "1 x USB 3.2 Gen 1 Tipo A - 1 x USB 3.2 Gen 1 Tipo C",
         hdmi: "Sí",
         audioMic: "Sí",
+        ehternet: "No (adaptador Ethernet a USB incluido)",
       },
       sistemaOperativo: {
-        nombre: "Windows 11",
+        nombre: "Windows 10",
         version: "64-bits",
       },
     },
   },
   {
-    id: "2",
-    title: "Notebook ASUS Vivobook 15",
-    image: "/products/notebook-asus.webp",
-    price: "649999",
-    slug: "notebook-asus-vivobook-15",
+    id: "equipos-notebooks-2",
+    title: "Notebook Dell Inspiron 15 3511 i3 8Gb 256Gb 15.6″ W10",
+    slug: "notebook-dell-inspiron-15-3511-i3-8gb-256gb-15.6-w10",
+    thumbnail:
+      "/products/equipos/notebooks/dell-inspiron-3511/dell-inspiron-3511_1.webp",
+    images: [
+      "/products/equipos/notebooks/dell-inspiron-3511/dell-inspiron-3511_1.webp",
+      "/products/equipos/notebooks/dell-inspiron-3511/dell-inspiron-3511_2.webp",
+      "/products/equipos/notebooks/dell-inspiron-3511/dell-inspiron-3511_3.webp",
+      "/products/equipos/notebooks/dell-inspiron-3511/dell-inspiron-3511_4.webp",
+    ],
+    price: "52499900", // $524.999,00
+    discount: 15,
+
     category: "equipos",
     subcategory: "notebooks",
-    brand: "asus",
-    processor: "intel i5",
+    brand: "dell",
+    processor: "intel i3",
     ramCapacity: "8gb",
     ramVersion: "ddr4",
     screenSize: "15.6",
     specs: {
       almacenamiento: {
-        disco: "512 GB",
+        disco: "256 GB",
         tipo: "SSD NVMe Gen 3",
-        lectura: "3500 MB/s",
-        escritura: "3000 MB/s",
+        lectura: "3000 MB/s",
+        escritura: "2000 MB/s",
       },
       conectividad: {
-        wifi: "Sí",
-        bluetooth: "Sí",
+        wifi: "WiFi 5 (802.11ac)",
+        bluetooth: "Bluetooth 5.0",
       },
       garantia: {
         tipo: "Oficial",
         plazo: "12 Meses",
       },
       memoriaRam: {
-        capacidad: "8 Gigas",
         formato: "SODIMM",
+        tipo: "DDR4",
+        capacidad: "8 Gb",
+        frecuencia: "2666Mhz",
         expandible: "Sí",
       },
       otrasCaracteristicas: {
@@ -106,83 +134,113 @@ export const products: Product[] = [
         touchscreen: "No",
       },
       pantalla: {
+        panel: "WVA",
+        frecuencia: "60Hz",
         resolucion: "1920x1080",
         tecnologia: "Full HD",
       },
       procesador: {
         marca: "Intel",
-        modelo: "Core i5-1135G7",
-        nucleos: "4 (8 Subprocesos)",
-        frecuencia: "2.40Ghz",
-        cache: "8Mb Cache",
+        modelo: "i3-1115G4",
+        nucleos: "2 (4 Subprocesos)",
+        frecuencia: "3.0GHz - 4.1GHz",
+        cacheL1: "96 KB (por núcleo)",
+        cacheL2: "1.25 MB (por núcleo)",
+        cacheL3: "6 MB (compartido)",
+        graficos: "Intel UHD Graphics",
+        tdp: "28 W",
       },
       puertos: {
-        usb2: "Sí",
-        hdmi: "Sí",
-        audioMic: "Sí",
+        usb2: "1 x Tipo A",
+        usb3: "2 x USB 3.2 Gen 1 Tipo A",
+        hdmi: "1 x HDMI 1.4",
+        audioMic: "Sí, combo",
+        ehternet: "No",
       },
       sistemaOperativo: {
-        nombre: "Windows 11",
+        nombre: "Windows 10",
         version: "64-bits",
       },
     },
   },
   {
-    id: "3",
-    title: "Notebook Dell Inspiron 14",
-    image: "/products/notebook-dell.webp",
-    price: "699999",
-    discount: 15,
-    slug: "notebook-dell-inspiron-14",
+    id: "equipos-notebooks-3",
+    title: "Notebook Dell Inspiron 15 3511 i7 8Gb 256Gb 15.6″ W11",
+    slug: "notebook-dell-inspiron-15-3511-i7-8gb-256gb-15.6-w11",
+    thumbnail:
+      "/products/equipos/notebooks/dell-inspiron-3511-v2/dell-inspiron-3511-v2_1.webp",
+    images: [
+      "/products/equipos/notebooks/dell-inspiron-3511-v2/dell-inspiron-3511-v2_1.webp",
+      "/products/equipos/notebooks/dell-inspiron-3511-v2/dell-inspiron-3511-v2_2.webp",
+      "/products/equipos/notebooks/dell-inspiron-3511-v2/dell-inspiron-3511-v2_3.webp",
+      "/products/equipos/notebooks/dell-inspiron-3511-v2/dell-inspiron-3511-v2_4.webp",
+      "/products/equipos/notebooks/dell-inspiron-3511-v2/dell-inspiron-3511-v2_5.webp",
+      "/products/equipos/notebooks/dell-inspiron-3511-v2/dell-inspiron-3511-v2_6.webp",
+      "/products/equipos/notebooks/dell-inspiron-3511-v2/dell-inspiron-3511-v2_7.webp",
+      "/products/equipos/notebooks/dell-inspiron-3511-v2/dell-inspiron-3511-v2_8.webp",
+    ],
+    price: "61999900", // $619.999,00
+    discount: 18,
+
     category: "equipos",
     subcategory: "notebooks",
     brand: "dell",
     processor: "intel i7",
-    ramCapacity: "16gb",
+    ramCapacity: "8gb",
     ramVersion: "ddr4",
-    screenSize: "14",
+    screenSize: "15.6",
     specs: {
       almacenamiento: {
-        disco: "512 GB",
+        disco: "256 GB",
         tipo: "SSD NVMe Gen 3",
-        lectura: "3500 MB/s",
-        escritura: "3000 MB/s",
+        lectura: "3000 MB/s",
+        escritura: "2200 MB/s",
       },
       conectividad: {
-        wifi: "Sí",
-        bluetooth: "Sí",
+        wifi: "WiFi 5 (802.11ac)",
+        bluetooth: "Bluetooth 5.0",
       },
       garantia: {
         tipo: "Oficial",
-        plazo: "24 Meses",
+        plazo: "12 Meses",
       },
       memoriaRam: {
-        capacidad: "16 Gigas",
         formato: "SODIMM",
+        tipo: "DDR4",
+        capacidad: "8 Gb",
+        frecuencia: "2666Mhz",
         expandible: "Sí",
       },
       otrasCaracteristicas: {
         sensorDactilar: "Sí",
-        tecladoNumerico: "No",
+        tecladoNumerico: "Sí",
         camaraWeb: "Sí",
         teclado: "Español",
         touchscreen: "No",
       },
       pantalla: {
-        resolucion: "1920x1080",
-        tecnologia: "Full HD",
+        panel: "WVA",
+        frecuencia: "60Hz",
+        resolucion: "1366x768",
+        tecnologia: "HD",
       },
       procesador: {
         marca: "Intel",
-        modelo: "Core i7-1165G7",
+        modelo: "i7-1165G7",
         nucleos: "4 (8 Subprocesos)",
-        frecuencia: "2.80Ghz",
-        cache: "12Mb Cache",
+        frecuencia: "2.8GHz - 4.7GHz",
+        cacheL1: "128 KB (por núcleo)",
+        cacheL2: "1.25 MB (por núcleo)",
+        cacheL3: "12 MB (compartido)",
+        graficos: "Intel Iris Xe",
+        tdp: "28 W",
       },
       puertos: {
-        usb2: "Sí",
-        hdmi: "Sí",
-        audioMic: "Sí",
+        usb2: "1 x Tipo A",
+        usb3: "2 x USB 3.2 Gen 1 Tipo A",
+        hdmi: "1 x HDMI 1.4",
+        audioMic: "Sí, combo",
+        ehternet: "No",
       },
       sistemaOperativo: {
         nombre: "Windows 11",
@@ -191,60 +249,79 @@ export const products: Product[] = [
     },
   },
   {
-    id: "4",
-    title: "Notebook HP Pavilion Gaming",
-    image: "/products/notebook-hp.webp",
-    price: "749999",
-    slug: "notebook-hp-pavilion-gaming",
+    id: "equipos-notebooks-4",
+    title: "Notebook Dell Inspiron 15 3515 Ryzen 5 8Gb 256Gb 15.6″ W11",
+    slug: "notebook-dell-inspiron-15-3515-ryzen-5-8gb-256gb-15.6-w11",
+    thumbnail:
+      "/products/equipos/notebooks/dell-inspiron-3515/dell-inspiron-3515_1.webp",
+    images: [
+      "/products/equipos/notebooks/dell-inspiron-3515/dell-inspiron-3515_1.webp",
+      "/products/equipos/notebooks/dell-inspiron-3515/dell-inspiron-3515_2.webp",
+      "/products/equipos/notebooks/dell-inspiron-3515/dell-inspiron-3515_3.webp",
+      "/products/equipos/notebooks/dell-inspiron-3515/dell-inspiron-3515_4.webp",
+    ],
+    price: "58999900", // $589.999,00
+    discount: 17,
+
     category: "equipos",
     subcategory: "notebooks",
-    brand: "hp",
-    processor: "ryzen 7",
-    ramCapacity: "16gb",
+    brand: "dell",
+    processor: "ryzen 5",
+    ramCapacity: "8gb",
     ramVersion: "ddr4",
-    screenSize: "16",
+    screenSize: "15.6",
     specs: {
       almacenamiento: {
-        disco: "512 GB",
+        disco: "256 GB",
         tipo: "SSD NVMe Gen 3",
-        lectura: "3500 MB/s",
-        escritura: "3000 MB/s",
+        lectura: "3000 MB/s",
+        escritura: "2000 MB/s",
       },
       conectividad: {
-        wifi: "Sí",
-        bluetooth: "Sí",
+        wifi: "WiFi 5 (802.11ac)",
+        bluetooth: "Bluetooth 5.0",
       },
       garantia: {
         tipo: "Oficial",
-        plazo: "24 Meses",
+        plazo: "12 Meses",
       },
       memoriaRam: {
-        capacidad: "16 Gigas",
         formato: "SODIMM",
+        tipo: "DDR4",
+        capacidad: "8 Gb",
+        frecuencia: "2666Mhz",
         expandible: "Sí",
       },
       otrasCaracteristicas: {
-        sensorDactilar: "Sí",
+        sensorDactilar: "No",
         tecladoNumerico: "Sí",
         camaraWeb: "Sí",
         teclado: "Español",
-        touchscreen: "Sí",
+        touchscreen: "No",
       },
       pantalla: {
+        panel: "WVA",
+        frecuencia: "60Hz",
         resolucion: "1920x1080",
-        tecnologia: "Full HD IPS",
+        tecnologia: "Full HD",
       },
       procesador: {
         marca: "AMD",
-        modelo: "Ryzen 7 5800H",
-        nucleos: "8 (16 Subprocesos)",
-        frecuencia: "3.20Ghz",
-        cache: "16Mb Cache",
+        modelo: "Ryzen 5 3450U",
+        nucleos: "4 (8 Subprocesos)",
+        frecuencia: "2.1GHz - 3.5GHz",
+        cacheL1: "128 KB (por núcleo)",
+        cacheL2: "512 KB (por núcleo)",
+        cacheL3: "4 MB (compartido)",
+        graficos: "Radeon Vega 8",
+        tdp: "15 W",
       },
       puertos: {
-        usb2: "Sí",
-        hdmi: "Sí",
-        audioMic: "Sí",
+        usb2: "1 x Tipo A",
+        usb3: "2 x USB 3.2 Gen 1 Tipo A",
+        hdmi: "1 x HDMI 1.4",
+        audioMic: "Sí, combo",
+        ehternet: "Sí",
       },
       sistemaOperativo: {
         nombre: "Windows 11",
@@ -252,12 +329,1076 @@ export const products: Product[] = [
       },
     },
   },
+  {
+  id: "equipos-notebooks-5",
+  title: "Notebook Dell Latitude 3520 i5 8Gb 256Gb 15.6″ W11 Pro",
+  slug: "notebook-dell-latitude-3520-i5-8gb-256gb-15.6-w11-pro",
+  thumbnail:
+    "/products/equipos/notebooks/dell-latitude-3520/dell-latitude-3520_1.webp",
+  images: [
+    "/products/equipos/notebooks/dell-latitude-3520/dell-latitude-3520_1.webp",
+    "/products/equipos/notebooks/dell-latitude-3520/dell-latitude-3520_2.webp",
+    "/products/equipos/notebooks/dell-latitude-3520/dell-latitude-3520_3.webp",
+    "/products/equipos/notebooks/dell-latitude-3520/dell-latitude-3520_4.webp",
+  ],
+  price: "67999900", // $679.999,00
+  discount: 15,
+
+  category: "equipos",
+  subcategory: "notebooks",
+  brand: "dell",
+  processor: "intel i5",
+  ramCapacity: "8gb",
+  ramVersion: "ddr4",
+  screenSize: "15.6",
+  specs: {
+    almacenamiento: {
+      disco: "256 GB",
+      tipo: "SSD NVMe Gen 3",
+      lectura: "3000 MB/s",
+      escritura: "2500 MB/s",
+    },
+    conectividad: {
+      wifi: "WiFi 6 (802.11ax)",
+      bluetooth: "Bluetooth 5.1",
+    },
+    garantia: {
+      tipo: "Oficial",
+      plazo: "12 Meses",
+    },
+    memoriaRam: {
+      formato: "SODIMM",
+      tipo: "DDR4",
+      capacidad: "8 Gb",
+      frecuencia: "3200Mhz",
+      expandible: "Sí",
+    },
+    otrasCaracteristicas: {
+      sensorDactilar: "Sí",
+      tecladoNumerico: "Sí",
+      camaraWeb: "Sí (HD)",
+      teclado: "Español con retroiluminación",
+      touchscreen: "No",
+    },
+    pantalla: {
+      panel: "WVA",
+      frecuencia: "60Hz",
+      resolucion: "1920x1080",
+      tecnologia: "Full HD",
+    },
+    procesador: {
+      marca: "Intel",
+      modelo: "i5-1135G7",
+      nucleos: "4 (8 Subprocesos)",
+      frecuencia: "2.4GHz - 4.2GHz",
+      cacheL1: "64 KB (por núcleo)",
+      cacheL2: "512 KB (por núcleo)",
+      cacheL3: "8 MB (compartido)",
+      graficos: "Intel Iris Xe",
+      tdp: "28 W",
+    },
+    puertos: {
+      usb2: "1 x Tipo A",
+      usb3: "2 x USB 3.2 Gen 1 Tipo A - 1 x USB-C",
+      hdmi: "1 x HDMI 1.4b",
+      audioMic: "Sí, combo",
+      ehternet: "Sí",
+    },
+    sistemaOperativo: {
+      nombre: "Windows 11 Pro",
+      version: "64-bits",
+    },
+  },
+},
+{
+  id: "equipos-notebooks-6",
+  title: "Notebook Dell Vostro 3405 Ryzen 5 8Gb 256Gb 14″ W11",
+  slug: "notebook-dell-vostro-3405-ryzen-5-8gb-256gb-14-w11",
+  thumbnail:
+    "/products/equipos/notebooks/dell-vostro-3405/dell-vostro-3405_1.webp",
+  images: [
+    "/products/equipos/notebooks/dell-vostro-3405/dell-vostro-3405_1.webp",
+    "/products/equipos/notebooks/dell-vostro-3405/dell-vostro-3405_2.webp",
+  ],
+  price: "52499900", // $524.999,00
+  discount: 12,
+
+  category: "equipos",
+  subcategory: "notebooks",
+  brand: "dell",
+  processor: "ryzen 5",
+  ramCapacity: "8gb",
+  ramVersion: "ddr4",
+  screenSize: "14",
+  specs: {
+    almacenamiento: {
+      disco: "256 GB",
+      tipo: "SSD NVMe Gen 3",
+      lectura: "2400 MB/s",
+      escritura: "1800 MB/s",
+    },
+    conectividad: {
+      wifi: "WiFi 5 (802.11ac)",
+      bluetooth: "Bluetooth 4.2",
+    },
+    garantia: {
+      tipo: "Oficial",
+      plazo: "12 Meses",
+    },
+    memoriaRam: {
+      formato: "SODIMM",
+      tipo: "DDR4",
+      capacidad: "8 Gb",
+      frecuencia: "2400Mhz",
+      expandible: "Sí",
+    },
+    otrasCaracteristicas: {
+      sensorDactilar: "No",
+      tecladoNumerico: "No",
+      camaraWeb: "Sí (HD)",
+      teclado: "Español",
+      touchscreen: "No",
+    },
+    pantalla: {
+      panel: "TN",
+      frecuencia: "60Hz",
+      resolucion: "1366x768",
+      tecnologia: "HD",
+    },
+    procesador: {
+      marca: "AMD",
+      modelo: "Ryzen 5 3450U",
+      nucleos: "4 (8 Subprocesos)",
+      frecuencia: "2.1GHz - 3.5GHz",
+      cacheL1: "96 KB (por núcleo)",
+      cacheL2: "512 KB (por núcleo)",
+      cacheL3: "4 MB (compartido)",
+      graficos: "AMD Radeon Vega 8",
+      tdp: "15 W",
+    },
+    puertos: {
+      usb2: "1 x Tipo A",
+      usb3: "2 x USB 3.2 Gen 1 Tipo A",
+      hdmi: "1 x HDMI 1.4",
+      audioMic: "Sí, combo",
+      ehternet: "Sí",
+    },
+    sistemaOperativo: {
+      nombre: "Windows 11",
+      version: "64-bits",
+    },
+  },
+},
+{
+  id: "equipos-notebooks-7",
+  title: "Notebook Lenovo V15 Pentium 4Gb 1Tb 15.6″ W10",
+  slug: "notebook-lenovo-v15-pentium-4gb-1tb-15.6-w10",
+  thumbnail:
+    "/products/equipos/notebooks/lenovo-v15/lenovo-v15_1.webp",
+  images: [
+    "/products/equipos/notebooks/lenovo-v15/lenovo-v15_1.webp",
+    "/products/equipos/notebooks/lenovo-v15/lenovo-v15_2.webp",
+    "/products/equipos/notebooks/lenovo-v15/lenovo-v15_3.webp",
+    "/products/equipos/notebooks/lenovo-v15/lenovo-v15_4.webp",
+  ],
+  price: "39999900", // $399.999,00
+  discount: 5,
+
+  category: "equipos",
+  subcategory: "notebooks",
+  brand: "lenovo",
+  processor: "intel pentium",
+  ramCapacity: "4gb",
+  ramVersion: "ddr4",
+  screenSize: "15.6",
+  specs: {
+    almacenamiento: {
+      disco: "1 TB",
+      tipo: "HDD",
+      lectura: "N/A",
+      escritura: "N/A",
+    },
+    conectividad: {
+      wifi: "WiFi 5 (802.11ac)",
+      bluetooth: "Bluetooth 4.2",
+    },
+    garantia: {
+      tipo: "Oficial",
+      plazo: "12 Meses",
+    },
+    memoriaRam: {
+      formato: "SODIMM",
+      tipo: "DDR4",
+      capacidad: "4 Gb",
+      frecuencia: "2400Mhz",
+      expandible: "Sí",
+    },
+    otrasCaracteristicas: {
+      sensorDactilar: "No",
+      tecladoNumerico: "Sí",
+      camaraWeb: "Sí (HD)",
+      teclado: "Español",
+      touchscreen: "No",
+    },
+    pantalla: {
+      panel: "TN",
+      frecuencia: "60Hz",
+      resolucion: "1366x768",
+      tecnologia: "HD",
+    },
+    procesador: {
+      marca: "Intel",
+      modelo: "Pentium Silver N5030",
+      nucleos: "4",
+      frecuencia: "1.1GHz - 3.1GHz",
+      cacheL1: "192 KB",
+      cacheL2: "2 MB",
+      cacheL3: "4 MB",
+      graficos: "Intel UHD Graphics 605",
+      tdp: "6 W",
+    },
+    puertos: {
+      usb2: "1 x USB 2.0 Tipo A",
+      usb3: "2 x USB 3.2 Gen 1 Tipo A",
+      hdmi: "1 x HDMI",
+      audioMic: "Sí, combo",
+      ehternet: "Sí",
+    },
+    sistemaOperativo: {
+      nombre: "Windows 10",
+      version: "64-bits",
+    },
+  },
+},
+{
+  id: "equipos-notebooks-8",
+  title: "Notebook Lenovo LOQ 15IAx9 i5 12450HX 16Gb 512Gb RTX 3050 15.6″ FHD W11",
+  slug: "notebook-lenovo-loq-15iax9-i5-12450hx-16gb-512gb-rtx-3050-15.6-fhd-w11",
+  thumbnail:
+    "/products/equipos/notebooks/lenovo-loq-15iax9/lenovo-loq-15iax9_1.webp",
+  images: [
+    "/products/equipos/notebooks/lenovo-loq-15iax9/lenovo-loq-15iax9_1.webp",
+    "/products/equipos/notebooks/lenovo-loq-15iax9/lenovo-loq-15iax9_2.webp",
+    "/products/equipos/notebooks/lenovo-loq-15iax9/lenovo-loq-15iax9_3.webp",
+    "/products/equipos/notebooks/lenovo-loq-15iax9/lenovo-loq-15iax9_4.webp",
+  ],
+  price: "109999900", // $1.099.999,00
+  discount: 10,
+
+  category: "equipos",
+  subcategory: "notebooks",
+  brand: "lenovo",
+  processor: "intel i5",
+  ramCapacity: "16gb",
+  ramVersion: "ddr5",
+  screenSize: "15.6",
+  specs: {
+    almacenamiento: {
+      disco: "512 GB",
+      tipo: "SSD NVMe Gen 4",
+      lectura: "5000 MB/s",
+      escritura: "4200 MB/s",
+    },
+    conectividad: {
+      wifi: "WiFi 6 (802.11ax)",
+      bluetooth: "Bluetooth 5.1",
+    },
+    garantia: {
+      tipo: "Oficial",
+      plazo: "12 Meses",
+    },
+    memoriaRam: {
+      formato: "SODIMM",
+      tipo: "DDR5",
+      capacidad: "16 Gb",
+      frecuencia: "4800 MHz",
+      expandible: "Sí",
+    },
+    otrasCaracteristicas: {
+      sensorDactilar: "No",
+      tecladoNumerico: "Sí",
+      camaraWeb: "Sí (HD)",
+      teclado: "Español con retroiluminación",
+      touchscreen: "No",
+    },
+    pantalla: {
+      panel: "IPS",
+      frecuencia: "144Hz",
+      resolucion: "1920x1080",
+      tecnologia: "FHD",
+    },
+    procesador: {
+      marca: "Intel",
+      modelo: "Core i5-12450HX",
+      nucleos: "8 (4P + 4E) / 12 Subprocesos",
+      frecuencia: "3.3GHz - 4.4GHz",
+      cacheL1: "80 KB (por núcleo)",
+      cacheL2: "1 MB (por núcleo)",
+      cacheL3: "12 MB (compartido)",
+      graficos: "Intel UHD + NVIDIA GeForce RTX 3050 6GB GDDR6",
+      tdp: "45 W",
+    },
+    puertos: {
+      usb2: "1 x USB 2.0 Tipo A",
+      usb3: "2 x USB 3.2 Gen 1 Tipo A - 1 x USB 3.2 Gen 2 Tipo C",
+      hdmi: "1 x HDMI 2.1",
+      audioMic: "Sí, combo 3.5mm",
+      ehternet: "Sí (RJ-45)",
+    },
+    sistemaOperativo: {
+      nombre: "Windows 11 Home",
+      version: "64-bits",
+    },
+  },
+},
+{
+  id: "equipos-notebooks-9",
+  title: "Notebook HP 255 G10 Ryzen 3 7330U 8Gb 256Gb 15.6″ FreeDOS",
+  slug: "notebook-hp-255-g10-ryzen-3-7330u-8gb-256gb-15.6-freedos",
+  thumbnail:
+    "/products/equipos/notebooks/hp-255-g10/hp-255-g10_1.webp",
+  images: [
+    "/products/equipos/notebooks/hp-255-g10/hp-255-g10_1.webp",
+    "/products/equipos/notebooks/hp-255-g10/hp-255-g10_2.webp",
+    "/products/equipos/notebooks/hp-255-g10/hp-255-g10_3.webp",
+    "/products/equipos/notebooks/hp-255-g10/hp-255-g10_4.webp",
+  ],
+  price: "58999900", // $589.999,00
+  discount: 15,
+  category: "equipos",
+  subcategory: "notebooks",
+  brand: "hp",
+  processor: "ryzen 3",
+  ramCapacity: "8gb",
+  ramVersion: "ddr4",
+  screenSize: "15.6",
+  specs: {
+    almacenamiento: {
+      disco: "256 GB",
+      tipo: "SSD NVMe Gen 3",
+      lectura: "3000 MB/s",
+      escritura: "1300 MB/s",
+    },
+    conectividad: {
+      wifi: "WiFi 5 (802.11ac)",
+      bluetooth: "Bluetooth 4.2",
+    },
+    garantia: {
+      tipo: "Oficial",
+      plazo: "12 Meses",
+    },
+    memoriaRam: {
+      formato: "SODIMM",
+      tipo: "DDR4",
+      capacidad: "8 Gb",
+      frecuencia: "3200 MHz",
+      expandible: "Sí (hasta 16 Gb)",
+    },
+    otrasCaracteristicas: {
+      sensorDactilar: "No",
+      tecladoNumerico: "Sí",
+      camaraWeb: "Sí (HD)",
+      teclado: "Español",
+      touchscreen: "No",
+    },
+    pantalla: {
+      panel: "TN",
+      frecuencia: "60Hz",
+      resolucion: "1920x1080",
+      tecnologia: "FHD",
+    },
+    procesador: {
+      marca: "AMD",
+      modelo: "Ryzen 3 7330U",
+      nucleos: "4 (8 Subprocesos)",
+      frecuencia: "2.3GHz - 4.3GHz",
+      cacheL1: "256 KB",
+      cacheL2: "2 MB",
+      cacheL3: "4 MB",
+      graficos: "AMD Radeon Graphics",
+      tdp: "15 W",
+    },
+    puertos: {
+      usb2: "1 x USB 2.0 Tipo A",
+      usb3: "2 x USB 3.2 Gen 1 Tipo A",
+      usbC: "1 x USB 3.2 Gen 1 Tipo C",
+      hdmi: "1 x HDMI 1.4b",
+      audioMic: "Sí, combo 3.5mm",
+      ehternet: "Sí (RJ-45)",
+    },
+    sistemaOperativo: {
+      nombre: "FreeDOS",
+      version: "",
+    },
+  },
+},
+{
+  id: "equipos-notebooks-10",
+  title: "Notebook HP 15-fc0037wm Ryzen 5 8Gb 256Gb 15.6″ FHD W11",
+  slug: "notebook-hp-15-fc0037wm-ryzen-5-8gb-256gb-15.6-fhd-w11",
+  thumbnail:
+    "/products/equipos/notebooks/hp-15-fc0037wm/hp-15-fc0037wm_1.webp",
+  images: [
+    "/products/equipos/notebooks/hp-15-fc0037wm/hp-15-fc0037wm_1.webp",
+    "/products/equipos/notebooks/hp-15-fc0037wm/hp-15-fc0037wm_2.webp",
+    "/products/equipos/notebooks/hp-15-fc0037wm/hp-15-fc0037wm_3.webp",
+    "/products/equipos/notebooks/hp-15-fc0037wm/hp-15-fc0037wm_4.webp",
+  ],
+  price: "60999000",
+  discount: 10,
+  category: "equipos",
+  subcategory: "notebooks",
+  brand: "hp",
+  processor: "ryzen 5",
+  ramCapacity: "8gb",
+  ramVersion: "ddr4",
+  screenSize: "15.6",
+  specs: {
+    almacenamiento: {
+      disco: "256 GB",
+      tipo: "SSD NVMe Gen 3",
+      lectura: "3000 MB/s",
+      escritura: "1500 MB/s",
+    },
+    conectividad: {
+      wifi: "WiFi 5 (802.11ac)",
+      bluetooth: "Bluetooth 5.3",
+    },
+    garantia: {
+      tipo: "Oficial",
+      plazo: "12 Meses",
+    },
+    memoriaRam: {
+      formato: "SODIMM",
+      tipo: "DDR4",
+      capacidad: "8 Gb",
+      frecuencia: "3200MHz",
+      expandible: "Sí",
+    },
+    otrasCaracteristicas: {
+      sensorDactilar: "No",
+      tecladoNumerico: "Sí",
+      camaraWeb: "Sí (HD)",
+      teclado: "Español",
+      touchscreen: "No",
+    },
+    pantalla: {
+      panel: "IPS",
+      frecuencia: "60Hz",
+      resolucion: "1920x1080",
+      tecnologia: "FHD",
+    },
+    procesador: {
+      marca: "AMD",
+      modelo: "Ryzen 5 7520U",
+      nucleos: "4 (8 Subprocesos)",
+      frecuencia: "2.8GHz - 4.3GHz",
+      cacheL1: "256 KB",
+      cacheL2: "2 MB",
+      cacheL3: "4 MB",
+      graficos: "AMD Radeon 610M",
+      tdp: "15 W",
+    },
+    puertos: {
+      usb2: "1 x USB 2.0 Tipo A",
+      usb3: "2 x USB 3.2 Gen 1 Tipo A",
+      usbC: "1 x USB 3.2 Gen 1 Tipo C",
+      hdmi: "1 x HDMI 1.4b",
+      audioMic: "Sí, combo",
+      ehternet: "No",
+    },
+    sistemaOperativo: {
+      nombre: "Windows 11",
+      version: "64-bits",
+    },
+  },
+},
+
+{
+  id: "equipos-notebooks-11",
+  title: "Notebook HP 15-fc0041wm Ryzen 5 8Gb 512Gb 15.6″ W11",
+  slug: "notebook-hp-15-fc0041wm-ryzen-5-8gb-512gb-15.6-w11",
+  thumbnail:
+    "/products/equipos/notebooks/hp-15-fc0041wm/hp-15-fc0041wm_1.webp",
+  images: [
+    "/products/equipos/notebooks/hp-15-fc0041wm/hp-15-fc0041wm_1.webp",
+    "/products/equipos/notebooks/hp-15-fc0041wm/hp-15-fc0041wm_2.webp",
+    "/products/equipos/notebooks/hp-15-fc0041wm/hp-15-fc0041wm_3.webp",
+  ],
+  price: "64999000", // $649.990,00
+  discount: 10,
+
+  category: "equipos",
+  subcategory: "notebooks",
+  brand: "hp",
+  processor: "ryzen 5",
+  ramCapacity: "8gb",
+  ramVersion: "ddr5",
+  screenSize: "15.6",
+  specs: {
+    almacenamiento: {
+      disco: "512 GB",
+      tipo: "SSD NVMe Gen 4",
+      lectura: "3500 MB/s",
+      escritura: "2800 MB/s",
+    },
+    conectividad: {
+      wifi: "WiFi 6 (802.11ax)",
+      bluetooth: "Bluetooth 5.3",
+    },
+    garantia: {
+      tipo: "Oficial",
+      plazo: "12 Meses",
+    },
+    memoriaRam: {
+      formato: "SODIMM",
+      tipo: "DDR5",
+      capacidad: "8 Gb",
+      frecuencia: "4800Mhz",
+      expandible: "Sí",
+    },
+    otrasCaracteristicas: {
+      sensorDactilar: "No",
+      tecladoNumerico: "Sí",
+      camaraWeb: "Sí (HD)",
+      teclado: "Español",
+      touchscreen: "No",
+    },
+    pantalla: {
+      panel: "IPS",
+      frecuencia: "60Hz",
+      resolucion: "1920x1080",
+      tecnologia: "FHD",
+    },
+    procesador: {
+      marca: "AMD",
+      modelo: "Ryzen 5 7520U",
+      nucleos: "4 (8 Subprocesos)",
+      frecuencia: "2.8GHz - 4.3GHz",
+      cacheL1: "128 KB (por núcleo)",
+      cacheL2: "512 KB (por núcleo)",
+      cacheL3: "2 MB (compartido)",
+      graficos: "AMD Radeon 610M",
+      tdp: "15 W",
+    },
+    puertos: {
+      usb2: "1 x Tipo A",
+      usb3: "2 x USB 3.2 Gen 1 Tipo A",
+      usbC: "1 x USB 3.2 Gen 1 Tipo C",
+      hdmi: "1 x HDMI 1.4b",
+      audioMic: "Sí, combo",
+      ehternet: "No",
+    },
+    sistemaOperativo: {
+      nombre: "Windows 11",
+      version: "64-bits",
+    },
+  },
+},
+{
+  id: "equipos-notebooks-12",
+  title: "Notebook HP 15-fd1085cl Core 5 Ultra 120U 12Gb 512Gb 15.6″ W11",
+  slug: "notebook-hp-15-fd1085cl-core-5-ultra-120u-12gb-512gb-15.6-w11",
+  thumbnail:
+    "/products/equipos/notebooks/hp-15-fd1085cl/hp-15-fd1085cl_1.webp",
+  images: [
+    "/products/equipos/notebooks/hp-15-fd1085cl/hp-15-fd1085cl_1.webp",
+    "/products/equipos/notebooks/hp-15-fd1085cl/hp-15-fd1085cl_2.webp",
+    "/products/equipos/notebooks/hp-15-fd1085cl/hp-15-fd1085cl_3.webp",
+  ],
+  price: "78999000", // $789.990,00
+  discount: 8,
+  category: "equipos",
+  subcategory: "notebooks",
+  brand: "hp",
+  processor: "intel i5",
+  ramCapacity: "12gb",
+  ramVersion: "ddr5",
+  screenSize: "15.6",
+  specs: {
+    almacenamiento: {
+      disco: "512 GB",
+      tipo: "SSD NVMe Gen 4",
+      lectura: "5000 MB/s",
+      escritura: "4500 MB/s",
+    },
+    conectividad: {
+      wifi: "WiFi 6 (802.11ax)",
+      bluetooth: "Bluetooth 5.3",
+    },
+    garantia: {
+      tipo: "Oficial",
+      plazo: "12 Meses",
+    },
+    memoriaRam: {
+      formato: "SODIMM",
+      tipo: "DDR5",
+      capacidad: "12 Gb",
+      frecuencia: "4800Mhz",
+      expandible: "Sí",
+    },
+    otrasCaracteristicas: {
+      sensorDactilar: "No",
+      tecladoNumerico: "Sí",
+      camaraWeb: "Sí (HD)",
+      teclado: "Español",
+      touchscreen: "No",
+    },
+    pantalla: {
+      panel: "IPS",
+      frecuencia: "60Hz",
+      resolucion: "1920x1080",
+      tecnologia: "FHD",
+    },
+    procesador: {
+      marca: "Intel",
+      modelo: "Core 5 Ultra 120U",
+      nucleos: "12 (2 P-cores + 8 E-cores)",
+      frecuencia: "1.1GHz - 4.9GHz",
+      cacheL1: "80 KB (por núcleo)",
+      cacheL2: "2 MB (total)",
+      cacheL3: "12 MB (compartido)",
+      graficos: "Intel Graphics (Xe-LPG)",
+      tdp: "15 W",
+    },
+    puertos: {
+      usb2: "1 x Tipo A",
+      usb3: "2 x USB 3.2 Gen 1 Tipo A",
+      usbC: "1 x USB 3.2 Gen 2 Tipo C (DisplayPort 1.4, Power Delivery)",
+      hdmi: "1 x HDMI 1.4b",
+      audioMic: "Sí, combo",
+      ehternet: "No",
+    },
+    sistemaOperativo: {
+      nombre: "Windows 11",
+      version: "64-bits",
+    },
+  },
+},
+{
+  id: "equipos-notebooks-13",
+  title: "Notebook Asus TUF A15 FA507NU-HQ108 Ryzen 7 16Gb 512Gb RTX 4050 15.6″ Free",
+  slug: "notebook-asus-tuf-a15-fa507nu-hq108-ryzen-7-16gb-512gb-rtx-4050-15.6-free",
+  thumbnail:
+    "/products/equipos/notebooks/asus-tuf-a15-fa507nu-hq108/asus-tuf-a15-fa507nu-hq108_1.webp",
+  images: [
+    "/products/equipos/notebooks/asus-tuf-a15-fa507nu-hq108/asus-tuf-a15-fa507nu-hq108_1.webp",
+    "/products/equipos/notebooks/asus-tuf-a15-fa507nu-hq108/asus-tuf-a15-fa507nu-hq108_2.webp",
+    "/products/equipos/notebooks/asus-tuf-a15-fa507nu-hq108/asus-tuf-a15-fa507nu-hq108_3.webp",
+    "/products/equipos/notebooks/asus-tuf-a15-fa507nu-hq108/asus-tuf-a15-fa507nu-hq108_4.webp",
+  ],
+  price: "124999000", // $1.249.990,00
+  discount: 10,
+
+  category: "equipos",
+  subcategory: "notebooks",
+  brand: "asus",
+  processor: "ryzen 7",
+  ramCapacity: "16gb",
+  ramVersion: "ddr5",
+  screenSize: "15.6",
+  specs: {
+    almacenamiento: {
+      disco: "512 GB",
+      tipo: "SSD NVMe Gen 4",
+      lectura: "5000 MB/s",
+      escritura: "4500 MB/s",
+    },
+    conectividad: {
+      wifi: "WiFi 6 (802.11ax)",
+      bluetooth: "Bluetooth 5.2",
+    },
+    garantia: {
+      tipo: "Oficial",
+      plazo: "12 Meses",
+    },
+    memoriaRam: {
+      formato: "SODIMM",
+      tipo: "DDR5",
+      capacidad: "16 Gb",
+      frecuencia: "4800Mhz",
+      expandible: "Sí",
+    },
+    otrasCaracteristicas: {
+      sensorDactilar: "No",
+      tecladoNumerico: "Sí",
+      camaraWeb: "Sí (HD)",
+      teclado: "Español con retroiluminación RGB",
+      touchscreen: "No",
+    },
+    pantalla: {
+      panel: "IPS",
+      frecuencia: "144Hz",
+      resolucion: "1920x1080",
+      tecnologia: "FHD",
+    },
+    procesador: {
+      marca: "AMD",
+      modelo: "Ryzen 7 7735HS",
+      nucleos: "8 (16 Subprocesos)",
+      frecuencia: "3.2GHz - 4.75GHz",
+      cacheL1: "512 KB",
+      cacheL2: "4 MB",
+      cacheL3: "16 MB",
+      graficos: "Integrados + NVIDIA GeForce RTX 4050 6GB",
+      tdp: "54 - 90 W (configurable)",
+    },
+    puertos: {
+      usb2: "1 x USB 2.0 Tipo A",
+      usb3: "2 x USB 3.2 Gen 1 Tipo A",
+      usbC: "2 x USB 3.2 Gen 2 Tipo C (1 con DisplayPort)",
+      hdmi: "1 x HDMI 2.1",
+      audioMic: "Sí, combo 3.5mm",
+      ehternet: "Sí, RJ-45",
+    },
+    sistemaOperativo: {
+      nombre: "Sin sistema operativo",
+      version: "",
+    },
+  },
+},
+{
+  id: "equipos-notebooks-14",
+  title: "Notebook Asus E410MA Celeron N4020 4Gb 128Gb eMMC 14″ W11",
+  slug: "notebook-asus-e410ma-celeron-n4020-4gb-128gb-emmc-14-w11",
+  thumbnail:
+    "/products/equipos/notebooks/asus-e410ma/asus-e410ma_1.webp",
+  images: [
+    "/products/equipos/notebooks/asus-e410ma/asus-e410ma_1.webp",
+    "/products/equipos/notebooks/asus-e410ma/asus-e410ma_2.webp",
+    "/products/equipos/notebooks/asus-e410ma/asus-e410ma_3.webp",
+    "/products/equipos/notebooks/asus-e410ma/asus-e410ma_4.webp",
+  ],
+  price: "36999900", // $369.999,00
+  discount: 10,
+
+  category: "equipos",
+  subcategory: "notebooks",
+  brand: "asus",
+  processor: "intel celeron",
+  ramCapacity: "4gb",
+  ramVersion: "ddr4",
+  screenSize: "14",
+  specs: {
+    almacenamiento: {
+      disco: "128 GB",
+      tipo: "SSD SATA",
+      lectura: "500 MB/s",
+      escritura: "450 MB/s",
+    },
+    conectividad: {
+      wifi: "WiFi 5 (802.11ac)",
+      bluetooth: "Bluetooth 4.1",
+    },
+    garantia: {
+      tipo: "Oficial",
+      plazo: "12 Meses",
+    },
+    memoriaRam: {
+      formato: "Integrada",
+      tipo: "DDR4",
+      capacidad: "4 Gb",
+      frecuencia: "2400Mhz",
+      expandible: "No",
+    },
+    otrasCaracteristicas: {
+      sensorDactilar: "No",
+      tecladoNumerico: "No",
+      camaraWeb: "Sí (VGA)",
+      teclado: "Español",
+      touchscreen: "No",
+    },
+    pantalla: {
+      panel: "TN",
+      frecuencia: "60Hz",
+      resolucion: "1366x768",
+      tecnologia: "HD",
+    },
+    procesador: {
+      marca: "Intel",
+      modelo: "Celeron N4020",
+      nucleos: "2 (2 Subprocesos)",
+      frecuencia: "1.1GHz - 2.8GHz",
+      cacheL1: "64 KB (por núcleo)",
+      cacheL2: "2 MB",
+      cacheL3: "0 MB",
+      graficos: "Intel UHD Graphics 600",
+      tdp: "6 W",
+    },
+    puertos: {
+      usb2: "1 x USB 2.0 Tipo A",
+      usb3: "1 x USB 3.2 Gen 1 Tipo A",
+      usbC: "1 x USB 3.2 Gen 1 Tipo C",
+      hdmi: "1 x HDMI 1.4",
+      audioMic: "Sí, combo 3.5mm",
+      ehternet: "No",
+    },
+    sistemaOperativo: {
+      nombre: "Windows 11 Home",
+      version: "64-bits",
+    },
+  },
+},
+{
+  id: "equipos-notebooks-15",
+  title: 'Notebook Asus E410KA Celeron N4500 4Gb 64Gb eMMC 14″ W11',
+  slug: 'notebook-asus-e410ka-celeron-n4500-4gb-64gb-emmc-14-w11',
+  thumbnail:
+    '/products/equipos/notebooks/asus-e410ka/asus-e410ka_1.webp',
+  images: [
+    '/products/equipos/notebooks/asus-e410ka/asus-e410ka_1.webp',
+    '/products/equipos/notebooks/asus-e410ka/asus-e410ka_2.webp',
+  ],
+  price: '32999900',
+  discount: 8,
+  category: 'equipos',
+  subcategory: 'notebooks',
+  brand: 'asus',
+  processor: 'intel celeron',
+  ramCapacity: '4gb',
+  ramVersion: 'ddr4',
+  screenSize: '14',
+  specs: {
+    almacenamiento: {
+      disco: '64 GB',
+      tipo: 'SSD SATA',
+      lectura: '300 MB/s',
+      escritura: '250 MB/s',
+    },
+    conectividad: {
+      wifi: 'WiFi 5 (802.11ac)',
+      bluetooth: 'Bluetooth 4.1',
+    },
+    garantia: {
+      tipo: 'Oficial',
+      plazo: '12 Meses',
+    },
+    memoriaRam: {
+      formato: 'Integrada',
+      tipo: 'DDR4',
+      capacidad: '4 Gb',
+      frecuencia: '2400Mhz',
+      expandible: 'No',
+    },
+    otrasCaracteristicas: {
+      sensorDactilar: 'No',
+      tecladoNumerico: 'No',
+      camaraWeb: 'Sí (VGA)',
+      teclado: 'Español',
+      touchscreen: 'No',
+    },
+    pantalla: {
+      panel: 'TN',
+      frecuencia: '60Hz',
+      resolucion: '1366x768',
+      tecnologia: 'HD',
+    },
+    procesador: {
+      marca: 'Intel',
+      modelo: 'Celeron N4500',
+      nucleos: '2 (2 Subprocesos)',
+      frecuencia: '1.1GHz - 2.8GHz',
+      cacheL1: '64 KB (por núcleo)',
+      cacheL2: '1.5 MB',
+      cacheL3: '0 MB',
+      graficos: 'Intel UHD Graphics',
+      tdp: '6 W',
+    },
+    puertos: {
+      usb2: '1 x USB 2.0 Tipo A',
+      usb3: '1 x USB 3.2 Gen 1 Tipo A',
+      usbC: '1 x USB 3.2 Gen 1 Tipo C',
+      hdmi: '1 x HDMI 1.4',
+      audioMic: 'Sí, combo 3.5mm',
+      ehternet: 'No',
+    },
+    sistemaOperativo: {
+      nombre: 'Windows 11 Home',
+      version: '64-bits',
+    },
+  },
+},
+{
+  id: "equipos-notebooks-16",
+  title: "Notebook Asus Vivobook E1504GA i3-N305 8Gb 128Gb SSD 15.6″ W11",
+  slug: "notebook-asus-vivobook-e1504ga-i3-n305-8gb-128gb-ssd-15.6-w11",
+  thumbnail:
+    "/products/equipos/notebooks/asus-vivobook-e1504ga/asus-vivobook-e1504ga_1.webp",
+  images: [
+    "/products/equipos/notebooks/asus-vivobook-e1504ga/asus-vivobook-e1504ga_1.webp",
+    "/products/equipos/notebooks/asus-vivobook-e1504ga/asus-vivobook-e1504ga_2.webp",
+    "/products/equipos/notebooks/asus-vivobook-e1504ga/asus-vivobook-e1504ga_3.webp",
+    "/products/equipos/notebooks/asus-vivobook-e1504ga/asus-vivobook-e1504ga_4.webp",
+    "/products/equipos/notebooks/asus-vivobook-e1504ga/asus-vivobook-e1504ga_5.webp",
+    "/products/equipos/notebooks/asus-vivobook-e1504ga/asus-vivobook-e1504ga_6.webp",
+    "/products/equipos/notebooks/asus-vivobook-e1504ga/asus-vivobook-e1504ga_7.webp",
+    "/products/equipos/notebooks/asus-vivobook-e1504ga/asus-vivobook-e1504ga_8.webp",
+  ],
+  price: "41499900", // $414.999,00
+  discount: 10,
+
+  category: "equipos",
+  subcategory: "notebooks",
+  brand: "asus",
+  processor: "intel i3",
+  ramCapacity: "8gb",
+  ramVersion: "ddr4",
+  screenSize: "15.6",
+  specs: {
+    almacenamiento: {
+      disco: "128 GB",
+      tipo: "SSD NVMe Gen 3",
+      lectura: "2400 MB/s",
+      escritura: "1800 MB/s",
+    },
+    conectividad: {
+      wifi: "WiFi 6 (802.11ax)",
+      bluetooth: "Bluetooth 5.1",
+    },
+    garantia: {
+      tipo: "Oficial",
+      plazo: "12 Meses",
+    },
+    memoriaRam: {
+      formato: "SODIMM",
+      tipo: "DDR4",
+      capacidad: "8 Gb",
+      frecuencia: "3200Mhz",
+      expandible: "Sí",
+    },
+    otrasCaracteristicas: {
+      sensorDactilar: "No",
+      tecladoNumerico: "Sí",
+      camaraWeb: "Sí (HD)",
+      teclado: "Español",
+      touchscreen: "No",
+    },
+    pantalla: {
+      panel: "IPS",
+      frecuencia: "60Hz",
+      resolucion: "1920x1080",
+      tecnologia: "FHD",
+    },
+    procesador: {
+      marca: "Intel",
+      modelo: "Core i3-N305",
+      nucleos: "8 (8 Subprocesos)",
+      frecuencia: "1.8GHz - 3.8GHz",
+      cacheL1: "96 KB (por núcleo)",
+      cacheL2: "2 MB",
+      cacheL3: "6 MB",
+      graficos: "Intel UHD Graphics",
+      tdp: "15 W",
+    },
+    puertos: {
+      usb2: "2 x USB 2.0 Tipo A",
+      usb3: "1 x USB 3.2 Gen 1 Tipo A",
+      usbC: "1 x USB 3.2 Gen 1 Tipo C",
+      hdmi: "1 x HDMI 1.4",
+      audioMic: "Sí, combo 3.5mm",
+      ehternet: "No",
+    },
+    sistemaOperativo: {
+      nombre: "Windows 11 Home",
+      version: "64-bits",
+    },
+  },
+},
+{
+  id: "equipos-notebooks-17",
+  title: "Notebook Asus Vivobook E1504G i3-N305 8Gb 256Gb SSD 15.6″ FreeDOS",
+  slug: "notebook-asus-vivobook-e1504g-i3-n305-8gb-256gb-ssd-15.6-freedos",
+  thumbnail:
+    "/products/equipos/notebooks/asus-vivobook-e1504g/asus-vivobook-e1504g_1.webp",
+  images: [
+    "/products/equipos/notebooks/asus-vivobook-e1504g/asus-vivobook-e1504g_1.webp",
+    "/products/equipos/notebooks/asus-vivobook-e1504g/asus-vivobook-e1504g_2.webp",
+    "/products/equipos/notebooks/asus-vivobook-e1504g/asus-vivobook-e1504g_3.webp",
+    "/products/equipos/notebooks/asus-vivobook-e1504g/asus-vivobook-e1504g_4.webp",
+    "/products/equipos/notebooks/asus-vivobook-e1504g/asus-vivobook-e1504g_5.webp",
+    "/products/equipos/notebooks/asus-vivobook-e1504g/asus-vivobook-e1504g_6.webp",
+    "/products/equipos/notebooks/asus-vivobook-e1504g/asus-vivobook-e1504g_7.webp",
+    "/products/equipos/notebooks/asus-vivobook-e1504g/asus-vivobook-e1504g_8.webp",
+    "/products/equipos/notebooks/asus-vivobook-e1504g/asus-vivobook-e1504g_9.webp",
+  ],
+  price: "45999900", // $459.999,00
+  discount: 15,
+
+  category: "equipos",
+  subcategory: "notebooks",
+  brand: "asus",
+  processor: "intel i3",
+  ramCapacity: "8gb",
+  ramVersion: "ddr4",
+  screenSize: "15.6",
+  specs: {
+    almacenamiento: {
+      disco: "256 GB",
+      tipo: "SSD NVMe Gen 3",
+      lectura: "2400 MB/s",
+      escritura: "1800 MB/s",
+    },
+    conectividad: {
+      wifi: "WiFi 6 (802.11ax)",
+      bluetooth: "Bluetooth 5.1",
+    },
+    garantia: {
+      tipo: "Oficial",
+      plazo: "12 Meses",
+    },
+    memoriaRam: {
+      formato: "SODIMM",
+      tipo: "DDR4",
+      capacidad: "8 Gb",
+      frecuencia: "3200Mhz",
+      expandible: "Sí",
+    },
+    otrasCaracteristicas: {
+      sensorDactilar: "No",
+      tecladoNumerico: "Sí",
+      camaraWeb: "Sí (HD)",
+      teclado: "Español",
+      touchscreen: "No",
+    },
+    pantalla: {
+      panel: "IPS",
+      frecuencia: "60Hz",
+      resolucion: "1920x1080",
+      tecnologia: "FHD",
+    },
+    procesador: {
+      marca: "Intel",
+      modelo: "Core i3-N305",
+      nucleos: "8 (8 Subprocesos)",
+      frecuencia: "1.8GHz - 3.8GHz",
+      cacheL1: "96 KB (por núcleo)",
+      cacheL2: "2 MB",
+      cacheL3: "6 MB",
+      graficos: "Intel UHD Graphics",
+      tdp: "15 W",
+    },
+    puertos: {
+      usb2: "2 x USB 2.0 Tipo A",
+      usb3: "1 x USB 3.2 Gen 1 Tipo A",
+      usbC: "1 x USB 3.2 Gen 1 Tipo C",
+      hdmi: "1 x HDMI 1.4",
+      audioMic: "Sí, combo 3.5mm",
+      ehternet: "No",
+    },
+    sistemaOperativo: {
+      nombre: "FreeDOS",
+      version: "-",
+    },
+  },
+},
 
   // PCs de escritorio
   {
     id: "5",
     title: "PC Armada AMD Ryzen 5 5600G",
-    image: "/products/pc-armada-ryzen5.webp",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "429999",
     discount: 10,
     slug: "pc-armada-amd-ryzen-5-5600g",
@@ -283,8 +1424,10 @@ export const products: Product[] = [
         plazo: "12 Meses",
       },
       memoriaRam: {
-        capacidad: "8 Gigas",
         formato: "UDIMM",
+        tipo: "DDR4",
+        capacidad: "8 Gb",
+        frecuencia: "3200Mhz",
         expandible: "Sí",
       },
       procesador: {
@@ -308,7 +1451,9 @@ export const products: Product[] = [
   {
     id: "6",
     title: "PC Gamer Intel Core i5 12400F + RTX 3060",
-    image: "/products/pc-gamer-i5-rtx3060.webp",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "849999",
     slug: "pc-gamer-intel-i5-12400f-rtx-3060",
     category: "equipos",
@@ -333,8 +1478,10 @@ export const products: Product[] = [
         plazo: "12 Meses",
       },
       memoriaRam: {
-        capacidad: "16 Gigas",
         formato: "UDIMM",
+        tipo: "DDR4",
+        capacidad: "16 Gb",
+        frecuencia: "3200Mhz",
         expandible: "Sí",
       },
       procesador: {
@@ -358,7 +1505,9 @@ export const products: Product[] = [
   {
     id: "7",
     title: "PC Oficina Intel Core i3 10100",
-    image: "/products/pc-oficina-i3.webp",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "319999",
     slug: "pc-oficina-intel-i3-10100",
     category: "equipos",
@@ -383,8 +1532,10 @@ export const products: Product[] = [
         plazo: "12 Meses",
       },
       memoriaRam: {
-        capacidad: "8 Gigas",
         formato: "UDIMM",
+        tipo: "DDR4",
+        capacidad: "32 Gb",
+        frecuencia: "3200Mhz",
         expandible: "Sí",
       },
       procesador: {
@@ -408,7 +1559,9 @@ export const products: Product[] = [
   {
     id: "8",
     title: "PC Diseño Gráfico Ryzen 7 5700G",
-    image: "/products/pc-diseno-ryzen7.webp",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "679999",
     discount: 12,
     slug: "pc-diseno-grafico-ryzen-7-5700g",
@@ -434,8 +1587,10 @@ export const products: Product[] = [
         plazo: "24 Meses",
       },
       memoriaRam: {
-        capacidad: "32 Gigas",
         formato: "UDIMM",
+        tipo: "DDR4",
+        capacidad: "8 Gb",
+        frecuencia: "2400Mhz",
         expandible: "Sí",
       },
       procesador: {
@@ -463,7 +1618,9 @@ export const products: Product[] = [
   {
     id: "10",
     title: "Disco HDD Seagate Barracuda 1TB",
-    image: "/products/hdd-seagate.webp",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "29999",
     slug: "hdd-seagate-barracuda-1tb",
     category: "almacenamiento",
@@ -487,7 +1644,9 @@ export const products: Product[] = [
   {
     id: "11",
     title: "Disco HDD Western Digital Blue 2TB",
-    image: "/products/hdd-wd-2tb.webp",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "42999",
     slug: "hdd-wd-blue-2tb",
     category: "almacenamiento",
@@ -511,7 +1670,9 @@ export const products: Product[] = [
   {
     id: "12",
     title: "Disco HDD Toshiba P300 1TB",
-    image: "/products/hdd-toshiba-p300-1tb.webp",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "30999",
     slug: "hdd-toshiba-p300-1tb",
     category: "almacenamiento",
@@ -535,7 +1696,9 @@ export const products: Product[] = [
   {
     id: "13",
     title: "Disco HDD Hitachi Ultrastar 4TB",
-    image: "/products/hdd-hitachi-4tb.webp",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "71999",
     slug: "hdd-hitachi-ultrastar-4tb",
     category: "almacenamiento",
@@ -558,7 +1721,9 @@ export const products: Product[] = [
   {
     id: "9",
     title: "Disco SSD Kingston 480GB",
-    image: "/products/ssd-kingston.webp",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "34999",
     slug: "ssd-kingston-480gb",
     category: "almacenamiento",
@@ -582,7 +1747,9 @@ export const products: Product[] = [
   {
     id: "33",
     title: "Disco SSD WD Blue 1TB SATA",
-    image: "/products/ssd-wd-blue-1tb.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "59999",
     slug: "ssd-wd-blue-1tb-sata",
     category: "almacenamiento",
@@ -606,7 +1773,9 @@ export const products: Product[] = [
   {
     id: "34",
     title: "Disco SSD Crucial BX500 240GB",
-    image: "/products/ssd-crucial-bx500-240gb.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "21999",
     slug: "ssd-crucial-bx500-240gb",
     category: "almacenamiento",
@@ -630,7 +1799,9 @@ export const products: Product[] = [
   {
     id: "35",
     title: "Disco SSD ADATA SU800 512GB",
-    image: "/products/ssd-adata-su800-512gb.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "38999",
     slug: "ssd-adata-su800-512gb",
     category: "almacenamiento",
@@ -654,7 +1825,9 @@ export const products: Product[] = [
   {
     id: "12",
     title: "SSD M.2 NVMe Crucial P3 1TB",
-    image: "/products/ssd-m2-crucial.webp",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "69999",
     slug: "ssd-m2-crucial-p3-1tb",
     category: "almacenamiento",
@@ -678,7 +1851,9 @@ export const products: Product[] = [
   {
     id: "36",
     title: "SSD M.2 NVMe Kingston NV2 500GB",
-    image: "/products/ssd-m2-kingston-nv2-500gb.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "37999",
     slug: "ssd-m2-kingston-nv2-500gb",
     category: "almacenamiento",
@@ -703,7 +1878,9 @@ export const products: Product[] = [
   {
     id: "37",
     title: "SSD M.2 SATA Kingston A400 240GB",
-    image: "/products/ssd-m2-kingston-a400-240gb.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "21999",
     slug: "ssd-m2-kingston-a400-240gb",
     category: "almacenamiento",
@@ -726,7 +1903,9 @@ export const products: Product[] = [
   {
     id: "38",
     title: "SSD M.2 SATA Western Digital Green 480GB",
-    image: "/products/ssd-m2-wd-green-480gb.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "28999",
     slug: "ssd-m2-wd-green-480gb",
     category: "almacenamiento",
@@ -751,7 +1930,9 @@ export const products: Product[] = [
   {
     id: "ext-001",
     title: "Disco Externo Seagate Backup Plus 2TB",
-    image: "/products/seagate-backup-plus-2tb.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "129999",
     slug: "disco-externo-seagate-backup-plus-2tb",
     category: "almacenamiento",
@@ -778,7 +1959,9 @@ export const products: Product[] = [
   {
     id: "ext-002",
     title: "Disco Externo WD My Passport 1TB",
-    image: "/products/wd-my-passport-1tb.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "99999",
     slug: "disco-externo-wd-my-passport-1tb",
     category: "almacenamiento",
@@ -805,7 +1988,9 @@ export const products: Product[] = [
   {
     id: "ext-003",
     title: "Disco Externo Samsung T7 512GB SSD",
-    image: "/products/samsung-t7-500gb.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "159999",
     slug: "disco-externo-samsung-t7-500gb",
     category: "almacenamiento",
@@ -832,7 +2017,9 @@ export const products: Product[] = [
   {
     id: "ext-004",
     title: "Disco Externo SanDisk Extreme Portable 1TB SSD",
-    image: "/products/sandisk-extreme-1tb.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "189999",
     slug: "disco-externo-sandisk-extreme-1tb",
     category: "almacenamiento",
@@ -861,7 +2048,9 @@ export const products: Product[] = [
   {
     id: "13",
     title: "MSI GeForce RTX 3060 Ventus 2X 12GB GDDR6",
-    image: "/images/gpu-rtx3060-msi.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "470000",
     slug: "msi-rtx-3060-ventus-12gb",
     category: "placas-de-video",
@@ -895,7 +2084,9 @@ export const products: Product[] = [
   {
     id: "14",
     title: "MSI GeForce RTX 4060 Ventus 2X 8GB GDDR6",
-    image: "/images/gpu-rtx4060-msi.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "520000",
     slug: "msi-rtx-4060-ventus-8gb",
     category: "placas-de-video",
@@ -930,7 +2121,9 @@ export const products: Product[] = [
   {
     id: "14",
     title: "XFX Radeon RX 6600 Speedster SWFT 8GB GDDR6",
-    image: "/images/gpu-rx6600-xfx.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "410000",
     slug: "xfx-radeon-rx-6600-8gb",
     category: "placas-de-video",
@@ -960,7 +2153,9 @@ export const products: Product[] = [
   {
     id: "16",
     title: "Asus Radeon RX 6750 XT Dual OC 12GB GDDR6",
-    image: "/images/gpu-rx6750xt-asus.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "590000",
     slug: "asus-radeon-rx-6750xt-12gb",
     category: "placas-de-video",
@@ -991,7 +2186,9 @@ export const products: Product[] = [
   {
     id: "17",
     title: "Monitor Gigabyte G24F 23.8'' FHD IPS 165Hz",
-    image: "/images/monitor-gigabyte-g24f.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "235000",
     slug: "monitor-gigabyte-g24f-238",
     category: "pantallas",
@@ -1018,7 +2215,9 @@ export const products: Product[] = [
   {
     id: "18",
     title: "Monitor Samsung T350 24'' FHD IPS",
-    image: "/images/monitor-samsung-t350.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "185000",
     slug: "monitor-samsung-t350-24",
     category: "pantallas",
@@ -1046,7 +2245,9 @@ export const products: Product[] = [
   {
     id: "19",
     title: "Smart TV LG 50'' 4K UHD webOS",
-    image: "/images/tv-lg-50up7750.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "399000",
     slug: "smart-tv-lg-50up7750",
     category: "pantallas",
@@ -1073,7 +2274,9 @@ export const products: Product[] = [
   {
     id: "20",
     title: "Smart TV Samsung 43'' Crystal UHD 4K",
-    image: "/images/tv-samsung-43au7000.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "349000",
     slug: "smart-tv-samsung-43au7000",
     category: "pantallas",
@@ -1102,7 +2305,9 @@ export const products: Product[] = [
   {
     id: "21",
     title: "Proyector Epson EB-X05",
-    image: "/images/proyector-epson-ebx05.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "85000",
     slug: "proyector-epson-eb-x05",
     category: "pantallas",
@@ -1122,7 +2327,9 @@ export const products: Product[] = [
   {
     id: "22",
     title: "Proyector BenQ TH585",
-    image: "/images/proyector-benq-th585.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "120000",
     slug: "proyector-benq-th585",
     category: "pantallas",
@@ -1144,7 +2351,9 @@ export const products: Product[] = [
   {
     id: "21",
     title: "ADATA XPG 4GB DDR4",
-    image: "/products/adata-xpg-4gb.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "8500",
     slug: "adata-xpg-4gb-ddr4",
     category: "memoria-ram",
@@ -1163,7 +2372,9 @@ export const products: Product[] = [
   {
     id: "22",
     title: "Corsair Vengeance 8GB DDR5",
-    image: "/products/corsair-8gb-ddr5.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "22999",
     slug: "corsair-vengeance-8gb-ddr5",
     category: "memoria-ram",
@@ -1182,7 +2393,9 @@ export const products: Product[] = [
   {
     id: "23",
     title: "Crucial Ballistix 16GB DDR5",
-    image: "/products/crucial-16gb-ddr5.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "38999",
     slug: "crucial-ballistix-16gb-ddr5",
     category: "memoria-ram",
@@ -1201,7 +2414,9 @@ export const products: Product[] = [
   {
     id: "24",
     title: "Patriot Signature 32GB DDR4",
-    image: "/products/patriot-32gb-ddr4.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "59999",
     slug: "patriot-signature-32gb-ddr4",
     category: "memoria-ram",
@@ -1220,7 +2435,9 @@ export const products: Product[] = [
   {
     id: "25",
     title: "TeamGroup Elite 4GB DDR3",
-    image: "/products/teamgroup-4gb-ddr3.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "6999",
     slug: "teamgroup-elite-4gb-ddr3",
     category: "memoria-ram",
@@ -1239,7 +2456,9 @@ export const products: Product[] = [
   {
     id: "26",
     title: "Kingston HyperX 8GB DDR3",
-    image: "/products/hyperx-8gb-ddr3.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "11500",
     slug: "kingston-hyperx-8gb-ddr3",
     category: "memoria-ram",
@@ -1258,7 +2477,9 @@ export const products: Product[] = [
   {
     id: "27",
     title: "Corsair Vengeance LPX 16GB DDR3",
-    image: "/products/corsair-16gb-ddr3.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "17999",
     slug: "corsair-vengeance-16gb-ddr3",
     category: "memoria-ram",
@@ -1277,7 +2498,9 @@ export const products: Product[] = [
   {
     id: "28",
     title: "ADATA Premier 32GB DDR3",
-    image: "/products/adata-32gb-ddr3.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "32999",
     slug: "adata-premier-32gb-ddr3",
     category: "memoria-ram",
@@ -1296,7 +2519,9 @@ export const products: Product[] = [
   {
     id: "29",
     title: "Patriot Viper Steel 4GB DDR5",
-    image: "/products/patriot-4gb-ddr5.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "9999",
     slug: "patriot-viper-steel-4gb-ddr5",
     category: "memoria-ram",
@@ -1315,7 +2540,9 @@ export const products: Product[] = [
   {
     id: "30",
     title: "Kingston Fury 8GB DDR5",
-    image: "/products/kingston-8gb-ddr5.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "19500",
     slug: "kingston-fury-8gb-ddr5",
     category: "memoria-ram",
@@ -1334,7 +2561,9 @@ export const products: Product[] = [
   {
     id: "31",
     title: "ADATA XPG 16GB DDR4",
-    image: "/products/adata-16gb-ddr4.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "27500",
     slug: "adata-xpg-16gb-ddr4",
     category: "memoria-ram",
@@ -1353,7 +2582,9 @@ export const products: Product[] = [
   {
     id: "32",
     title: "Crucial Basic 32GB DDR5",
-    image: "/products/crucial-32gb-ddr5.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "64999",
     slug: "crucial-basic-32gb-ddr5",
     category: "memoria-ram",
@@ -1375,7 +2606,9 @@ export const products: Product[] = [
     id: "refrig-001",
     title: "Cooler Master Hyper 212 Black Edition",
     slug: "cooler-master-hyper-212-black",
-    image: "/productos/hyper212-black.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "34999",
     category: "refrigeracion",
     subcategory: "air-cooling",
@@ -1409,7 +2642,9 @@ export const products: Product[] = [
     id: "refrig-002",
     title: "Thermaltake UX200 ARGB Lighting",
     slug: "thermaltake-ux200-argb",
-    image: "/productos/ux200.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "29999",
     category: "refrigeracion",
     subcategory: "air-cooling",
@@ -1443,7 +2678,9 @@ export const products: Product[] = [
     id: "refrig-003",
     title: "Corsair A500 Dual Fan",
     slug: "corsair-a500",
-    image: "/productos/corsair-a500.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "41999",
     category: "refrigeracion",
     subcategory: "air-cooling",
@@ -1477,7 +2714,9 @@ export const products: Product[] = [
     id: "refrig-004",
     title: "Cooler Master MA410M ARGB",
     slug: "cooler-master-ma410m",
-    image: "/productos/ma410m.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "37999",
     category: "refrigeracion",
     subcategory: "air-cooling",
@@ -1511,7 +2750,9 @@ export const products: Product[] = [
     id: "refrig-005",
     title: "Thermaltake Contac 9",
     slug: "thermaltake-contac-9",
-    image: "/productos/contac9.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "26999",
     category: "refrigeracion",
     subcategory: "air-cooling",
@@ -1546,7 +2787,9 @@ export const products: Product[] = [
     id: "refrig-007",
     title: "NZXT Kraken X63 RGB",
     slug: "nzxt-kraken-x63-rgb",
-    image: "/productos/kraken-x63.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "89999",
     category: "refrigeracion",
     subcategory: "water-cooling",
@@ -1592,7 +2835,9 @@ export const products: Product[] = [
     id: "refrig-008",
     title: "Cooler Master ML240L V2 ARGB",
     slug: "cooler-master-ml240l-v2",
-    image: "/productos/ml240l-v2.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "68999",
     category: "refrigeracion",
     subcategory: "water-cooling",
@@ -1638,7 +2883,9 @@ export const products: Product[] = [
     id: "refrig-009",
     title: "Thermaltake TH120 ARGB Sync",
     slug: "thermaltake-th120-argb",
-    image: "/productos/th120.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "59999",
     category: "refrigeracion",
     subcategory: "water-cooling",
@@ -1684,7 +2931,9 @@ export const products: Product[] = [
     id: "refrig-010",
     title: "NZXT Kraken Elite 240",
     slug: "nzxt-kraken-elite-240",
-    image: "/productos/kraken-elite-240.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "104999",
     category: "refrigeracion",
     subcategory: "water-cooling",
@@ -1731,7 +2980,9 @@ export const products: Product[] = [
     id: "refrig-011",
     title: "Pasta Térmica Arctic MX-4",
     slug: "pasta-termica-arctic-mx4",
-    image: "/productos/mx4.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "4999",
     category: "refrigeracion",
     subcategory: "pasta-termica",
@@ -1751,7 +3002,9 @@ export const products: Product[] = [
     id: "refrig-012",
     title: "Fan Cooler Thermaltake Riing 12 RGB",
     slug: "fan-thermaltake-riing-12-rgb",
-    image: "/productos/riing12.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "8999",
     category: "refrigeracion",
     subcategory: "fan-cooler",
@@ -1775,7 +3028,9 @@ export const products: Product[] = [
     id: "combo-002",
     title: "Combo AMD Ryzen 7 5700G + ASUS A520M-K + 16GB DDR4",
     slug: "combo-amd-5700g-a520m-16gb",
-    image: "/productos/combo-amd-5700g.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "279999",
     category: "combos-de-actualizacion",
     subcategory: "combo-amd",
@@ -1809,7 +3064,9 @@ export const products: Product[] = [
     id: "combo-003",
     title: "Combo AMD Ryzen 5 5600X + ASUS B550M + 16GB DDR4",
     slug: "combo-amd-5600x-b550m-16gb",
-    image: "/productos/combo-amd-5600x-b550m-16gb.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "279999",
     category: "combos-de-actualizacion",
     subcategory: "combo-amd",
@@ -1843,7 +3100,9 @@ export const products: Product[] = [
     id: "combo-00121313",
     title: "Combo Intel Core i5 12400F + ASUS H610M + 16GB DDR4",
     slug: "combo-intel-i5-h610m-16gb",
-    image: "/productos/combo-intel-i5.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "269999",
     category: "combos-de-actualizacion",
     subcategory: "combo-intel",
@@ -1877,7 +3136,9 @@ export const products: Product[] = [
     id: "combo-004",
     title: "Combo Intel Core i3 12100 + Gigabyte H610M + 8GB DDR4",
     slug: "combo-intel-i3-h610m-8gb",
-    image: "/productos/combo-intel-i3.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "199999",
     category: "combos-de-actualizacion",
     subcategory: "combo-intel",
@@ -1911,7 +3172,9 @@ export const products: Product[] = [
     id: "combo-005",
     title: "Gabinete Aerocool Bolt + Fuente 500W",
     slug: "gabinete-aerocool-bolt-fuente-500w",
-    image: "/productos/gabinete-bolt.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "79999",
     category: "combos-de-actualizacion",
     subcategory: "gabinete-y-fuente",
@@ -1946,7 +3209,9 @@ export const products: Product[] = [
     id: "combo-006",
     title: "Gabinete Corsair 4000D + Fuente CV550",
     slug: "gabinete-corsair-4000d-fuente-cv550",
-    image: "/productos/gabinete-corsair-4000d.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "129999",
     category: "combos-de-actualizacion",
     subcategory: "gabinete-y-fuente",
@@ -1982,7 +3247,9 @@ export const products: Product[] = [
     id: "cpu-amd-001",
     title: "AMD Ryzen 5 5600",
     slug: "amd-ryzen-5-5600",
-    image: "/productos/amd-5600.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "89999",
     category: "procesadores",
     subcategory: "amd",
@@ -2005,7 +3272,9 @@ export const products: Product[] = [
     id: "cpu-amd-002",
     title: "AMD Ryzen 7 5700X",
     slug: "amd-ryzen-7-5700x",
-    image: "/productos/amd-5700x.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "129999",
     category: "procesadores",
     subcategory: "amd",
@@ -2028,7 +3297,9 @@ export const products: Product[] = [
     id: "cpu-amd-003",
     title: "AMD Ryzen 3 4100",
     slug: "amd-ryzen-3-4100",
-    image: "/productos/amd-4100.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "62999",
     category: "procesadores",
     subcategory: "amd",
@@ -2051,7 +3322,9 @@ export const products: Product[] = [
     id: "cpu-amd-004",
     title: "AMD Ryzen 5 7600",
     slug: "amd-ryzen-5-7600",
-    image: "/productos/amd-7600.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "114999",
     category: "procesadores",
     subcategory: "amd",
@@ -2074,7 +3347,9 @@ export const products: Product[] = [
     id: "cpu-intel-001",
     title: "Intel Core i3 12100",
     slug: "intel-i3-12100",
-    image: "/productos/intel-i3-12100.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "74999",
     category: "procesadores",
     subcategory: "intel",
@@ -2097,7 +3372,9 @@ export const products: Product[] = [
     id: "cpu-intel-002",
     title: "Intel Core i5 12400F",
     slug: "intel-i5-12400f",
-    image: "/productos/intel-i5-12400f.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "99999",
     category: "procesadores",
     subcategory: "intel",
@@ -2120,7 +3397,9 @@ export const products: Product[] = [
     id: "cpu-intel-003",
     title: "Intel Core i7 12700",
     slug: "intel-i7-12700",
-    image: "/productos/intel-i7-12700.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "144999",
     category: "procesadores",
     subcategory: "intel",
@@ -2143,7 +3422,9 @@ export const products: Product[] = [
     id: "cpu-intel-004",
     title: "Intel Core i5 11400",
     slug: "intel-i5-11400",
-    image: "/productos/intel-i5-11400.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "89999",
     category: "procesadores",
     subcategory: "intel",
@@ -2166,7 +3447,9 @@ export const products: Product[] = [
   {
     id: "mb1",
     title: "ASRock B550M Pro4",
-    image: "/products/motherboards/asrock-b550m.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "89.990",
     slug: "asrock-b550m-pro4",
     category: "motherboards",
@@ -2208,7 +3491,9 @@ export const products: Product[] = [
   {
     id: "mb2",
     title: "Gigabyte A520M S2H",
-    image: "/products/motherboards/gigabyte-a520m.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "72.500",
     slug: "gigabyte-a520m-s2h",
     category: "motherboards",
@@ -2252,7 +3537,9 @@ export const products: Product[] = [
   {
     id: "mb5",
     title: "ASRock B650M Pro RS",
-    image: "/products/motherboards/asrock-b650m.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "125.000",
     slug: "asrock-b650m-pro-rs",
     category: "motherboards",
@@ -2294,7 +3581,9 @@ export const products: Product[] = [
   {
     id: "mb6",
     title: "Gigabyte X670 AORUS Elite",
-    image: "/products/motherboards/gigabyte-x670.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "210.000",
     slug: "gigabyte-x670-aorus-elite",
     category: "motherboards",
@@ -2336,7 +3625,9 @@ export const products: Product[] = [
   {
     id: "mb7",
     title: "MSI PRO X670-P WiFi",
-    image: "/products/motherboards/msi-x670.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "229.000",
     slug: "msi-pro-x670-p-wifi",
     category: "motherboards",
@@ -2378,7 +3669,9 @@ export const products: Product[] = [
   {
     id: "mb8",
     title: "ASUS TUF Gaming B650-Plus",
-    image: "/products/motherboards/asus-b650.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "198.000",
     slug: "asus-tuf-b650-plus",
     category: "motherboards",
@@ -2422,7 +3715,9 @@ export const products: Product[] = [
   {
     id: "mb9",
     title: "MSI H510M-A Pro",
-    image: "/products/motherboards/msi-h510m.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "65.900",
     slug: "msi-h510m-a-pro",
     category: "motherboards",
@@ -2464,7 +3759,9 @@ export const products: Product[] = [
   {
     id: "mb10",
     title: "ASRock B460M-HDV",
-    image: "/products/motherboards/asrock-b460m.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "78.990",
     slug: "asrock-b460m-hdv",
     category: "motherboards",
@@ -2506,7 +3803,9 @@ export const products: Product[] = [
   {
     id: "mb11",
     title: "Gigabyte B460M DS3H",
-    image: "/products/motherboards/gigabyte-b460m.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "84.000",
     slug: "gigabyte-b460m-ds3h",
     category: "motherboards",
@@ -2548,7 +3847,9 @@ export const products: Product[] = [
   {
     id: "mb12",
     title: "ASUS Prime H510M-K",
-    image: "/products/motherboards/asus-h510m.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "79.500",
     slug: "asus-prime-h510m-k",
     category: "motherboards",
@@ -2591,7 +3892,9 @@ export const products: Product[] = [
   {
     id: "mb13",
     title: "Gigabyte B660M DS3H",
-    image: "/products/motherboards/gigabyte-b660m.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "104.500",
     slug: "gigabyte-b660m-ds3h",
     category: "motherboards",
@@ -2633,7 +3936,9 @@ export const products: Product[] = [
   {
     id: "mb14",
     title: "ASUS Prime Z790-P",
-    image: "/products/motherboards/asus-z790p.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "185.000",
     slug: "asus-prime-z790-p",
     category: "motherboards",
@@ -2675,7 +3980,9 @@ export const products: Product[] = [
   {
     id: "mb15",
     title: "MSI PRO B760M-P DDR4",
-    image: "/products/motherboards/msi-b760m.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "112.000",
     slug: "msi-pro-b760m-p",
     category: "motherboards",
@@ -2717,7 +4024,9 @@ export const products: Product[] = [
   {
     id: "mb16",
     title: "ASRock Z790 PG Lightning",
-    image: "/products/motherboards/asrock-z790.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "199.000",
     slug: "asrock-z790-pg-lightning",
     category: "motherboards",
@@ -2761,7 +4070,9 @@ export const products: Product[] = [
   {
     id: "case1",
     title: "Thermaltake Versa H15",
-    image: "/products/gabinetes/thermaltake-versa-h15.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "34.900",
     slug: "thermaltake-versa-h15",
     category: "gabinetes",
@@ -2804,7 +4115,9 @@ export const products: Product[] = [
   {
     id: "case2",
     title: "Cooler Master Elite 110",
-    image: "/products/gabinetes/cooler-master-elite-110.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "39.990",
     slug: "cooler-master-elite-110",
     category: "gabinetes",
@@ -2847,7 +4160,9 @@ export const products: Product[] = [
   {
     id: "case3",
     title: "Corsair Carbide 88R",
-    image: "/products/gabinetes/corsair-carbide-88r.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "45.000",
     slug: "corsair-carbide-88r",
     category: "gabinetes",
@@ -2890,7 +4205,9 @@ export const products: Product[] = [
   {
     id: "case4",
     title: "NZXT H210 Mini Tower",
-    image: "/products/gabinetes/nzxt-h210.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "54.500",
     slug: "nzxt-h210-mini-tower",
     category: "gabinetes",
@@ -2935,7 +4252,9 @@ export const products: Product[] = [
   {
     id: "case5",
     title: "Cooler Master MasterBox Q300L",
-    image: "/products/gabinetes/cooler-master-q300l.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "47.900",
     slug: "cooler-master-q300l",
     category: "gabinetes",
@@ -2978,7 +4297,9 @@ export const products: Product[] = [
   {
     id: "case6",
     title: "Corsair 4000D Airflow",
-    image: "/products/gabinetes/corsair-4000d.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "62.000",
     slug: "corsair-4000d-airflow",
     category: "gabinetes",
@@ -3022,7 +4343,9 @@ export const products: Product[] = [
   {
     id: "case7",
     title: "NZXT H510",
-    image: "/products/gabinetes/nzxt-h510.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "64.900",
     slug: "nzxt-h510",
     category: "gabinetes",
@@ -3065,7 +4388,9 @@ export const products: Product[] = [
   {
     id: "case8",
     title: "Thermaltake V250 TG ARGB",
-    image: "/products/gabinetes/thermaltake-v250.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "69.000",
     slug: "thermaltake-v250-argb",
     category: "gabinetes",
@@ -3110,7 +4435,9 @@ export const products: Product[] = [
   {
     id: "case9",
     title: "Corsair Obsidian Series 1000D",
-    image: "/products/gabinetes/corsair-1000d.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "185.000",
     slug: "corsair-obsidian-1000d",
     category: "gabinetes",
@@ -3153,7 +4480,9 @@ export const products: Product[] = [
   {
     id: "case10",
     title: "Cooler Master Cosmos C700M",
-    image: "/products/gabinetes/cooler-master-c700m.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "210.000",
     slug: "cooler-master-cosmos-c700m",
     category: "gabinetes",
@@ -3196,7 +4525,9 @@ export const products: Product[] = [
   {
     id: "case11",
     title: "Thermaltake View 71 RGB",
-    image: "/products/gabinetes/thermaltake-view71.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "174.900",
     slug: "thermaltake-view-71-rgb",
     category: "gabinetes",
@@ -3239,7 +4570,9 @@ export const products: Product[] = [
   {
     id: "case12",
     title: "NZXT Phantom 820",
-    image: "/products/gabinetes/nzxt-phantom-820.jpg",
+    thumbnail:
+      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
+    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
     price: "160.000",
     slug: "nzxt-phantom-820",
     category: "gabinetes",

@@ -1,14 +1,22 @@
-import {WaterCoolingSpecs} from "./waterCoolingSpecs"
-import SpecsSection from "../../SpecsSection"
-import { MdWaterDrop, MdDeviceThermostat, MdPower, MdSettings, MdOutlineMemory } from "react-icons/md";
+import { WaterCoolingSpecs } from "./waterCoolingSpecs";
+import SpecsSection from "../../SpecsSection";
+import {
+  MdWaterDrop,
+  MdDeviceThermostat,
+  MdPower,
+  MdSettings,
+  MdOutlineMemory,
+} from "react-icons/md";
 import { FaFan, FaMicrochip } from "react-icons/fa";
 
-export default function WaterCoolingSpecsView({ specs }: { specs: WaterCoolingSpecs }) {
+export default function WaterCoolingSpecsView({
+  specs,
+}: {
+  specs: WaterCoolingSpecs;
+}) {
   return (
     <div className="mt-10">
-      <h2 className="text-xl font-semibold mb-4 text-gray-800">Especificaciones</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
         <SpecsSection
           title="General"
           icon={<MdDeviceThermostat className="w-5 h-5" />}
@@ -65,11 +73,16 @@ export default function WaterCoolingSpecsView({ specs }: { specs: WaterCoolingSp
             { label: "MTTF", value: specs.ventilador.mttf },
             { label: "Conector", value: specs.ventilador.conector },
             { label: "Voltaje", value: specs.ventilador.voltaje },
-            { label: "Corriente Ventilador", value: specs.ventilador.corrienteVentilador },
-            { label: "Corriente Total", value: specs.ventilador.corrienteTotal },
+            {
+              label: "Corriente Ventilador",
+              value: specs.ventilador.corrienteVentilador,
+            },
+            {
+              label: "Corriente Total",
+              value: specs.ventilador.corrienteTotal,
+            },
           ]}
         />
-
       </div>
     </div>
   );

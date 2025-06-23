@@ -3,10 +3,13 @@ import { FaPlug, FaBoxOpen, FaGamepad } from "react-icons/fa";
 import { MonitoresSpecs } from "./monitoresSpecs";
 import SpecsSection from "../../SpecsSection";
 
-export default function MonitoresSpecsView({ specs }: { specs: MonitoresSpecs }) {
+export default function MonitoresSpecsView({
+  specs,
+}: {
+  specs: MonitoresSpecs;
+}) {
   return (
     <div className="mt-10">
-      <h2 className="text-xl font-semibold mb-4 text-gray-800">Especificaciones</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <SpecsSection
           title="Pantalla"
@@ -14,7 +17,10 @@ export default function MonitoresSpecsView({ specs }: { specs: MonitoresSpecs })
           items={[
             { label: "Tipo de Panel", value: specs.tipoPanel },
             { label: "Resolución", value: specs.resolucion },
-            { label: "Frecuencia de Actualización", value: specs.frecuenciaActualizacion },
+            {
+              label: "Frecuencia de Actualización",
+              value: specs.frecuenciaActualizacion,
+            },
             { label: "Tiempo de Respuesta", value: specs.tiempoRespuesta },
             { label: "Colores", value: specs.colores },
           ]}
