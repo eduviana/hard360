@@ -140,16 +140,7 @@ export default function NotebookSpecsView({ specs }: { specs: NotebookSpecs }) {
           ]}
         />
 
-        {/* <SpecsSection
-          title="Garantía"
-          icon={<MdVerified className="w-5 h-5" />}
-          items={[
-            {
-              label: "Tipo",
-              value: `${specs.garantia.tipo} - ${specs.garantia.plazo}`,
-            },
-          ]}
-        /> */}
+   
       </div>
     </div>
   );

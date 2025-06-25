@@ -26,17 +26,26 @@ export type PcSpecs = {
     frecuencia: string;
     expandible: string;
   };
+
+
   procesador: {
     marca: string;
     modelo: string;
     nucleos: string;
     frecuencia: string;
-    cache: string;
+    cacheL1: string;
+    cacheL2: string;
+    cacheL3: string;
+    graficos: string;
+    tdp: string;
   };
   puertos: {
     usb2: string;
+    usb3: string;
+    usbC?: string;
     hdmi: string;
     audioMic: string;
+    ehternet: string;
   };
   sistemaOperativo: {
     nombre: string;

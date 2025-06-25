@@ -142,9 +142,10 @@ export const processors = [
   "intel i3",
   "intel i5",
   "intel i7",
-  "ryzen 3",
-  "ryzen 5",
-  "ryzen 7",
+  "amd athlon",
+  "amd ryzen 3",
+  "amd ryzen 5",
+  "amd ryzen 7",
 ] as const;
 export type Processor = (typeof processors)[number];
 
