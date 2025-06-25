@@ -41,6 +41,7 @@ export const Carousel = ({ images, alt }: CarouselProps) => {
                 src={img}
                 alt={`${alt} thumbnail ${i + 1}`}
                 fill
+                sizes="80px"
                 className="object-contain transition duration-200"
               />
             </div>

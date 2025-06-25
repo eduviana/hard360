@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import { FilterHeader } from "@/app/components/filter-sidebar/FilterHeader";
 import { FilterSidebar } from "@/app/components/filter-sidebar/FilterSidebar";
 import { ProductCard } from "@/app/components/productCard/ProductCard";
@@ -7,12 +8,14 @@ import { Product } from "@/app/data/types";
 import { useState } from "react";
 import { SortSelect } from "./filters/SortSelect";
 import { ItemsToShowSelect } from "./filters/ItemsToShowSelect";
+import type { FilterOption } from "@/app/data/types"; // ✅ nuevo import
 
 interface CategorySectionProps {
   category: string;
   subcategory?: string;
   subcategories: string[];
   filteredProducts: Product[];
+  filters?: FilterOption[]; // ✅ nuevo
 }
 
 export const CategorySection = ({
@@ -20,11 +23,17 @@ export const CategorySection = ({
   subcategory,
   subcategories,
   filteredProducts,
+  filters, // ✅ nuevo
 }: CategorySectionProps) => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-
   const [sort, setSort] = useState("default");
-  const [itemsToShow, setItemsToShow] = useState(20); // valor por defecto
+  const [itemsToShow, setItemsToShow] = useState(20);
+
+  console.log(category, "Categoria");
+  console.log(subcategory, "Sucategoria");
+  console.log(subcategories, "Subcategoriass");
+  console.log(filteredProducts, "Productos Filtrados");
+  console.log(filters, "Filtrosssss");
 
   return (
     <section className="custom-container py-16">
@@ -33,7 +42,6 @@ export const CategorySection = ({
 
         {/* Encabezado de filtros y controles */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-8">
-          {/* Izquierda: Cantidad + botón de filtro */}
           <div className="flex items-center gap-4">
             <span className="text-text-secondary text-md font-medium">
               {filteredProducts.length} productos
@@ -46,7 +54,6 @@ export const CategorySection = ({
             </button>
           </div>
 
-          {/* Derecha: Selects de orden y cantidad */}
           <div className="flex gap-16 w-full md:w-auto">
             <SortSelect value={sort} onChange={setSort} />
             <ItemsToShowSelect value={itemsToShow} onChange={setItemsToShow} />
@@ -67,6 +74,7 @@ export const CategorySection = ({
               category={category}
               subcategories={subcategories}
               subcategory={subcategory}
+              filters={filters} // ✅ nuevo
             />
           </div>
         </div>
@@ -79,6 +87,7 @@ export const CategorySection = ({
             category={category}
             subcategories={subcategories}
             subcategory={subcategory}
+            filters={filters} // ✅ nuevo
           />
         </div>
 
@@ -88,7 +97,10 @@ export const CategorySection = ({
               <ProductCard key={product.id} product={product} />
             ))
           ) : (
-            <div className="col-span-full text-center text-gray-500 font-medium">
+            <div
+              className="col-span-full flex justify-center items-center text-gray-500 font-medium"
+              style={{ minHeight: "300px" }}
+            >
               No se encontraron productos.
             </div>
           )}
