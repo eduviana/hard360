@@ -100,11 +100,6 @@
 //   return notFound();
 // }
 
-
-
-
-
-
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { products } from "../data/data";
@@ -183,7 +178,9 @@ export default async function Page({ params, searchParams }: PageProps) {
       });
 
     // Aquí removemos activeFilter para que no se pase a cliente
-    const filtersToPass = categoryFilters?.map(({ activeFilter, ...rest }) => rest);
+    const filtersToPass = categoryFilters?.map(
+      ({ activeFilter, ...rest }) => rest
+    );
 
     if (categoryFilters && resolvedSearchParams) {
       for (const filter of categoryFilters) {
@@ -202,11 +199,19 @@ export default async function Page({ params, searchParams }: PageProps) {
     ];
 
     return (
+      // <CategorySection
+      //   category={category}
+      //   subcategory={subcategory}
+      //   subcategories={subcategories}
+      //   filteredProducts={filteredProducts}
+      //   filters={filtersToPass} // <--- PASAMOS FILTROS SIN FUNCIONES
+      // />
       <CategorySection
         category={category}
         subcategory={subcategory}
         subcategories={subcategories}
         filteredProducts={filteredProducts}
+        allCategoryProducts={categoryProducts} // 🟡 nuevo
         filters={filtersToPass} // <--- PASAMOS FILTROS SIN FUNCIONES
       />
     );
