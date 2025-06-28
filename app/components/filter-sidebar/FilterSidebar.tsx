@@ -105,7 +105,6 @@
 //   );
 // }
 
-
 "use client";
 
 import { Product } from "@/app/data/types";
@@ -128,7 +127,6 @@ export function FilterSidebar({
   subcategories,
   subcategory,
   filters,
-  products,
   allProductsFromCategory,
   productsFilteredByCategoryAndSubcategory,
 }: FilterSidebarProps) {
@@ -163,31 +161,33 @@ export function FilterSidebar({
   };
 
   return (
-    <aside className="bg-white rounded-xl shadow p-4 space-y-6">
+    <aside className=" py-0 border border-gray-50 rounded-xl shadow space-y-12">
       {/* Subcategorías con conteo global */}
       <div>
-        <h2 className="text-xl font-bold mb-2">Subcategorías</h2>
+        <h2 className="px-2 py-1 rounded-sm text-xl font-bold mb-2 bg-gray-800 text-white">Subcategorías</h2>
         <ul className="space-y-2">
           {subcategories.map((sub, index) => {
             const isActive = sub === subcategory;
-            const count = allProductsFromCategory.filter((p) => p.subcategory === sub).length;
+            const count = allProductsFromCategory.filter(
+              (p) => p.subcategory === sub
+            ).length;
 
             return (
               <li
                 key={sub}
-                className="p-2 rounded-xl transition-colors bg-gray-50 hover:bg-slate-300"
+                className="py-2 px-4 rounded-sm transition-colors bg-gray-50 hover:bg-slate-200"
               >
                 <Link
                   href={`/${category}/${sub}`}
                   scroll={false}
                   className={`capitalize flex justify-between items-center ${
-                    isActive ? "text-green-600 font-bold text-lg" : "text-neutral-800 font-medium"
+                    isActive
+                      ? "text-green-600 font-bold text-lg"
+                      : "text-neutral-800 font-medium"
                   }`}
                 >
                   <span>{sub.replaceAll("-", " ")}</span>
-                  <span className="ml-2 bg-orange-700 text-white text-sm font-semibold w-6 h-6 flex items-center justify-center rounded-full">
-                    {count}
-                  </span>
+                  <span>({count})</span>
                 </Link>
               </li>
             );
@@ -204,15 +204,17 @@ export function FilterSidebar({
 
         return (
           <div key={String(field)}>
-            <h2 className="text-xl font-bold mb-2">{label}</h2>
+            <h2 className="px-2 py-1 rounded-sm text-xl font-bold mb-2 bg-gray-800 text-white">{label}</h2>
             <ul className="space-y-2">
               {values.map((val, index) => {
-                const count = productsForCount.filter((p) => p[field] === val).length;
+                const count = productsForCount.filter(
+                  (p) => p[field] === val
+                ).length;
 
                 return (
                   <li
                     key={val}
-                    className="p-2 rounded-xl transition-colors bg-gray-50 hover:bg-slate-300"
+                    className="py-2 px-4 rounded-sm transition-colors bg-gray-50 hover:bg-slate-200"
                   >
                     <Link
                       href={getLinkWithParam(field as string, val)}
@@ -224,10 +226,7 @@ export function FilterSidebar({
                       }`}
                     >
                       <span>{val.replaceAll("-", " ")}</span>
-                      <span className="ml-2 bg-orange-700 text-white text-xs font-semibold w-6 h-6 flex items-center justify-center rounded-full">
-                        {count}
-                      </span>
-                    
+                      <span>({count})</span>
                     </Link>
                   </li>
                 );

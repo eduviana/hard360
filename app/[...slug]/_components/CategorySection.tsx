@@ -201,8 +201,8 @@ export const CategorySection = ({
       )}
 
       {/* Layout principal */}
-      <div className="flex flex-col md:flex-row gap-8">
-        <div className="hidden md:block w-1/4">
+      <div className="flex flex-col md:flex-row gap-12">
+        <div className="hidden md:block w-1/5">
           <FilterSidebar
             category={category}
             subcategories={subcategories}
@@ -216,7 +216,7 @@ export const CategorySection = ({
           />
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 items-stretch flex-1">
+        {/* <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 items-stretch flex-1">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
@@ -229,6 +229,22 @@ export const CategorySection = ({
               No se encontraron productos.
             </div>
           )}
+        </div> */}
+        <div className="flex-1">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredProducts.length > 0 ? (
+              filteredProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))
+            ) : (
+              <div
+                className="col-span-full flex justify-center items-center text-gray-500 font-medium"
+                style={{ minHeight: "300px" }}
+              >
+                No se encontraron productos.
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>

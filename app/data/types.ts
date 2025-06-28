@@ -76,7 +76,7 @@ export const displayBrands = [
   "lg",
   "samsung",
   "epson",
-  "benq"
+  "benq",
 ] as const;
 export type DisplayBrand = (typeof displayBrands)[number];
 
@@ -105,7 +105,7 @@ export const storageBrands = [
   "hitachi",
   "toshiba",
   "adata",
-  "sandisk"
+  "sandisk",
 ] as const;
 export type StorageBrand = (typeof storageBrands)[number];
 
@@ -128,7 +128,7 @@ export const brands = [
   ...storageBrands,
   ...coolingBrands,
   ...motherboardBrands,
-  ...caseBrands
+  ...caseBrands,
 ] as const;
 export type Brand = (typeof brands)[number];
 
@@ -136,7 +136,7 @@ export type Brand = (typeof brands)[number];
 // Especificaciones Técnicas
 // ==============================
 
-export const panelTypes = ["ips", "led", "oled", "tn", "va"] as const;
+export const panelTypes = ["ips", "led", "oled", "tn", "va", "qled"] as const;
 export type PanelType = (typeof panelTypes)[number];
 
 export const processors = [
@@ -158,11 +158,22 @@ export type RamCapacity = (typeof ramCapacities)[number];
 export const ramVersions = ["ddr3", "ddr4", "ddr5"] as const;
 export type RamVersion = (typeof ramVersions)[number];
 
-export const screenSizes = ["14", "15.6", "16"] as const;
+export const screenSizes = [
+  "14",
+  "15",
+  "16",
+  "20",
+  "24",
+  "27",
+  "32",
+  "43",
+  "55",
+] as const;
 export type ScreenSize = (typeof screenSizes)[number];
 
 export const storageSizes = [
-  "240gb",
+  "120gb",
+  "256gb",
   "480gb",
   "512gb",
   "1tb",
@@ -229,35 +240,50 @@ export type Product = {
     | MotherIntelSpecs
     | FullTowerSpecs
     | MidTowerSpecs
-    | MiniTowerSpecs
+    | MiniTowerSpecs;
 };
 
+// export interface SubcategoryFilter {
+//   values: readonly string[];
+//   activeFilter?: (value: string) => string;
+// }
+
+// export interface FilterOption {
+//   label: string;
+//   field: keyof Product;
+//   values: readonly string[];
+//   activeFilter?: (value: string) => string;
+//   subcategories?: {
+//     [subcategory: string]: SubcategoryFilter;
+//   };
+// }
+
 // export const filtersByCategory: {
-//   [key in Category]?: {
-//     label: string; // Texto para la UI
-//     field: keyof Product;
-//     values: readonly string[];
-//     activeFilter?: (value: string) => string; // 👈 NUEVO
-//   }[];
+//   [key in Category]?: FilterOption[];
 // } = {
 //   equipos: [
 //     {
 //       label: "Marca",
 //       field: "brand",
-//       values: notebookBrands,
-//       activeFilter: (val) => val, // Se mostrará "lg"
+//       values: notebookBrands, // default para notebooks
+//       activeFilter: (val) => val,
+//       subcategories: {
+//         "pcs-de-escritorio": {
+//           values: ["intel", "amd"],
+//         },
+//       },
 //     },
 //     {
 //       label: "Procesador",
 //       field: "processor",
 //       values: processors,
-//       activeFilter: (val) => val, // Se mostrará "I5"
+//       activeFilter: (val) => val,
 //     },
 //     {
 //       label: "Memoria Ram",
 //       field: "ramCapacity",
 //       values: ramCapacities,
-//       activeFilter: (val) => val, // Se mostrará "I5"
+//       activeFilter: (val) => val,
 //     },
 //   ],
 //   pantallas: [
@@ -271,21 +297,22 @@ export type Product = {
 //       label: "Panel",
 //       field: "panelType",
 //       values: panelTypes,
-//       activeFilter: (val) => val, // "IPS"
+//       activeFilter: (val) => val,
 //     },
 //     {
 //       label: "Tamaño",
 //       field: "screenSize",
 //       values: screenSizes,
-//       activeFilter: (val) => `${val}″`, // "16″"
+//       activeFilter: (val) => `${val}″`,
 //     },
 //   ],
+  
 //   "memoria-ram": [
 //     {
-//       label: "Capacidad RAM",
+//       label: "Capacidad",
 //       field: "ramCapacity",
 //       values: ramCapacities,
-//       activeFilter: (val) => `${val} GB`,
+//       activeFilter: (val) => val,
 //     },
 //     {
 //       label: "Tipo RAM",
@@ -310,26 +337,26 @@ export type Product = {
 //       activeFilter: (val) => val,
 //     },
 //   ],
-//   procesadores: [
-//     {
-//       label: "Serie",
-//       field: "processor",
-//       values: processors,
-//       activeFilter: (val) => val,
-//     },
-//   ],
+//   // procesadores: [
+//   //   {
+//   //     label: "Serie",
+//   //     field: "processor",
+//   //     values: processors,
+//   //     activeFilter: (val) => val,
+//   //   },
+//   // ],
 //   motherboards: [
 //     {
 //       label: "Socket",
 //       field: "socket",
 //       values: motherboardSockets,
-//       activeFilter: (val) => val.toUpperCase(), // AM4, LGA 1200, etc.
+//       activeFilter: (val) => val.toUpperCase(),
 //     },
 //     {
 //       label: "Marca",
 //       field: "brand",
 //       values: motherboardBrands,
-//       activeFilter: (val) => val, // se muestra tal cual: asus, msi, etc.
+//       activeFilter: (val) => val,
 //     },
 //   ],
 //   gabinetes: [
@@ -337,9 +364,9 @@ export type Product = {
 //       label: "Marca",
 //       field: "brand",
 //       values: caseBrands,
-//       activeFilter: (val) => val
-//     }
-//   ]
+//       activeFilter: (val) => val,
+//     },
+//   ],
 // };
 
 
@@ -347,8 +374,9 @@ export type Product = {
 
 
 export interface SubcategoryFilter {
-  values: readonly string[];
+  values?: readonly string[];
   activeFilter?: (value: string) => string;
+  hidden?: boolean;
 }
 
 export interface FilterOption {
@@ -356,9 +384,7 @@ export interface FilterOption {
   field: keyof Product;
   values: readonly string[];
   activeFilter?: (value: string) => string;
-  subcategories?: {
-    [subcategory: string]: SubcategoryFilter;
-  };
+  subcategories?: Record<string, SubcategoryFilter>;
 }
 
 export const filtersByCategory: {
@@ -368,7 +394,7 @@ export const filtersByCategory: {
     {
       label: "Marca",
       field: "brand",
-      values: notebookBrands, // default para notebooks
+      values: notebookBrands,
       activeFilter: (val) => val,
       subcategories: {
         "pcs-de-escritorio": {
@@ -395,18 +421,33 @@ export const filtersByCategory: {
       field: "brand",
       values: displayBrands,
       activeFilter: (val) => val,
+      subcategories: {
+        proyectores: {
+          values: ["epson"],
+        },
+      },
     },
     {
       label: "Panel",
       field: "panelType",
       values: panelTypes,
       activeFilter: (val) => val,
+      subcategories: {
+        proyectores: {
+          hidden: true,
+        },
+      },
     },
     {
       label: "Tamaño",
       field: "screenSize",
       values: screenSizes,
       activeFilter: (val) => `${val}″`,
+      subcategories: {
+        proyectores: {
+          hidden: true,
+        },
+      },
     },
   ],
   "memoria-ram": [
@@ -439,14 +480,6 @@ export const filtersByCategory: {
       activeFilter: (val) => val,
     },
   ],
-  // procesadores: [
-  //   {
-  //     label: "Serie",
-  //     field: "processor",
-  //     values: processors,
-  //     activeFilter: (val) => val,
-  //   },
-  // ],
   motherboards: [
     {
       label: "Socket",

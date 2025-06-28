@@ -106,7 +106,7 @@ import { products } from "../data/data";
 import ProductDetail from "../components/productDetail/ProductDetail";
 import { Category, filtersByCategory } from "../data/types";
 import { CategorySection } from "./_components/CategorySection";
-import type { FilterOption } from "../data/types";
+import type { FilterOption, SubcategoryFilter } from "../data/types";
 
 interface PageProps {
   params: Promise<{ slug: string[] }>;
@@ -158,15 +158,45 @@ export default async function Page({ params, searchParams }: PageProps) {
       | FilterOption[]
       | undefined;
 
-    const categoryFilters: FilterOption[] | undefined =
-      baseCategoryFilters?.map((filter) => {
-        const subFilter = subcategory && filter.subcategories?.[subcategory];
+    // const categoryFilters: FilterOption[] | undefined =
+    //   baseCategoryFilters?.map((filter) => {
+    //     const subFilter = subcategory && filter.subcategories?.[subcategory];
 
-        if (
-          subFilter &&
-          typeof subFilter === "object" &&
-          "values" in subFilter
-        ) {
+    //     if (
+    //       subFilter &&
+    //       typeof subFilter === "object" &&
+    //       "values" in subFilter
+    //     ) {
+    //       return {
+    //         ...filter,
+    //         values: subFilter.values,
+    //         activeFilter: subFilter.activeFilter ?? filter.activeFilter,
+    //       };
+    //     }
+
+    //     return filter;
+    //   });
+
+    const isSubcategoryFilter = (obj: unknown): obj is SubcategoryFilter => {
+      return (
+        typeof obj === "object" &&
+        obj !== null &&
+        ("hidden" in obj || "values" in obj || "activeFilter" in obj)
+      );
+    };
+
+    const categoryFilters: FilterOption[] | undefined = baseCategoryFilters
+      ?.map((filter) => {
+        const subFilterCandidate =
+          subcategory && filter.subcategories?.[subcategory];
+
+        if (!isSubcategoryFilter(subFilterCandidate)) return filter;
+
+        const subFilter = subFilterCandidate;
+
+        if (subFilter.hidden) return null;
+
+        if (subFilter.values) {
           return {
             ...filter,
             values: subFilter.values,
@@ -175,7 +205,8 @@ export default async function Page({ params, searchParams }: PageProps) {
         }
 
         return filter;
-      });
+      })
+      .filter((f): f is FilterOption => f !== null);
 
     // Aquí removemos activeFilter para que no se pase a cliente
     const filtersToPass = categoryFilters?.map(
