@@ -18,7 +18,6 @@ export const SortSelect = ({ value, onChange }: SortSelectProps) => {
         <option value="default">Por defecto</option>
         <option value="priceAsc">Precio: menor a mayor</option>
         <option value="priceDesc">Precio: mayor a menor</option>
-        <option value="highlighted">Destacados</option>
       </select>
     </div>
   );

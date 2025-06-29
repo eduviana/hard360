@@ -14,8 +14,8 @@
 //   category: string;
 //   subcategory?: string;
 //   subcategories: string[];
-//   filteredProducts: Product[]; // productos finales que se muestran
-//   allCategoryProducts: Product[]; // 🟡 todos los productos de la categoría (sin filtro por subcat ni searchParams)
+//   filteredProducts: Product[]; // productos que cumplen los filtros dinámicos
+//   allCategoryProducts: Product[]; // todos los productos de la categoría
 //   filters?: FilterOption[];
 // }
 
@@ -24,12 +24,21 @@
 //   subcategory,
 //   subcategories,
 //   filteredProducts,
-//   allCategoryProducts, // 🟡 nuevo
+//   allCategoryProducts,
 //   filters,
 // }: CategorySectionProps) => {
 //   const [isFilterOpen, setIsFilterOpen] = useState(false);
 //   const [sort, setSort] = useState("default");
 //   const [itemsToShow, setItemsToShow] = useState(20);
+
+//   const productsFilteredByCategoryAndSubcategory = subcategory
+//     ? allCategoryProducts.filter((p) => p.subcategory === subcategory)
+//     : allCategoryProducts;
+
+//   // 🔍 Productos base para los filtros: respetan subcategoría si está activa
+//   const productsForFilters = subcategory
+//     ? allCategoryProducts.filter((p) => p.subcategory === subcategory)
+//     : allCategoryProducts;
 
 //   return (
 //     <section className="custom-container py-16">
@@ -71,25 +80,33 @@
 //               subcategories={subcategories}
 //               subcategory={subcategory}
 //               filters={filters}
-//               products={allCategoryProducts} // 🟡 importante
+//               products={filteredProducts} // para mostrar grid y filtros activos
+//               allProductsFromCategory={allCategoryProducts} // para subcategorías
+//               productsFilteredByCategoryAndSubcategory={
+//                 productsFilteredByCategoryAndSubcategory
+//               } // para conteos filtros dinámicos
 //             />
 //           </div>
 //         </div>
 //       )}
 
 //       {/* Layout principal */}
-//       <div className="flex flex-col md:flex-row gap-8">
-//         <div className="hidden md:block w-1/4">
+//       <div className="flex flex-col md:flex-row gap-12">
+//         <div className="hidden md:block w-1/5">
 //           <FilterSidebar
 //             category={category}
 //             subcategories={subcategories}
 //             subcategory={subcategory}
 //             filters={filters}
-//             products={allCategoryProducts} // 🟡 importante
+//             products={filteredProducts} // para mostrar grid y filtros activos
+//             allProductsFromCategory={allCategoryProducts} // para subcategorías
+//             productsFilteredByCategoryAndSubcategory={
+//               productsFilteredByCategoryAndSubcategory
+//             } // para conteos filtros dinámicos
 //           />
 //         </div>
 
-//         <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 items-stretch flex-1">
+//         {/* <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 items-stretch flex-1">
 //           {filteredProducts.length > 0 ? (
 //             filteredProducts.map((product) => (
 //               <ProductCard key={product.id} product={product} />
@@ -102,11 +119,39 @@
 //               No se encontraron productos.
 //             </div>
 //           )}
+//         </div> */}
+//         <div className="flex-1">
+//           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+//             {filteredProducts.length > 0 ? (
+//               filteredProducts.map((product) => (
+//                 <ProductCard key={product.id} product={product} />
+//               ))
+//             ) : (
+//               <div
+//                 className="col-span-full flex justify-center items-center text-gray-500 font-medium"
+//                 style={{ minHeight: "300px" }}
+//               >
+//                 No se encontraron productos.
+//               </div>
+//             )}
+//           </div>
 //         </div>
 //       </div>
 //     </section>
 //   );
 // };
+
+
+
+
+
+
+
+
+
+
+
+
 
 "use client";
 
@@ -139,16 +184,26 @@ export const CategorySection = ({
 }: CategorySectionProps) => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [sort, setSort] = useState("default");
-  const [itemsToShow, setItemsToShow] = useState(20);
+  const [itemsToShow, setItemsToShow] = useState(10);
 
   const productsFilteredByCategoryAndSubcategory = subcategory
     ? allCategoryProducts.filter((p) => p.subcategory === subcategory)
     : allCategoryProducts;
 
-  // 🔍 Productos base para los filtros: respetan subcategoría si está activa
-  const productsForFilters = subcategory
-    ? allCategoryProducts.filter((p) => p.subcategory === subcategory)
-    : allCategoryProducts;
+  // Función para ordenar productos según estado `sort`
+  const sortProducts = (products: Product[]) => {
+  switch (sort) {
+    case "priceAsc":
+      return [...products].sort((a, b) => Number(a.price) - Number(b.price));
+    case "priceDesc":
+      return [...products].sort((a, b) => Number(b.price) - Number(a.price));
+    default:
+      return products;
+  }
+};
+  // Productos ordenados y limitados a itemsToShow
+  const sortedProducts = sortProducts(filteredProducts);
+  const displayedProducts = sortedProducts.slice(0, itemsToShow);
 
   return (
     <section className="custom-container py-16">
@@ -216,24 +271,10 @@ export const CategorySection = ({
           />
         </div>
 
-        {/* <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 items-stretch flex-1">
-          {filteredProducts.length > 0 ? (
-            filteredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))
-          ) : (
-            <div
-              className="col-span-full flex justify-center items-center text-gray-500 font-medium"
-              style={{ minHeight: "300px" }}
-            >
-              No se encontraron productos.
-            </div>
-          )}
-        </div> */}
         <div className="flex-1">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredProducts.length > 0 ? (
-              filteredProducts.map((product) => (
+            {displayedProducts.length > 0 ? (
+              displayedProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))
             ) : (

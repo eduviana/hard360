@@ -2673,143 +2673,776 @@ export const products: Product[] = [
       consumo: "6.0W",
     },
   },
-  // Placas de video - nvidia
+  // placas de video nvidia
   {
-    id: "13",
-    title: "MSI GeForce RTX 3060 Ventus 2X 12GB GDDR6",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "470000",
-    slug: "msi-rtx-3060-ventus-12gb",
-    category: "placas-de-video",
-    subcategory: "nvidia",
-    brand: "msi",
-    specs: {
-      // Memoria y Rendimiento
-      memoria: "12 GB GDDR6",
-      interfaz: "192 bits",
-      relojBase: "1320 MHz",
-      relojBoost: "1807 MHz",
-      velocidadMemoria: "15 Gbps",
-      anchoBanda: "360 GB/s",
-      cudaCores: "3584",
-
-      // Puertos y Conectividad
-      pcie: "PCIe 4.0",
-      hdmi: "1 x 2.1",
-      displayPort: "3 x 1.4a",
-      resolucionMaxima: "7680 x 4320 (8K UHD)",
-      monitoresSoportados: "4",
-
-      // Tamaño y Consumo
-      dimensiones: "235 x 124 x 42 mm",
-      altura: "2 Slot",
-      consumo: "170 W",
-      fuenteRecomendada: "550 W",
-      conector: "1 x 8-pin",
-    },
+  id: "placas-de-video-nvidia-1",
+  title: "EVGA GeForce RTX 3050 XC 8GB GDDR6",
+  slug: "evga-geforce-rtx-3050-xc-8gb",
+  thumbnail:
+    "/products/placas-de-video/nvidia/evga-rtx-3050-xc-8gb-gddr6/evga-rtx-3050-xc-8gb-gddr6_1.webp",
+  images: [
+    "/products/placas-de-video/nvidia/evga-rtx-3050-xc-8gb-gddr6/evga-rtx-3050-xc-8gb-gddr6_1.webp",
+    "/products/placas-de-video/nvidia/evga-rtx-3050-xc-8gb-gddr6/evga-rtx-3050-xc-8gb-gddr6_2.webp",
+    "/products/placas-de-video/nvidia/evga-rtx-3050-xc-8gb-gddr6/evga-rtx-3050-xc-8gb-gddr6_3.webp",
+    "/products/placas-de-video/nvidia/evga-rtx-3050-xc-8gb-gddr6/evga-rtx-3050-xc-8gb-gddr6_4.webp",
+    "/products/placas-de-video/nvidia/evga-rtx-3050-xc-8gb-gddr6/evga-rtx-3050-xc-8gb-gddr6_5.webp",
+  ],
+  price: "26799999",
+  category: "placas-de-video",
+  subcategory: "nvidia",
+  brand: "evga",
+  specs: {
+    memoria: "8GB GDDR6",
+    interfaz: "128 bits",
+    relojBase: "1552 MHz",
+    relojBoost: "1845 MHz",
+    velocidadMemoria: "14 Gbps",
+    anchoBanda: "224 GB/s",
+    cudaCores: "2560",
+    pcie: "PCIe 4.0 x8",
+    hdmi: "1 x 2.1",
+    displayPort: "3 x 1.4a",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "202 mm x 110 mm x 37 mm",
+    altura: "2 Slot",
+    consumo: "130 W",
+    fuenteRecomendada: "550 W",
+    conector: "1 x 8-pin",
   },
-  {
-    id: "14",
-    title: "MSI GeForce RTX 4060 Ventus 2X 8GB GDDR6",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "520000",
-    slug: "msi-rtx-4060-ventus-8gb",
-    category: "placas-de-video",
-    subcategory: "nvidia",
-    brand: "msi",
-    specs: {
-      // Memoria y Rendimiento
-      memoria: "8 GB GDDR6",
-      interfaz: "128 bits",
-      relojBase: "1830 MHz",
-      relojBoost: "2460 MHz",
-      velocidadMemoria: "17 Gbps",
-      anchoBanda: "272 GB/s",
-      cudaCores: "3072",
-
-      // Puertos y Conectividad
-      pcie: "PCIe 4.0",
-      hdmi: "1 x 2.1",
-      displayPort: "3 x 1.4a",
-      resolucionMaxima: "7680 x 4320 (8K UHD)",
-      monitoresSoportados: "4",
-
-      // Tamaño y Consumo
-      dimensiones: "199 x 120 x 41 mm",
-      altura: "2 Slot",
-      consumo: "115 W",
-      fuenteRecomendada: "550 W",
-      conector: "1 x 8-pin",
-    },
+},
+{
+  id: "placas-de-video-nvidia-2",
+  title: "MSI GeForce GTX 1650 Ventus XS OC 4GB GDDR6",
+  slug: "msi-geforce-gtx-1650-ventus-xs-oc-4gb",
+  thumbnail:
+    "/products/placas-de-video/nvidia/msi-gtx-1650-ventus-xs-oc-4g-gddr6/msi-gtx-1650-ventus-xs-oc-4g-gddr6_1.webp",
+  images: [
+    "/products/placas-de-video/nvidia/msi-gtx-1650-ventus-xs-oc-4g-gddr6/msi-gtx-1650-ventus-xs-oc-4g-gddr6_1.webp",
+    "/products/placas-de-video/nvidia/msi-gtx-1650-ventus-xs-oc-4g-gddr6/msi-gtx-1650-ventus-xs-oc-4g-gddr6_2.webp",
+    "/products/placas-de-video/nvidia/msi-gtx-1650-ventus-xs-oc-4g-gddr6/msi-gtx-1650-ventus-xs-oc-4g-gddr6_3.webp",
+    "/products/placas-de-video/nvidia/msi-gtx-1650-ventus-xs-oc-4g-gddr6/msi-gtx-1650-ventus-xs-oc-4g-gddr6_4.webp",
+  ],
+  price: "20499999", // completá con el precio en centavos
+  category: "placas-de-video",
+  subcategory: "nvidia",
+  brand: "msi",
+  specs: {
+    memoria: "4GB GDDR6",
+    interfaz: "128 bits",
+    relojBase: "1410 MHz",
+    relojBoost: "1620 MHz",
+    velocidadMemoria: "12 Gbps",
+    anchoBanda: "192 GB/s",
+    cudaCores: "896",
+    pcie: "PCIe 3.0 x16",
+    hdmi: "1 x HDMI 2.0",
+    displayPort: "1 x DisplayPort 1.4a",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "177 mm x 111 mm x 38 mm",
+    altura: "Dual slot",
+    consumo: "75 W",
+    fuenteRecomendada: "250 W",
+    conector: "1 x 8 pin",
   },
-  // Placas de video - radeon
-  {
-    id: "14",
-    title: "XFX Radeon RX 6600 Speedster SWFT 8GB GDDR6",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "410000",
-    slug: "xfx-radeon-rx-6600-8gb",
-    category: "placas-de-video",
-    subcategory: "radeon",
-    brand: "xfx",
-    specs: {
-      memoria: "8 GB GDDR6",
-      interfaz: "128 bits",
-      relojBase: "2044 MHz",
-      relojBoost: "2491 MHz",
-      velocidadMemoria: "14 Gbps",
-      anchoBanda: "224 GB/s",
-      streamProcessors: "1792", // para AMD sería "Stream Processors", pero usamos misma key para reutilizar UI
-      pcie: "4.0",
-      hdmi: "1 x 2.1",
-      displayPort: "3 x 1.4a",
-      resolucionMaxima: "8K a 60Hz",
-      monitoresSoportados: "4",
-      dimensiones: "240 x 110 x 40 mm",
-      altura: "2 Slot",
-      consumo: "132 W",
-      fuenteRecomendada: "500 W",
-      conector: "1 x 8-pin",
-    },
+},
+{
+  id: "placas-de-video-nvidia-3",
+  title: "Palit GeForce GTX 1660 Dual 6GB GDDR5",
+  slug: "palit-geforce-gtx-1660-dual-6gb",
+  thumbnail:
+    "/products/placas-de-video/nvidia/palit-gtx-1660-6gb-dual-gddr6/palit-gtx-1660-6gb-dual-gddr6_1.webp",
+  images: [
+    "/products/placas-de-video/nvidia/palit-gtx-1660-6gb-dual-gddr6/palit-gtx-1660-6gb-dual-gddr6_1.webp",
+    "/products/placas-de-video/nvidia/palit-gtx-1660-6gb-dual-gddr6/palit-gtx-1660-6gb-dual-gddr6_2.webp",
+    "/products/placas-de-video/nvidia/palit-gtx-1660-6gb-dual-gddr6/palit-gtx-1660-6gb-dual-gddr6_3.webp",
+    "/products/placas-de-video/nvidia/palit-gtx-1660-6gb-dual-gddr6/palit-gtx-1660-6gb-dual-gddr6_4.webp"
+  ],
+  price: "24999999",
+  category: "placas-de-video",
+  subcategory: "nvidia",
+  brand: "palit",
+  specs: {
+    memoria: "6GB GDDR5",
+    interfaz: "192 bits",
+    relojBase: "1530 MHz",
+    relojBoost: "1785 MHz",
+    velocidadMemoria: "8 Gbps",
+    anchoBanda: "192.1 GB/s",
+    cudaCores: "1408",
+    pcie: "PCIe 3.0 x16",
+    hdmi: "1 x HDMI 2.0",
+    displayPort: "1 x DisplayPort 1.4a",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "No disponible",
+    altura: "Dual-slot",
+    consumo: "120 W",
+    fuenteRecomendada: "300 W",
+    conector: "1 x 8 pin"
+  }
+},
+{
+  id: "placas-de-video-nvidia-4",
+  title: "Palit GeForce GTX 1660 Ti Dual 6GB GDDR6",
+  slug: "palit-geforce-gtx-1660-ti-dual-6gb",
+  thumbnail:
+    "/products/placas-de-video/nvidia/palit-gtx-1660-ti-6gb-dual-gddr6/palit-gtx-1660-ti-6gb-dual-gddr6_1.webp",
+  images: [
+    "/products/placas-de-video/nvidia/palit-gtx-1660-ti-6gb-dual-gddr6/palit-gtx-1660-ti-6gb-dual-gddr6_1.webp",
+    "/products/placas-de-video/nvidia/palit-gtx-1660-ti-6gb-dual-gddr6/palit-gtx-1660-ti-6gb-dual-gddr6_2.webp",
+    "/products/placas-de-video/nvidia/palit-gtx-1660-ti-6gb-dual-gddr6/palit-gtx-1660-ti-6gb-dual-gddr6_3.webp",
+    "/products/placas-de-video/nvidia/palit-gtx-1660-ti-6gb-dual-gddr6/palit-gtx-1660-ti-6gb-dual-gddr6_4.webp",
+    "/products/placas-de-video/nvidia/palit-gtx-1660-ti-6gb-dual-gddr6/palit-gtx-1660-ti-6gb-dual-gddr6_5.webp",
+  ],
+  price: "28999999", // completá con el precio en centavos
+  category: "placas-de-video",
+  subcategory: "nvidia",
+  brand: "palit",
+  specs: {
+    memoria: "6GB GDDR6",
+    interfaz: "192 bits",
+    relojBase: "1500 MHz",
+    relojBoost: "1770 MHz",
+    velocidadMemoria: "12 Gbps",
+    anchoBanda: "288 GB/s",
+    cudaCores: "1536",
+    pcie: "PCIe 3.0 x16",
+    hdmi: "1 x HDMI 2.0b",
+    displayPort: "1 x DisplayPort 1.4a",
+    dvi: "1 x DVI-D",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "3",
+    dimensiones: "235 mm x 115 mm x 40 mm",
+    altura: "Dual-slot",
+    consumo: "120 W",
+    fuenteRecomendada: "450 W",
+    conector: "1 x 8-pin"
+  }
+},
+{
+  id: "placas-de-video-nvidia-5",
+  title: "Palit GeForce RTX 2060 SUPER Dual 8GB GDDR6",
+  slug: "palit-geforce-rtx-2060-super-dual-8gb",
+  thumbnail:
+    "/products/placas-de-video/nvidia/palit-rtx-2060-super-dual-8gb-gddr6/palit-rtx-2060-super-dual-8gb-gddr6_1.webp",
+  images: [
+    "/products/placas-de-video/nvidia/palit-rtx-2060-super-dual-8gb-gddr6/palit-rtx-2060-super-dual-8gb-gddr6_1.webp",
+    "/products/placas-de-video/nvidia/palit-rtx-2060-super-dual-8gb-gddr6/palit-rtx-2060-super-dual-8gb-gddr6_2.webp",
+    "/products/placas-de-video/nvidia/palit-rtx-2060-super-dual-8gb-gddr6/palit-rtx-2060-super-dual-8gb-gddr6_3.webp",
+    "/products/placas-de-video/nvidia/palit-rtx-2060-super-dual-8gb-gddr6/palit-rtx-2060-super-dual-8gb-gddr6_4.webp",
+    "/products/placas-de-video/nvidia/palit-rtx-2060-super-dual-8gb-gddr6/palit-rtx-2060-super-dual-8gb-gddr6_5.webp",
+  ],
+  price: "25099999",
+  category: "placas-de-video",
+  subcategory: "nvidia",
+  brand: "palit",
+  specs: {
+    memoria: "8GB GDDR6",
+    interfaz: "256 bits",
+    relojBase: "1470 MHz",
+    relojBoost: "1650 MHz",
+    velocidadMemoria: "14 Gbps",
+    anchoBanda: "448 GB/s",
+    cudaCores: "2176",
+    pcie: "PCIe 3.0 x16",
+    hdmi: "1 x HDMI 2.0",
+    displayPort: "1 x DisplayPort 1.4a",
+    dvi: "1 x DVI",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "235 mm x 112 mm x 40 mm",
+    altura: "Dual-slot",
+    consumo: "175 W",
+    fuenteRecomendada: "450 W",
+    conector: "1 x 8-pin",
+  }
+},
+{
+  id: "placas-de-video-nvidia-6",
+  title: "Palit GeForce RTX 5060 Dual 8GB GDDR7",
+  slug: "palit-geforce-rtx-5060-dual-8gb",
+  thumbnail:
+    "/products/placas-de-video/nvidia/palit-rtx-5060-dual-8gb-gddr7/palit-rtx-5060-dual-8gb-gddr7_1.webp",
+  images: [
+    "/products/placas-de-video/nvidia/palit-rtx-5060-dual-8gb-gddr7/palit-rtx-5060-dual-8gb-gddr7_1.webp",
+    "/products/placas-de-video/nvidia/palit-rtx-5060-dual-8gb-gddr7/palit-rtx-5060-dual-8gb-gddr7_2.webp",
+    "/products/placas-de-video/nvidia/palit-rtx-5060-dual-8gb-gddr7/palit-rtx-5060-dual-8gb-gddr7_3.webp",
+    "/products/placas-de-video/nvidia/palit-rtx-5060-dual-8gb-gddr7/palit-rtx-5060-dual-8gb-gddr7_4.webp"
+  ],
+  price: "69499900",
+  category: "placas-de-video",
+  subcategory: "nvidia",
+  brand: "palit",
+  specs: {
+    memoria: "8GB GDDR7",
+    interfaz: "128 bits",
+    relojBase: "2280 MHz",
+    relojBoost: "2497 MHz",
+    velocidadMemoria: "28 Gbps",
+    anchoBanda: "448 GB/s",
+    cudaCores: "3840",
+    pcie: "PCIe 5.0",
+    hdmi: "HDMI 2.1b",
+    displayPort: "DP 2.1b x3",
+    resolucionMaxima: "8K @120 Hz",
+    monitoresSoportados: "4",
+    dimensiones: "291.9 mm x 116.6 mm x 41.3 mm",
+    altura: "2 Slot",
+    consumo: "180 W",
+    fuenteRecomendada: "600 W",
+    conector: "1 x 8 pin",
+  }
+},
+{
+  id: "placas-de-video-nvidia-7",
+  title: "Gigabyte GeForce RTX 4060 Gaming OC 8GB GDDR6",
+  slug: "gigabyte-geforce-rtx-4060-gaming-oc-8gb",
+  thumbnail:
+    "/products/placas-de-video/nvidia/gigabyte-rtx-4060-gaming-oc-8gb-gddr6/gigabyte-rtx-4060-gaming-oc-8gb-gddr6_1.webp",
+  images: [
+    "/products/placas-de-video/nvidia/gigabyte-rtx-4060-gaming-oc-8gb-gddr6/gigabyte-rtx-4060-gaming-oc-8gb-gddr6_1.webp",
+    "/products/placas-de-video/nvidia/gigabyte-rtx-4060-gaming-oc-8gb-gddr6/gigabyte-rtx-4060-gaming-oc-8gb-gddr6_2.webp",
+    "/products/placas-de-video/nvidia/gigabyte-rtx-4060-gaming-oc-8gb-gddr6/gigabyte-rtx-4060-gaming-oc-8gb-gddr6_3.webp",
+    "/products/placas-de-video/nvidia/gigabyte-rtx-4060-gaming-oc-8gb-gddr6/gigabyte-rtx-4060-gaming-oc-8gb-gddr6_4.webp",
+  ],
+  price: "64769900",
+  category: "placas-de-video",
+  subcategory: "nvidia",
+  brand: "gigabyte",
+  specs: {
+    memoria: "8GB GDDR6",
+    interfaz: "128 bits",
+    relojBase: "2475 MHz",
+    relojBoost: "2550 MHz",
+    velocidadMemoria: "2550 MHz",
+    anchoBanda: "272 GB/s",
+    cudaCores: "3072",
+    pcie: "PCIe 4.0 x16",
+    hdmi: "2 x HDMI 2.1a",
+    displayPort: "2 x DisplayPort 1.4a",
+    dvi: "",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "281 mm x 114 mm x 40 mm",
+    altura: "Dual-slot",
+    consumo: "115 W",
+    fuenteRecomendada: "450 W",
+    conector: "1 x 8-pin",
   },
-
-  {
-    id: "16",
-    title: "Asus Radeon RX 6750 XT Dual OC 12GB GDDR6",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "590000",
-    slug: "asus-radeon-rx-6750xt-12gb",
-    category: "placas-de-video",
-    subcategory: "radeon",
-    brand: "asus",
-    specs: {
-      memoria: "12 GB GDDR6",
-      interfaz: "192 bits",
-      relojBase: "2150 MHz",
-      relojBoost: "2623 MHz",
-      velocidadMemoria: "18 Gbps",
-      anchoBanda: "432 GB/s",
-      streamProcessors: "2560",
-      pcie: "4.0",
-      hdmi: "1 x 2.1",
-      displayPort: "3 x 1.4a",
-      resolucionMaxima: "8K a 60Hz",
-      monitoresSoportados: "4",
-      dimensiones: "295 x 139 x 54 mm",
-      altura: "2.7 Slot",
-      consumo: "250 W",
-      fuenteRecomendada: "650 W",
-      conector: "2 x 8-pin",
-    },
-  },
+},
+{
+  id: "placas-de-video-nvidia-8",
+  title: "Palit GeForce RTX 5070 GamingPro 12GB GDDR7",
+  slug: "palit-geforce-rtx-5070-gamingpro-12gb",
+  thumbnail:
+    "/products/placas-de-video/nvidia/palit-rtx-5070-gamingpro-12gb-gddr7/palit-rtx-5070-gamingpro-12gb-gddr7_1.webp",
+  images: [
+    "/products/placas-de-video/nvidia/palit-rtx-5070-gamingpro-12gb-gddr7/palit-rtx-5070-gamingpro-12gb-gddr7_1.webp",
+    "/products/placas-de-video/nvidia/palit-rtx-5070-gamingpro-12gb-gddr7/palit-rtx-5070-gamingpro-12gb-gddr7_2.webp",
+    "/products/placas-de-video/nvidia/palit-rtx-5070-gamingpro-12gb-gddr7/palit-rtx-5070-gamingpro-12gb-gddr7_3.webp",
+    "/products/placas-de-video/nvidia/palit-rtx-5070-gamingpro-12gb-gddr7/palit-rtx-5070-gamingpro-12gb-gddr7_4.webp"
+  ],
+  price: "84899900",
+  category: "placas-de-video",
+  subcategory: "nvidia",
+  brand: "palit",
+  specs: {
+    memoria: "12GB GDDR7",
+    interfaz: "192 bits",
+    relojBase: "2325 MHz",
+    relojBoost: "2512 MHz",
+    velocidadMemoria: "28 Gbps",
+    anchoBanda: "672 GB/s",
+    cudaCores: "6144",
+    pcie: "PCIe 5.0 x16",
+    hdmi: "1 x HDMI 2.1b",
+    displayPort: "3 x DisplayPort 2.1b",
+    dvi: "", // no incluye DVI
+    resolucionMaxima: "7680 x 4320 (8K @120Hz)",
+    monitoresSoportados: "4",
+    dimensiones: "332 mm x 127 mm x 60 mm",
+    altura: "Triple-slot",
+    consumo: "250 W",
+    fuenteRecomendada: "650 W",
+    conector: "1 x 16-pin (12V-2x6)"
+  }
+},
+{
+  id: "placas-de-video-nvidia-9",
+  title: "Gigabyte GeForce RTX 5070 Eagle OC 12GB GDDR7",
+  slug: "gigabyte-geforce-rtx-5070-eagle-oc-12gb",
+  thumbnail:
+    "/products/placas-de-video/nvidia/gigabyte-rtx-5070-eagle-oc-12gb-gddr7/gigabyte-rtx-5070-eagle-oc-12gb-gddr7_1.webp",
+  images: [
+    "/products/placas-de-video/nvidia/gigabyte-rtx-5070-eagle-oc-12gb-gddr7/gigabyte-rtx-5070-eagle-oc-12gb-gddr7_1.webp",
+    "/products/placas-de-video/nvidia/gigabyte-rtx-5070-eagle-oc-12gb-gddr7/gigabyte-rtx-5070-eagle-oc-12gb-gddr7_2.webp",
+    "/products/placas-de-video/nvidia/gigabyte-rtx-5070-eagle-oc-12gb-gddr7/gigabyte-rtx-5070-eagle-oc-12gb-gddr7_3.webp",
+    "/products/placas-de-video/nvidia/gigabyte-rtx-5070-eagle-oc-12gb-gddr7/gigabyte-rtx-5070-eagle-oc-12gb-gddr7_4.webp"
+  ],
+  price: "104449900", // $1.044.499 → 104.449.900 centavos
+  category: "placas-de-video",
+  subcategory: "nvidia",
+  brand: "gigabyte",
+  specs: {
+    memoria: "12GB GDDR7",
+    interfaz: "192 bits",
+    relojBase: "2325 MHz",
+    relojBoost: "2587 MHz",
+    velocidadMemoria: "28 Gbps",
+    anchoBanda: "672 GB/s",
+    cudaCores: "6144",
+    pcie: "PCIe 5.0 x16",
+    hdmi: "1 x HDMI 2.1b",
+    displayPort: "3 x DisplayPort 2.1b",
+    dvi: "",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "290 mm x 115 mm x 50 mm",
+    altura: "Dual-slot",
+    consumo: "250 W",
+    fuenteRecomendada: "600 W",
+    conector: "1 x 16-pin"
+  }
+},
+{
+  id: "placas-de-video-nvidia-10",
+  title: "ASUS Prime GeForce RTX 5080 OC 16GB GDDR7",
+  slug: "asus-prime-geforce-rtx-5080-oc-16gb",
+  thumbnail:
+    "/products/placas-de-video/nvidia/asus-prime-rtx-5080-oc-16gb-gddr7/asus-prime-rtx-5080-oc-16gb-gddr7_1.webp",
+  images: [
+    "/products/placas-de-video/nvidia/asus-prime-rtx-5080-oc-16gb-gddr7/asus-prime-rtx-5080-oc-16gb-gddr7_1.webp",
+    "/products/placas-de-video/nvidia/asus-prime-rtx-5080-oc-16gb-gddr7/asus-prime-rtx-5080-oc-16gb-gddr7_2.webp",
+    "/products/placas-de-video/nvidia/asus-prime-rtx-5080-oc-16gb-gddr7/asus-prime-rtx-5080-oc-16gb-gddr7_3.webp",
+    "/products/placas-de-video/nvidia/asus-prime-rtx-5080-oc-16gb-gddr7/asus-prime-rtx-5080-oc-16gb-gddr7_4.webp"
+  ],
+  price: "132000000",
+  category: "placas-de-video",
+  subcategory: "nvidia",
+  brand: "asus",
+  specs: {
+    memoria: "16GB GDDR7",
+    interfaz: "256 bits",
+    relojBase: "2295 MHz",
+    relojBoost: "2655 MHz",
+    velocidadMemoria: "30 Gbps",
+    anchoBanda: "960 GB/s",
+    cudaCores: "10752",
+    pcie: "PCIe 5.0 x16",
+    hdmi: "1 x HDMI 2.1b",
+    displayPort: "3 x DisplayPort 2.1b",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "2.5 Slot",
+    altura: "2.5 Slot",
+    consumo: "350 W",
+    fuenteRecomendada: "750 W",
+    conector: "1 x 16-pin"
+  }
+},
+{
+  id: "placas-de-video-nvidia-11",
+  title: "Gigabyte GeForce RTX 5090 Gaming OC 32GB GDDR7",
+  slug: "gigabyte-geforce-rtx-5090-gaming-oc-32gb",
+  thumbnail:
+    "/products/placas-de-video/nvidia/gigabyte-rtx-5090-gaming-oc-32gb-gddr7/gigabyte-rtx-5090-gaming-oc-32gb-gddr7_1.webp",
+  images: [
+    "/products/placas-de-video/nvidia/gigabyte-rtx-5090-gaming-oc-32gb-gddr7/gigabyte-rtx-5090-gaming-oc-32gb-gddr7_1.webp",
+    "/products/placas-de-video/nvidia/gigabyte-rtx-5090-gaming-oc-32gb-gddr7/gigabyte-rtx-5090-gaming-oc-32gb-gddr7_2.webp",
+    "/products/placas-de-video/nvidia/gigabyte-rtx-5090-gaming-oc-32gb-gddr7/gigabyte-rtx-5090-gaming-oc-32gb-gddr7_3.webp",
+    "/products/placas-de-video/nvidia/gigabyte-rtx-5090-gaming-oc-32gb-gddr7/gigabyte-rtx-5090-gaming-oc-32gb-gddr7_4.webp"
+  ],
+  price: "574800000",
+  category: "placas-de-video",
+  subcategory: "nvidia",
+  brand: "gigabyte",
+  specs: {
+    memoria: "32GB GDDR7",
+    interfaz: "512 bits",
+    relojBase: "2.520 MHz",
+    relojBoost: "2.700 MHz",
+    velocidadMemoria: "24 Gbps",
+    anchoBanda: "1.152 GB/s",
+    cudaCores: "21.760",
+    pcie: "PCIe 5.0 x16",
+    hdmi: "1 x HDMI 2.1b",
+    displayPort: "3 x DisplayPort 2.1b",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "3 Slot",
+    altura: "3 Slot",
+    consumo: "600 W",
+    fuenteRecomendada: "1.000 W",
+    conector: "1 x 16-pin"
+  }
+},
+{
+  id: "placas-de-video-nvidia-12",
+  title: "Palit GeForce RTX 5090 GameRock 32GB GDDR7",
+  slug: "palit-geforce-rtx-5090-gamerock-32gb",
+  thumbnail:
+    "/products/placas-de-video/nvidia/palit-rtx-5090-gamerock-32gb-gddr7/palit-rtx-5090-gamerock-32gb-gddr7_1.webp",
+  images: [
+    "/products/placas-de-video/nvidia/palit-rtx-5090-gamerock-32gb-gddr7/palit-rtx-5090-gamerock-32gb-gddr7_1.webp",
+    "/products/placas-de-video/nvidia/palit-rtx-5090-gamerock-32gb-gddr7/palit-rtx-5090-gamerock-32gb-gddr7_2.webp",
+    "/products/placas-de-video/nvidia/palit-rtx-5090-gamerock-32gb-gddr7/palit-rtx-5090-gamerock-32gb-gddr7_3.webp",
+    "/products/placas-de-video/nvidia/palit-rtx-5090-gamerock-32gb-gddr7/palit-rtx-5090-gamerock-32gb-gddr7_4.webp"
+  ],
+  price: "534849879",
+  category: "placas-de-video",
+  subcategory: "nvidia",
+  brand: "palit",
+  specs: {
+    memoria: "32GB GDDR7",
+    interfaz: "512 bits",
+    relojBase: "2017 MHz",
+    relojBoost: "2407 MHz",
+    velocidadMemoria: "28 Gbps",
+    anchoBanda: "1.79 TB/s",
+    cudaCores: "21.760",
+    pcie: "PCIe 5.0 x16",
+    hdmi: "1 x HDMI 2.1b",
+    displayPort: "3 x DisplayPort 2.1b",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "3 Slot",
+    altura: "3 Slot",
+    consumo: "600 W",
+    fuenteRecomendada: "1.000 W",
+    conector: "1 x 16-pin"
+  }
+},
+ //placas de video radeon
+ {
+  id: "placas-de-video-radeon-1",
+  title: "ASRock Radeon RX 6600 XT Challenger 8GB GDDR6",
+  slug: "asrock-radeon-rx-6600-xt-challenger-8gb",
+  thumbnail:
+    "/products/placas-de-video/radeon/asrock-rx-6600-xt-challenger-8gb-gddr6/asrock-rx-6600-xt-challenger-8gb-gddr6_1.webp",
+  images: [
+    "/products/placas-de-video/radeon/asrock-rx-6600-xt-challenger-8gb-gddr6/asrock-rx-6600-xt-challenger-8gb-gddr6_1.webp",
+    "/products/placas-de-video/radeon/asrock-rx-6600-xt-challenger-8gb-gddr6/asrock-rx-6600-xt-challenger-8gb-gddr6_2.webp",
+    "/products/placas-de-video/radeon/asrock-rx-6600-xt-challenger-8gb-gddr6/asrock-rx-6600-xt-challenger-8gb-gddr6_3.webp",
+    "/products/placas-de-video/radeon/asrock-rx-6600-xt-challenger-8gb-gddr6/asrock-rx-6600-xt-challenger-8gb-gddr6_4.webp",
+    "/products/placas-de-video/radeon/asrock-rx-6600-xt-challenger-8gb-gddr6/asrock-rx-6600-xt-challenger-8gb-gddr6_5.webp",
+  ],
+  price: "28499999",
+  category: "placas-de-video",
+  subcategory: "radeon",
+  brand: "asrock",
+  specs: {
+    memoria: "8GB GDDR6",
+    interfaz: "128 bits",
+    relojBase: "1968 MHz",
+    relojBoost: "2589 MHz",
+    velocidadMemoria: "16 Gbps",
+    anchoBanda: "256 GB/s",
+    streamProcessors: "2048",
+    pcie: "PCIe 4.0 x8",
+    hdmi: "1 x HDMI 2.1",
+    displayPort: "3 x DisplayPort 1.4a",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "230 mm x 115 mm x 45 mm",
+    altura: "2 Slot",
+    consumo: "160 W",
+    fuenteRecomendada: "500 W",
+    conector: "1 x 8-pin"
+  }
+},
+{
+  id: "placas-de-video-radeon-2",
+  title: "PowerColor Radeon RX 6600 Fighter 8GB GDDR6",
+  slug: "powercolor-radeon-rx-6600-fighter-8gb",
+  thumbnail:
+    "/products/placas-de-video/radeon/powercolor-rx-6600-fighter-bulk-8gb-gddr6/powercolor-rx-6600-fighter-bulk-8gb-gddr6_1.webp",
+  images: [
+    "/products/placas-de-video/radeon/powercolor-rx-6600-fighter-bulk-8gb-gddr6/powercolor-rx-6600-fighter-bulk-8gb-gddr6_1.webp",
+    "/products/placas-de-video/radeon/powercolor-rx-6600-fighter-bulk-8gb-gddr6/powercolor-rx-6600-fighter-bulk-8gb-gddr6_2.webp",
+    "/products/placas-de-video/radeon/powercolor-rx-6600-fighter-bulk-8gb-gddr6/powercolor-rx-6600-fighter-bulk-8gb-gddr6_3.webp",
+    "/products/placas-de-video/radeon/powercolor-rx-6600-fighter-bulk-8gb-gddr6/powercolor-rx-6600-fighter-bulk-8gb-gddr6_4.webp"
+  ],
+  price: "49999900",
+  category: "placas-de-video",
+  subcategory: "radeon",
+  brand: "powercolor",
+  specs: {
+    memoria: "8GB GDDR6",
+    interfaz: "128 bits",
+    relojBase: "2044 MHz",
+    relojBoost: "2491 MHz",
+    velocidadMemoria: "16 Gbps",
+    anchoBanda: "256 GB/s",
+    streamProcessors: "1792",
+    pcie: "PCIe 4.0 x8",
+    hdmi: "1 x HDMI 2.1",
+    displayPort: "3 x DisplayPort 1.4a",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "230 mm x 115 mm x 40 mm",
+    altura: "2 Slot",
+    consumo: "132 W",
+    fuenteRecomendada: "500 W",
+    conector: "1 x 8-pin"
+  }
+},
+{
+  id: "placas-de-video-radeon-3",
+  title: "PowerColor Radeon RX 6700 10GB GDDR6",
+  slug: "powercolor-radeon-rx-6700-10gb",
+  thumbnail:
+    "/products/placas-de-video/radeon/powercolor-rx-6700-10gb-gddr6/powercolor-rx-6700-10gb-gddr6_1.webp",
+  images: [
+    "/products/placas-de-video/radeon/powercolor-rx-6700-10gb-gddr6/powercolor-rx-6700-10gb-gddr6_1.webp",
+    "/products/placas-de-video/radeon/powercolor-rx-6700-10gb-gddr6/powercolor-rx-6700-10gb-gddr6_2.webp",
+    "/products/placas-de-video/radeon/powercolor-rx-6700-10gb-gddr6/powercolor-rx-6700-10gb-gddr6_3.webp",
+    "/products/placas-de-video/radeon/powercolor-rx-6700-10gb-gddr6/powercolor-rx-6700-10gb-gddr6_4.webp"
+  ],
+  price: "40529900",
+  category: "placas-de-video",
+  subcategory: "radeon",
+  brand: "powercolor",
+  specs: {
+    memoria: "10GB GDDR6",
+    interfaz: "160 bits",
+    relojBase: "2321 MHz",
+    relojBoost: "2581 MHz",
+    velocidadMemoria: "16 Gbps",
+    anchoBanda: "256 GB/s",
+    streamProcessors: "2560",
+    pcie: "PCIe 4.0 x16",
+    hdmi: "1 x HDMI 2.1",
+    displayPort: "3 x DisplayPort 1.4a",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "250 mm x 115 mm x 40 mm",
+    altura: "2 Slot",
+    consumo: "180 W",
+    fuenteRecomendada: "650 W",
+    conector: "1 x 6-pin + 1 x 8-pin"
+  }
+},
+{
+  id: "placas-de-video-radeon-4",
+  title: "ASRock Radeon RX 6500 XT Phantom Gaming D 4GB OC",
+  slug: "asrock-radeon-rx-6500-xt-phantom-gaming-d-4gb",
+  thumbnail:
+    "/products/placas-de-video/radeon/asrock-rx-6500-xt-panthom-4g-oc-gddr6/asrock-rx-6500-xt-panthom-4g-oc-gddr6_1.webp",
+  images: [
+    "/products/placas-de-video/radeon/asrock-rx-6500-xt-panthom-4g-oc-gddr6/asrock-rx-6500-xt-panthom-4g-oc-gddr6_1.webp",
+    "/products/placas-de-video/radeon/asrock-rx-6500-xt-panthom-4g-oc-gddr6/asrock-rx-6500-xt-panthom-4g-oc-gddr6_2.webp",
+    "/products/placas-de-video/radeon/asrock-rx-6500-xt-panthom-4g-oc-gddr6/asrock-rx-6500-xt-panthom-4g-oc-gddr6_3.webp",
+    "/products/placas-de-video/radeon/asrock-rx-6500-xt-panthom-4g-oc-gddr6/asrock-rx-6500-xt-panthom-4g-oc-gddr6_4.webp"
+  ],
+  price: "42127500",
+  category: "placas-de-video",
+  subcategory: "radeon",
+  brand: "asrock",
+  specs: {
+    memoria: "4GB GDDR6",
+    interfaz: "64 bits",
+    relojBase: "2365 MHz",
+    relojBoost: "2820 MHz",
+    velocidadMemoria: "18 Gbps",
+    anchoBanda: "144 GB/s",
+    streamProcessors: "1024",
+    pcie: "PCIe 4.0 x4",
+    hdmi: "1 x HDMI 2.1",
+    displayPort: "1 x DisplayPort 1.4a",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "2",
+    dimensiones: "240 mm x 129 mm x 40 mm",
+    altura: "Dual-slot",
+    consumo: "107 W",
+    fuenteRecomendada: "300 W",
+    conector: "1 x 8-pin"
+  }
+},
+{
+  id: "placas-de-video-radeon-5",
+  title: "Gigabyte Radeon RX 9060 XT Gaming OC 8GB GDDR6",
+  slug: "gigabyte-radeon-rx-9060-xt-gaming-oc-8gb",
+  thumbnail:
+    "/products/placas-de-video/radeon/gigabyte-rx-9060xt-gaming-oc-8gb-gddr6/gigabyte-rx-9060xt-gaming-oc-8gb-gddr6_1.webp",
+  images: [
+    "/products/placas-de-video/radeon/gigabyte-rx-9060xt-gaming-oc-8gb-gddr6/gigabyte-rx-9060xt-gaming-oc-8gb-gddr6_1.webp",
+    "/products/placas-de-video/radeon/gigabyte-rx-9060xt-gaming-oc-8gb-gddr6/gigabyte-rx-9060xt-gaming-oc-8gb-gddr6_2.webp",
+    "/products/placas-de-video/radeon/gigabyte-rx-9060xt-gaming-oc-8gb-gddr6/gigabyte-rx-9060xt-gaming-oc-8gb-gddr6_3.webp",
+    "/products/placas-de-video/radeon/gigabyte-rx-9060xt-gaming-oc-8gb-gddr6/gigabyte-rx-9060xt-gaming-oc-8gb-gddr6_4.webp",
+    "/products/placas-de-video/radeon/gigabyte-rx-9060xt-gaming-oc-8gb-gddr6/gigabyte-rx-9060xt-gaming-oc-8gb-gddr6_5.webp",
+  ],
+  price: "99999900",
+  category: "placas-de-video",
+  subcategory: "radeon",
+  brand: "gigabyte",
+  specs: {
+    memoria: "8GB GDDR6",
+    interfaz: "128 bits",
+    relojBase: "2325 MHz",
+    relojBoost: "2800 MHz",
+    velocidadMemoria: "16 Gbps",
+    anchoBanda: "256 GB/s",
+    streamProcessors: "2048",
+    pcie: "PCIe 4.0 x16",
+    hdmi: "1 x HDMI 2.1",
+    displayPort: "3 x DisplayPort 1.4a",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "300 mm x 130 mm x 50 mm",
+    altura: "2.5 Slot",
+    consumo: "300 W",
+    fuenteRecomendada: "750 W",
+    conector: "1 x 8-pin + 1 x 6-pin"
+  }
+},
+{
+  id: "placas-de-video-radeon-6",
+  title: "Gigabyte Radeon RX 7600 XT Gaming OC 16GB GDDR6",
+  slug: "gigabyte-radeon-rx-7600-xt-gaming-oc-16gb",
+  thumbnail:
+    "/products/placas-de-video/radeon/gigabyte-rx-7600xt-gaming-oc-16gb-gddr6/gigabyte-rx-7600xt-gaming-oc-16gb-gddr6_1.webp",
+  images: [
+    "/products/placas-de-video/radeon/gigabyte-rx-7600xt-gaming-oc-16gb-gddr6/gigabyte-rx-7600xt-gaming-oc-16gb-gddr6_1.webp",
+    "/products/placas-de-video/radeon/gigabyte-rx-7600xt-gaming-oc-16gb-gddr6/gigabyte-rx-7600xt-gaming-oc-16gb-gddr6_2.webp",
+    "/products/placas-de-video/radeon/gigabyte-rx-7600xt-gaming-oc-16gb-gddr6/gigabyte-rx-7600xt-gaming-oc-16gb-gddr6_3.webp",
+    "/products/placas-de-video/radeon/gigabyte-rx-7600xt-gaming-oc-16gb-gddr6/gigabyte-rx-7600xt-gaming-oc-16gb-gddr6_4.webp"
+  ],
+  price: "58499900",
+  category: "placas-de-video",
+  subcategory: "radeon",
+  brand: "gigabyte",
+  specs: {
+    memoria: "16GB GDDR6",
+    interfaz: "128 bits",
+    relojBase: "2320 MHz",
+    relojBoost: "2810 MHz",
+    velocidadMemoria: "18 Gbps",
+    anchoBanda: "288 GB/s",
+    streamProcessors: "2048",
+    pcie: "PCIe 4.0 x16",
+    hdmi: "2 x HDMI 2.1a",
+    displayPort: "2 x DisplayPort 2.1",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "310 mm x 130 mm x 50 mm",
+    altura: "2.5 Slot",
+    consumo: "250 W",
+    fuenteRecomendada: "650 W",
+    conector: "1 x 8-pin + 1 x 6-pin"
+  }
+},
+{
+  id: "placas-de-video-radeon-7",
+  title: "Gigabyte Radeon RX 7700 XT Gaming OC 12GB GDDR6",
+  slug: "gigabyte-radeon-rx-7700-xt-gaming-oc-12gb",
+  thumbnail:
+    "/products/placas-de-video/radeon/gigabyte-rx-7700xt-gaming-oc-12gb-gddr6/gigabyte-rx-7700xt-gaming-oc-12gb-gddr6_1.webp",
+  images: [
+    "/products/placas-de-video/radeon/gigabyte-rx-7700xt-gaming-oc-12gb-gddr6/gigabyte-rx-7700xt-gaming-oc-12gb-gddr6_1.webp",
+    "/products/placas-de-video/radeon/gigabyte-rx-7700xt-gaming-oc-12gb-gddr6/gigabyte-rx-7700xt-gaming-oc-12gb-gddr6_2.webp",
+    "/products/placas-de-video/radeon/gigabyte-rx-7700xt-gaming-oc-12gb-gddr6/gigabyte-rx-7700xt-gaming-oc-12gb-gddr6_3.webp",
+    "/products/placas-de-video/radeon/gigabyte-rx-7700xt-gaming-oc-12gb-gddr6/gigabyte-rx-7700xt-gaming-oc-12gb-gddr6_4.webp"
+  ],
+  price: "84897800",
+  category: "placas-de-video",
+  subcategory: "radeon",
+  brand: "gigabyte",
+  specs: {
+    memoria: "12GB GDDR6",
+    interfaz: "192 bits",
+    relojBase: "2276 MHz",
+    relojBoost: "2599 MHz",
+    velocidadMemoria: "18 Gbps",
+    anchoBanda: "432 GB/s",
+    streamProcessors: "3456",
+    pcie: "PCIe 4.0 x16",
+    hdmi: "2 x HDMI 2.1a",
+    displayPort: "2 x DisplayPort 2.1",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "310 mm x 130 mm x 50 mm",
+    altura: "2.5 Slot",
+    consumo: "300 W",
+    fuenteRecomendada: "750 W",
+    conector: "1 x 8-pin + 1 x 6-pin"
+  }
+},
+{
+  id: "placas-de-video-radeon-8",
+  title: "ASUS Prime Radeon RX 9070 OC Edition 16GB GDDR6",
+  slug: "asus-prime-radeon-rx-9070-oc-16gb",
+  thumbnail:
+    "/products/placas-de-video/radeon/asus-prime-rx-9070-gaming-oc-16gb-gddr6/asus-prime-rx-9070-gaming-oc-16gb-gddr6_1.webp",
+  images: [
+    "/products/placas-de-video/radeon/asus-prime-rx-9070-gaming-oc-16gb-gddr6/asus-prime-rx-9070-gaming-oc-16gb-gddr6_1.webp",
+    "/products/placas-de-video/radeon/asus-prime-rx-9070-gaming-oc-16gb-gddr6/asus-prime-rx-9070-gaming-oc-16gb-gddr6_2.webp",
+    "/products/placas-de-video/radeon/asus-prime-rx-9070-gaming-oc-16gb-gddr6/asus-prime-rx-9070-gaming-oc-16gb-gddr6_3.webp",
+    "/products/placas-de-video/radeon/asus-prime-rx-9070-gaming-oc-16gb-gddr6/asus-prime-rx-9070-gaming-oc-16gb-gddr6_4.webp",
+    "/products/placas-de-video/radeon/asus-prime-rx-9070-gaming-oc-16gb-gddr6/asus-prime-rx-9070-gaming-oc-16gb-gddr6_5.webp",
+  ],
+  price: "72000000",
+  category: "placas-de-video",
+  subcategory: "radeon",
+  brand: "asus",
+  specs: {
+    memoria: "16GB GDDR6",
+    interfaz: "256 bits",
+    relojBase: "2120 MHz",
+    relojBoost: "2610 MHz",
+    velocidadMemoria: "20 Gbps",
+    anchoBanda: "640 GB/s",
+    streamProcessors: "5120",
+    pcie: "PCIe 5.0 x16",
+    hdmi: "1 x HDMI 2.1b",
+    displayPort: "3 x DisplayPort 2.1a",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "310 mm x 140 mm x 60 mm",
+    altura: "2.5 Slot",
+    consumo: "330 W",
+    fuenteRecomendada: "750 W",
+    conector: "3 x 8-pin"
+  }
+},
+{
+  id: "placas-de-video-radeon-9",
+  title: "Gigabyte Radeon RX 9070 XT Gaming OC 16GB GDDR6",
+  slug: "gigabyte-radeon-rx-9070-xt-gaming-oc-16gb",
+  thumbnail:
+    "/products/placas-de-video/radeon/gigabyte-rx-9070xt-gaming-oc-16gb-gddr6/gigabyte-rx-9070xt-gaming-oc-16gb-gddr6_1.webp",
+  images: [
+    "/products/placas-de-video/radeon/gigabyte-rx-9070xt-gaming-oc-16gb-gddr6/gigabyte-rx-9070xt-gaming-oc-16gb-gddr6_1.webp",
+    "/products/placas-de-video/radeon/gigabyte-rx-9070xt-gaming-oc-16gb-gddr6/gigabyte-rx-9070xt-gaming-oc-16gb-gddr6_2.webp",
+    "/products/placas-de-video/radeon/gigabyte-rx-9070xt-gaming-oc-16gb-gddr6/gigabyte-rx-9070xt-gaming-oc-16gb-gddr6_3.webp",
+    "/products/placas-de-video/radeon/gigabyte-rx-9070xt-gaming-oc-16gb-gddr6/gigabyte-rx-9070xt-gaming-oc-16gb-gddr6_4.webp",
+    "/products/placas-de-video/radeon/gigabyte-rx-9070xt-gaming-oc-16gb-gddr6/gigabyte-rx-9070xt-gaming-oc-16gb-gddr6_5.webp",
+  ],
+  price: "114119900",
+  category: "placas-de-video",
+  subcategory: "radeon",
+  brand: "gigabyte",
+  specs: {
+    memoria: "16GB GDDR6",
+    interfaz: "256 bits",
+    relojBase: "1330 MHz",
+    relojBoost: "3060 MHz",
+    velocidadMemoria: "20.1 Gbps",
+    anchoBanda: "640 GB/s",
+    streamProcessors: "4096",
+    pcie: "PCIe 5.0 x16",
+    hdmi: "2 x HDMI 2.1b",
+    displayPort: "2 x DisplayPort 2.1",
+    resolucionMaxima: "7680 x 4320 (8K UHD)",
+    monitoresSoportados: "4",
+    dimensiones: "288 mm, triple-slot",
+    altura: "3 Slot",
+    consumo: "304 W",
+    fuenteRecomendada: "750 W",
+    conector: "2 x 8-pin"
+  }
+},
 
   // Pantallas - Monitores
   {
@@ -5681,7 +6314,7 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "intel",
     processor: "intel i3",
-    socket: "LGA 1200",
+    socket: "LGA1200",
     specs: {
       socket: "LGA1200",
       fundicion: "Intel",
@@ -5717,7 +6350,7 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "intel",
     processor: "intel celeron",
-    socket: "LGA 1700",
+    socket: "LGA1700",
     specs: {
       socket: "LGA1700",
       fundicion: "Intel",
@@ -5753,7 +6386,7 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "intel",
     processor: "intel pentium",
-    socket: "LGA 1200",
+    socket: "LGA1200",
     specs: {
       socket: "LGA1200",
       fundicion: "Intel",
@@ -5789,7 +6422,7 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "intel",
     processor: "intel i5",
-    socket: "LGA 1700",
+    socket: "LGA1700",
     specs: {
       socket: "LGA1700",
       fundicion: "Intel",
@@ -5825,7 +6458,7 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "intel",
     processor: "intel i5",
-    socket: "LGA 1700",
+    socket: "LGA1700",
     specs: {
       socket: "LGA1700",
       fundicion: "Intel",
@@ -5861,7 +6494,7 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "intel",
     processor: "intel i5",
-    socket: "LGA 1700",
+    socket: "LGA1700",
     specs: {
       socket: "LGA1700",
       fundicion: "Intel",
@@ -5897,7 +6530,7 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "intel",
     processor: "intel i7",
-    socket: "LGA 1700",
+    socket: "LGA1700",
     specs: {
       socket: "LGA1700",
       fundicion: "Intel",
@@ -5933,7 +6566,7 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "intel",
     processor: "intel i7",
-    socket: "LGA 1700",
+    socket: "LGA1700",
     specs: {
       socket: "LGA1700",
       fundicion: "Intel",
@@ -5969,7 +6602,7 @@ export const products: Product[] = [
     category: "procesadores",
     subcategory: "intel",
     processor: "intel i9",
-    socket: "LGA 1700",
+    socket: "LGA1700",
     specs: {
       socket: "LGA1700",
       fundicion: "Intel",
@@ -5993,1173 +6626,1110 @@ export const products: Product[] = [
     },
   },
 
-  // Motherboards
+  // motherboards amd
   {
-    id: "mb1",
-    title: "ASRock B550M Pro4",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "89.990",
-    slug: "asrock-b550m-pro4",
-    category: "motherboards",
-    subcategory: "motherboards-amd",
-    brand: "asrock",
-    socket: "AM4",
-    specs: {
-      procesadorChipset: {
-        socket: "AM4",
-        compatibilidad: "Ryzen 3000, 4000 G, 5000 Series",
-        chipset: "AMD B550",
-      },
-      memoria: {
-        slots: "4 DDR4",
-        capacidadMaxima: "128 GB",
-        frecuencia: "4733 MHz (OC)",
-        soporte: "Dual Channel, AMD EXPO, XMP",
-      },
-      graficosIntegrados: {
-        salidas: "HDMI 2.1, DisplayPort 1.4",
-        resolucionMaxima: "4K a 60 Hz",
-      },
-      almacenamiento: {
-        m2: "2 x M.2 PCIe 4.0/3.0",
-        sata: "4 x SATA III",
-      },
-      expansionConectividad: {
-        pciExpress: "1 x PCIe 4.0 x16, 1 x PCIe 3.0 x1",
-        redInalambrica: "No",
-        lan: "Realtek Gigabit LAN",
-      },
-      puertosAudio: {
-        usb: "USB 3.2 Gen1, USB 2.0",
-        audio: "7.1 canales HD",
-        rgb: "Conectores para tiras RGB direccionables",
-      },
+  id: "motherboards-amd-1",
+  title: "Gigabyte A520M K V2 (rev. 1.0) AM4",
+  slug: "gigabyte-a520m-k-v2-am4",
+  thumbnail:
+    "/products/motherboards/amd/gigabyte-a520m-k-v2-am4/gigabyte-a520m-k-v2-am4_1.webp",
+  images: [
+    "/products/motherboards/amd/gigabyte-a520m-k-v2-am4/gigabyte-a520m-k-v2-am4_1.webp",
+    "/products/motherboards/amd/gigabyte-a520m-k-v2-am4/gigabyte-a520m-k-v2-am4_2.webp",
+  ],
+  price: "7139999",
+  category: "motherboards",
+  subcategory: "motherboards-amd",
+  brand: "gigabyte",
+  socket: "AM4",
+  specs: {
+    procesadorChipset: {
+      socket: "AM4",
+      compatibilidad: "Ryzen 3000 / 4000 G-Series / 5000 Series",
+      chipset: "AMD A520"
     },
-  },
+    memoria: {
+      slots: "2 x DDR4",
+      capacidadMaxima: "64 GB",
+      frecuencia: "5100 MHz (OC)",
+      soporte: "Dual-Channel, ECC/Non-ECC"
+    },
+    graficosIntegrados: {
+      salidas: "HDMI 2.1, D-Sub",
+      resolucionMaxima: "4K at 60 Hz"
+    },
+    almacenamiento: {
+      m2: "1 x M.2 PCIe 3.0 x4 NVMe/SATA",
+      sata: "4 x SATA III"
+    },
+    expansionConectividad: {
+      pciExpress: "1 x PCIe 3.0 x16, 1 x PCIe 3.0 x1",
+      redInalambrica: "No",
+      lan: "Realtek Gigabit LAN"
+    },
+    puertosAudio: {
+      usb: "4 x USB 3.1 Gen1 (rear), 2 x USB 2.0 (rear)",
+      audio: "8-Channel HD",
+      rgb: "No"
+    }
+  }
+},
+{
+  id: "motherboards-amd-2",
+  title: "ASUS Prime A520M-K AM4",
+  slug: "asus-prime-a520m-k-am4",
+  thumbnail:
+    "/products/motherboards/amd/asus-prime-a520m-k-am4/asus-prime-a520m-k-am4_1.webp",
+  images: [
+    "/products/motherboards/amd/asus-prime-a520m-k-am4/asus-prime-a520m-k-am4_1.webp",
+    "/products/motherboards/amd/asus-prime-a520m-k-am4/asus-prime-a520m-k-am4_2.webp"
+  ],
+  price: "7897900",
+  category: "motherboards",
+  subcategory: "motherboards-amd",
+  brand: "asus",
+  socket: "AM4",
+  specs: {
+    procesadorChipset: {
+      socket: "AM4",
+      compatibilidad: "Ryzen 3000 / 4000 G-Series / 5000 Series",
+      chipset: "AMD A520"
+    },
+    memoria: {
+      slots: "2 x DDR4",
+      capacidadMaxima: "64 GB",
+      frecuencia: "4600 MHz (OC)",
+      soporte: "Dual-Channel, ECC/Non-ECC"
+    },
+    graficosIntegrados: {
+      salidas: "HDMI 1.4, D-Sub",
+      resolucionMaxima: "4K at 30 Hz"
+    },
+    almacenamiento: {
+      m2: "1 x M.2 PCIe 3.0 x4",
+      sata: "4 x SATA III"
+    },
+    expansionConectividad: {
+      pciExpress: "1 x PCIe 3.0 x16, 1 x PCIe 3.0 x1",
+      redInalambrica: "No",
+      lan: "Realtek Gigabit LAN"
+    },
+    puertosAudio: {
+      usb: "2 x USB 3.2 Gen1 (rear), 2 x USB 2.0 (rear)",
+      audio: "8-Channel HD",
+      rgb: "No"
+    }
+  }
+},
+{
+  id: "motherboards-amd-3",
+  title: "MSI B550M-A PRO AM4",
+  slug: "msi-b550m-a-pro-am4",
+  thumbnail: "/products/motherboards/amd/msi-b550m-a-pro-am4/msi-b550m-a-pro-am4_1.webp",
+  images: [
+    "/products/motherboards/amd/msi-b550m-a-pro-am4/msi-b550m-a-pro4_1.webp",
+    "/products/motherboards/amd/msi-b550m-a-pro-am4/msi-b550m-a-pro-am4_2.webp"
+  ],
+  price: "9499900",
+  category: "motherboards",
+  subcategory: "motherboards-amd",
+  brand: "msi",
+  socket: "AM4",
+  specs: {
+    procesadorChipset: {
+      socket: "AM4",
+      compatibilidad: "Ryzen 3000 / 4000 G-Series / 5000 Series",
+      chipset: "AMD B550"
+    },
+    memoria: {
+      slots: "2 x DDR4",
+      capacidadMaxima: "64 GB",
+      frecuencia: "4600 MHz (OC)",
+      soporte: "Dual-Channel"
+    },
+    graficosIntegrados: {
+      salidas: "HDMI 2.1, DVI-D",
+      resolucionMaxima: "4096 x 2160 at 60 Hz"
+    },
+    almacenamiento: {
+      m2: "1 x M.2 PCIe 4.0 x4",
+      sata: "4 x SATA III"
+    },
+    expansionConectividad: {
+      pciExpress: "1 x PCIe 4.0 x16, 1 x PCIe 3.0 x1",
+      redInalambrica: "No",
+      lan: "Realtek RTL8111H Gigabit LAN"
+    },
+    puertosAudio: {
+      usb: "4 x USB 3.2 Gen1, 2 x USB 2.0",
+      audio: "7.1 Channel HD Audio",
+      rgb: "No"
+    }
+  }
+},
+{
+  id: "motherboards-amd-4",
+  title: "ASUS TUF GAMING B550M-PLUS WiFi II AM4",
+  slug: "asus-tuf-gaming-b550m-plus-wifi-ii-am4",
+  thumbnail:
+    "/products/motherboards/amd/asus-tuf-gaming-b550m-plus-wifi-am4/asus-tuf-gaming-b550m-plus-wifi-am4_1.webp",
+  images: [
+    "/products/motherboards/amd/asus-tuf-gaming-b550m-plus-wifi-am4/asus-tuf-gaming-b550m-plus-wifi-am4_1.webp",
+    "/products/motherboards/amd/asus-tuf-gaming-b550m-plus-wifi-am4/asus-tuf-gaming-b550m-plus-wifi-am4_2.webp",
+  ],
+  price: "20199900",
+  category: "motherboards",
+  subcategory: "motherboards-amd",
+  brand: "asus",
+  socket: "AM4",
+  specs: {
+    procesadorChipset: {
+      socket: "AM4",
+      compatibilidad: "Ryzen 3000 / 4000 G-Series / 5000 Series",
+      chipset: "AMD B550"
+    },
+    memoria: {
+      slots: "4 x DDR4",
+      capacidadMaxima: "128 GB",
+      frecuencia: "4866 MHz (OC)",
+      soporte: "Dual-Channel, ECC/Non-ECC"
+    },
+    graficosIntegrados: {
+      salidas: "HDMI 2.1, DisplayPort 1.4",
+      resolucionMaxima: "4K at 60 Hz"
+    },
+    almacenamiento: {
+      m2: "2 x M.2 (PCIe 4.0/3.0)",
+      sata: "4 x SATA III"
+    },
+    expansionConectividad: {
+      pciExpress: "1 x PCIe 4.0 x16, 1 x PCIe 3.0 x1",
+      redInalambrica: "WiFi 6 (802.11ax)",
+      lan: "2.5 Gb Ethernet"
+    },
+    puertosAudio: {
+      usb: "1 x USB 3.2 Gen2 Type-C, 1 x USB 3.2 Gen2 Type-A, 4 x USB 3.2 Gen1, 2 x USB 2.0",
+      audio: "8-Channel HD Audio (Realtek S1200A)",
+      rgb: "ARGB header Gen 2"
+    }
+  }
+},
   {
-    id: "mb2",
-    title: "Gigabyte A520M S2H",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "72.500",
-    slug: "gigabyte-a520m-s2h",
-    category: "motherboards",
-    subcategory: "motherboards-amd",
-    brand: "gigabyte",
-    socket: "AM4",
-    specs: {
-      procesadorChipset: {
-        socket: "AM4",
-        compatibilidad: "Ryzen 3000, 4000 G, 5000 Series",
-        chipset: "AMD A520",
-      },
-      memoria: {
-        slots: "2 DDR4",
-        capacidadMaxima: "64 GB",
-        frecuencia: "4733 MHz (OC)",
-        soporte: "Dual Channel, XMP",
-      },
-      graficosIntegrados: {
-        salidas: "HDMI 2.1, DVI-D",
-        resolucionMaxima: "4K a 60 Hz",
-      },
-      almacenamiento: {
-        m2: "1 x M.2 PCIe 3.0 x4",
-        sata: "4 x SATA III",
-      },
-      expansionConectividad: {
-        pciExpress: "1 x PCIe 3.0 x16, 2 x PCIe 3.0 x1",
-        redInalambrica: "No",
-        lan: "Realtek Gigabit LAN",
-      },
-      puertosAudio: {
-        usb: "USB 3.2 Gen1, USB 2.0",
-        audio: "7.1 canales HD",
-        rgb: "No",
-      },
+  id: "motherboards-amd-5",
+  title: "ASUS Prime A620M-K AM5",
+  slug: "asus-prime-a620m-k-am5",
+  thumbnail:
+    "/products/motherboards/amd/asus-prime-a620m-k-am5/asus-prime-a620m-k-am5_1.webp",
+  images: [
+    "/products/motherboards/amd/asus-prime-a620m-k-am5/asus-prime-a620m-k-am5_1.webp",
+    "/products/motherboards/amd/asus-prime-a620m-k-am5/asus-prime-a620m-k-am5_2.webp"
+  ],
+  price: "10979900",
+  category: "motherboards",
+  subcategory: "motherboards-amd",
+  brand: "asus",
+  socket: "AM5",
+  specs: {
+    procesadorChipset: {
+      socket: "AM5",
+      compatibilidad: "Ryzen 7000 / 8000 / 9000 Series",
+      chipset: "AMD A620"
     },
-  },
+    memoria: {
+      slots: "2 x DDR5",
+      capacidadMaxima: "96 GB",
+      frecuencia: "7200 MHz (OC)",
+      soporte: "Dual-Channel, EXPO"
+    },
+    graficosIntegrados: {
+      salidas: "VGA, HDMI 2.1",
+      resolucionMaxima: "4K at 60 Hz"
+    },
+    almacenamiento: {
+      m2: "1 x M.2 PCIe 4.0 x4",
+      sata: "4 x SATA 6 Gb/s"
+    },
+    expansionConectividad: {
+      pciExpress: "1 x PCIe 4.0 x16, 1 x PCIe 3.0 x1",
+      redInalambrica: "No",
+      lan: "Realtek 1 Gb Ethernet"
+    },
+    puertosAudio: {
+      usb: "4 x USB 3.2 Gen1, 2 x USB 2.0 (rear) + front headers",
+      audio: "7.1 Channel HD Audio",
+      rgb: "Aura Sync RGB header"
+    }
+  }
+},
+{
+  id: "motherboards-amd-6",
+  title: "Gigabyte A620M S2H AM5",
+  slug: "gigabyte-a620m-s2h-am5",
+  thumbnail:
+    "/products/motherboards/amd/gigabyte-a620m-s2h-am5/gigabyte-a620m-s2h-am5_1.webp",
+  images: [
+    "/products/motherboards/amd/gigabyte-a620m-s2h-am5/gigabyte-a620m-s2h-am5_1.webp",
+    "/products/motherboards/amd/gigabyte-a620m-s2h-am5/gigabyte-a620m-s2h-am5_2.webp",
+  ],
+  price: "12899900",
+  category: "motherboards",
+  subcategory: "motherboards-amd",
+  brand: "gigabyte",
+  socket: "AM5",
+  specs: {
+    procesadorChipset: {
+      socket: "AM5",
+      compatibilidad: "Ryzen 7000 Series",
+      chipset: "AMD A620"
+    },
+    memoria: {
+      slots: "2 x DDR5",
+      capacidadMaxima: "96 GB",
+      frecuencia: "5200 MHz (OC)",
+      soporte: "Dual-Channel, EXPO"
+    },
+    graficosIntegrados: {
+      salidas: "HDMI 2.1, DisplayPort",
+      resolucionMaxima: "4K at 60 Hz"
+    },
+    almacenamiento: {
+      m2: "1 x M.2 PCIe 4.0 x4",
+      sata: "4 x SATA III"
+    },
+    expansionConectividad: {
+      pciExpress: "1 x PCIe 4.0 x16, 1 x PCIe 3.0 x1",
+      redInalambrica: "No",
+      lan: "Realtek 1 Gb Ethernet"
+    },
+    puertosAudio: {
+      usb: "4 x USB 2.0, 2 x USB 3.2 Gen1",
+      audio: "7.1 Channel HD Audio",
+      rgb: "RGB Fusion 2.0 headers"
+    }
+  }
+},
+{
+  id: "motherboards-amd-7",
+  title: "Gigabyte B650M H AM5",
+  slug: "gigabyte-b650m-h-am5",
+  thumbnail:
+    "/products/motherboards/amd/gigabyte-b650m-h-am5/gigabyte-b650m-h-am5_1.webp",
+  images: [
+    "/products/motherboards/amd/gigabyte-b650m-h-am5/gigabyte-b650m-h-am5_1.webp",
+    "/products/motherboards/amd/gigabyte-b650m-h-am5/gigabyte-b650m-h-am5_2.webp"
+  ],
+  price: "13199900",
+  category: "motherboards",
+  subcategory: "motherboards-amd",
+  brand: "gigabyte",
+  socket: "AM5",
+  specs: {
+    procesadorChipset: {
+      socket: "AM5",
+      compatibilidad: "Ryzen 7000 / 8000 / 9000 Series",
+      chipset: "AMD B650"
+    },
+    memoria: {
+      slots: "2 x DDR5",
+      capacidadMaxima: "96 GB",
+      frecuencia: "6400 MHz (OC)",
+      soporte: "Dual-Channel, EXPO"
+    },
+    graficosIntegrados: {
+      salidas: "HDMI 2.1, DisplayPort",
+      resolucionMaxima: "4K at 60 Hz"
+    },
+    almacenamiento: {
+      m2: "1 x M.2 PCIe 4.0 x4",
+      sata: "4 x SATA III"
+    },
+    expansionConectividad: {
+      pciExpress: "1 x PCIe 4.0 x16, 1 x PCIe 3.0 x1",
+      redInalambrica: "No",
+      lan: "Realtek 1 Gb Ethernet"
+    },
+    puertosAudio: {
+      usb: "4 x USB 2.0, 2 x USB 3.2 Gen1",
+      audio: "7.1 Channel HD Audio",
+      rgb: "RGB Fusion 2.0 headers"
+    }
+  }
+},
+{
+  id: "motherboards-amd-8",
+  title: "Gigabyte B650M Gaming WiFi AM5",
+  slug: "gigabyte-b650m-gaming-wifi-am5",
+  thumbnail:
+    "/products/motherboards/amd/gigabyte-b650m-gaming-wifi-am5/gigabyte-b650m-gaming-wifi-am5_1.webp",
+  images: [
+    "/products/motherboards/amd/gigabyte-b650m-gaming-wifi-am5/gigabyte-b650m-gaming-wifi-am5_1.webp",
+    "/products/motherboards/amd/gigabyte-b650m-gaming-wifi-am5/gigabyte-b650m-gaming-wifi-am5_2.webp"
+  ],
+  price: "16999900",
+  category: "motherboards",
+  subcategory: "motherboards-amd",
+  brand: "gigabyte",
+  socket: "AM5",
+  specs: {
+    procesadorChipset: {
+      socket: "AM5",
+      compatibilidad: "Ryzen 7000 / 8000 / 9000 Series",
+      chipset: "AMD B650"
+    },
+    memoria: {
+      slots: "2 x DDR5",
+      capacidadMaxima: "96 GB",
+      frecuencia: "6400 MHz (OC)",
+      soporte: "Dual-Channel, EXPO"
+    },
+    graficosIntegrados: {
+      salidas: "HDMI 2.1, DisplayPort",
+      resolucionMaxima: "4K at 60 Hz"
+    },
+    almacenamiento: {
+      m2: "1 x M.2 PCIe 4.0 x4",
+      sata: "4 x SATA III"
+    },
+    expansionConectividad: {
+      pciExpress: "1 x PCIe 4.0 x16, 1 x PCIe 3.0 x1",
+      redInalambrica: "802.11ac Wi-Fi",
+      lan: "2.5 GbE LAN"
+    },
+    puertosAudio: {
+      usb: "4 x USB 2.0, 2 x USB 3.2 Gen1",
+      audio: "7.1 Channel HD Audio",
+      rgb: "RGB Fusion 2.0 headers"
+    }
+  }
+},
+{
+  id: "motherboards-amd-9",
+  title: "Gigabyte B840M Eagle WiFi AM5",
+  slug: "gigabyte-b840m-eagle-wifi-am5",
+  thumbnail:
+    "/products/motherboards/amd/gigabyte-b840m-eagle-wifi-am5/gigabyte-b840m-eagle-wifi-am5_1.webp",
+  images: [
+    "/products/motherboards/amd/gigabyte-b840m-eagle-wifi-am5/gigabyte-b840m-eagle-wifi-am5_1.webp",
+    "/products/motherboards/amd/gigabyte-b840m-eagle-wifi-am5/gigabyte-b840m-eagle-wifi-am5_2.webp"
+  ],
+  price: "17999900",
+  category: "motherboards",
+  subcategory: "motherboards-amd",
+  brand: "gigabyte",
+  socket: "AM5",
+  specs: {
+    procesadorChipset: {
+      socket: "AM5",
+      compatibilidad: "Ryzen 7000 / 8000 / 9000 Series",
+      chipset: "AMD B840"
+    },
+    memoria: {
+      slots: "2 x DDR5",
+      capacidadMaxima: "128 GB",
+      frecuencia: "7600 MHz (OC)",
+      soporte: "Dual-Channel, AMD EXPO"
+    },
+    graficosIntegrados: {
+      salidas: "HDMI, DisplayPort",
+      resolucionMaxima: "4K a 60 Hz"
+    },
+    almacenamiento: {
+      m2: "1 x M.2 PCIe 4.0 x4, 1 x M.2 PCIe 3.0 x4",
+      sata: "4 x SATA III"
+    },
+    expansionConectividad: {
+      pciExpress: "1 x PCIe 4.0 x16, 1 x PCIe 3.0 x4",
+      redInalambrica: "Wi-Fi 6",
+      lan: "2.5 GbE Ethernet"
+    },
+    puertosAudio: {
+      usb: "4 x USB 2.0, 2 x USB 3.2 Gen1, 1 x USB 3.2 Gen2 Type-C",
+      audio: "8-Channel HD Audio",
+      rgb: "1 x RGB LED Header, 2 x ARGB LED Headers"
+    }
+  }
+},
 
-  // AM5
-  {
-    id: "mb5",
-    title: "ASRock B650M Pro RS",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "125.000",
-    slug: "asrock-b650m-pro-rs",
-    category: "motherboards",
-    subcategory: "motherboards-amd",
-    brand: "asrock",
-    socket: "AM5",
-    specs: {
-      procesadorChipset: {
-        socket: "AM5",
-        compatibilidad: "Ryzen 7000, 8000, 9000 Series",
-        chipset: "AMD B650",
-      },
-      memoria: {
-        slots: "4 DDR5",
-        capacidadMaxima: "256 GB",
-        frecuencia: "8200 MHz (OC)",
-        soporte: "Dual Channel, AMD EXPO, XMP",
-      },
-      graficosIntegrados: {
-        salidas: "DisplayPort 1.4, HDMI 2.1",
-        resolucionMaxima: "8K a 60 Hz",
-      },
-      almacenamiento: {
-        m2: "2 x M.2 PCIe 5.0, 2 x M.2 PCIe 4.0",
-        sata: "4 x SATA III",
-      },
-      expansionConectividad: {
-        pciExpress: "1 x PCIe 5.0 x16 reforzado, 3 x PCIe x1",
-        redInalambrica: "No",
-        lan: "Realtek 2.5GbE",
-      },
-      puertosAudio: {
-        usb: "USB 3.2 Gen2x2 Tipo C, USB 3.2 Gen2 y USB 2.0",
-        audio: "Realtek 7.1 canales",
-        rgb: "Conectores para tiras LED y RGB direccionables",
-      },
+//motherboards intel
+{
+  id: "motherboards-intel-1",
+  title: "ASUS Prime B560-PLUS AC-HES LGA1700",
+  slug: "asus-prime-b560-plus-ac-hes-lga1700",
+  thumbnail:
+    "/products/motherboards/intel/asus-prime-b560-plus-ac-hes-lga1700/asus-prime-b560-plus-ac-hes-lga1700_1.webp",
+  images: [
+    "/products/motherboards/intel/asus-prime-b560-plus-ac-hes-lga1700/asus-prime-b560-plus-ac-hes-lga1700_1.webp",
+    "/products/motherboards/intel/asus-prime-b560-plus-ac-hes-lga1700/asus-prime-b560-plus-ac-hes-lga1700_2.webp"
+  ],
+  price: "15346800",
+  category: "motherboards",
+  subcategory: "motherboards-intel",
+  brand: "asus",
+  socket: "LGA1200",
+  specs: {
+    procesadorChipset: {
+      socket: "LGA1200",
+      compatibilidad: "Intel 10th/11th Gen",
+      chipset: "Intel B560"
     },
-  },
-  {
-    id: "mb6",
-    title: "Gigabyte X670 AORUS Elite",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "210.000",
-    slug: "gigabyte-x670-aorus-elite",
-    category: "motherboards",
-    subcategory: "motherboards-amd",
-    brand: "gigabyte",
-    socket: "AM5",
-    specs: {
-      procesadorChipset: {
-        socket: "AM5",
-        compatibilidad: "Ryzen 7000, 8000, 9000 Series",
-        chipset: "AMD X670",
-      },
-      memoria: {
-        slots: "4 DDR5",
-        capacidadMaxima: "256 GB",
-        frecuencia: "8200 MHz (OC)",
-        soporte: "Dual Channel, AMD EXPO, XMP",
-      },
-      graficosIntegrados: {
-        salidas: "DisplayPort 1.4, HDMI 2.1",
-        resolucionMaxima: "8K a 60 Hz",
-      },
-      almacenamiento: {
-        m2: "2 x M.2 PCIe 5.0, 2 x M.2 PCIe 4.0",
-        sata: "4 x SATA III",
-      },
-      expansionConectividad: {
-        pciExpress: "1 x PCIe 5.0 x16 reforzado, 3 x PCIe x1",
-        redInalambrica: "Wi-Fi 6E, Bluetooth 5.2",
-        lan: "Realtek 2.5GbE",
-      },
-      puertosAudio: {
-        usb: "USB 3.2 Gen2x2 Tipo C, USB 3.2 Gen2 y USB 2.0",
-        audio: "Realtek 7.1 canales",
-        rgb: "Conectores para tiras LED y RGB direccionables",
-      },
+    memoria: {
+      slots: "4 x DDR4",
+      capacidadMaxima: "128 GB",
+      frecuencia: "4600 MHz (OC)",
+      soporte: "Dual-Channel"
     },
-  },
-  {
-    id: "mb7",
-    title: "MSI PRO X670-P WiFi",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "229.000",
-    slug: "msi-pro-x670-p-wifi",
-    category: "motherboards",
-    subcategory: "motherboards-amd",
-    brand: "msi",
-    socket: "AM5",
-    specs: {
-      procesadorChipset: {
-        socket: "AM5",
-        compatibilidad: "Ryzen 7000, 8000, 9000 Series",
-        chipset: "AMD X670",
-      },
-      memoria: {
-        slots: "4 DDR5",
-        capacidadMaxima: "256 GB",
-        frecuencia: "8200 MHz (OC)",
-        soporte: "Dual Channel, AMD EXPO, XMP",
-      },
-      graficosIntegrados: {
-        salidas: "DisplayPort 1.4, HDMI 2.1",
-        resolucionMaxima: "8K a 60 Hz",
-      },
-      almacenamiento: {
-        m2: "2 x M.2 PCIe 5.0, 2 x M.2 PCIe 4.0",
-        sata: "4 x SATA III",
-      },
-      expansionConectividad: {
-        pciExpress: "1 x PCIe 5.0 x16 reforzado, 3 x PCIe x1",
-        redInalambrica: "Wi-Fi 6E, Bluetooth 5.2",
-        lan: "Realtek 2.5GbE",
-      },
-      puertosAudio: {
-        usb: "USB 3.2 Gen2x2 Tipo C, USB 3.2 Gen2 y USB 2.0",
-        audio: "Realtek 7.1 canales",
-        rgb: "Conectores para tiras LED y RGB direccionables",
-      },
+    graficosIntegrados: {
+      salidas: "HDMI, DisplayPort, D-Sub",
+      resolucionMaxima: "4K at 60 Hz"
     },
-  },
-  {
-    id: "mb8",
-    title: "ASUS TUF Gaming B650-Plus",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "198.000",
-    slug: "asus-tuf-b650-plus",
-    category: "motherboards",
-    subcategory: "motherboards-amd",
-    brand: "asus",
-    socket: "AM5",
-    specs: {
-      procesadorChipset: {
-        socket: "AM5",
-        compatibilidad: "Ryzen 7000, 8000, 9000 Series",
-        chipset: "AMD B650",
-      },
-      memoria: {
-        slots: "4 DDR5",
-        capacidadMaxima: "256 GB",
-        frecuencia: "8200 MHz (OC)",
-        soporte: "Dual Channel, AMD EXPO, XMP",
-      },
-      graficosIntegrados: {
-        salidas: "DisplayPort 1.4, HDMI 2.1",
-        resolucionMaxima: "8K a 60 Hz",
-      },
-      almacenamiento: {
-        m2: "2 x M.2 PCIe 5.0, 2 x M.2 PCIe 4.0",
-        sata: "4 x SATA III",
-      },
-      expansionConectividad: {
-        pciExpress: "1 x PCIe 5.0 x16 reforzado, 3 x PCIe x1",
-        redInalambrica: "No",
-        lan: "Realtek 2.5GbE",
-      },
-      puertosAudio: {
-        usb: "USB 3.2 Gen2x2 Tipo C, USB 3.2 Gen2 y USB 2.0",
-        audio: "Realtek 7.1 canales",
-        rgb: "Conectores para tiras LED y RGB direccionables",
-      },
+    almacenamiento: {
+      m2: "2 x M.2 (PCIe 4.0/3.0)",
+      sata: "6 x SATA III"
     },
-  },
-
-  // LGA 1200
-  {
-    id: "mb9",
-    title: "MSI H510M-A Pro",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "65.900",
-    slug: "msi-h510m-a-pro",
-    category: "motherboards",
-    subcategory: "motherboards-intel",
-    brand: "msi",
-    socket: "LGA 1200",
-    specs: {
-      procesadorChipset: {
-        socket: "LGA 1200",
-        compatibilidad: "10ª y 11ª Gen Intel Core",
-        chipset: "Intel H510",
-      },
-      memoria: {
-        slots: "2 DDR4",
-        capacidadMaxima: "64 GB",
-        frecuencia: "3200 MHz",
-        soporte: "Dual Channel, XMP",
-      },
-      graficosIntegrados: {
-        salidas: "HDMI 1.4, D-Sub",
-        resolucionMaxima: "4096 x 2304 a 60 Hz",
-      },
-      almacenamiento: {
-        m2: "1 x M.2 PCIe 3.0 x4",
-        sata: "4 x SATA III",
-      },
-      expansionConectividad: {
-        pciExpress: "1 x PCIe 3.0 x16, 1 x PCIe 3.0 x1",
-        redInalambrica: "No",
-        lan: "Realtek 1 GbE",
-      },
-      puertosAudio: {
-        usb: "USB 3.2 Gen1 y USB 2.0",
-        audio: "Realtek ALC887 7.1 canales",
-        rgb: "No",
-      },
+    expansionConectividad: {
+      pciExpress: "1 x PCIe 4.0 x16, 1 x PCIe 3.0 x1",
+      redInalambrica: "Wi-Fi 5",
+      lan: "Intel 1 Gb Ethernet"
     },
-  },
-  {
-    id: "mb10",
-    title: "ASRock B460M-HDV",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "78.990",
-    slug: "asrock-b460m-hdv",
-    category: "motherboards",
-    subcategory: "motherboards-intel",
-    brand: "asrock",
-    socket: "LGA 1200",
-    specs: {
-      procesadorChipset: {
-        socket: "LGA 1200",
-        compatibilidad: "10ª y 11ª Gen Intel Core",
-        chipset: "Intel B460",
-      },
-      memoria: {
-        slots: "2 DDR4",
-        capacidadMaxima: "128 GB",
-        frecuencia: "2933 MHz",
-        soporte: "Dual Channel, XMP",
-      },
-      graficosIntegrados: {
-        salidas: "HDMI 1.4, D-Sub",
-        resolucionMaxima: "4096 x 2304 a 60 Hz",
-      },
-      almacenamiento: {
-        m2: "1 x M.2 PCIe 3.0 x4",
-        sata: "4 x SATA III",
-      },
-      expansionConectividad: {
-        pciExpress: "1 x PCIe 3.0 x16, 1 x PCIe 3.0 x1",
-        redInalambrica: "No",
-        lan: "Intel I219V 1 GbE",
-      },
-      puertosAudio: {
-        usb: "USB 3.2 Gen1 y USB 2.0",
-        audio: "Realtek ALC887 7.1 canales",
-        rgb: "No",
-      },
+    puertosAudio: {
+      usb: "1 x USB 3.2 Gen2 Type-C, 1 x USB 3.2 Gen2 Type-A, 2 x USB 3.2 Gen1, 4 x USB 2.0",
+      audio: "Realtek 7.1-Channel HD Audio",
+      rgb: "Aura Sync RGB header"
+    }
+  }
+},
+{
+  id: "motherboards-intel-2",
+  title: "MSI B560M PRO-E LGA1200",
+  slug: "msi-b560m-pro-e-lga1200",
+  thumbnail:
+    "/products/motherboards/intel/msi-b560m-pro-e-lga1200/msi-b560m-pro-e-lga1200_1.webp",
+  images: [
+    "/products/motherboards/intel/msi-b560m-pro-e-lga1200/msi-b560m-pro-e-lga1200_1.webp",
+    "/products/motherboards/intel/msi-b560m-pro-e-lga1200/msi-b560m-pro-e-lga1200_2.webp"
+  ],
+  price: "9209900",
+  category: "motherboards",
+  subcategory: "motherboards-intel",
+  brand: "msi",
+  socket: "LGA1200",
+  specs: {
+    procesadorChipset: {
+      socket: "LGA1200",
+      compatibilidad: "Intel 10th/11th Gen",
+      chipset: "Intel B560"
     },
-  },
-  {
-    id: "mb11",
-    title: "Gigabyte B460M DS3H",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "84.000",
-    slug: "gigabyte-b460m-ds3h",
-    category: "motherboards",
-    subcategory: "motherboards-intel",
-    brand: "gigabyte",
-    socket: "LGA 1200",
-    specs: {
-      procesadorChipset: {
-        socket: "LGA 1200",
-        compatibilidad: "10ª y 11ª Gen Intel Core",
-        chipset: "Intel B460",
-      },
-      memoria: {
-        slots: "4 DDR4",
-        capacidadMaxima: "128 GB",
-        frecuencia: "2933 MHz",
-        soporte: "Dual Channel, XMP",
-      },
-      graficosIntegrados: {
-        salidas: "HDMI 1.4, D-Sub, DisplayPort 1.2",
-        resolucionMaxima: "4096 x 2304 a 60 Hz",
-      },
-      almacenamiento: {
-        m2: "1 x M.2 PCIe 3.0 x4",
-        sata: "6 x SATA III",
-      },
-      expansionConectividad: {
-        pciExpress: "1 x PCIe 3.0 x16, 2 x PCIe 3.0 x1",
-        redInalambrica: "No",
-        lan: "Realtek 1 GbE",
-      },
-      puertosAudio: {
-        usb: "USB 3.2 Gen1 y USB 2.0",
-        audio: "Realtek ALC892 7.1 canales",
-        rgb: "No",
-      },
+    memoria: {
+      slots: "2 x DDR4",
+      capacidadMaxima: "64 GB",
+      frecuencia: "4800 MHz (OC)",
+      soporte: "Dual-Channel"
     },
-  },
-  {
-    id: "mb12",
-    title: "ASUS Prime H510M-K",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "79.500",
-    slug: "asus-prime-h510m-k",
-    category: "motherboards",
-    subcategory: "motherboards-intel",
-    brand: "asus",
-    socket: "LGA 1200",
-    specs: {
-      procesadorChipset: {
-        socket: "LGA 1200",
-        compatibilidad: "10ª y 11ª Gen Intel Core",
-        chipset: "Intel H510",
-      },
-      memoria: {
-        slots: "2 DDR4",
-        capacidadMaxima: "64 GB",
-        frecuencia: "3200 MHz",
-        soporte: "Dual Channel, XMP",
-      },
-      graficosIntegrados: {
-        salidas: "HDMI 1.4, D-Sub",
-        resolucionMaxima: "4096 x 2304 a 60 Hz",
-      },
-      almacenamiento: {
-        m2: "1 x M.2 PCIe 3.0 x4",
-        sata: "4 x SATA III",
-      },
-      expansionConectividad: {
-        pciExpress: "1 x PCIe 3.0 x16, 1 x PCIe 3.0 x1",
-        redInalambrica: "No",
-        lan: "Realtek 1 GbE",
-      },
-      puertosAudio: {
-        usb: "USB 3.2 Gen1 y USB 2.0",
-        audio: "Realtek ALC887 7.1 canales",
-        rgb: "No",
-      },
+    graficosIntegrados: {
+      salidas: "VGA, HDMI",
+      resolucionMaxima: "4K at 60 Hz"
     },
-  },
-  //lga 1700
-  {
-    id: "mb13",
-    title: "Gigabyte B660M DS3H",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "104.500",
-    slug: "gigabyte-b660m-ds3h",
-    category: "motherboards",
-    subcategory: "motherboards-intel",
-    brand: "gigabyte",
-    socket: "LGA 1700",
-    specs: {
-      procesadorChipset: {
-        socket: "LGA 1700",
-        compatibilidad: "12ª Gen Intel Core",
-        chipset: "Intel B660",
-      },
-      memoria: {
-        slots: "4 DDR4",
-        capacidadMaxima: "128 GB",
-        frecuencia: "3200 MHz",
-        soporte: "Dual Channel, XMP",
-      },
-      graficosIntegrados: {
-        salidas: "HDMI 2.1, DisplayPort 1.4",
-        resolucionMaxima: "4096 x 2304 a 60 Hz",
-      },
-      almacenamiento: {
-        m2: "2 x M.2 PCIe 4.0 x4",
-        sata: "4 x SATA III",
-      },
-      expansionConectividad: {
-        pciExpress: "1 x PCIe 4.0 x16, 2 x PCIe 3.0 x1",
-        redInalambrica: "No",
-        lan: "Realtek 2.5 GbE",
-      },
-      puertosAudio: {
-        usb: "USB 3.2 Gen2 y USB 2.0",
-        audio: "Realtek ALC897 7.1 canales",
-        rgb: "No",
-      },
+    almacenamiento: {
+      m2: "1 x M.2 PCIe 4.0/3.0",
+      sata: "4 x SATA III"
     },
-  },
-  {
-    id: "mb14",
-    title: "ASUS Prime Z790-P",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "185.000",
-    slug: "asus-prime-z790-p",
-    category: "motherboards",
-    subcategory: "motherboards-intel",
-    brand: "asus",
-    socket: "LGA 1700",
-    specs: {
-      procesadorChipset: {
-        socket: "LGA 1700",
-        compatibilidad: "12ª y 13ª Gen Intel Core",
-        chipset: "Intel Z790",
-      },
-      memoria: {
-        slots: "4 DDR5",
-        capacidadMaxima: "128 GB",
-        frecuencia: "5600 MHz",
-        soporte: "Dual Channel, XMP",
-      },
-      graficosIntegrados: {
-        salidas: "HDMI 2.1, DisplayPort 1.4",
-        resolucionMaxima: "7680 x 4320 (8K) a 60 Hz",
-      },
-      almacenamiento: {
-        m2: "3 x M.2 PCIe 4.0/5.0 x4",
-        sata: "6 x SATA III",
-      },
-      expansionConectividad: {
-        pciExpress: "1 x PCIe 5.0 x16, 2 x PCIe 3.0 x1",
-        redInalambrica: "No",
-        lan: "Intel 2.5 GbE",
-      },
-      puertosAudio: {
-        usb: "USB 3.2 Gen2x2, Gen2 y USB 2.0",
-        audio: "Realtek ALC897 7.1 canales",
-        rgb: "No",
-      },
+    expansionConectividad: {
+      pciExpress: "1 x PCIe 4.0 x16, 1 x PCIe 3.0 x1",
+      redInalambrica: "No",
+      lan: "Intel Gigabit LAN"
     },
-  },
-  {
-    id: "mb15",
-    title: "MSI PRO B760M-P DDR4",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "112.000",
-    slug: "msi-pro-b760m-p",
-    category: "motherboards",
-    subcategory: "motherboards-intel",
-    brand: "msi",
-    socket: "LGA 1700",
-    specs: {
-      procesadorChipset: {
-        socket: "LGA 1700",
-        compatibilidad: "12ª y 13ª Gen Intel Core",
-        chipset: "Intel B760",
-      },
-      memoria: {
-        slots: "4 DDR4",
-        capacidadMaxima: "128 GB",
-        frecuencia: "3200 MHz",
-        soporte: "Dual Channel, XMP",
-      },
-      graficosIntegrados: {
-        salidas: "HDMI 2.1, DisplayPort 1.4",
-        resolucionMaxima: "4096 x 2304 a 60 Hz",
-      },
-      almacenamiento: {
-        m2: "2 x M.2 PCIe 4.0 x4",
-        sata: "6 x SATA III",
-      },
-      expansionConectividad: {
-        pciExpress: "1 x PCIe 4.0 x16, 2 x PCIe 3.0 x1",
-        redInalambrica: "No",
-        lan: "Realtek 2.5 GbE",
-      },
-      puertosAudio: {
-        usb: "USB 3.2 Gen1 y USB 2.0",
-        audio: "Realtek ALC897 7.1 canales",
-        rgb: "No",
-      },
+    puertosAudio: {
+      usb: "2 x USB 3.2 Gen1, 2 x USB 2.0",
+      audio: "Realtek HD Audio",
+      rgb: "No"
+    }
+  }
+},
+{
+  id: "motherboards-intel-3",
+  title: "Gigabyte H610M K V2 LGA1700",
+  slug: "gigabyte-h610m-k-v2-lga1700",
+  thumbnail:
+    "/products/motherboards/intel/gigabyte-h610m-k-v2-lga1700/gigabyte-h610m-k-v2-lga1700_1.webp",
+  images: [
+    "/products/motherboards/intel/gigabyte-h610m-k-v2-lga1700/gigabyte-h610m-k-v2-lga1700_1.webp",
+    "/products/motherboards/intel/gigabyte-h610m-k-v2-lga1700/gigabyte-h610m-k-v2-lga1700_2.webp"
+  ],
+  price: "11069900",
+  category: "motherboards",
+  subcategory: "motherboards-intel",
+  brand: "gigabyte",
+  socket: "LGA1700",
+  specs: {
+    procesadorChipset: {
+      socket: "LGA1700",
+      compatibilidad: "Intel 12th/13th/14th Gen",
+      chipset: "Intel H610"
     },
-  },
-  {
-    id: "mb16",
-    title: "ASRock Z790 PG Lightning",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "199.000",
-    slug: "asrock-z790-pg-lightning",
-    category: "motherboards",
-    subcategory: "motherboards-intel",
-    brand: "asrock",
-    socket: "LGA 1700",
-    specs: {
-      procesadorChipset: {
-        socket: "LGA 1700",
-        compatibilidad: "12ª y 13ª Gen Intel Core",
-        chipset: "Intel Z790",
-      },
-      memoria: {
-        slots: "4 DDR5",
-        capacidadMaxima: "128 GB",
-        frecuencia: "5600 MHz",
-        soporte: "Dual Channel, XMP",
-      },
-      graficosIntegrados: {
-        salidas: "HDMI 2.1, DisplayPort 1.4",
-        resolucionMaxima: "7680 x 4320 (8K) a 60 Hz",
-      },
-      almacenamiento: {
-        m2: "4 x M.2 PCIe 4.0/5.0 x4",
-        sata: "6 x SATA III",
-      },
-      expansionConectividad: {
-        pciExpress: "1 x PCIe 5.0 x16, 2 x PCIe 3.0 x1",
-        redInalambrica: "Wi-Fi 6E 802.11ax, Bluetooth 5.3",
-        lan: "Intel 2.5 GbE",
-      },
-      puertosAudio: {
-        usb: "USB 3.2 Gen2x2, Gen2 y USB 2.0",
-        audio: "Realtek ALC897 7.1 canales",
-        rgb: "Sí, direccionable",
-      },
+    memoria: {
+      slots: "2 x DDR5",
+      capacidadMaxima: "128 GB",
+      frecuencia: "5600 MHz (OC)",
+      soporte: "Dual-Channel, XMP 3.0"
     },
-  },
+    graficosIntegrados: {
+      salidas: "HDMI 2.1, DisplayPort",
+      resolucionMaxima: "4K at 60 Hz"
+    },
+    almacenamiento: {
+      m2: "1 x M.2 PCIe 3.0 x4",
+      sata: "2 x SATA III"
+    },
+    expansionConectividad: {
+      pciExpress: "1 x PCIe 4.0 x16, 1 x PCIe 3.0 x1",
+      redInalambrica: "No",
+      lan: "Realtek 1 GbE LAN"
+    },
+    puertosAudio: {
+      usb: "2 x USB 3.2 Gen1, 4 x USB 2.0",
+      audio: "8-Channel HD Audio",
+      rgb: "No"
+    }
+  }
+},
+{
+  id: "motherboards-intel-4",
+  title: "MSI PRO B760M-E DDR4 LGA1700",
+  slug: "msi-pro-b760m-e-ddr4-lga1700",
+  thumbnail:
+    "/products/motherboards/intel/msi-b760m-e-lga1700/msi-b760m-e-lga1700_1.webp",
+  images: [
+    "/products/motherboards/intel/msi-b760m-e-lga1700/msi-b760m-e-lga1700_1.webp",
+    "/products/motherboards/intel/msi-b760m-e-lga1700/msi-b760m-e-lga1700_2.webp",
+  ],
+  price: "11699900",
+  category: "motherboards",
+  subcategory: "motherboards-intel",
+  brand: "msi",
+  socket: "LGA1700",
+  specs: {
+    procesadorChipset: {
+      socket: "LGA1700",
+      compatibilidad: "Intel 12th / 13th / 14th Gen, Pentium Gold, Celeron",
+      chipset: "Intel B760"
+    },
+    memoria: {
+      slots: "2 x DDR4",
+      capacidadMaxima: "64 GB",
+      frecuencia: "4800 MHz (OC)",
+      soporte: "Dual-Channel, XMP"
+    },
+    graficosIntegrados: {
+      salidas: "HDMI 1.4, VGA",
+      resolucionMaxima: "4K at 30 Hz"
+    },
+    almacenamiento: {
+      m2: "1 x M.2 PCIe 4.0 x4 / SATA",
+      sata: "4 x SATA III"
+    },
+    expansionConectividad: {
+      pciExpress: "1 x PCIe 4.0 x16, 1 x PCIe 3.0 x1",
+      redInalambrica: "No",
+      lan: "Realtek RTL8111H Gigabit LAN"
+    },
+    puertosAudio: {
+      usb: "4 x USB 2.0 (rear), 2 x USB 5 Gbps Type A (rear)",
+      audio: "7.1 Channel HD Audio",
+      rgb: "RGB LED connector"
+    }
+  }
+},
+{
+  id: "motherboards-intel-5",
+  title: "Gigabyte B760M Gaming Plus WiFi DDR4 LGA1700",
+  slug: "gigabyte-b760m-gaming-plus-wifi-lga1700",
+  thumbnail:
+    "/products/motherboards/intel/gigabyte-b760m-gaming-plus-wifi-lga1700/gigabyte-b760m-gaming-plus-wifi-lga1700_1.webp",
+  images: [
+    "/products/motherboards/intel/gigabyte-b760m-gaming-plus-wifi-lga1700/gigabyte-b760m-gaming-plus-wifi-lga1700_1.webp",
+    "/products/motherboards/intel/gigabyte-b760m-gaming-plus-wifi-lga1700/gigabyte-b760m-gaming-plus-wifi-lga1700_2.webp"
+  ],
+  price: "18999900",
+  category: "motherboards",
+  subcategory: "motherboards-intel",
+  brand: "gigabyte",
+  socket: "LGA1700",
+  specs: {
+    procesadorChipset: {
+      socket: "LGA1700",
+      compatibilidad: "Intel 12th/13th/14th Gen",
+      chipset: "Intel B760"
+    },
+    memoria: {
+      slots: "4 x DDR4",
+      capacidadMaxima: "128 GB",
+      frecuencia: "5333 MHz (OC)",
+      soporte: "Dual-Channel, XMP"
+    },
+    graficosIntegrados: {
+      salidas: "HDMI, DisplayPort, D-Sub",
+      resolucionMaxima: "4K at 60 Hz"
+    },
+    almacenamiento: {
+      m2: "2 x M.2 PCIe 4.0 x4",
+      sata: "4 x SATA III"
+    },
+    expansionConectividad: {
+      pciExpress: "1 x PCIe 4.0 x16, 1 x PCIe 3.0 x1",
+      redInalambrica: "Wi-Fi 6 (802.11ax)",
+      lan: "Gigabit LAN"
+    },
+    puertosAudio: {
+      usb: "1 x USB 3.2 Gen2 Type-C, 1 x USB 3.2 Gen2, 2 x USB 3.2 Gen1, 4 x USB 2.0",
+      audio: "8-Channel HD Audio",
+      rgb: "RGB Fusion 2.0 headers"
+    }
+  }
+},
+{
+  id: "motherboards-intel-6",
+  title: "Gigabyte B760M AORUS Elite AX DDR5 LGA1700",
+  slug: "gigabyte-b760m-aorus-elite-ax-lga1700",
+  thumbnail:
+    "/products/motherboards/intel/gigabyte-b760m-aorus-elite-ax-lga1700/gigabyte-b760m-aorus-elite-ax-lga1700_1.webp",
+  images: [
+    "/products/motherboards/intel/gigabyte-b760m-aorus-elite-ax-lga1700/gigabyte-b760m-aorus-elite-ax-lga1700_1.webp",
+    "/products/motherboards/intel/gigabyte-b760m-aorus-elite-ax-lga1700/gigabyte-b760m-aorus-elite-ax-lga1700_2.webp"
+  ],
+  price: "29487926",
+  category: "motherboards",
+  subcategory: "motherboards-intel",
+  brand: "gigabyte",
+  socket: "LGA1700",
+  specs: {
+    procesadorChipset: {
+      socket: "LGA1700",
+      compatibilidad: "Intel 12th/13th Gen",
+      chipset: "Intel B760"
+    },
+    memoria: {
+      slots: "4 x DDR5",
+      capacidadMaxima: "192 GB",
+      frecuencia: "7600 MHz (OC)",
+      soporte: "Dual-Channel, XMP 3.0"
+    },
+    graficosIntegrados: {
+      salidas: "HDMI, DisplayPort",
+      resolucionMaxima: "4K at 60 Hz"
+    },
+    almacenamiento: {
+      m2: "2 x M.2 PCIe 4.0 x4",
+      sata: "4 x SATA III"
+    },
+    expansionConectividad: {
+      pciExpress: "1 x PCIe 5.0 x16, 1 x PCIe 4.0 x4",
+      redInalambrica: "Wi-Fi 6E (802.11ax)",
+      lan: "2.5 GbE LAN"
+    },
+    puertosAudio: {
+      usb: "1 x USB-C 20Gb/s, 1 x USB 3.2 Gen2, 3 x USB 3.2 Gen1, 4 x USB 2.0",
+      audio: "8-Channel HD Audio",
+      rgb: "RGB Fusion 2.0 headers"
+    }
+  }
+},
+{
+  id: "motherboards-intel-7",
+  title: "ASUS TUF GAMING B760M-PLUS WiFi II DDR5 LGA1700",
+  slug: "asus-tuf-gaming-b760m-plus-wifi-ii-ddr5-lga1700",
+  thumbnail:
+    "/products/motherboards/intel/asus-tuf-gaming-b760m-plus-wifi-lga1700/asus-tuf-gaming-b760m-plus-wifi-lga1700_1.webp",
+  images: [
+    "/products/motherboards/intel/asus-tuf-gaming-b760m-plus-wifi-lga1700/asus-tuf-gaming-b760m-plus-wifi-lga1700_1.webp",
+    "/products/motherboards/intel/asus-tuf-gaming-b760m-plus-wifi-lga1700/asus-tuf-gaming-b760m-plus-wifi-lga1700_2.webp",
+  ],
+  price: "29049900",
+  category: "motherboards",
+  subcategory: "motherboards-intel",
+  brand: "asus",
+  socket: "LGA1700",
+  specs: {
+    procesadorChipset: {
+      socket: "LGA1700",
+      compatibilidad: "Intel 12th/13th/14th Gen, Pentium Gold, Celeron",
+      chipset: "Intel B760"
+    },
+    memoria: {
+      slots: "4 x DDR5",
+      capacidadMaxima: "192 GB",
+      frecuencia: "7200 MHz (OC)",
+      soporte: "Dual-Channel, XMP"
+    },
+    graficosIntegrados: {
+      salidas: "1 x DisplayPort 1.4, 1 x HDMI 2.1",
+      resolucionMaxima: "4K at 60 Hz"
+    },
+    almacenamiento: {
+      m2: "3 x M.2 (2 x PCIe 4.0 x4, 1 x PCIe 4.0 x2)",
+      sata: "4 x SATA 6 Gb/s"
+    },
+    expansionConectividad: {
+      pciExpress: "1 x PCIe 5.0 x16, 1 x PCIe 4.0 x4, 1 x PCIe 3.0 x1",
+      redInalambrica: "Wi-Fi 6E (802.11ax)",
+      lan: "Realtek 2.5 Gb Ethernet"
+    },
+    puertosAudio: {
+      usb: "1 x USB 20Gbps Type-C, 1 x USB 10Gbps Type-A, 2 x USB 5Gbps, 4 x USB 2.0",
+      audio: "7.1 Channel HD Audio (Realtek)",
+      rgb: "ARGB header Gen 2"
+    }
+  }
+},
 
   // Gabinetes
   {
-    id: "case1",
-    title: "Thermaltake Versa H15",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "34.900",
-    slug: "thermaltake-versa-h15",
-    category: "gabinetes",
-    subcategory: "mini-tower",
-    brand: "thermaltake",
-    specs: {
-      diseñoYCompatibilidad: {
-        tipo: "Mini Tower",
-        material: "SPCC, plástico",
-        soporteDePlacasBase: "Micro-ATX, Mini-ITX",
-        slotsDeExpansion: 4,
-      },
-      ventilacionRefrigeracion: {
-        soporteRadiadores: "Frontal: 120 mm / Trasero: 120 mm",
-        soporteVentiladores: {
-          superior: "1 x 120 mm",
-          frontal: "1 x 120 mm",
-          trasero: "1 x 120 mm",
-        },
-        ventiladoresPreinstalados: {
-          frontal: "No",
-          trasero: "1 x 120 mm",
-        },
-      },
-      almacenamientoConectividad: {
-        bahiasAlmacenamiento: '2 x 3.5", 2 x 2.5"',
-        puertosConexion: "USB 3.0 x1, USB 2.0 x1, HD Audio",
-      },
-      dimensionesEspacioInterno: {
-        dimensiones: "378 x 198 x 411 mm",
-        peso: "3.5 kg",
-        limitaciones: {
-          alturaDisipadorCPU: "155 mm",
-          longitudTarjetaGrafica: "315 mm",
-          longitudFuenteAlimentacion: "150 mm",
-        },
-      },
+  id: "gabinetes-mini-tower-1",
+  title: "Thermaltake S100 TG Micro Chassis",
+  slug: "thermaltake-s100-tg",
+  thumbnail:
+    "/products/gabinetes/mini-tower/thermaltake-s100-tg-c-fan-black/thermaltake-s100-tg-c-fan-black_1.webp",
+  images: [
+    "/products/gabinetes/mini-tower/thermaltake-s100-tg-c-fan-black/thermaltake-s100-tg-c-fan-black_1.webp",
+    "/products/gabinetes/mini-tower/thermaltake-s100-tg-c-fan-black/thermaltake-s100-tg-c-fan-black_2.webp",
+    "/products/gabinetes/mini-tower/thermaltake-s100-tg-c-fan-black/thermaltake-s100-tg-c-fan-black_3.webp",
+    "/products/gabinetes/mini-tower/thermaltake-s100-tg-c-fan-black/thermaltake-s100-tg-c-fan-black_4.webp",
+  ],
+  price: "7099000",
+  category: "gabinetes",
+  subcategory: "mini-tower",
+  brand: "thermaltake",
+  specs: {
+    diseñoYCompatibilidad: {
+      tipo: "Mini Tower",
+      material: "SPCC, cristal templado",
+      soporteDePlacasBase: "Micro-ATX, Mini-ITX",
+      slotsDeExpansion: 4
     },
-  },
+    ventilacionRefrigeracion: {
+      soporteRadiadores: "Frontal/top: 240/280 mm, trasero: 120 mm",
+      soporteVentiladores: {
+        frontal: "2 x 120 mm",
+        superior: "2 x 120 mm",
+        trasero: "1 x 120 mm"
+      },
+      ventiladoresPreinstalados: {
+        frontal: "No",
+        trasero: "1 x 120 mm"
+      }
+    },
+    almacenamientoConectividad: {
+      bahiasAlmacenamiento: "2 x 3.5\", 2 x 2.5\"",
+      puertosConexion: "USB 3.0 x1, USB 2.0 x2, HD Audio"
+    },
+    dimensionesEspacioInterno: {
+      dimensiones: "441 x 220 x 411 mm",
+      peso: "6.1 kg",
+      limitaciones: {
+        alturaDisipadorCPU: "165 mm",
+        longitudTarjetaGrafica: "330 mm",
+        longitudFuenteAlimentacion: "160 mm"
+      }
+    }
+  }
+},
+{
+  id: "gabinetes-mini-tower-2",
+  title: "Cooler Master TD300 Mesh",
+  slug: "cooler-master-td300-mesh",
+  thumbnail:
+    "/products/gabinetes/mini-tower/coolermaster-td-300-mesh/coolermaster-td-300-mesh_1.webp",
+  images: [
+    "/products/gabinetes/mini-tower/coolermaster-td-300-mesh/coolermaster-td-300-mesh_1.webp",
+    "/products/gabinetes/mini-tower/coolermaster-td-300-mesh/coolermaster-td-300-mesh_2.webp",
+    "/products/gabinetes/mini-tower/coolermaster-td-300-mesh/coolermaster-td-300-mesh_3.webp",
+    "/products/gabinetes/mini-tower/coolermaster-td-300-mesh/coolermaster-td-300-mesh_4.webp"
+  ],
+  price: "10999000",
+  category: "gabinetes",
+  subcategory: "mini-tower",
+  brand: "coolermaster",
+  specs: {
+    diseñoYCompatibilidad: {
+      tipo: "Mini Tower",
+      material: "Acero, malla, cristal templado",
+      soporteDePlacasBase: "Micro-ATX, Mini-ITX",
+      slotsDeExpansion: 4
+    },
+    ventilacionRefrigeracion: {
+      soporteRadiadores: "Frontal: 280 mm, superior: 240 mm, trasero: 120 mm",
+      soporteVentiladores: {
+        frontal: "3 x 120 mm / 2 x 140 mm",
+        superior: "2 x 120 mm / 2 x 140 mm",
+        trasero: "1 x 120 mm"
+      },
+      ventiladoresPreinstalados: {
+        frontal: "2 x 120 mm ARGB",
+        trasero: "No"
+      }
+    },
+    almacenamientoConectividad: {
+      bahiasAlmacenamiento: "2 x 3.5\", 2 x 2.5\"",
+      puertosConexion: "USB 3.2 Gen1 x2, Audio Combo Jack, ARGB Controller"
+    },
+    dimensionesEspacioInterno: {
+      dimensiones: "420 x 210 x 433 mm",
+      peso: "6.5 kg",
+      limitaciones: {
+        alturaDisipadorCPU: "166 mm",
+        longitudTarjetaGrafica: "344 mm",
+        longitudFuenteAlimentacion: "325 mm (sin HDD cage)"
+      }
+    }
+  }
+},
+{
+  id: "gabinetes-mini-tower-3",
+  title: "Corsair 2500D Airflow TG Negro",
+  slug: "corsair-2500d-airflow-tg-negro",
+  thumbnail:
+    "/products/gabinetes/mini-tower/corsair-2500d-airflow-tg-negro/corsair-2500d-airflow-tg-negro_1.webp",
+  images: [
+    "/products/gabinetes/mini-tower/corsair-2500d-airflow-tg-negro/corsair-2500d-airflow-tg-negro_1.webp",
+    "/products/gabinetes/mini-tower/corsair-2500d-airflow-tg-negro/corsair-2500d-airflow-tg-negro_2.webp",
+    "/products/gabinetes/mini-tower/corsair-2500d-airflow-tg-negro/corsair-2500d-airflow-tg-negro_3.webp",
+    "/products/gabinetes/mini-tower/corsair-2500d-airflow-tg-negro/corsair-2500d-airflow-tg-negro_4.webp"
+  ],
+  price: "17699000",
+  category: "gabinetes",
+  subcategory: "mini-tower",
+  brand: "corsair",
+  specs: {
+    diseñoYCompatibilidad: {
+      tipo: "Mini Tower",
+      material: "Acero, cristal templado, malla",
+      soporteDePlacasBase: "Micro-ATX, Mini-ITX",
+      slotsDeExpansion: 7
+    },
+    ventilacionRefrigeracion: {
+      soporteRadiadores: "Frontal: 360 mm, superior: 240 mm, trasero: 120 mm",
+      soporteVentiladores: {
+        frontal: "3 x 120 mm",
+        superior: "2 x 120 mm",
+        trasero: "1 x 120 mm"
+      },
+      ventiladoresPreinstalados: {
+        frontal: "3 x 120 mm AirGuide RGB",
+        trasero: "1 x 120 mm"
+      }
+    },
+    almacenamientoConectividad: {
+      bahiasAlmacenamiento: "2 x 3.5\", 3 x 2.5\"",
+      puertosConexion: "USB 3.2 Gen2 x2, Audio HD, Reset Button"
+    },
+    dimensionesEspacioInterno: {
+      dimensiones: "463 x 230 x 442 mm",
+      peso: "7.7 kg",
+      limitaciones: {
+        alturaDisipadorCPU: "170 mm",
+        longitudTarjetaGrafica: "370 mm",
+        longitudFuenteAlimentacion: "180 mm"
+      }
+    }
+  }
+},
   {
-    id: "case2",
-    title: "Cooler Master Elite 110",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "39.990",
-    slug: "cooler-master-elite-110",
-    category: "gabinetes",
-    subcategory: "mini-tower",
-    brand: "cooler master",
-    specs: {
-      diseñoYCompatibilidad: {
-        tipo: "Mini Tower",
-        material: "Malla metálica, acero",
-        soporteDePlacasBase: "Mini-ITX",
-        slotsDeExpansion: 2,
+  id: "gabinetes-mid-tower-1",
+  title: "Gigabyte C102 TG Ice C Coolers x2 Black",
+  slug: "gigabyte-c102-tg-ice-c-coolers-x2-black",
+  thumbnail:
+    "/products/gabinetes/mid-tower/gigabyte-c102-tg-ice-c-coolers-x2-black/gigabyte-c102-tg-ice-c-coolers-x2-black_1.webp",
+  images: [
+    "/products/gabinetes/mid-tower/gigabyte-c102-tg-ice-c-coolers-x2-black/gigabyte-c102-tg-ice-c-coolers-x2-black_1.webp",
+    "/products/gabinetes/mid-tower/gigabyte-c102-tg-ice-c-coolers-x2-black/gigabyte-c102-tg-ice-c-coolers-x2-black_2.webp",
+    "/products/gabinetes/mid-tower/gigabyte-c102-tg-ice-c-coolers-x2-black/gigabyte-c102-tg-ice-c-coolers-x2-black_3.webp",
+    "/products/gabinetes/mid-tower/gigabyte-c102-tg-ice-c-coolers-x2-black/gigabyte-c102-tg-ice-c-coolers-x2-black_4.webp"
+  ],
+  price: "6599000",
+  category: "gabinetes",
+  subcategory: "mid-tower",
+  brand: "gigabyte",
+  specs: {
+    diseñoYCompatibilidad: {
+      tipo: "Mid Tower",
+      material: "SPCC, cristal templado",
+      soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
+      slotsDeExpansion: 7
+    },
+    ventilacionRefrigeracion: {
+      soporteRadiadores: "Frontal: 360 mm, superior: 240 mm, trasero: 120 mm",
+      soporteVentiladores: {
+        frontal: "3 x 120 mm",
+        superior: "2 x 120 mm",
+        trasero: "1 x 120 mm"
       },
-      ventilacionRefrigeracion: {
-        soporteRadiadores: "Frontal: 120 mm",
-        soporteVentiladores: {
-          superior: "No",
-          frontal: "1 x 120 mm",
-          trasero: "No",
-        },
-        ventiladoresPreinstalados: {
-          frontal: "1 x 120 mm",
-          trasero: "No",
-        },
+      ventiladoresPreinstalados: {
+        frontal: "2 x 120 mm Ice C Cooler",
+        trasero: "No"
+      }
+    },
+    almacenamientoConectividad: {
+      bahiasAlmacenamiento: "2 x 3.5\", 3 x 2.5\"",
+      puertosConexion: "USB 3.0 x1, USB 2.0 x2, HD Audio"
+    },
+    dimensionesEspacioInterno: {
+      dimensiones: "452 x 210 x 440 mm",
+      peso: "5.5 kg",
+      limitaciones: {
+        alturaDisipadorCPU: "160 mm",
+        longitudTarjetaGrafica: "340 mm",
+        longitudFuenteAlimentacion: "160 mm"
+      }
+    }
+  }
+},
+{
+  id: "gabinetes-mid-tower-2",
+  title: "Cooler Master Elite 301 TG Black",
+  slug: "coolermaster-elite-301-tg-black",
+  thumbnail:
+    "/products/gabinetes/mid-tower/coolermaster-elite-301-tg-black/coolermaster-elite-301-tg-black_1.webp",
+  images: [
+    "/products/gabinetes/mid-tower/coolermaster-elite-301-tg-black/coolermaster-elite-301-tg-black_1.webp",
+    "/products/gabinetes/mid-tower/coolermaster-elite-301-tg-black/coolermaster-elite-301-tg-black_2.webp",
+    "/products/gabinetes/mid-tower/coolermaster-elite-301-tg-black/coolermaster-elite-301-tg-black_3.webp",
+    "/products/gabinetes/mid-tower/coolermaster-elite-301-tg-black/coolermaster-elite-301-tg-black_4.webp",
+  ],
+  price: "7799000",
+  category: "gabinetes",
+  subcategory: "mid-tower",
+  brand: "coolermaster",
+  specs: {
+    diseñoYCompatibilidad: {
+      tipo: "Mini Tower",
+      material: "SPCC, plástico",
+      soporteDePlacasBase: "Micro-ATX, Mini-ITX",
+      slotsDeExpansion: 4,
+    },
+    ventilacionRefrigeracion: {
+      soporteRadiadores: "Frontal: 120 mm, trasero: 120 mm",
+      soporteVentiladores: {
+        frontal: "1 x 120 mm",
+        superior: "No",
+        trasero: "1 x 120 mm",
       },
-      almacenamientoConectividad: {
-        bahiasAlmacenamiento: '3 x 3.5", 4 x 2.5"',
-        puertosConexion: "USB 3.0 x2, Audio",
+      ventiladoresPreinstalados: {
+        frontal: "No",
+        trasero: "1 x 120 mm",
       },
-      dimensionesEspacioInterno: {
-        dimensiones: "260 x 208 x 280 mm",
-        peso: "2.7 kg",
-        limitaciones: {
-          alturaDisipadorCPU: "76 mm",
-          longitudTarjetaGrafica: "210 mm",
-          longitudFuenteAlimentacion: "180 mm",
-        },
+    },
+    almacenamientoConectividad: {
+      bahiasAlmacenamiento: '2 x 3.5", 2 x 2.5"',
+      puertosConexion: "USB 3.0 x1, USB 2.0 x1, HD Audio",
+    },
+    dimensionesEspacioInterno: {
+      dimensiones: "381 x 196 x 374 mm",
+      peso: "4.2 kg",
+      limitaciones: {
+        alturaDisipadorCPU: "160 mm",
+        longitudTarjetaGrafica: "320 mm",
+        longitudFuenteAlimentacion: "160 mm",
       },
     },
   },
-  {
-    id: "case3",
-    title: "Corsair Carbide 88R",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "45.000",
-    slug: "corsair-carbide-88r",
-    category: "gabinetes",
-    subcategory: "mini-tower",
-    brand: "corsair",
-    specs: {
-      diseñoYCompatibilidad: {
-        tipo: "Mini Tower",
-        material: "Acero, plástico",
-        soporteDePlacasBase: "Micro-ATX, Mini-ITX",
-        slotsDeExpansion: 4,
+},
+{
+  id: "gabinetes-full-tower-1",
+  title: "Thermaltake S200 Plus TG C Coolers x3 ARGB Black",
+  slug: "thermaltake-s200-plus-tg-c-coolers-x3-argb-black",
+  thumbnail:
+    "/products/gabinetes/full-tower/thermaltake-s200-plus-tg-c-coolers-x3-argb-black/thermaltake-s200-plus-tg-c-coolers-x3-argb-black_1.webp",
+  images: [
+    "/products/gabinetes/full-tower/thermaltake-s200-plus-tg-c-coolers-x3-argb-black/thermaltake-s200-plus-tg-c-coolers-x3-argb-black_1.webp",
+    "/products/gabinetes/full-tower/thermaltake-s200-plus-tg-c-coolers-x3-argb-black/thermaltake-s200-plus-tg-c-coolers-x3-argb-black_2.webp",
+    "/products/gabinetes/full-tower/thermaltake-s200-plus-tg-c-coolers-x3-argb-black/thermaltake-s200-plus-tg-c-coolers-x3-argb-black_3.webp",
+    "/products/gabinetes/full-tower/thermaltake-s200-plus-tg-c-coolers-x3-argb-black/thermaltake-s200-plus-tg-c-coolers-x3-argb-black_4.webp",
+  ],
+  price: "8999000",
+  category: "gabinetes",
+  subcategory: "full-tower",
+  brand: "thermaltake",
+  specs: {
+    diseñoYCompatibilidad: {
+      tipo: "Full Tower",
+      material: "SPCC, cristal templado",
+      soporteDePlacasBase: "E-ATX, ATX, Micro-ATX, Mini-ITX",
+      slotsDeExpansion: 7,
+    },
+    ventilacionRefrigeracion: {
+      soporteRadiadores: "Frontal/top: 360/240 mm, trasero: 120 mm",
+      soporteVentiladores: {
+        frontal: "3 x 120 mm (ARGB)",
+        superior: "2 x 120 mm",
+        trasero: "1 x 120 mm",
       },
-      ventilacionRefrigeracion: {
-        soporteRadiadores: "Frontal: 240 mm / Trasero: 120 mm",
-        soporteVentiladores: {
-          superior: "No",
-          frontal: "2 x 120 mm",
-          trasero: "1 x 120 mm",
-        },
-        ventiladoresPreinstalados: {
-          frontal: "No",
-          trasero: "1 x 120 mm",
-        },
+      ventiladoresPreinstalados: {
+        frontal: "3 x 120 mm (ARGB)",
+        trasero: "1 x 120 mm",
       },
-      almacenamientoConectividad: {
-        bahiasAlmacenamiento: '1 x 3.5", 2 x 2.5"',
-        puertosConexion: "USB 3.0 x1, USB 2.0 x1, Audio",
-      },
-      dimensionesEspacioInterno: {
-        dimensiones: "378 x 198 x 423 mm",
-        peso: "3.7 kg",
-        limitaciones: {
-          alturaDisipadorCPU: "150 mm",
-          longitudTarjetaGrafica: "383 mm",
-          longitudFuenteAlimentacion: "160 mm",
-        },
+    },
+    almacenamientoConectividad: {
+      bahiasAlmacenamiento: '2 x 3.5", 4 x 2.5"',
+      puertosConexion: "USB 3.0 x2, USB 2.0 x2, HD Audio",
+    },
+    dimensionesEspacioInterno: {
+      dimensiones: "460 x 220 x 480 mm",
+      peso: "7.6 kg",
+      limitaciones: {
+        alturaDisipadorCPU: "170 mm",
+        longitudTarjetaGrafica: "400 mm",
+        longitudFuenteAlimentacion: "180 mm",
       },
     },
   },
-  {
-    id: "case4",
-    title: "NZXT H210 Mini Tower",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "54.500",
-    slug: "nzxt-h210-mini-tower",
-    category: "gabinetes",
-    subcategory: "mini-tower",
-    brand: "nzxt",
-    specs: {
-      diseñoYCompatibilidad: {
-        tipo: "Mini Tower",
-        material: "Acero, vidrio templado",
-        soporteDePlacasBase: "Mini-ITX",
-        slotsDeExpansion: 2,
+},
+{
+  id: "gabinetes-full-tower-2",
+  title: "Corsair iCUE 5000D TG Airflow Black",
+  slug: "corsair-icue-5000d-tg-airflow-black",
+  thumbnail:
+    "/products/gabinetes/full-tower/corsair-icue-5000d-tg-airflow-black/corsair-icue-5000d-tg-airflow-black_1.webp",
+  images: [
+    "/products/gabinetes/full-tower/corsair-icue-5000d-tg-airflow-black/corsair-icue-5000d-tg-airflow-black_1.webp",
+    "/products/gabinetes/full-tower/corsair-icue-5000d-tg-airflow-black/corsair-icue-5000d-tg-airflow-black_2.webp",
+    "/products/gabinetes/full-tower/corsair-icue-5000d-tg-airflow-black/corsair-icue-5000d-tg-airflow-black_3.webp",
+    "/products/gabinetes/full-tower/corsair-icue-5000d-tg-airflow-black/corsair-icue-5000d-tg-airflow-black_4.webp",
+  ],
+  price: "29098900",
+  category: "gabinetes",
+  subcategory: "full-tower",
+  brand: "corsair",
+  specs: {
+    diseñoYCompatibilidad: {
+      tipo: "Full Tower",
+      material: "Acero, cristal templado",
+      soporteDePlacasBase: "E-ATX, ATX, Micro-ATX, Mini-ITX",
+      slotsDeExpansion: 7,
+    },
+    ventilacionRefrigeracion: {
+      soporteRadiadores: "Frontal/top: 360/360 mm, trasero: 120 mm",
+      soporteVentiladores: {
+        frontal: "3 x 120 mm",
+        superior: "3 x 120 mm",
+        trasero: "1 x 120 mm",
       },
-      ventilacionRefrigeracion: {
-        soporteRadiadores: "Frontal: 240 mm / Trasero: 120 mm",
-        soporteVentiladores: {
-          superior: "1 x 120 mm",
-          frontal: "2 x 120 mm",
-          trasero: "1 x 120 mm",
-        },
-        ventiladoresPreinstalados: {
-          frontal: "2 x 120 mm",
-          trasero: "1 x 120 mm",
-        },
+      ventiladoresPreinstalados: {
+        frontal: "3 x 120 mm",
+        trasero: "1 x 120 mm",
       },
-      almacenamientoConectividad: {
-        bahiasAlmacenamiento: '1 x 3.5", 2 x 2.5"',
-        puertosConexion: "USB 3.1 Gen1 x1, USB-C x1, HD Audio",
-      },
-      dimensionesEspacioInterno: {
-        dimensiones: "349 x 210 x 372 mm",
-        peso: "5.9 kg",
-        limitaciones: {
-          alturaDisipadorCPU: "165 mm",
-          longitudTarjetaGrafica: "325 mm",
-          longitudFuenteAlimentacion: "311 mm",
-        },
+    },
+    almacenamientoConectividad: {
+      bahiasAlmacenamiento: '2 x 3.5", 4 x 2.5"',
+      puertosConexion: "USB 3.2 Gen 2 x2, USB 3.0 x2, Audio HD",
+    },
+    dimensionesEspacioInterno: {
+      dimensiones: "520 x 245 x 520 mm",
+      peso: "12.35 kg",
+      limitaciones: {
+        alturaDisipadorCPU: "170 mm",
+        longitudTarjetaGrafica: "450 mm",
+        longitudFuenteAlimentacion: "225 mm",
       },
     },
   },
-
-  // MID TOWER
-  {
-    id: "case5",
-    title: "Cooler Master MasterBox Q300L",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "47.900",
-    slug: "cooler-master-q300l",
-    category: "gabinetes",
-    subcategory: "mid-tower",
-    brand: "cooler master",
-    specs: {
-      diseñoYCompatibilidad: {
-        tipo: "Mid Tower",
-        material: "SPCC y vidrio templado",
-        soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
-        slotsDeExpansion: 7,
-      },
-      ventilacionRefrigeracion: {
-        soporteRadiadores: "Frontal: 240 mm / Trasero: 120 mm",
-        soporteVentiladores: {
-          superior: "No",
-          frontal: "2 x 120 mm",
-          trasero: "1 x 120 mm",
-        },
-        ventiladoresPreinstalados: {
-          frontal: "1 x 120 mm",
-          trasero: "1 x 120 mm",
-        },
-      },
-      almacenamientoConectividad: {
-        bahiasAlmacenamiento: '1 x 3.5", 2 x 2.5"',
-        puertosConexion: "USB 3.0 x2, USB 2.0 x1, Audio HD",
-      },
-      dimensionesEspacioInterno: {
-        dimensiones: "387 x 230 x 378 mm",
-        peso: "4.2 kg",
-        limitaciones: {
-          alturaDisipadorCPU: "159 mm",
-          longitudTarjetaGrafica: "360 mm",
-          longitudFuenteAlimentacion: "160 mm",
-        },
-      },
-    },
-  },
-  {
-    id: "case6",
-    title: "Corsair 4000D Airflow",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "62.000",
-    slug: "corsair-4000d-airflow",
-    category: "gabinetes",
-    subcategory: "mid-tower",
-    brand: "corsair",
-    specs: {
-      diseñoYCompatibilidad: {
-        tipo: "Mid Tower",
-        material: "Acero, vidrio templado",
-        soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
-        slotsDeExpansion: 7,
-      },
-      ventilacionRefrigeracion: {
-        soporteRadiadores:
-          "Frontal: 360 mm / Trasero: 120 mm / Superior: 120 mm",
-        soporteVentiladores: {
-          superior: "1 x 120 mm",
-          frontal: "3 x 120 mm",
-          trasero: "1 x 120 mm",
-        },
-        ventiladoresPreinstalados: {
-          frontal: "2 x 120 mm",
-          trasero: "1 x 120 mm",
-        },
-      },
-      almacenamientoConectividad: {
-        bahiasAlmacenamiento: '2 x 3.5", 3 x 2.5"',
-        puertosConexion: "USB 3.1 x2, USB 2.0 x1, Audio HD",
-      },
-      dimensionesEspacioInterno: {
-        dimensiones: "453 x 230 x 466 mm",
-        peso: "6.63 kg",
-        limitaciones: {
-          alturaDisipadorCPU: "170 mm",
-          longitudTarjetaGrafica: "360 mm",
-          longitudFuenteAlimentacion: "180 mm",
-        },
-      },
-    },
-  },
-  {
-    id: "case7",
-    title: "NZXT H510",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "64.900",
-    slug: "nzxt-h510",
-    category: "gabinetes",
-    subcategory: "mid-tower",
-    brand: "nzxt",
-    specs: {
-      diseñoYCompatibilidad: {
-        tipo: "Mid Tower",
-        material: "Acero, vidrio templado",
-        soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
-        slotsDeExpansion: 7,
-      },
-      ventilacionRefrigeracion: {
-        soporteRadiadores: "Frontal: 280 mm / Trasero: 120 mm",
-        soporteVentiladores: {
-          superior: "No",
-          frontal: "2 x 120 mm",
-          trasero: "1 x 120 mm",
-        },
-        ventiladoresPreinstalados: {
-          frontal: "1 x 120 mm",
-          trasero: "1 x 120 mm",
-        },
-      },
-      almacenamientoConectividad: {
-        bahiasAlmacenamiento: '2 x 3.5", 3 x 2.5"',
-        puertosConexion: "USB 3.1 Gen 2 x1, USB 3.1 Gen 1 x1, Audio HD",
-      },
-      dimensionesEspacioInterno: {
-        dimensiones: "428 x 210 x 460 mm",
-        peso: "6.8 kg",
-        limitaciones: {
-          alturaDisipadorCPU: "165 mm",
-          longitudTarjetaGrafica: "381 mm",
-          longitudFuenteAlimentacion: "180 mm",
-        },
-      },
-    },
-  },
-  {
-    id: "case8",
-    title: "Thermaltake V250 TG ARGB",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "69.000",
-    slug: "thermaltake-v250-argb",
-    category: "gabinetes",
-    subcategory: "mid-tower",
-    brand: "thermaltake",
-    specs: {
-      diseñoYCompatibilidad: {
-        tipo: "Mid Tower",
-        material: "Acero, vidrio templado",
-        soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
-        slotsDeExpansion: 7,
-      },
-      ventilacionRefrigeracion: {
-        soporteRadiadores: "Frontal: 360 mm / Trasero: 120 mm",
-        soporteVentiladores: {
-          superior: "1 x 120 mm",
-          frontal: "3 x 120 mm",
-          trasero: "1 x 120 mm",
-        },
-        ventiladoresPreinstalados: {
-          frontal: "2 x 120 mm ARGB",
-          trasero: "1 x 120 mm ARGB",
-        },
-      },
-      almacenamientoConectividad: {
-        bahiasAlmacenamiento: '2 x 3.5", 2 x 2.5"',
-        puertosConexion: "USB 3.0 x2, USB 2.0 x2, Audio HD",
-      },
-      dimensionesEspacioInterno: {
-        dimensiones: "470 x 210 x 450 mm",
-        peso: "7.5 kg",
-        limitaciones: {
-          alturaDisipadorCPU: "165 mm",
-          longitudTarjetaGrafica: "350 mm",
-          longitudFuenteAlimentacion: "180 mm",
-        },
-      },
-    },
-  },
-
-  // FULL TOWER
-  {
-    id: "case9",
-    title: "Corsair Obsidian Series 1000D",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "185.000",
-    slug: "corsair-obsidian-1000d",
-    category: "gabinetes",
-    subcategory: "full-tower",
-    brand: "corsair",
-    specs: {
-      diseñoYCompatibilidad: {
-        tipo: "Mid Tower",
-        material: "SPCC, ABS y vidrio templado",
-        soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
-        slotsDeExpansion: 7,
-      },
-      ventilacionRefrigeracion: {
-        soporteRadiadores: "Frontal: 360 mm / Trasero: 120 mm",
-        soporteVentiladores: {
-          superior: "2 x 120 mm",
-          frontal: "3 x 120 mm o 2 x 140 mm",
-          trasero: "1 x 120 mm",
-        },
-        ventiladoresPreinstalados: {
-          frontal: "3 x 120 mm ARGB",
-          trasero: "1 x 120 mm ARGB",
-        },
-      },
-      almacenamientoConectividad: {
-        bahiasAlmacenamiento: `2 x 3.5" o 1 x 3.5" + 1 x 2.5", 2 x 2.5"`,
-        puertosConexion: "USB 3.0 x1, USB 2.0 x2, HD Audio x1, Reset x1",
-      },
-      dimensionesEspacioInterno: {
-        dimensiones: "395 x 195 x 450 mm (15.5 x 7.7 x 17.8 in)",
-        peso: "4.9 kg",
-        limitaciones: {
-          alturaDisipadorCPU: "160 mm",
-          longitudTarjetaGrafica: "340 mm",
-          longitudFuenteAlimentacion: "160 mm",
-        },
-      },
-    },
-  },
-  {
-    id: "case10",
-    title: "Cooler Master Cosmos C700M",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "210.000",
-    slug: "cooler-master-cosmos-c700m",
-    category: "gabinetes",
-    subcategory: "full-tower",
-    brand: "cooler master",
-    specs: {
-      diseñoYCompatibilidad: {
-        tipo: "Mid Tower",
-        material: "SPCC, ABS y vidrio templado",
-        soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
-        slotsDeExpansion: 7,
-      },
-      ventilacionRefrigeracion: {
-        soporteRadiadores: "Frontal: 360 mm / Trasero: 120 mm",
-        soporteVentiladores: {
-          superior: "2 x 120 mm",
-          frontal: "3 x 120 mm o 2 x 140 mm",
-          trasero: "1 x 120 mm",
-        },
-        ventiladoresPreinstalados: {
-          frontal: "3 x 120 mm ARGB",
-          trasero: "1 x 120 mm ARGB",
-        },
-      },
-      almacenamientoConectividad: {
-        bahiasAlmacenamiento: `2 x 3.5" o 1 x 3.5" + 1 x 2.5", 2 x 2.5"`,
-        puertosConexion: "USB 3.0 x1, USB 2.0 x2, HD Audio x1, Reset x1",
-      },
-      dimensionesEspacioInterno: {
-        dimensiones: "395 x 195 x 450 mm (15.5 x 7.7 x 17.8 in)",
-        peso: "4.9 kg",
-        limitaciones: {
-          alturaDisipadorCPU: "160 mm",
-          longitudTarjetaGrafica: "340 mm",
-          longitudFuenteAlimentacion: "160 mm",
-        },
-      },
-    },
-  },
-  {
-    id: "case11",
-    title: "Thermaltake View 71 RGB",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "174.900",
-    slug: "thermaltake-view-71-rgb",
-    category: "gabinetes",
-    subcategory: "full-tower",
-    brand: "thermaltake",
-    specs: {
-      diseñoYCompatibilidad: {
-        tipo: "Mid Tower",
-        material: "SPCC, ABS y vidrio templado",
-        soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
-        slotsDeExpansion: 7,
-      },
-      ventilacionRefrigeracion: {
-        soporteRadiadores: "Frontal: 360 mm / Trasero: 120 mm",
-        soporteVentiladores: {
-          superior: "2 x 120 mm",
-          frontal: "3 x 120 mm o 2 x 140 mm",
-          trasero: "1 x 120 mm",
-        },
-        ventiladoresPreinstalados: {
-          frontal: "3 x 120 mm ARGB",
-          trasero: "1 x 120 mm ARGB",
-        },
-      },
-      almacenamientoConectividad: {
-        bahiasAlmacenamiento: `2 x 3.5" o 1 x 3.5" + 1 x 2.5", 2 x 2.5"`,
-        puertosConexion: "USB 3.0 x1, USB 2.0 x2, HD Audio x1, Reset x1",
-      },
-      dimensionesEspacioInterno: {
-        dimensiones: "395 x 195 x 450 mm (15.5 x 7.7 x 17.8 in)",
-        peso: "4.9 kg",
-        limitaciones: {
-          alturaDisipadorCPU: "160 mm",
-          longitudTarjetaGrafica: "340 mm",
-          longitudFuenteAlimentacion: "160 mm",
-        },
-      },
-    },
-  },
-  {
-    id: "case12",
-    title: "NZXT Phantom 820",
-    thumbnail:
-      "/products/equipos/notebooks/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp",
-    images: ["/products/asus-x515EA-EJ711/asus-X515EA-EJ711_1.webp"],
-    price: "160.000",
-    slug: "nzxt-phantom-820",
-    category: "gabinetes",
-    subcategory: "full-tower",
-    brand: "nzxt",
-    specs: {
-      diseñoYCompatibilidad: {
-        tipo: "Mid Tower",
-        material: "SPCC, ABS y vidrio templado",
-        soporteDePlacasBase: "ATX, Micro-ATX, Mini-ITX",
-        slotsDeExpansion: 7,
-      },
-      ventilacionRefrigeracion: {
-        soporteRadiadores: "Frontal: 360 mm / Trasero: 120 mm",
-        soporteVentiladores: {
-          superior: "2 x 120 mm",
-          frontal: "3 x 120 mm o 2 x 140 mm",
-          trasero: "1 x 120 mm",
-        },
-        ventiladoresPreinstalados: {
-          frontal: "3 x 120 mm ARGB",
-          trasero: "1 x 120 mm ARGB",
-        },
-      },
-      almacenamientoConectividad: {
-        bahiasAlmacenamiento: `2 x 3.5" o 1 x 3.5" + 1 x 2.5", 2 x 2.5"`,
-        puertosConexion: "USB 3.0 x1, USB 2.0 x2, HD Audio x1, Reset x1",
-      },
-      dimensionesEspacioInterno: {
-        dimensiones: "395 x 195 x 450 mm (15.5 x 7.7 x 17.8 in)",
-        peso: "4.9 kg",
-        limitaciones: {
-          alturaDisipadorCPU: "160 mm",
-          longitudTarjetaGrafica: "340 mm",
-          longitudFuenteAlimentacion: "160 mm",
-        },
-      },
-    },
-  },
+},
 ];

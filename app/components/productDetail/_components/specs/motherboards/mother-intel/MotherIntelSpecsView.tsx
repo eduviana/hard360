@@ -21,11 +21,11 @@ export default function MotherIntelSpecsView({
           icon={<MdSettings className="w-5 h-5" />}
           items={[
             { label: "Socket", value: specs.procesadorChipset.socket },
+            { label: "Chipset", value: specs.procesadorChipset.chipset },
             {
               label: "Compatibilidad",
               value: specs.procesadorChipset.compatibilidad,
             },
-            { label: "Chipset", value: specs.procesadorChipset.chipset },
           ]}
         />
 

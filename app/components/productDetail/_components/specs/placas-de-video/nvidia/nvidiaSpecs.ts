@@ -12,6 +12,7 @@ export type NvidiaSpecs = {
   pcie: string;
   hdmi: string;
   displayPort: string;
+  dvi?: string;
   resolucionMaxima: string;
   monitoresSoportados: string;
 

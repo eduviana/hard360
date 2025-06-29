@@ -29,12 +29,12 @@ export default function MiniTowerSpecsView({ specs }: { specs: MiniTowerSpecs })
           title="Ventilación y Refrigeración"
           icon={<MdOutlineSettingsInputComponent className="w-5 h-5" />}
           items={[
-            { label: "Soporte para radiadores", value: specs.ventilacionRefrigeracion.soporteRadiadores },
+            { label: "Ventiladores preinstalados - Frontal", value: specs.ventilacionRefrigeracion.ventiladoresPreinstalados.frontal },
             { label: "Ventiladores soportados - Superior", value: specs.ventilacionRefrigeracion.soporteVentiladores.superior },
             { label: "Ventiladores soportados - Frontal", value: specs.ventilacionRefrigeracion.soporteVentiladores.frontal },
             { label: "Ventiladores soportados - Trasero", value: specs.ventilacionRefrigeracion.soporteVentiladores.trasero },
-            { label: "Ventiladores preinstalados - Frontal", value: specs.ventilacionRefrigeracion.ventiladoresPreinstalados.frontal },
             { label: "Ventiladores preinstalados - Trasero", value: specs.ventilacionRefrigeracion.ventiladoresPreinstalados.trasero },
+            { label: "Soporte para radiadores", value: specs.ventilacionRefrigeracion.soporteRadiadores },
           ]}
         />
 

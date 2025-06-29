@@ -154,6 +154,32 @@ export const processors = [
 ] as const;
 export type Processor = (typeof processors)[number];
 
+export const amdProcessors = [
+  "amd athlon",
+  "amd ryzen 3",
+  "amd ryzen 5",
+  "amd ryzen 7",
+  "amd ryzen 9",
+] as const;
+export type AmdProcessors = (typeof amdProcessors)[number];
+
+export const intelProcessors = [
+  "intel celeron",
+  "intel pentium",
+  "intel i3",
+  "intel i5",
+  "intel i7",
+  "intel i9",
+] as const;
+export type IntelProcessors = (typeof intelProcessors)[number];
+
+export const processorSockets = ["LGA1200", "LGA1700", "AM4", "AM5"] as const;
+export type ProcessorSockets = (typeof processorSockets)[number];
+
+export const amdSockets = ["AM4", "AM5"] as const;
+
+export const intelSockets = ["LGA1200", "LGA1700"] as const;
+
 export const ramCapacities = ["4gb", "8gb", "16gb", "32gb"] as const;
 export type RamCapacity = (typeof ramCapacities)[number];
 
@@ -213,7 +239,7 @@ export type Product = {
   screenSize?: ScreenSize;
   storageSize?: StorageSize;
   panelType?: PanelType;
-  socket?: MotherboardSocket;
+  socket?: ProcessorSockets;
 
   // 👇 Nueva propiedad
   specs?:
@@ -244,8 +270,6 @@ export type Product = {
     | MidTowerSpecs
     | MiniTowerSpecs;
 };
-
-
 
 export interface SubcategoryFilter {
   values?: readonly string[];
@@ -330,15 +354,29 @@ export const filtersByCategory: {
       field: "processor",
       values: processors,
       activeFilter: (val) => val,
+      subcategories: {
+        amd: {
+          values: amdProcessors,
+        },
+        intel: {
+          values: intelProcessors,
+        },
+      },
     },
     {
       label: "Socket",
       field: "socket",
-      values: motherboardSockets,
-      activeFilter: (val) => val,
+      values: processorSockets,
+      activeFilter: (val) => val.toUpperCase(),
+      subcategories: {
+        amd: {
+          values: amdSockets,
+        },
+        intel: {
+          values: intelSockets,
+        },
+      },
     },
-     
-    
   ],
   "memoria-ram": [
     {
@@ -372,16 +410,16 @@ export const filtersByCategory: {
   ],
   motherboards: [
     {
-      label: "Socket",
-      field: "socket",
-      values: motherboardSockets,
-      activeFilter: (val) => val.toUpperCase(),
-    },
-    {
       label: "Marca",
       field: "brand",
       values: motherboardBrands,
       activeFilter: (val) => val,
+    },
+    {
+      label: "Socket",
+      field: "socket",
+      values: motherboardSockets,
+      activeFilter: (val) => val.toUpperCase(),
     },
   ],
   gabinetes: [

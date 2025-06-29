@@ -28,6 +28,7 @@ export default function NvidiaSpecsView({ specs }: { specs: NvidiaSpecs }) {
             { label: "PCIe", value: specs.pcie },
             { label: "HDMI", value: specs.hdmi },
             { label: "DisplayPort", value: specs.displayPort },
+            ...(specs.dvi ? [{ label: "DVI", value: specs.dvi }] : []), // 👈 esta línea evita el error
             { label: "Resolución máx.", value: specs.resolucionMaxima },
             { label: "Monitores soportados", value: specs.monitoresSoportados },
           ]}

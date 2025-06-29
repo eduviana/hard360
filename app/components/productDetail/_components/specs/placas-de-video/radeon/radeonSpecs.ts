@@ -1,5 +1,6 @@
 export type RadeonSpecs = {
   // Memoria y Rendimiento
+  // Memoria y Rendimiento
   memoria: string;
   interfaz: string;
   relojBase: string;
@@ -12,6 +13,7 @@ export type RadeonSpecs = {
   pcie: string;
   hdmi: string;
   displayPort: string;
+  dvi?: string;
   resolucionMaxima: string;
   monitoresSoportados: string;
 

@@ -27,18 +27,24 @@ const MiddleBar = ({
         {/* --- Hamburguesa + Logo --- */}
         <div className="flex items-center justify-start gap-4">
           <button
-            className="p-0 text-accent focus:outline-none lg:hidden"
+            className="p-0 text-white focus:outline-none lg:hidden"
             onClick={() => setDrawerOpen(true)}
             aria-label="Abrir menú"
           >
-            <Bars3Icon className="h-8 w-8" />
+            <Bars3Icon className="w-10 h-10" />
           </button>
           <Link href="/">
-            <h1 className="relative flex flex-col items-start leading-none">
-              <span className="text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase text-white tracking-wide">
+            {/* <h1 className="relative flex flex-col items-start leading-none">
+              <span className="text-3xl md:text-3xl lg:text-4xl font-extrabold uppercase text-white tracking-wide">
                 HARD <span className="text-orange-500">360</span>
               </span>
               <span className="block h-1 w-full max-w-[120px] bg-gradient-to-r from-orange-500 via-orange-400/80 to-transparent rounded-sm mt-1"></span>
+            </h1> */}
+            <h1 className="relative flex flex-col items-start leading-none">
+              <span className="text-3xl md:text-3xl lg:text-4xl font-extrabold uppercase text-white tracking-wide">
+                HARD <span className="text-orange-500">360</span>
+              </span>
+              <span className="block h-1 w-full max-w-full bg-gradient-to-r from-orange-500 via-orange-400/80 to-transparent rounded-sm mt-1"></span>
             </h1>
           </Link>
         </div>
