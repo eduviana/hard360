@@ -145,10 +145,12 @@ export const processors = [
   "intel i3",
   "intel i5",
   "intel i7",
+  "intel i9",
   "amd athlon",
   "amd ryzen 3",
   "amd ryzen 5",
   "amd ryzen 7",
+  "amd ryzen 9",
 ] as const;
 export type Processor = (typeof processors)[number];
 
@@ -243,134 +245,6 @@ export type Product = {
     | MiniTowerSpecs;
 };
 
-// export interface SubcategoryFilter {
-//   values: readonly string[];
-//   activeFilter?: (value: string) => string;
-// }
-
-// export interface FilterOption {
-//   label: string;
-//   field: keyof Product;
-//   values: readonly string[];
-//   activeFilter?: (value: string) => string;
-//   subcategories?: {
-//     [subcategory: string]: SubcategoryFilter;
-//   };
-// }
-
-// export const filtersByCategory: {
-//   [key in Category]?: FilterOption[];
-// } = {
-//   equipos: [
-//     {
-//       label: "Marca",
-//       field: "brand",
-//       values: notebookBrands, // default para notebooks
-//       activeFilter: (val) => val,
-//       subcategories: {
-//         "pcs-de-escritorio": {
-//           values: ["intel", "amd"],
-//         },
-//       },
-//     },
-//     {
-//       label: "Procesador",
-//       field: "processor",
-//       values: processors,
-//       activeFilter: (val) => val,
-//     },
-//     {
-//       label: "Memoria Ram",
-//       field: "ramCapacity",
-//       values: ramCapacities,
-//       activeFilter: (val) => val,
-//     },
-//   ],
-//   pantallas: [
-//     {
-//       label: "Marca",
-//       field: "brand",
-//       values: displayBrands,
-//       activeFilter: (val) => val,
-//     },
-//     {
-//       label: "Panel",
-//       field: "panelType",
-//       values: panelTypes,
-//       activeFilter: (val) => val,
-//     },
-//     {
-//       label: "Tamaño",
-//       field: "screenSize",
-//       values: screenSizes,
-//       activeFilter: (val) => `${val}″`,
-//     },
-//   ],
-  
-//   "memoria-ram": [
-//     {
-//       label: "Capacidad",
-//       field: "ramCapacity",
-//       values: ramCapacities,
-//       activeFilter: (val) => val,
-//     },
-//     {
-//       label: "Tipo RAM",
-//       field: "ramVersion",
-//       values: ramVersions,
-//       activeFilter: (val) => val,
-//     },
-//   ],
-//   almacenamiento: [
-//     {
-//       label: "Capacidad",
-//       field: "storageSize",
-//       values: storageSizes,
-//       activeFilter: (val) => val,
-//     },
-//   ],
-//   refrigeracion: [
-//     {
-//       label: "Marca",
-//       field: "brand",
-//       values: coolingBrands,
-//       activeFilter: (val) => val,
-//     },
-//   ],
-//   // procesadores: [
-//   //   {
-//   //     label: "Serie",
-//   //     field: "processor",
-//   //     values: processors,
-//   //     activeFilter: (val) => val,
-//   //   },
-//   // ],
-//   motherboards: [
-//     {
-//       label: "Socket",
-//       field: "socket",
-//       values: motherboardSockets,
-//       activeFilter: (val) => val.toUpperCase(),
-//     },
-//     {
-//       label: "Marca",
-//       field: "brand",
-//       values: motherboardBrands,
-//       activeFilter: (val) => val,
-//     },
-//   ],
-//   gabinetes: [
-//     {
-//       label: "Marca",
-//       field: "brand",
-//       values: caseBrands,
-//       activeFilter: (val) => val,
-//     },
-//   ],
-// };
-
-
-
 
 
 export interface SubcategoryFilter {
@@ -449,6 +323,22 @@ export const filtersByCategory: {
         },
       },
     },
+  ],
+  procesadores: [
+    {
+      label: "Serie",
+      field: "processor",
+      values: processors,
+      activeFilter: (val) => val,
+    },
+    {
+      label: "Socket",
+      field: "socket",
+      values: motherboardSockets,
+      activeFilter: (val) => val,
+    },
+     
+    
   ],
   "memoria-ram": [
     {
