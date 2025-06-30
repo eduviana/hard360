@@ -32,7 +32,7 @@ export default function Home() {
       />
       <div className="bg-[#2D2D33] py-20">
         <BrandCategorySection />
-        <StandardCategorySection products={graphicCards} isDark={true} />
+        <StandardCategorySection title="sdadsa" products={graphicCards} isDark={true} />
       </div>
       <StandardCategorySection
         title="Elejí tu pantalla ideal"

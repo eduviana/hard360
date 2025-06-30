@@ -103,7 +103,7 @@ export const StandardCategorySection = ({
         </div>
 
         {/* TÍTULO DENTRO DEL BACKGROUND EN breakpoints < md */}
-        <div className="block md:hidden col-span-full rounded-t-2xl bg-gray-800 px-4 py-3">
+        <div className="relative block md:hidden col-span-full rounded-t-2xl bg-gray-800 px-4 py-3">
           <div className="flex items-center gap-4 min-h-[70px]">
             <h2 className="text-[17px] font-semibold text-left text-white">
               {title}

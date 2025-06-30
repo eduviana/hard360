@@ -73,7 +73,7 @@ export const Carousel = ({ images, alt }: CarouselProps) => {
               e.stopPropagation();
               prevImage();
             }}
-            className="absolute left-0 top-1/2 -translate-y-1/2 p-2 z-10 cursor-pointer"
+            className="absolute -left-2 top-1/2 -translate-y-1/2 p-1 z-10 cursor-pointer"
           >
             <FaChevronLeft className="w-6 h-6 text-accent" />
           </button>
@@ -82,7 +82,7 @@ export const Carousel = ({ images, alt }: CarouselProps) => {
               e.stopPropagation();
               nextImage();
             }}
-            className="absolute right-0 top-1/2 -translate-y-1/2 p-2 z-10 cursor-pointer"
+            className="absolute -right-2 top-1/2 -translate-y-1/2 p-1 z-10 cursor-pointer"
           >
             <FaChevronRight className="w-6 h-6 text-accent" />
           </button>
@@ -90,31 +90,31 @@ export const Carousel = ({ images, alt }: CarouselProps) => {
       </div>
 
       {/* Modal */}
-      {showModal && (
+      {/* {showModal && (
         <div
           className="fixed inset-0 bg-[#000000db] z-50 flex items-center justify-center"
           onClick={() => setShowModal(false)}
         >
-          {/* Botón cerrar */}
+          
           <button
             onClick={() => setShowModal(false)}
-            className="absolute top-6 right-6 p-1 bg-red-600 text-3xl rounded-full cursor-pointer"
+            className="absolute top-2 right-2 p-1 bg-red-600 rounded-full cursor-pointer"
           >
-            <IoClose className="text-white" />
+            <IoClose className="text-white w-5 h-5" />
           </button>
 
-          {/* Chevron izquierda con fondo visible */}
+          
           <button
             onClick={(e) => {
               e.stopPropagation();
               prevImage();
             }}
-            className="absolute left-6 top-1/2 -translate-y-1/2 p-2 bg-accent rounded-full z-50"
+            className="absolute left-0 top-1/2 -translate-y-1/2 p-1 bg-black/40 rounded-full z-50"
           >
-            <FaChevronLeft className="w-8 h-8 text-white" />
+            <FaChevronLeft className="w-6 h-6 text-gray-300" />
           </button>
 
-          {/* Imagen grande */}
+          
           <div className="relative w-[90vw] max-w-5xl h-[90vh]">
             <Image
               key={images[currentIndex]}
@@ -125,15 +125,81 @@ export const Carousel = ({ images, alt }: CarouselProps) => {
             />
           </div>
 
-          {/* Chevron derecha con fondo visible */}
+          
           <button
             onClick={(e) => {
               e.stopPropagation();
               nextImage();
             }}
-            className="absolute right-6 top-1/2 -translate-y-1/2 p-2 bg-accent rounded-full z-50"
+            className="absolute right-0 top-1/2 -translate-y-1/2 p-1 bg-black/40 rounded-full z-50"
           >
-            <FaChevronRight className="w-8 h-8 text-white" />
+            <FaChevronRight className="w-6 h-6 text-gray-300" />
+          </button>
+        </div>
+      )} */}
+      {showModal && (
+        <div
+          className="fixed inset-0 bg-[#000000db] z-50 flex items-center justify-center"
+          onClick={() => setShowModal(false)}
+        >
+          {/* Botón cerrar */}
+          <button
+            onClick={() => setShowModal(false)}
+            className="absolute top-2 right-2 p-1 bg-red-600 rounded-full cursor-pointer"
+          >
+            <IoClose className="text-white w-5 h-5" />
+          </button>
+
+          {/* Chevron izquierda */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              prevImage();
+            }}
+            className="absolute left-0 top-1/2 -translate-y-1/2 p-1 bg-black/40 rounded-full z-50"
+          >
+            <FaChevronLeft className="w-6 h-6 text-gray-300" />
+          </button>
+
+          {/* Imagen grande con gestos */}
+          <div
+            className="relative w-[90vw] max-w-5xl h-[90vh] touch-none"
+            onClick={(e) => e.stopPropagation()}
+            onTouchStart={(e) => {
+              const touch = e.touches[0];
+              (e.currentTarget as any).startX = touch.clientX;
+            }}
+            onTouchEnd={(e) => {
+              const touch = e.changedTouches[0];
+              const startX = (e.currentTarget as any).startX;
+              const diffX = touch.clientX - startX;
+
+              // Umbral mínimo de deslizamiento (en px)
+              if (diffX > 50) {
+                prevImage();
+              } else if (diffX < -50) {
+                nextImage();
+              }
+            }}
+          >
+            <Image
+              key={images[currentIndex]}
+              src={images[currentIndex]}
+              alt={`${alt} full ${currentIndex + 1}`}
+              fill
+              className="object-contain rounded-lg transition-opacity duration-500 opacity-0 animate-fadeIn"
+            />
+          </div>
+
+          {/* Chevron derecha */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              nextImage();
+            }}
+            className="absolute right-0 top-1/2 -translate-y-1/2 p-1 bg-black/40 rounded-full z-50"
+          >
+            <FaChevronRight className="w-6 h-6 text-gray-300" />
           </button>
         </div>
       )}

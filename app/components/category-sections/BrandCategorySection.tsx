@@ -21,9 +21,6 @@ export const BrandCategorySection = () => {
             <div className="w-full h-[300px] md:w-[320px] md:h-[240px] lg:w-[390px] lg:h-[290px] xl:w-[480px] xl:h-[320px] rounded-sm bg-[url('/graphicCards/radeon.png')] bg-cover bg-no-repeat bg-center transition-all duration-300 hover:ring-2 hover:ring-orange-600" />
           </Link>
 
-          <Link href="/productos/placas-de-video/intel" aria-label="Intel">
-            <div className="w-full h-[300px] md:w-[320px] md:h-[240px] lg:w-[390px] lg:h-[290px] xl:w-[480px] xl:h-[320px] rounded-sm bg-[url('/graphicCards/intel.png')] bg-cover bg-no-repeat bg-center transition-all duration-300 hover:ring-2 hover:ring-orange-600" />
-          </Link>
         </div>
       </div>
     </section>
