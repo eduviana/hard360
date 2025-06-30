@@ -141,18 +141,6 @@
 //   );
 // };
 
-
-
-
-
-
-
-
-
-
-
-
-
 "use client";
 
 import { FilterHeader } from "@/app/components/filter-sidebar/FilterHeader";
@@ -192,15 +180,15 @@ export const CategorySection = ({
 
   // Función para ordenar productos según estado `sort`
   const sortProducts = (products: Product[]) => {
-  switch (sort) {
-    case "priceAsc":
-      return [...products].sort((a, b) => Number(a.price) - Number(b.price));
-    case "priceDesc":
-      return [...products].sort((a, b) => Number(b.price) - Number(a.price));
-    default:
-      return products;
-  }
-};
+    switch (sort) {
+      case "priceAsc":
+        return [...products].sort((a, b) => Number(a.price) - Number(b.price));
+      case "priceDesc":
+        return [...products].sort((a, b) => Number(b.price) - Number(a.price));
+      default:
+        return products;
+    }
+  };
   // Productos ordenados y limitados a itemsToShow
   const sortedProducts = sortProducts(filteredProducts);
   const displayedProducts = sortedProducts.slice(0, itemsToShow);
@@ -237,7 +225,7 @@ export const CategorySection = ({
           <div className="absolute inset-y-0 right-0 w-full bg-white p-6 overflow-y-auto animate-slide-in-left">
             <div className="flex justify-end">
               <button onClick={() => setIsFilterOpen(false)}>
-                <IoClose className="w-6 h-6 text-gray-700" />
+                <IoClose className="w-8 h-8 text-white bg-red-600 rounded-full p-1" />
               </button>
             </div>
             <FilterSidebar
@@ -254,10 +242,11 @@ export const CategorySection = ({
           </div>
         </div>
       )}
+      
 
       {/* Layout principal */}
       <div className="flex flex-col md:flex-row gap-12">
-        <div className="hidden md:block w-1/5">
+        <div className="hidden md:block w-[30%] max-w-[260px]">
           <FilterSidebar
             category={category}
             subcategories={subcategories}

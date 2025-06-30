@@ -21,7 +21,7 @@ body {
 }
 
 .custom-container {
-  @apply w-[96%] md:w-[90%] lg:w-[80%] xl:w-[74%] mx-auto;
+  @apply w-[92%] md:w-[90%] lg:w-[80%] xl:w-[74%] mx-auto;
 }
 
 @layer utilities {

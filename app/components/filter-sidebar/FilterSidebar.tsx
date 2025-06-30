@@ -54,13 +54,13 @@ export function FilterSidebar({
   };
 
   return (
-    <aside className=" py-0 border border-gray-50 rounded-xl shadow space-y-12">
+    <aside className="shadow space-y-12">
       {/* Subcategorías con conteo global */}
       <div>
-        <h2 className="px-2 py-1 rounded-sm text-xl font-bold mb-2 bg-gray-800 text-white">
+        <h2 className="p-2 rounded-t-md rounded-b-xs text-base font-bold bg-gray-800 text-white">
           Subcategorías
         </h2>
-        <ul className="space-y-2">
+        <ul className="space-y-1">
           {subcategories.map((sub) => {
             const isActive = sub === subcategory;
             const count = allProductsFromCategory.filter(
@@ -70,14 +70,14 @@ export function FilterSidebar({
             return (
               <li
                 key={sub}
-                className="py-2 px-4 rounded-sm transition-colors bg-gray-50 hover:bg-slate-200"
+                className="py-2 px-4 rounded-xl transition-colors bg-gray-50 hover:bg-slate-200"
               >
                 <Link
                   href={`/${category}/${sub}`}
                   scroll={false}
-                  className={`capitalize flex justify-between items-center ${
+                  className={`text-sm capitalize flex justify-between items-center ${
                     isActive
-                      ? "text-green-600 font-bold text-lg"
+                      ? "text-green-600 font-bold"
                       : "text-neutral-800 font-medium"
                   }`}
                 >
@@ -99,7 +99,7 @@ export function FilterSidebar({
 
         return (
           <div key={String(field)}>
-            <h2 className="px-2 py-1 rounded-sm text-xl font-bold mb-2 bg-gray-800 text-white">
+            <h2 className="p-2 rounded-t-md rounded-b-xs text-base font-bold bg-gray-800 text-white">
               {label}
             </h2>
             <ul className="space-y-2">
@@ -111,14 +111,14 @@ export function FilterSidebar({
                 return (
                   <li
                     key={val}
-                    className="py-2 px-4 rounded-sm transition-colors bg-gray-50 hover:bg-slate-200"
+                    className="py-2 px-4 rounded-xl transition-colors bg-gray-50 hover:bg-slate-200"
                   >
                     <Link
                       href={getLinkWithParam(field as string, val)}
                       scroll={false}
-                      className={`capitalize flex justify-between items-center ${
+                      className={`text-sm capitalize flex justify-between items-center ${
                         current === val
-                          ? "text-green-600 font-bold text-lg"
+                          ? "text-green-600 font-bold"
                           : "text-neutral-800 font-medium"
                       }`}
                     >
