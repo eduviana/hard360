@@ -14,8 +14,6 @@ export const Carousel = ({ images, alt }: CarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
 
-  
-
   const prevImage = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
@@ -50,7 +48,7 @@ export const Carousel = ({ images, alt }: CarouselProps) => {
           ))}
         </div>
 
-        {/* <div
+        <div
           className="relative w-full h-[300px] sm:h-[400px] cursor-zoom-in overflow-hidden"
           onClick={() => setShowModal(true)}
         >
@@ -68,65 +66,28 @@ export const Carousel = ({ images, alt }: CarouselProps) => {
             />
           </div>
 
+          {/* Flecha izquierda (dentro del contenedor) */}
           <button
             onClick={(e) => {
               e.stopPropagation();
               prevImage();
             }}
-            className="absolute -left-2 top-1/2 -translate-y-1/2 p-1 z-10 cursor-pointer"
+            className="absolute left-24 top-1/2 -translate-y-1/2 p-1 bg-white/80 hover:bg-white rounded-full z-10 cursor-pointer"
           >
             <FaChevronLeft className="w-6 h-6 text-accent" />
           </button>
+
+          {/* Flecha derecha (dentro del contenedor) */}
           <button
             onClick={(e) => {
               e.stopPropagation();
               nextImage();
             }}
-            className="absolute -right-2 top-1/2 -translate-y-1/2 p-1 z-10 cursor-pointer"
+            className="absolute right-24 top-1/2 -translate-y-1/2 p-1 bg-white/80 hover:bg-white rounded-full z-10 cursor-pointer"
           >
             <FaChevronRight className="w-6 h-6 text-accent" />
           </button>
-        </div> */}
-        <div
-  className="relative w-full h-[300px] sm:h-[400px] cursor-zoom-in overflow-hidden"
-  onClick={() => setShowModal(true)}
->
-  <div
-    key={images[currentIndex]}
-    className="absolute inset-0 transition-opacity duration-500 opacity-0 animate-fadeIn"
-  >
-    <Image
-      src={images[currentIndex]}
-      alt={`${alt} ${currentIndex + 1}`}
-      fill
-      className="object-contain rounded-lg"
-      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 50vw"
-      priority
-    />
-  </div>
-
-  {/* Flecha izquierda (dentro del contenedor) */}
-  <button
-    onClick={(e) => {
-      e.stopPropagation();
-      prevImage();
-    }}
-    className="absolute left-24 top-1/2 -translate-y-1/2 p-1 bg-white/80 hover:bg-white rounded-full z-10 cursor-pointer"
-  >
-    <FaChevronLeft className="w-6 h-6 text-accent" />
-  </button>
-
-  {/* Flecha derecha (dentro del contenedor) */}
-  <button
-    onClick={(e) => {
-      e.stopPropagation();
-      nextImage();
-    }}
-    className="absolute right-24 top-1/2 -translate-y-1/2 p-1 bg-white/80 hover:bg-white rounded-full z-10 cursor-pointer"
-  >
-    <FaChevronRight className="w-6 h-6 text-accent" />
-  </button>
-</div>
+        </div>
       </div>
 
       {/* Modal */}
@@ -147,8 +108,6 @@ export const Carousel = ({ images, alt }: CarouselProps) => {
             className="relative w-full max-w-5xl h-[90vh]"
             onClick={(e) => e.stopPropagation()} // importante para no cerrar modal al tocar imagen
           >
-
-
             {/* Flecha izquierda dentro del contenedor */}
             <button
               onClick={(e) => {
