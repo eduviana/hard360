@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const sliderData = [
   {
@@ -22,28 +22,26 @@ export const Slider = () => {
   const totalSlides = sliderData.length;
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const startAutoSlide = () => {
+  const startAutoSlide = useCallback(() => {
     intervalRef.current = setInterval(() => {
       setCurrent((prev) => (prev + 1) % totalSlides);
     }, 7000);
-  };
+  }, [totalSlides]);
 
   const stopAutoSlide = () => {
     if (intervalRef.current) clearInterval(intervalRef.current);
   };
 
-  // Iniciar auto-slide al montar
   useEffect(() => {
     startAutoSlide();
     return stopAutoSlide;
-  }, [totalSlides]);
+  }, [startAutoSlide]);
 
   const handleManualChange = (i: number) => {
     stopAutoSlide();
     setCurrent(i);
     startAutoSlide();
   };
-
   return (
     <div className="relative overflow-hidden">
       <div

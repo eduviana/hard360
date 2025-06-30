@@ -3,9 +3,7 @@ import SpecsSection from "../../SpecsSection";
 import {
   MdWaterDrop,
   MdDeviceThermostat,
-  MdPower,
   MdSettings,
-  MdOutlineMemory,
 } from "react-icons/md";
 import { FaFan, FaMicrochip } from "react-icons/fa";
 

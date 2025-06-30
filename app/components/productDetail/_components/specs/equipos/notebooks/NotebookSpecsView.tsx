@@ -7,7 +7,6 @@ import {
   MdSdStorage,
   MdUsb,
   MdInfoOutline,
-  MdVerified,
 } from "react-icons/md";
 import { FaWindows } from "react-icons/fa";
 import SpecsSection from "../../SpecsSection";

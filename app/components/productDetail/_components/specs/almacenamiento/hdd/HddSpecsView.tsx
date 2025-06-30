@@ -1,5 +1,4 @@
-import { MdStorage, MdNoiseAware, MdBolt } from "react-icons/md";
-import { TbRulerMeasure } from "react-icons/tb";
+import { MdStorage, MdBolt } from "react-icons/md";
 import { HddSpecs } from "./hddSpecs";
 import SpecsSection from "../../SpecsSection";
 

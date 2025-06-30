@@ -1,7 +1,5 @@
 import { TbThermometer, TbTemperatureCelsius } from "react-icons/tb";
-import { GiChemicalDrop } from "react-icons/gi";
 import { BsFillDropletFill } from "react-icons/bs";
-import { FaWeightHanging } from "react-icons/fa";
 import { PastaTermicaSpecs } from "./pastaTermicaSpecs";
 import SpecsSection from "../../SpecsSection";
 

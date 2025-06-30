@@ -1,8 +1,6 @@
 import {
   MdMemory,
   MdSpeed,
-  MdPower,
-  MdDesktopWindows,
   MdSettings,
 } from "react-icons/md";
 import SpecsSection from "../../SpecsSection";

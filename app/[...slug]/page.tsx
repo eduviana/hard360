@@ -88,9 +88,15 @@ export default async function Page({ params, searchParams }: PageProps) {
       .filter((f): f is FilterOption => f !== null);
 
     // Aquí removemos activeFilter para que no se pase a cliente
-    const filtersToPass = categoryFilters?.map(
-      ({ activeFilter, ...rest }) => rest
-    );
+    // const filtersToPass = categoryFilters?.map(
+    //   ({ activeFilter, ...rest }) => rest
+    // );
+
+const filtersToPass = categoryFilters?.map((filter) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { activeFilter, ...rest } = filter;
+  return rest;
+});
 
     if (categoryFilters && resolvedSearchParams) {
       for (const filter of categoryFilters) {

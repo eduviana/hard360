@@ -1,5 +1,5 @@
 import { FaTv, FaBolt, FaBoxOpen } from "react-icons/fa";
-import { MdScreenRotation, MdColorLens, MdGraphicEq } from "react-icons/md";
+import { MdScreenRotation, MdGraphicEq } from "react-icons/md";
 import { TelevisoresSpecs } from "./televisoresSpecs";
 import SpecsSection from "../../SpecsSection";
 

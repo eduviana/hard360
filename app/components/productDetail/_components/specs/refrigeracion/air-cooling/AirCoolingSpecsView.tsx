@@ -1,7 +1,5 @@
 import {
   MdDeviceThermostat,
-  MdOutlineNoiseAware,
-  MdSettings,
   MdPrecisionManufacturing,
   MdPower,
 } from "react-icons/md";

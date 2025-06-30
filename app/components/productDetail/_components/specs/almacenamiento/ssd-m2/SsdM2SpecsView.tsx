@@ -3,7 +3,6 @@ import SpecsSection from "../../SpecsSection";
 import {
   MdSdStorage,
   MdSpeed,
-  MdSettings,
   MdBatteryChargingFull,
 } from "react-icons/md";
 

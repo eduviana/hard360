@@ -8,7 +8,7 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
 import { MobileSearchInput } from "./MobileSearchInput";
-import Image from "next/image";
+
 
 interface MiddleBarProps {
   mobileSearchOpen: boolean;
@@ -34,12 +34,6 @@ const MiddleBar = ({
             <Bars3Icon className="w-10 h-10" />
           </button>
           <Link href="/">
-            {/* <h1 className="relative flex flex-col items-start leading-none">
-              <span className="text-3xl md:text-3xl lg:text-4xl font-extrabold uppercase text-white tracking-wide">
-                HARD <span className="text-orange-500">360</span>
-              </span>
-              <span className="block h-1 w-full max-w-[120px] bg-gradient-to-r from-orange-500 via-orange-400/80 to-transparent rounded-sm mt-1"></span>
-            </h1> */}
             <h1 className="relative flex flex-col items-start leading-none">
               <span className="text-3xl md:text-3xl lg:text-4xl font-extrabold uppercase text-white tracking-wide">
                 HARD <span className="text-orange-500">360</span>

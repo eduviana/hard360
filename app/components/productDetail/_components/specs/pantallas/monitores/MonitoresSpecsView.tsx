@@ -1,5 +1,5 @@
 import { MdDisplaySettings } from "react-icons/md";
-import { FaPlug, FaBoxOpen, FaGamepad } from "react-icons/fa";
+import { FaPlug, FaGamepad } from "react-icons/fa";
 import { MonitoresSpecs } from "./monitoresSpecs";
 import SpecsSection from "../../SpecsSection";
 

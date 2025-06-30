@@ -1,5 +1,5 @@
-import { FaMemory, FaPlug, FaRulerCombined, FaTv } from "react-icons/fa";
-import { MdSpeed, MdVideoSettings } from "react-icons/md";
+import { FaMemory, FaPlug } from "react-icons/fa";
+import { MdVideoSettings } from "react-icons/md";
 
 import SpecsSection from "../../SpecsSection";
 import { RadeonSpecs } from "./radeonSpecs";
@@ -18,7 +18,7 @@ export default function RadeonSpecsView({ specs }: { specs: RadeonSpecs }) {
                 { label: "Reloj boost", value: specs.relojBoost },
                 { label: "Velocidad memoria", value: specs.velocidadMemoria },
                 { label: "Ancho de banda", value: specs.anchoBanda },
-                { label: "CUDA Cores", value: specs.cudaCores },
+                { label: "Stream Processors", value: specs.streamProcessors },
               ]}
             />
     

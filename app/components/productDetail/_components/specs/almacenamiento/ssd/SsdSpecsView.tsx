@@ -1,10 +1,7 @@
 import {
   MdSdStorage,
   MdSpeed,
-  MdMemory,
-  MdDeviceHub,
   MdBatteryChargingFull,
-  MdAccessTime,
 } from "react-icons/md";
 import { SsdSpecs } from "./ssdSpecs";
 import SpecsSection from "../../SpecsSection";

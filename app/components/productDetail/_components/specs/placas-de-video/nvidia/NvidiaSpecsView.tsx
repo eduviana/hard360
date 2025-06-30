@@ -1,5 +1,5 @@
-import { FaMemory, FaPlug, FaRulerCombined, FaTv } from "react-icons/fa";
-import { MdSpeed, MdVideoSettings } from "react-icons/md";
+import { FaMemory, FaPlug } from "react-icons/fa";
+import { MdVideoSettings } from "react-icons/md";
 import { NvidiaSpecs } from "./nvidiaSpecs";
 import SpecsSection from "../../SpecsSection";
 

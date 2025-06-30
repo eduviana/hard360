@@ -25,6 +25,7 @@ import FanCoolerSpecsView from "./refrigeracion/fan-cooler/FanCoolerSpecsView";
 import PastaTermicaSpecsView from "./refrigeracion/pasta-termica/PastaTermicaSpecsView";
 import WaterCoolingSpecsView from "./refrigeracion/water-cooling/WaterCoolingSpecsView";
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const specsComponentMap: Record<string, any> = {
   notebooks: ({ specs }: any) => <NotebookSpecsView specs={specs} />,
   "pcs-de-escritorio": ({ specs }: any) => <PcSpecsView specs={specs} />,
@@ -54,5 +55,6 @@ export const specsComponentMap: Record<string, any> = {
   "mid-tower": ({ specs }: any) => <MidTowerSpecsView specs={specs} />,
   "mini-tower": ({ specs }: any) => <MiniTowerSpecsView specs={specs} />,
 };
+
 
 

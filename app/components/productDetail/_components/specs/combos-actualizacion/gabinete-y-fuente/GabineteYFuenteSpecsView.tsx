@@ -1,5 +1,5 @@
 
-import { MdPower, MdComputer, MdStorage, MdUsb } from "react-icons/md";
+import { MdPower, MdComputer } from "react-icons/md";
 import { GabineteYFuenteSpecs } from "./gabineteYfuenteSpecs";
 import SpecsSection from "../../SpecsSection";
 

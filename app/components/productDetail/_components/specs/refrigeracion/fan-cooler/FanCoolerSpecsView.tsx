@@ -1,9 +1,6 @@
 import {
   MdPower,
-  MdSpeed,
-  MdVolumeUp,
   MdWbIncandescent,
-  MdAutorenew,
 } from "react-icons/md";
 import { BsFan } from "react-icons/bs";
 import { FanCoolerSpecs } from "./fanCoolerSpecs";
