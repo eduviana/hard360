@@ -31,11 +31,11 @@ const MiddleBar = ({
             onClick={() => setDrawerOpen(true)}
             aria-label="Abrir menú"
           >
-            <Bars3Icon className="w-10 h-10" />
+            <Bars3Icon className="w-8 h-8 md:w-10 md:h-10" />
           </button>
           <Link href="/">
             <h1 className="relative flex flex-col items-start leading-none">
-              <span className="text-3xl md:text-3xl lg:text-4xl font-extrabold uppercase text-white tracking-wide">
+              <span className="text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase text-white tracking-wide">
                 HARD <span className="text-orange-500">360</span>
               </span>
               <span className="block h-1 w-full max-w-full bg-gradient-to-r from-orange-500 via-orange-400/80 to-transparent rounded-sm mt-1"></span>
@@ -63,17 +63,17 @@ const MiddleBar = ({
             onClick={() => setMobileSearchOpen(!mobileSearchOpen)}
             aria-label="Abrir/cerrar búsqueda"
           >
-            <MagnifyingGlassIcon className="h-6 w-6 md:h-8 md:w-8" />
+            <MagnifyingGlassIcon className="h-7 w-7 md:h-8 md:w-8" />
           </button>
 
           {/* Favoritos */}
           <button className="p-1 transition-colors duration-200 hover:text-accent focus:outline-none">
-            <HeartIcon className="h-6 w-6 md:h-8 md:w-8" />
+            <HeartIcon className="h-7 w-7 md:h-8 md:w-8" />
           </button>
 
           {/* Carrito */}
           <button className="p-1 transition-colors duration-200 hover:text-accent focus:outline-none">
-            <ShoppingCartIcon className="h-6 w-6 md:h-8 md:w-8" />
+            <ShoppingCartIcon className="h-7 w-7 md:h-8 md:w-8" />
           </button>
         </div>
       </div>

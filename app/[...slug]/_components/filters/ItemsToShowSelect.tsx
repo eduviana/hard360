@@ -5,13 +5,14 @@ interface ItemsToShowSelectProps {
 
 export const ItemsToShowSelect = ({ value, onChange }: ItemsToShowSelectProps) => {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-col sm:flex-row items-center gap-2">
       <label htmlFor="perPage" className="text-sm text-gray-700 whitespace-nowrap">
         Cantidad
       </label>
       <select
         id="perPage"
-        className="border border-gray-300 rounded px-3 py-2 text-sm"
+        // className="border border-gray-300 rounded px-3 py-2 text-sm"
+        className="border border-gray-300 rounded px-3 py-2 text-sm max-w-full"
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
       >

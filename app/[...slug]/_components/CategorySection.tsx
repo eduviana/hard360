@@ -224,7 +224,7 @@ export const CategorySection = ({
             </button>
           </div>
 
-          <div className="flex gap-16 w-full md:w-auto">
+          <div className="w-full md:w-auto justify-end flex gap-16 ">
             <SortSelect value={sort} onChange={setSort} />
             <ItemsToShowSelect value={itemsToShow} onChange={setItemsToShow} />
           </div>
@@ -272,7 +272,7 @@ export const CategorySection = ({
         </div>
 
         <div className="flex-1">
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {displayedProducts.length > 0 ? (
               displayedProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />
