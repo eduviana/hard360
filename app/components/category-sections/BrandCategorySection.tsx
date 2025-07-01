@@ -9,7 +9,7 @@ export const BrandCategorySection = () => {
           <h2 className="text-3xl font-normal text-left text-white">
             LLevá tus juegos al siguiente nivel
           </h2>
-          <ViewMore category="placas-de-video" />
+          {/* <ViewMore category="placas-de-video" /> */}
         </div>
 
         <div className="flex flex-col flex-wrap md:flex-row md:justify-center gap-8">

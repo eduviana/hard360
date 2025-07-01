@@ -171,7 +171,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 
       {/* Specs abajo de todo */}
       {SpecsComponent && product.specs && (
-        <div>
+        <div className="mb-24">
           <SpecsComponent specs={product.specs} />
         </div>
       )}
