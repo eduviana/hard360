@@ -2,15 +2,15 @@ import { Product } from "@/app/data/types";
 import ViewMore from "../view-more/ViewMore";
 import { ProductCard } from "../productCard/ProductCard";
 
-interface StandardCategorySectionProps {
+interface StandardCategorySectionBlackProps {
   title?: string;
   products: Product[];
 }
 
-export const StandardCategorySection = ({
+export const StandardCategorySectionBlack = ({
   title,
   products,
-}: StandardCategorySectionProps) => {
+}: StandardCategorySectionBlackProps) => {
   const productsSlice = products.slice(0, 8);
 
   return (
@@ -18,7 +18,7 @@ export const StandardCategorySection = ({
       <div className="custom-container">
         {/* TÍTULO FUERA DEL BACKGROUND EN md Y MÁS */}
         <div className="hidden md:flex items-center gap-6 mb-10">
-          <h2 className="text-lg lg:text-3xl font-normal text-left text-text-secondary">
+          <h2 className="text-lg lg:text-3xl font-normal text-left text-white">
             {title}
           </h2>
           {products[0] && (

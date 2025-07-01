@@ -6,6 +6,7 @@ import { Spacer } from "./components/spacer/Spacer";
 import { StandardCategorySection } from "./components/category-sections/StandardCategorySection";
 import { BrandCategorySection } from "./components/category-sections/BrandCategorySection";
 import { FeatureBannerSection } from "./components/category-sections/FeatureBannerSection";
+import { StandardCategorySectionBlack } from "./components/category-sections/StandardCategorySectionBlack";
 
 export default function Home() {
   const notebooks = getProductsByCategory("equipos", "notebooks");
@@ -32,7 +33,7 @@ export default function Home() {
       />
       <div className="bg-[#2D2D33] py-20">
         <BrandCategorySection />
-        <StandardCategorySection title="Placas de Video" products={graphicCards} />
+        <StandardCategorySectionBlack title="Placas de Video" products={graphicCards} />
       </div>
       <StandardCategorySection
         title="Elejí tu pantalla ideal"
