@@ -45,12 +45,12 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             {/* Layout md+ */}
             <div className="hidden md:flex items-center justify-between gap-6">
               <p className="text-[26px] font-medium text-[#333333]">
-               {formatCurrency(product.price)}
+                {formatCurrency(product.price)}
               </p>
               <div className="flex items-center gap-1">
                 <HiCurrencyDollar className="w-7 h-7 text-accent" />
                 <span className="text-[13px] text-[#A48A7B] font-medium">
-                  Precio especial hard360
+                  Precio especial HARD360
                 </span>
               </div>
             </div>
@@ -59,13 +59,10 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             <div className="flex md:hidden w-full items-center">
               <div className="w-1/2">
                 <p className="text-[28px] font-medium text-[#333333]">
-                 {formatCurrency(product.price)}
+                  {formatCurrency(product.price)}
                 </p>
               </div>
               <div className="w-1/2 text-left">
-                {/* <p className="text-sm text-gray-700 font-medium">
-                  Precio especial hard360
-                </p> */}
                 <div className="flex items-center gap-1">
                   <HiCurrencyDollar className="w-7 h-7 text-accent" />
                   <span className="text-[13px] text-[#A48A7B] font-medium">
@@ -78,7 +75,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             {/* Texto adicional */}
             <p className="text-sm text-gray-500 mt-8">
               Precio sin impuestos nacionales:{" "}
-             {formatCurrency(priceWithoutTax.toString())}
+              {formatCurrency(priceWithoutTax.toString())}
             </p>
           </div>
 
@@ -90,7 +87,9 @@ export default function ProductDetail({ product }: ProductDetailProps) {
               <p className="text-[#333333] font-semibold">Precio de lista:</p>
             </div>
             <span className="text-[26px] font-medium text-[#333333]">
-               {formatCurrency(Math.round(parseInt(product.price) * 1.05).toString())}
+              {formatCurrency(
+                Math.round(parseInt(product.price) * 1.05).toString()
+              )}
             </span>
             <p className="mt-4">
               LLevalo en hasta{" "}
@@ -149,14 +148,14 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           </div>
 
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-4 bg-gray-100 py-2 px-4 rounded">
-              <span>1</span>
-              <div className="flex flex-col items-center gap-2">
+            <div className="flex items-center gap-4 bg-gray-100 rounded">
+              <span className="pl-2">1</span>
+              <div className="flex flex-col items-center gap-2 p-2">
                 <IoIosArrowUp className="cursor-pointer text-blue-600 font-bold w-4 h-4" />
                 <IoIosArrowDown className="cursor-pointer text-blue-600 font-bold w-4 h-4" />
               </div>
             </div>
-            <button className="text-white text-xl font-medium bg-blue-500 w-full py-4 rounded-md">
+            <button className="text-white text-xl font-medium bg-blue-500 w-full rounded-md p-3">
               Comprar
             </button>
           </div>

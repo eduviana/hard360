@@ -70,7 +70,7 @@ export function FilterSidebar({
             return (
               <li
                 key={sub}
-                className="py-2 px-4 rounded-xl transition-colors bg-gray-50 hover:bg-slate-200"
+                className="py-2 px-4 rounded-sm transition-colors bg-gray-50 hover:bg-slate-200"
               >
                 <Link
                   href={`/${category}/${sub}`}
@@ -111,7 +111,7 @@ export function FilterSidebar({
                 return (
                   <li
                     key={val}
-                    className="py-2 px-4 rounded-xl transition-colors bg-gray-50 hover:bg-slate-200"
+                    className="py-2 px-4 rounded-sm transition-colors bg-gray-50 hover:bg-slate-200"
                   >
                     <Link
                       href={getLinkWithParam(field as string, val)}

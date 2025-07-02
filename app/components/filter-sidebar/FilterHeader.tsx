@@ -76,6 +76,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { filtersByCategory } from "@/app/data/types";
 import { IoCloseSharp } from "react-icons/io5";
+import { FaChevronRight } from "react-icons/fa6";
 
 
 
@@ -108,7 +109,7 @@ export function FilterHeader({ category, subcategory }: FilterHeaderProps) {
   return (
     <div className="inline-block text-left">
       {/* Breadcrumb título */}
-      <h2 className=" text-sm sm:text-xl md:text-2xl font-semibold capitalize mb-4 flex gap-2">
+      <h2 className=" text-sm sm:text-xl md:text-2xl font-semibold capitalize mb-4 flex items-center gap-2">
         <Link
           href={`/${category}`}
           className="hover:underline text-primary font-semibold"
@@ -117,7 +118,8 @@ export function FilterHeader({ category, subcategory }: FilterHeaderProps) {
         </Link>
         {subcategory && (
           <>
-            <span>/</span>
+            {/* <span>/</span> */}
+            <FaChevronRight className="w-5 h-5 text-accent"/>
             <Link
               href={`/${category}/${subcategory}`}
               className="hover:underline text-primary font-semibold"

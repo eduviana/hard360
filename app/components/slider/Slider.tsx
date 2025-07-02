@@ -4,16 +4,16 @@
 
 // const sliderData = [
 //   {
-//     desktop: "/slider/aorus.jpg",
-//     mobile: "slider/aorus.jpg",
+//     className:
+//       "bg-[url('/slider/aorus-mobile.webp')] lg:bg-[url('/slider/aorus.webp')]",
 //   },
 //   {
-//     desktop: "/slider/nvidia.jpg",
-//     mobile: "slider/nvidia.jpg",
+//     className:
+//       "bg-[url('/slider/nvidia-mobile.webp')] lg:bg-[url('/slider/nvidia.webp')]",
 //   },
 //   {
-//     desktop: "/slider/xpg.jpg",
-//     mobile: "slider/xpg.jpg",
+//     className:
+//       "bg-[url('/slider/msi-mobile.webp')] lg:bg-[url('/slider/xpg.webp')]",
 //   },
 // ];
 
@@ -42,26 +42,25 @@
 //     setCurrent(i);
 //     startAutoSlide();
 //   };
+
 //   return (
 //     <div className="relative overflow-hidden">
 //       <div
 //         className="flex transition-transform duration-700 ease-in-out"
 //         style={{ transform: `translateX(-${current * 100}%)` }}
 //       >
-//         {sliderData.map((img, i) => (
-//           <picture key={i} className="w-full shrink-0">
-//             <source media="(min-width: 1024px)" srcSet={img.desktop} />
-//             <img
-//               src={img.mobile}
-//               alt={`Slide ${i + 1}`}
-//               className="w-full h-[300px] object-cover sm:h-[350px] md:h-[400px] lg:h-[514px]"
-//             />
-//           </picture>
+//         {sliderData.map((bg, i) => (
+//           <div
+//             key={i}
+//             className={`w-full shrink-0 h-[390px] sm:h-[500px] md:h-[540px] lg:h-[500px]
+//     bg-no-repeat bg-center bg-contain bg-black ${bg.className}
+//   `}
+//           />
 //         ))}
 //       </div>
 
 //       {/* Indicadores */}
-//       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 m-8">
+//       <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 flex gap-2 m-8">
 //         {sliderData.map((_, i) => (
 //           <button
 //             key={i}
@@ -69,13 +68,13 @@
 //             aria-label={`Ir al slide ${i + 1}`}
 //             aria-current={current === i}
 //             className={`
-//         relative transition-all
-//         ${current === i ? "w-10 h-1 bg-white" : "w-6 h-0.5 bg-white/50"}
-//         hover:opacity-80
-//         before:content-[''] before:absolute before:inset-x-[-8px] before:inset-y-[-8px]
-//         before:z-[-1] before:pointer-events-auto
-//         cursor-pointer
-//       `}
+//               relative transition-all
+//               ${current === i ? "w-10 h-1 bg-white" : "w-6 h-0.5 bg-white/50"}
+//               hover:opacity-80
+//               before:content-[''] before:absolute before:inset-x-[-8px] before:inset-y-[-8px]
+//               before:z-[-1] before:pointer-events-auto
+//               cursor-pointer
+//             `}
 //           />
 //         ))}
 //       </div>
@@ -83,36 +82,26 @@
 //   );
 // };
 
+
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
-// const sliderData = [
-//   {
-//     desktop: "bg-[url('/slider/aorus.jpg')]",
-//     mobile: "bg-[url('/slider/aorus-mobile.webp')]", // si tuvieras otra, la cambiarías acá
-//   },
-//   {
-//     desktop: "bg-[url('/slider/nvidia.jpg')]",
-//     mobile: "bg-[url('/slider/nvidia-mobile.webp')]",
-//   },
-//   {
-//     desktop: "bg-[url('/slider/xpg.jpg')]",
-//     mobile: "bg-[url('/slider/msi-mobile.webp')]",
-//   },
-// ];
 const sliderData = [
   {
-    className:
-      "bg-[url('/slider/aorus-mobile.webp')] lg:bg-[url('/slider/aorus.webp')]",
+    mobile: '/slider/aorus-mobile.webp',
+    desktop: '/slider/aorus.webp',
+    alt: "Aorus products"
   },
   {
-    className:
-      "bg-[url('/slider/nvidia-mobile.webp')] lg:bg-[url('/slider/nvidia.webp')]",
+    mobile: '/slider/nvidia-mobile.webp',
+    desktop: '/slider/nvidia.webp',
+    alt: "NVIDIA technology"
   },
   {
-    className:
-      "bg-[url('/slider/msi-mobile.webp')] lg:bg-[url('/slider/xpg.webp')]",
+    mobile: '/slider/msi-mobile.webp',
+    desktop: '/slider/xpg.webp',
+    alt: "MSI and XPG products"
   },
 ];
 
@@ -148,18 +137,26 @@ export const Slider = () => {
         className="flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
-        {sliderData.map((bg, i) => (
-          <div
-            key={i}
-            className={`w-full shrink-0 h-[390px] sm:h-[500px] md:h-[540px] lg:h-[500px]
-    bg-no-repeat bg-center bg-contain bg-black ${bg.className}
-  `}
-          />
+        {sliderData.map((img, i) => (
+          <div key={i} className="w-full shrink-0 bg-black relative">
+            {/* Imagen para móvil - se muestra por defecto */}
+            <img
+              src={img.mobile}
+              alt={img.alt}
+              className="w-full h-full object-fill lg:hidden"
+            />
+            {/* Imagen para desktop - se muestra en lg: y mayores */}
+            <img
+              src={img.desktop}
+              alt={img.alt}
+              className="hidden lg:block w-full h-full object-contain"
+            />
+          </div>
         ))}
       </div>
 
       {/* Indicadores */}
-      <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 flex gap-2 m-8">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
         {sliderData.map((_, i) => (
           <button
             key={i}
@@ -171,7 +168,7 @@ export const Slider = () => {
               ${current === i ? "w-10 h-1 bg-white" : "w-6 h-0.5 bg-white/50"}
               hover:opacity-80
               before:content-[''] before:absolute before:inset-x-[-8px] before:inset-y-[-8px]
-              before:z-[-1] before:pointer-events-auto
+              before:pointer-events-auto
               cursor-pointer
             `}
           />
@@ -179,4 +176,5 @@ export const Slider = () => {
       </div>
     </div>
   );
+  
 };

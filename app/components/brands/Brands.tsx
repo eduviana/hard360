@@ -66,8 +66,8 @@ const brandImages = [
 
 export const Brands = () => {
   return (
-    <div className="bg-slate-100 py-6 flex justify-center">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 place-items-center">
+    <div className="bg-slate-100 py-4 flex justify-center">
+      <div className="grid grid-cols-4 gap-0 place-items-center">
         {brandImages.map((brand) => (
           <Image
             key={brand.src}

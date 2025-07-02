@@ -145,12 +145,6 @@
 //   );
 // };
 
-
-
-
-
-
-
 "use client";
 
 import { useState } from "react";
@@ -167,12 +161,15 @@ interface CarouselProps {
 export const Carousel = ({ images, alt }: CarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const [direction, setDirection] = useState<"left" | "right">("right");
 
   const prevImage = () => {
+    setDirection("left");
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
   const nextImage = () => {
+    setDirection("right");
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
@@ -290,13 +287,29 @@ export const Carousel = ({ images, alt }: CarouselProps) => {
             </button>
 
             {/* Imagen modal */}
-            <Image
+
+            {/* <Image
               key={images[currentIndex]}
               src={images[currentIndex]}
               alt={`${alt} full ${currentIndex + 1}`}
               fill
               className="object-contain rounded-lg transition-opacity duration-500 opacity-0 animate-fadeIn"
-            />
+            /> */}
+            <div
+              key={images[currentIndex]}
+              className={`absolute inset-0 ${
+                direction === "right"
+                  ? "animate-slide-in-left"
+                  : "animate-slide-in-right"
+              }`}
+            >
+              <Image
+                src={images[currentIndex]}
+                alt={`${alt} full ${currentIndex + 1}`}
+                fill
+                className="object-contain rounded-lg"
+              />
+            </div>
 
             {/* Flecha derecha */}
             <button
