@@ -1,49 +1,3 @@
-// import { notFound } from "next/navigation";
-// import { getProductsFrom } from "../../lib/getProductsFrom";
-// import { getCategoryFilters } from "../../lib/getCategoryFilters";
-// import { applyFiltersToProducts } from "../../lib/applyFiltersToProducts";
-// import { getUniqueSubcategories } from "../../lib/getUniqueSubcategories";
-// import { CategorySection } from "../_components/CategorySection";
-// import type { FilterOption } from "../../data/types";
-
-// export async function resolveCategoryView(
-//   slug: string[],
-//   resolvedSearchParams?: Record<string, string>
-// ) {
-//   const [category] = slug;
-//   const subcategory = slug.length === 2 ? slug[1] : undefined;
-
-//   const categoryProducts = getProductsFrom(category);
-//   if (categoryProducts.length === 0) return notFound();
-
-//   let filteredProducts = getProductsFrom(category, subcategory);
-
-//   const categoryFilters = getCategoryFilters(category, subcategory);
-
-//   filteredProducts = applyFiltersToProducts({
-//     products: filteredProducts,
-//     filters: categoryFilters,
-//     searchParams: resolvedSearchParams,
-//   });
-
-//   const filtersToPass: FilterOption[] | undefined = categoryFilters?.map(
-//     ({ activeFilter, ...rest }) => rest
-//   );
-
-//   const subcategories = getUniqueSubcategories(categoryProducts);
-
-//   return (
-//     <CategorySection
-//       category={category}
-//       subcategory={subcategory}
-//       subcategories={subcategories}
-//       filteredProducts={filteredProducts}
-//       allCategoryProducts={categoryProducts}
-//       filters={filtersToPass}
-//     />
-//   );
-// }
-
 import { notFound } from "next/navigation";
 import { getProductsFrom } from "../../lib/getProductsFrom";
 import { getCategoryFilters } from "../../lib/getCategoryFilters";
@@ -88,24 +42,31 @@ export async function resolveCategoryView(
   });
 
   // 🟢 Limpiar los filtros para enviarlos al cliente (removiendo funciones como `activeFilter`)
+  // const filtersToPass: FilterOption[] | undefined = categoryFilters?.map(
+  //   ({ activeFilter, ...rest }) => rest
+  // );
   const filtersToPass: FilterOption[] | undefined = categoryFilters?.map(
-    ({ activeFilter, ...rest }) => rest
+    (filter) => ({
+      label: filter.label,
+      field: filter.field,
+      values: filter.values,
+      subcategories: filter.subcategories,
+    })
   );
-
   // 🟢 Obtener la lista única de subcategorías dentro de la categoría actual
   const subcategories = getUniqueSubcategories(categoryProducts);
 
   // 🟢 Devolver el componente de la sección de categoría listo para renderizarse
   return (
-    <CategoryProvider>
-      <CategorySection
-        category={category}
-        subcategory={subcategory}
-        subcategories={subcategories}
-        filteredProducts={filteredProducts}
-        allCategoryProducts={categoryProducts}
-        filters={filtersToPass}
-      />
+    <CategoryProvider
+      category={category}
+      subcategory={subcategory}
+      subcategories={subcategories}
+      filteredProducts={filteredProducts}
+      allCategoryProducts={categoryProducts}
+      filters={filtersToPass}
+    >
+      <CategorySection />
     </CategoryProvider>
   );
 }
