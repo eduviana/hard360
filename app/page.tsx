@@ -1,7 +1,6 @@
 import { Slider } from "./components/slider/Slider";
 import { Brands } from "./components/brands/Brands";
-
-import { getProductsByCategory } from "./lib/getProductsByCategory";
+import { getProductsFrom } from "./lib/getProductsFrom";
 import { Spacer } from "./components/spacer/Spacer";
 import { StandardCategorySection } from "./components/category-sections/StandardCategorySection";
 import { BrandCategorySection } from "./components/category-sections/BrandCategorySection";
@@ -9,11 +8,11 @@ import { FeatureBannerSection } from "./components/category-sections/FeatureBann
 import { StandardCategorySectionBlack } from "./components/category-sections/StandardCategorySectionBlack";
 
 export default function Home() {
-  const notebooks = getProductsByCategory("equipos", "notebooks");
-  const desktopComputers = getProductsByCategory("equipos","pcs-de-escritorio");
-  const storage = getProductsByCategory("almacenamiento");
-  const graphicCards = getProductsByCategory("placas-de-video");
-  const displays = getProductsByCategory("pantallas");
+  const notebooks = getProductsFrom("equipos", "notebooks");
+  const desktopComputers = getProductsFrom("equipos", "pcs-de-escritorio");
+  const storage = getProductsFrom("almacenamiento");
+  const graphicCards = getProductsFrom("placas-de-video");
+  const displays = getProductsFrom("pantallas");
   return (
     <>
       <Slider />
@@ -33,7 +32,10 @@ export default function Home() {
       />
       <div className="bg-[#2D2D33] py-20">
         <BrandCategorySection />
-        <StandardCategorySectionBlack title="Placas de Video" products={graphicCards} />
+        <StandardCategorySectionBlack
+          title="Placas de Video"
+          products={graphicCards}
+        />
       </div>
       <StandardCategorySection
         title="Elejí tu pantalla ideal"

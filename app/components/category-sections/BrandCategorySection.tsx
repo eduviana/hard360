@@ -12,7 +12,7 @@ export const BrandCategorySection = () => {
 
         <div className="flex flex-col flex-wrap md:flex-row md:justify-center gap-8">
           <Link href="/placas-de-video/nvidia" aria-label="Nvidia">
-            <div className="w-full h-[300px] md:w-[320px] md:h-[240px] lg:w-[390px] lg:h-[290px] xl:w-[480px] xl:h-[320px] rounded-sm bg-[url('/graphicCards/nvidia.png')] bg-cover bg-no-repeat bg-center transition-all duration-300 hover:ring-2 hover:ring-orange-600" />
+            <div className="w-full h-[300px] md:w-[320px] md:h-[240px] lg:w-[390px] lg:h-[290px] xl:w-[480px] xl:h-[320px] rounded-sm bg-[url('/graphicCards/nvidia.png')] bg-cover bg-no-repeat bg-center transition-all duration-300 hover:ring-2 hover:ring-green-600" />
           </Link>
 
           <Link href="/placas-de-video/radeon" aria-label="Radeon">

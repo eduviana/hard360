@@ -1,7 +1,7 @@
 import { products } from "../data/data";
 import { Product } from "../data/types";
 
-export const getProductsByCategory = (
+export const getProductsFrom = (
   category: string,
   subcategory?: string
 ): Product[] => {

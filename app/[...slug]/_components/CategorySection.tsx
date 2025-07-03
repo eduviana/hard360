@@ -152,6 +152,8 @@ import { useState } from "react";
 import { SortSelect } from "./filters/SortSelect";
 import { ItemsToShowSelect } from "./filters/ItemsToShowSelect";
 import type { FilterOption } from "@/app/data/types";
+import { CategoryContext } from "../_context/CategoryContext";
+import { useCategoryContext } from "../_hooks/useCategoryContext";
 
 interface CategorySectionProps {
   category: string;
@@ -173,6 +175,10 @@ export const CategorySection = ({
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [sort, setSort] = useState("default");
   const [itemsToShow, setItemsToShow] = useState(10);
+
+  const { saludo } = useCategoryContext();
+
+  console.log(saludo); // Debería mostrar "hola"
 
   const productsFilteredByCategoryAndSubcategory = subcategory
     ? allCategoryProducts.filter((p) => p.subcategory === subcategory)
@@ -242,7 +248,6 @@ export const CategorySection = ({
           </div>
         </div>
       )}
-      
 
       {/* Layout principal */}
       <div className="flex flex-col md:flex-row gap-12">

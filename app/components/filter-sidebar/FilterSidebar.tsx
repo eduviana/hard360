@@ -56,6 +56,7 @@ export function FilterSidebar({
   return (
     <aside className="shadow space-y-12">
       {/* Subcategorías con conteo global */}
+
       <div>
         <h2 className="p-2 rounded-t-md rounded-b-xs text-base font-bold bg-gray-800 text-white">
           Subcategorías
@@ -68,18 +69,20 @@ export function FilterSidebar({
             ).length;
 
             return (
-              <li
-                key={sub}
-                className="py-2 px-4 rounded-sm transition-colors bg-gray-50 hover:bg-slate-200"
-              >
+              <li key={sub}>
                 <Link
                   href={`/${category}/${sub}`}
                   scroll={false}
-                  className={`text-sm capitalize flex justify-between items-center ${
-                    isActive
-                      ? "text-green-600 font-bold"
-                      : "text-neutral-800 font-medium"
-                  }`}
+                  className={`text-sm capitalize
+              flex justify-between items-center
+              py-2 px-4 rounded-sm transition-colors
+              ${
+                isActive
+                  ? "text-green-600 font-bold"
+                  : "text-neutral-800 font-medium"
+              }
+              bg-gray-50 hover:bg-slate-200
+            `}
                 >
                   <span>{sub.replaceAll("-", " ")}</span>
                   <span>({count})</span>
@@ -109,18 +112,20 @@ export function FilterSidebar({
                 ).length;
 
                 return (
-                  <li
-                    key={val}
-                    className="py-2 px-4 rounded-sm transition-colors bg-gray-50 hover:bg-slate-200"
-                  >
+                  <li key={val}>
                     <Link
                       href={getLinkWithParam(field as string, val)}
                       scroll={false}
-                      className={`text-sm capitalize flex justify-between items-center ${
-                        current === val
-                          ? "text-green-600 font-bold"
-                          : "text-neutral-800 font-medium"
-                      }`}
+                      className={`text-sm capitalize
+              flex justify-between items-center
+              py-2 px-4 rounded-sm transition-colors
+              ${
+                current === val
+                  ? "text-green-600 font-bold"
+                  : "text-neutral-800 font-medium"
+              }
+              bg-gray-50 hover:bg-slate-200
+            `}
                     >
                       <span>{val.replaceAll("-", " ")}</span>
                       <span>({count})</span>
