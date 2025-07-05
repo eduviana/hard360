@@ -1,43 +1,10 @@
-// import { notFound } from "next/navigation";
-// import { products } from "../../data/data";
-// import ProductDetail from "../../components/productDetail/ProductDetail";
-
-// export function resolveProductView(slug: string[]) {
-//   const [category, subcategory, productSlug] = slug;
-
-//   const product = products.find(
-//     (p) =>
-//       p.slug === productSlug &&
-//       p.category === category &&
-//       p.subcategory === subcategory
-//   );
-
-//   if (!product) return notFound();
-
-//   return (
-//     <div className="custom-container py-8">
-//       <ProductDetail product={product} />
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
 import { notFound } from "next/navigation";
 import { products } from "../../data/data";
 import ProductDetail from "../../components/productDetail/ProductDetail";
 
-  // Resuelve y devuelve la vista de detalle de un producto específico según los parámetros de la URL.
- 
-  // @param slug - Array de strings de la URL (ej: ["equipos", "notebooks", "notebook-dell-inspiron-15"])
+// Resuelve y devuelve la vista de detalle de un producto específico según los parámetros de la URL.
+
+// @param slug - Array de strings de la URL (ej: ["equipos", "notebooks", "notebook-dell-inspiron-15"])
 
 export function resolveProductView(slug: string[]) {
   // 🟢 Extraer la categoría, subcategoría y slug del producto desde la URL

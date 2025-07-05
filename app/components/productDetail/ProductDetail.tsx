@@ -10,15 +10,51 @@ import { IoIosArrowDown } from "react-icons/io";
 import { HiCurrencyDollar } from "react-icons/hi";
 import { Carousel } from "./_components/carousel/Carousel";
 import { formatCurrency } from "@/app/helpers/formatCurrency";
+import { useCartContext } from "@/app/hooks/useCartContext";
+import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
+import { FaCheckCircle } from "react-icons/fa";
 
 interface ProductDetailProps {
   product: Product;
 }
 
 export default function ProductDetail({ product }: ProductDetailProps) {
+  const {
+    productQuantity,
+    increaseProductQuantity,
+    decreaseProductQuantity,
+    addToCart,
+  } = useCartContext();
+
+  const router = useRouter();
+
   const SpecsComponent = specsComponentMap[product.subcategory];
 
   const priceWithoutTax = Math.round(parseInt(product.price) * (1 - 0.0909));
+
+  const handleAddToCart = () => {
+    addToCart(product, productQuantity);
+
+    const toastId = toast.success(
+      <div className="w-full flex flex-col items-center gap-2">
+        <div className="flex items-center gap-2">
+          <FaCheckCircle className="text-green-500 w-5 h-5" />
+          <span>Producto agregado al carrito</span>
+        </div>
+        <button
+          onClick={() => {
+            toast.dismiss(toastId); // ✅ Cerrar este toast específico
+            router.push("/carrito"); // ✅ Redirigir
+          }}
+          className="mx-auto bg-orange-700 hover:bg-orange-800 rounded-sm px-4 py-1 text-sm text-white font-semibold cursor-pointer"
+        >
+          Ir al carrito
+        </button>
+      </div>,
+      { position: "top-right", autoClose: 5000, icon: false }
+    );
+  };
 
   return (
     <section className="space-y-12">
@@ -108,31 +144,26 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             >
               <option value="12">
                 12 cuotas de{" "}
-                {(Number(product.price) / 12).toLocaleString("es-AR", {
-                  style: "currency",
-                  currency: "ARS",
-                })}
+                {formatCurrency(
+                  Math.floor(
+                    (Number(product.price) / 100 / 12) * 100
+                  ).toString()
+                )}
               </option>
               <option value="6">
                 6 cuotas de{" "}
-                {(Number(product.price) / 6).toLocaleString("es-AR", {
-                  style: "currency",
-                  currency: "ARS",
-                })}
+                {formatCurrency(
+                  Math.floor((Number(product.price) / 100 / 6) * 100).toString()
+                )}
               </option>
               <option value="3">
                 3 cuotas de{" "}
-                {(Number(product.price) / 3).toLocaleString("es-AR", {
-                  style: "currency",
-                  currency: "ARS",
-                })}
+                {formatCurrency(
+                  Math.floor((Number(product.price) / 100 / 3) * 100).toString()
+                )}
               </option>
               <option value="1">
-                1 cuota de{" "}
-                {Number(product.price).toLocaleString("es-AR", {
-                  style: "currency",
-                  currency: "ARS",
-                })}
+                1 cuota de {formatCurrency(product.price)}
               </option>
             </select>
           </div>
@@ -148,15 +179,26 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           </div>
 
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-4 bg-gray-100 rounded">
-              <span className="pl-2">1</span>
+            <div className="flex items-center gap-2 bg-gray-100 rounded px-1">
+              <span className="w-6 text-center">{productQuantity}</span>
               <div className="flex flex-col items-center gap-2 p-2">
-                <IoIosArrowUp className="cursor-pointer text-blue-600 font-bold w-4 h-4" />
-                <IoIosArrowDown className="cursor-pointer text-blue-600 font-bold w-4 h-4" />
+                <IoIosArrowUp
+                  className="cursor-pointer text-blue-600 font-bold w-4 h-4 select-none"
+                  onClick={increaseProductQuantity}
+                  onMouseDown={(e) => e.preventDefault()}
+                />
+                <IoIosArrowDown
+                  className="cursor-pointer text-blue-600 font-bold w-4 h-4 select-none"
+                  onClick={decreaseProductQuantity}
+                  onMouseDown={(e) => e.preventDefault()}
+                />
               </div>
             </div>
-            <button className="text-white text-xl font-medium bg-blue-500 w-full rounded-md p-3">
-              Comprar
+            <button
+              className="text-white text-xl font-medium bg-blue-500 hover:bg-blue-700 transition-colors duration-300 w-full rounded-md p-3 cursor-pointer"
+              onClick={handleAddToCart}
+            >
+              Agregar al carrito
             </button>
           </div>
 

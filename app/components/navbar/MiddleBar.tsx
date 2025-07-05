@@ -8,7 +8,7 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
 import { MobileSearchInput } from "./MobileSearchInput";
-
+import { useCartContext } from "@/app/hooks/useCartContext";
 
 interface MiddleBarProps {
   mobileSearchOpen: boolean;
@@ -21,6 +21,9 @@ const MiddleBar = ({
   setMobileSearchOpen,
   setDrawerOpen,
 }: MiddleBarProps) => {
+
+  
+  
   return (
     <div className="bg-primary">
       <div className="custom-container relative flex items-center justify-between gap-6 py-6">
@@ -68,13 +71,15 @@ const MiddleBar = ({
 
           {/* Favoritos */}
           <button className="p-1 transition-colors duration-200 hover:text-accent focus:outline-none">
-            <HeartIcon className="h-7 w-7 md:h-8 md:w-8" />
+            <HeartIcon className="h-7 w-7 md:h-8 md:w-8 cursor-pointer" />
           </button>
 
           {/* Carrito */}
-          <button className="p-1 transition-colors duration-200 hover:text-accent focus:outline-none">
-            <ShoppingCartIcon className="h-7 w-7 md:h-8 md:w-8" />
-          </button>
+          <Link href="/carrito" passHref>
+            <button className="p-1 transition-colors duration-200 hover:text-accent focus:outline-none">
+              <ShoppingCartIcon className="h-7 w-7 md:h-8 md:w-8 cursor-pointer" />
+            </button>
+          </Link>
         </div>
       </div>
 

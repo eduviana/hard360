@@ -3,6 +3,8 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Menu from "./components/navbar/Menu";
 import { Footer } from "./components/footer/Footer";
+import { CartProvider } from "./context/CartContext";
+import { ToastContainer } from "react-toastify";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -23,10 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.variable} antialiased`}>
-        <Menu />
-        {children}
-        <Footer />
-        </body>
+        <CartProvider>
+          <ToastContainer position="top-right" autoClose={6000} />
+          <Menu />
+          {children}
+          <Footer />
+        </CartProvider>
+      </body>
     </html>
   );
 }
