@@ -14,27 +14,30 @@ import { useCartContext } from "@/app/hooks/useCartContext";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import { FaCheckCircle } from "react-icons/fa";
+import { useState } from "react";
 
 interface ProductDetailProps {
   product: Product;
 }
 
 export default function ProductDetail({ product }: ProductDetailProps) {
-  const {
-    productQuantity,
-    increaseProductQuantity,
-    decreaseProductQuantity,
-    addToCart,
-  } = useCartContext();
+  const { productQuantity, addToCart } = useCartContext();
 
+  const [localQuantity, setLocalQuantity] = useState<number>(1);
   const router = useRouter();
-
   const SpecsComponent = specsComponentMap[product.subcategory];
-
   const priceWithoutTax = Math.round(parseInt(product.price) * (1 - 0.0909));
 
+  const increaseLocalQuantity = () => {
+    setLocalQuantity((prev) => Math.min(prev + 1, 10));
+  };
+
+  const decreaseLocalQuantity = () => {
+    setLocalQuantity((prev) => Math.max(prev - 1, 1));
+  };
+
   const handleAddToCart = () => {
-    addToCart(product, productQuantity);
+    addToCart(product, localQuantity);
 
     const toastId = toast.success(
       <div className="w-full flex flex-col items-center gap-2">
@@ -184,12 +187,13 @@ export default function ProductDetail({ product }: ProductDetailProps) {
               <div className="flex flex-col items-center gap-2 p-2">
                 <IoIosArrowUp
                   className="cursor-pointer text-blue-600 font-bold w-4 h-4 select-none"
-                  onClick={increaseProductQuantity}
+                  onClick={increaseLocalQuantity}
                   onMouseDown={(e) => e.preventDefault()}
                 />
+
                 <IoIosArrowDown
                   className="cursor-pointer text-blue-600 font-bold w-4 h-4 select-none"
-                  onClick={decreaseProductQuantity}
+                  onClick={decreaseLocalQuantity}
                   onMouseDown={(e) => e.preventDefault()}
                 />
               </div>

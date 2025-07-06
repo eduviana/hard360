@@ -8,7 +8,7 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
 import { MobileSearchInput } from "./MobileSearchInput";
-
+import { useCartContext } from "@/app/hooks/useCartContext";
 
 interface MiddleBarProps {
   mobileSearchOpen: boolean;
@@ -21,9 +21,8 @@ const MiddleBar = ({
   setMobileSearchOpen,
   setDrawerOpen,
 }: MiddleBarProps) => {
+  const { totalItemsInCart } = useCartContext();
 
-  
-  
   return (
     <div className="bg-primary">
       <div className="custom-container relative flex items-center justify-between gap-6 py-6">
@@ -76,8 +75,13 @@ const MiddleBar = ({
 
           {/* Carrito */}
           <Link href="/carrito" passHref>
-            <button className="p-1 transition-colors duration-200 hover:text-accent focus:outline-none">
+            <button className="relative p-1 transition-colors duration-200 hover:text-accent focus:outline-none">
               <ShoppingCartIcon className="h-7 w-7 md:h-8 md:w-8 cursor-pointer" />
+              {totalItemsInCart > 0 && (
+                <span className="absolute -top-2 -right-1 bg-orange-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                  {totalItemsInCart}
+                </span>
+              )}
             </button>
           </Link>
         </div>
