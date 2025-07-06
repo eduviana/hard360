@@ -11,7 +11,7 @@ import { HiCurrencyDollar } from "react-icons/hi";
 import { Carousel } from "./_components/carousel/Carousel";
 import { formatCurrency } from "@/app/helpers/formatCurrency";
 import { useCartContext } from "@/app/hooks/useCartContext";
-import { toast } from "react-toastify";
+import { toast, Bounce } from "react-toastify";
 import { useRouter } from "next/navigation";
 import { FaCheckCircle } from "react-icons/fa";
 import { useState } from "react";
@@ -21,7 +21,7 @@ interface ProductDetailProps {
 }
 
 export default function ProductDetail({ product }: ProductDetailProps) {
-  const { productQuantity, addToCart } = useCartContext();
+  const { addToCart } = useCartContext();
 
   const [localQuantity, setLocalQuantity] = useState<number>(1);
   const router = useRouter();
@@ -36,26 +36,63 @@ export default function ProductDetail({ product }: ProductDetailProps) {
     setLocalQuantity((prev) => Math.max(prev - 1, 1));
   };
 
+  // const handleAddToCart = () => {
+  //   addToCart(product, localQuantity);
+
+  //   const toastId = toast.success(
+  //     <div className="w-full flex flex-col items-center gap-2">
+  //       <div className="flex items-center gap-2">
+  //         <FaCheckCircle className="text-green-500 w-5 h-5" />
+  //         <span>Producto agregado al carrito</span>
+  //       </div>
+  //       <button
+  //         onClick={() => {
+  //           toast.dismiss(toastId); // ✅ Cerrar este toast específico
+  //           router.push("/carrito"); // ✅ Redirigir
+  //         }}
+  //         className="mx-auto bg-orange-700 hover:bg-orange-800 rounded-sm px-4 py-1 text-sm text-white font-semibold cursor-pointer"
+  //       >
+  //         Ir al carrito
+  //       </button>
+  //     </div>,
+  //     { position: "top-right", autoClose: 50000, icon: false }
+  //   );
+  // };
+
   const handleAddToCart = () => {
     addToCart(product, localQuantity);
 
     const toastId = toast.success(
-      <div className="w-full flex flex-col items-center gap-2">
+      <div className="w-full flex flex-col items-center gap-2 text-white">
         <div className="flex items-center gap-2">
-          <FaCheckCircle className="text-green-500 w-5 h-5" />
-          <span>Producto agregado al carrito</span>
+          <FaCheckCircle className="w-5 h-5 text-white" />
+          <span className="font-semibold text-[17px]">Producto agregado al carrito</span>
         </div>
         <button
           onClick={() => {
-            toast.dismiss(toastId); // ✅ Cerrar este toast específico
-            router.push("/carrito"); // ✅ Redirigir
+            toast.dismiss(toastId);
+            router.push("/carrito");
           }}
-          className="mx-auto bg-orange-700 hover:bg-orange-800 rounded-sm px-4 py-1 text-sm text-white font-semibold cursor-pointer"
+          className="mx-auto bg-white hover:bg-gray-100 text-green-700 border border-green-700 rounded-sm px-4 py-1 text-[17px] font-bold cursor-pointer transition-colors duration-300"
         >
           Ir al carrito
         </button>
       </div>,
-      { position: "top-right", autoClose: 5000, icon: false }
+      {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "colored",
+        transition: Bounce,
+        icon: false,
+        style: {
+          backgroundColor: "#166534", // ✅ Verde oscuro (Tailwind: bg-green-700)
+          color: "#ffffff", // ✅ Blanco puro
+        },
+      }
     );
   };
 
@@ -183,7 +220,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2 bg-gray-100 rounded px-1">
-              <span className="w-6 text-center">{productQuantity}</span>
+              <span className="w-6 text-center">{localQuantity}</span>
               <div className="flex flex-col items-center gap-2 p-2">
                 <IoIosArrowUp
                   className="cursor-pointer text-blue-600 font-bold w-4 h-4 select-none"
