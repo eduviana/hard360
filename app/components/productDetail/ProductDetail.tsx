@@ -117,14 +117,14 @@ export default function ProductDetail({ product }: ProductDetailProps) {
         {/* Columna derecha: Precio + Texto + Botón */}
         <div className="lg:w-5/12 flex flex-col gap-6 justify-start">
           {/* Bloque con borde izquierdo */}
-          <div className="border-l-4 border-accent pl-4 space-y-2">
+          <div className="border-l-4 border-accent-primary pl-4 space-y-2">
             {/* Layout md+ */}
             <div className="hidden md:flex items-center justify-between gap-6">
               <p className="text-[26px] font-medium text-[#333333]">
                 {formatCurrency(product.price)}
               </p>
               <div className="flex items-center gap-1">
-                <HiCurrencyDollar className="w-7 h-7 text-accent" />
+                <HiCurrencyDollar className="w-7 h-7 text-accent-primary" />
                 <span className="text-[13px] text-[#A48A7B] font-medium">
                   Precio especial HARD360
                 </span>
@@ -140,7 +140,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
               </div>
               <div className="w-1/2 text-left">
                 <div className="flex items-center gap-1">
-                  <HiCurrencyDollar className="w-7 h-7 text-accent" />
+                  <HiCurrencyDollar className="w-7 h-7 text-accent-primary" />
                   <span className="text-[13px] text-[#A48A7B] font-medium">
                     Precio especial hard360
                   </span>

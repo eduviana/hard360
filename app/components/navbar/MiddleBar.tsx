@@ -38,9 +38,9 @@ const MiddleBar = ({
           <Link href="/">
             <h1 className="relative flex flex-col items-start leading-none">
               <span className="text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase text-white tracking-wide">
-                HARD <span className="text-orange-500">360</span>
+                HARD <span className="text-orange-600">360</span>
               </span>
-              <span className="block h-1 w-full max-w-full bg-gradient-to-r from-orange-500 via-orange-400/80 to-transparent rounded-sm mt-1"></span>
+              <span className="block h-1 w-full max-w-full bg-gradient-to-r from-orange-700 via-orange-500/80 to-transparent rounded-sm mt-1"></span>
             </h1>
           </Link>
         </div>
@@ -61,7 +61,7 @@ const MiddleBar = ({
         <div className="flex items-center space-x-2 text-white">
           {/* Lupa Mobile */}
           <button
-            className="p-1 transition-colors duration-200 hover:text-accent focus:outline-none lg:hidden"
+            className="p-1 transition-colors duration-200 hover:text-accent-primary focus:outline-none lg:hidden"
             onClick={() => setMobileSearchOpen(!mobileSearchOpen)}
             aria-label="Abrir/cerrar búsqueda"
           >
@@ -69,16 +69,16 @@ const MiddleBar = ({
           </button>
 
           {/* Favoritos */}
-          <button className="p-1 transition-colors duration-200 hover:text-accent focus:outline-none">
+          <button className="p-1 transition-colors duration-200 hover:text-accent-primary focus:outline-none">
             <HeartIcon className="h-7 w-7 md:h-8 md:w-8 cursor-pointer" />
           </button>
 
           {/* Carrito */}
           <Link href="/carrito" passHref>
-            <button className="relative p-1 transition-colors duration-200 hover:text-accent focus:outline-none">
+            <button className="relative p-1 transition-colors duration-200 hover:text-accent-primary focus:outline-none">
               <ShoppingCartIcon className="h-7 w-7 md:h-8 md:w-8 cursor-pointer" />
               {totalItemsInCart > 0 && (
-                <span className="absolute -top-2 -right-1 bg-orange-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                <span className="absolute -top-2 -right-1 bg-accent-secondary text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                   {totalItemsInCart}
                 </span>
               )}

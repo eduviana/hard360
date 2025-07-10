@@ -183,7 +183,7 @@ const Page = () => {
             <div className="flex justify-center mt-8">
               <button
                 onClick={clearCart}
-                className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-xl text-base font-semibold transition"
+                className="bg-red-700 hover:bg-red-800 text-white px-6 py-3 rounded-sm text-base font-semibold transition-colors duration-300 cursor-pointer"
               >
                 Vaciar Carrito
               </button>
@@ -207,10 +207,10 @@ const Page = () => {
         />
 
         <div className="flex justify-between gap-2 mb-6">
-          <button className="bg-accent text-white px-8 py-2 rounded-sm text-sm font-bold hover:bg-green-600 transition-colors duration-300 cursor-pointer">
+          <button className="bg-accent-primary hover:bg-accent-primary/85 text-white px-8 py-2 rounded-sm text-sm font-bold transition-colors duration-300 cursor-pointer">
             Aplicar
           </button>
-          <button className="bg-accent text-white px-8 py-2 rounded-sm text-sm font-bold hover:bg-green-600 transition-colors duration-300 cursor-pointer">
+          <button className="bg-accent-primary hover:bg-accent-primary/85 text-white px-8 py-2 rounded-sm text-sm font-bold transition-colors duration-300 cursor-pointer">
             Quitar
           </button>
         </div>
@@ -227,7 +227,7 @@ const Page = () => {
           <span>{formatCurrency(totalAmount.toString())}</span>
         </div>
 
-        <button className="w-full bg-accent text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-300 cursor-pointer">
+        <button className="w-full bg-accent-primary hover:bg-accent-primary/85 text-white py-3 rounded-lg font-semibold transition-colors duration-300 cursor-pointer">
           Finalizar compra
         </button>
       </aside>

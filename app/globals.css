@@ -3,7 +3,9 @@
 @theme {
   --color-primary: #37373f; /* Color principal (navbar, links) */
   --color-secondary: #000000; /* Color secundario (barra de redes) */
-  --color-accent: #88c426; /* Verde para íconos o títulos destacados */
+  /* --color-accent: #88c426; Verde para íconos o títulos destacados */
+  --color-accent-primary: oklch(37.8% 0.077 168.94);
+  --color-accent-secondary: oklch(55.3% 0.195 38.402);
 
   /* Superficies (fondos) */
   --color-surface-primary: #000000; /* Fondo de top bar (redes) */

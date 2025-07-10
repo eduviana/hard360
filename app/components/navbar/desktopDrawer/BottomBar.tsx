@@ -65,7 +65,7 @@ const BottomBar = ({ categories }: BottomBarProps) => {
         <button className="text-base font-semibold text-secondary">
           CATEGORÍAS
         </button>
-        <FiChevronDown className="h-7 w-7 text-accent" />
+        <FiChevronDown className="h-7 w-7 text-accent-primary" />
       </div>
 
       {isCategoriesMenuOpen && (
