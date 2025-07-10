@@ -1,5 +1,4 @@
 "use client";
-
 import { Product } from "@/app/data/types";
 import { specsComponentMap } from "./_components/specs/specsComponentMap";
 import Image from "next/image";
@@ -36,29 +35,6 @@ export default function ProductDetail({ product }: ProductDetailProps) {
     setLocalQuantity((prev) => Math.max(prev - 1, 1));
   };
 
-  // const handleAddToCart = () => {
-  //   addToCart(product, localQuantity);
-
-  //   const toastId = toast.success(
-  //     <div className="w-full flex flex-col items-center gap-2">
-  //       <div className="flex items-center gap-2">
-  //         <FaCheckCircle className="text-green-500 w-5 h-5" />
-  //         <span>Producto agregado al carrito</span>
-  //       </div>
-  //       <button
-  //         onClick={() => {
-  //           toast.dismiss(toastId); // ✅ Cerrar este toast específico
-  //           router.push("/carrito"); // ✅ Redirigir
-  //         }}
-  //         className="mx-auto bg-orange-700 hover:bg-orange-800 rounded-sm px-4 py-1 text-sm text-white font-semibold cursor-pointer"
-  //       >
-  //         Ir al carrito
-  //       </button>
-  //     </div>,
-  //     { position: "top-right", autoClose: 50000, icon: false }
-  //   );
-  // };
-
   const handleAddToCart = () => {
     addToCart(product, localQuantity);
 
@@ -66,7 +42,9 @@ export default function ProductDetail({ product }: ProductDetailProps) {
       <div className="w-full flex flex-col items-center gap-2 text-white">
         <div className="flex items-center gap-2">
           <FaCheckCircle className="w-5 h-5 text-white" />
-          <span className="font-semibold text-[17px]">Producto agregado al carrito</span>
+          <span className="font-semibold text-[17px]">
+            Producto agregado al carrito
+          </span>
         </div>
         <button
           onClick={() => {
