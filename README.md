@@ -8,7 +8,7 @@
 - Desarrollado con **Next.js** y **TypeScript**.
 - **Renderizado del lado del servidor (SSR)** para mejorar el rendimiento y el SEO.
 - **Estructura de carpetas modular** basada en categorías de productos.
-- **Datos simulados** mediante archivos `.ts`, evitando servicios externos para mayor control y estabilidad.
+- **Datos simulados** mediante un archivo `.ts`, evitando servicios externos para mayor control y estabilidad.
 - **Tipado estricto** de cada producto (por ejemplo: `NotebookSpecs`, `TvSpecs`, `RamSpecs`, etc.).
 - **Filtros dinámicos** por categoría y subcategoría.
 - **Lógica de filtros desacoplada** en un *custom hook* centralizado.
@@ -26,13 +26,13 @@ El tipo `Product` define propiedades comunes a todos los productos (`id`, `title
 La propiedad `specs` es clave y está fuertemente tipada. Su estructura varía según el tipo de producto. Por ejemplo:
 
 - En `almacenamiento > hdd`, `specs` puede incluir: `velocidadRotacion`, `ruido`.
-- En `almacenamiento > ssd`, cambia por: `tipo`, `capacidad`, `TBW (Total Bytes Written)`, `MTBF (Mean Time Between Failures)`.
+- En `almacenamiento > ssd`, cambia por: `TBW (Total Bytes Written)`, `MTBF (Mean Time Between Failures)`.
 
 Esto permite adaptar las especificaciones técnicas a cada tipo de producto, manteniendo una estructura general coherente y escalable.
 
 Los precios están definidos como `string` en centavos (`"7500000"`) y se formatean dinámicamente en el *frontend* a pesos argentinos mediante una función utilitaria.
 
-### 🧾 Ejemplo de Producto
+### Ejemplo de Producto
 
 ```ts
 {
@@ -65,7 +65,7 @@ Los precios están definidos como `string` en centavos (`"7500000"`) y se format
 
 ---
 
-## 🚀 Ejecutar el proyecto localmente
+## Ejecutar el proyecto localmente
 
 Para configurar y ejecutar el proyecto en tu máquina local:
 
@@ -95,7 +95,7 @@ yarn dev
 
 ---
 
-## 🧱 Organización del Código
+## Organización del Código
 
 El proyecto está estructurado de manera clara y modular:
 
@@ -117,7 +117,7 @@ El proyecto está estructurado de manera clara y modular:
 
 ---
 
-## 📸 Capturas de Pantalla
+## Capturas de Pantalla
 
 ### Hero  
 ![Vista general](readme-assets/hard360-1.webp)
@@ -142,7 +142,7 @@ El proyecto está estructurado de manera clara y modular:
 
 ---
 
-## 🧠 Aprendizajes Clave
+## Aprendizajes Clave
 
 Durante el desarrollo de este proyecto:
 
@@ -154,12 +154,12 @@ Durante el desarrollo de este proyecto:
 
 ---
 
-## 🔗 Link al Sitio
+## Link al Sitio
 
 https://hard360.vercel.app/
 
 ---
 
-## 👤 Autor
+## Autor
 
 Desarrollado por **Eduardo Viana**
