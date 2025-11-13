@@ -1841,7 +1841,7 @@ export const products: Product[] = [
 
   // almacenamiento
 
-  //hdd
+  //discos duros hdd
   {
     id: "almacenamiento-hdd-1",
     title: "Disco HDD Seagate SkyHawk 1TB SATA III",
@@ -1851,7 +1851,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/hdd/seagate-sata3-skyhawk-1tb/seagate-sata3-skyhawk-1tb_1.webp",
     ],
-    price: "73999",
+    price: "7399999",
     category: "almacenamiento",
     subcategory: "hdd",
     brand: "seagate",
@@ -1877,7 +1877,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/hdd/western-digital-blue-1tb/western-digital-blue-1tb_1.webp",
     ],
-    price: "74999",
+    price: "7499999",
     category: "almacenamiento",
     subcategory: "hdd",
     brand: "western digital",
@@ -1903,7 +1903,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/hdd/western-digital-sata3-purple-1tb/western-digital-sata3-purple-1tb_1.webp",
     ],
-    price: "75999",
+    price: "7599999",
     category: "almacenamiento",
     subcategory: "hdd",
     brand: "western digital",
@@ -1929,7 +1929,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/hdd/seagate-sata3-skyhawk-2tb/seagate-sata3-skyhawk-2tb_1.webp",
     ],
-    price: "84499",
+    price: "8449999",
     category: "almacenamiento",
     subcategory: "hdd",
     brand: "seagate",
@@ -1955,7 +1955,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/hdd/western-digital-sata3-blue-2tb/western-digital-sata3-blue-2tb_1.webp",
     ],
-    price: "84999",
+    price: "8999999",
     category: "almacenamiento",
     subcategory: "hdd",
     brand: "western-digital",
@@ -1981,7 +1981,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/hdd/western-digital-sata3-purple-2tb/western-digital-sata3-purple-2tb_1.webp",
     ],
-    price: "89999",
+    price: "9299999",
     category: "almacenamiento",
     subcategory: "hdd",
     brand: "western-digital",
@@ -2007,7 +2007,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/hdd/seagate-sata3-skyhawk-4tb/seagate-sata3-skyhawk-4tb_1.webp",
     ],
-    price: "130699",
+    price: "13069989",
     category: "almacenamiento",
     subcategory: "hdd",
     brand: "seagate",
@@ -2033,7 +2033,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/hdd/western-digital-sata3-blue-4tb/western-digital-sata3-blue-4tb_1.webp",
     ],
-    price: "134999",
+    price: "13499999",
     category: "almacenamiento",
     subcategory: "hdd",
     brand: "western-digital",
@@ -2059,7 +2059,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/hdd/western-digital-sata3-purple-4tb/western-digital-sata3-purple-4tb_1.webp",
     ],
-    price: "134999",
+    price: "13499999",
     category: "almacenamiento",
     subcategory: "hdd",
     brand: "western-digital",
@@ -2087,7 +2087,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/ssd/hiksemi-sata3-120gb/hiksemi-sata3-120gb_1.webp",
     ],
-    price: "12799",
+    price: "1279999",
     category: "almacenamiento",
     subcategory: "ssd",
     brand: "hiksemi",
@@ -2114,7 +2114,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/ssd/kingstone-sata3-a400-240gb/kingstone-sata3-a400-240gb_1.webp",
     ],
-    price: "36990",
+    price: "3699000",
     category: "almacenamiento",
     subcategory: "ssd",
     brand: "kingston",
@@ -2141,7 +2141,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/ssd/western-digital-sata3-green-512gb/western-digital-sata3-green-512gb_1.webp",
     ],
-    price: "40690",
+    price: "4069000",
     category: "almacenamiento",
     subcategory: "ssd",
     brand: "western digital",
@@ -2168,7 +2168,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/ssd/kingstone-sata3-a400-512gb/kingstone-sata3-a400-512gb_1.webp",
     ],
-    price: "50690",
+    price: "5069000",
     category: "almacenamiento",
     subcategory: "ssd",
     brand: "kingston",
@@ -2195,7 +2195,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/ssd/hiksemi-sata3-1tb/hiksemi-sata3-1tb_1.webp",
     ],
-    price: "74999",
+    price: "7499999",
     category: "almacenamiento",
     subcategory: "ssd",
     brand: "hiksemi",
@@ -2222,7 +2222,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/ssd/kinstone-sata3-a400-1tb/kinstone-sata3-a400-1tb_1.webp",
     ],
-    price: "80990",
+    price: "8099000",
     category: "almacenamiento",
     subcategory: "ssd",
     brand: "kingstone",
@@ -2249,7 +2249,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/ssd/adata-sata3-su650-2tb/adata-sata3-su650-2tb_1.webp",
     ],
-    price: "129690",
+    price: "12969000",
     category: "almacenamiento",
     subcategory: "ssd",
     brand: "adata",
@@ -2276,7 +2276,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/ssd/crucial-sata3-bx500/crucial-sata3-bx500_1.webp",
     ],
-    price: "21819",
+    price: "2181999",
     category: "almacenamiento",
     subcategory: "ssd",
     brand: "crucial",
@@ -2303,7 +2303,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/ssd/crucial-sata3-bx500-512gb/crucial-sata3-bx500-512gb_1.webp",
     ],
-    price: "37379",
+    price: "3737999",
     category: "almacenamiento",
     subcategory: "ssd",
     brand: "crucial",
@@ -2332,7 +2332,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/ssd-m2/hiksemi-pci3-2280-256gb-3520mbps/hiksemi-pci3-2280-256gb-3520mbps_1.webp",
     ],
-    price: "23490",
+    price: "2349000",
     category: "almacenamiento",
     subcategory: "ssd-m2",
     brand: "hiksemi",
@@ -2359,7 +2359,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/ssd-m2/adata-legend-pci3-2280-256gb-2400mbps/adata-legend-pci3-2280-256gb-2400mbps_1.webp",
     ],
-    price: "25969",
+    price: "2596999",
     category: "almacenamiento",
     subcategory: "ssd-m2",
     brand: "adata",
@@ -2386,7 +2386,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/ssd-m2/hiksemi-pci3-2280-512gb-3520mbps/hiksemi-pci3-2280-512gb-3520mbps_1.webp",
     ],
-    price: "42990",
+    price: "4299000",
     category: "almacenamiento",
     subcategory: "ssd-m2",
     brand: "hiksemi",
@@ -2413,7 +2413,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/ssd-m2/western-digital-sn350-pci3-2280-512gb-2400mbps/western-digital-sn350-pci3-2280-512gb-2400mbps_1.webp",
     ],
-    price: "46990",
+    price: "4699099",
     category: "almacenamiento",
     subcategory: "ssd-m2",
     brand: "western-digital",
@@ -2440,7 +2440,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/ssd-m2/hiksemi-pci4-2280-512gb-7100mbps/hiksemi-pci4-2280-512gb-7100mbps_1.webp",
     ],
-    price: "48999",
+    price: "4899999",
     category: "almacenamiento",
     subcategory: "ssd-m2",
     brand: "hiksemi",
@@ -2467,7 +2467,7 @@ export const products: Product[] = [
     images: [
       "/products/almacenamiento/ssd-m2/kingstone-nv3-pci4-2280-500gb-5000mbps/kingstone-nv3-pci4-2280-500gb-5000mbps_1.webp",
     ],
-    price: "55190",
+    price: "5519000",
     category: "almacenamiento",
     subcategory: "ssd-m2",
     brand: "kingston",
