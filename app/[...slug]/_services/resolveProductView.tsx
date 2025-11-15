@@ -23,7 +23,7 @@ export function resolveProductView(slug: string[]) {
 
   // 🟢 Devolver la vista de detalle del producto encontrado
   return (
-    <div className="custom-container py-8">
+    <div className="custom-container py-8 animate-fadeInSlow">
       <ProductDetail product={product} />
     </div>
   );

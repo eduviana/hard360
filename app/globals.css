@@ -16,6 +16,8 @@
   --color-text-secondary: #343636; /* Título de sección */
   --color-text-tertiary: #706f6f; /* Título de card, precio tachado */
   --color-text-muted: #37373f; /* Links en navbar (similar a primary) */
+
+  --breakpoint-3xl: 122rem;
 }
 
 body {
@@ -75,6 +77,19 @@ body {
 
   .animate-fadeIn {
     animation: fadeIn 0.4s forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fadeInSlow {
+    animation: fadeIn 0.8s forwards;
   }
 
   @keyframes fadeIn {

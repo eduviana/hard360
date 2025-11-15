@@ -19,7 +19,7 @@ export const CategorySection = () => {
   const displayedProducts = sortedProducts.slice(0, itemsToShow);
 
   return (
-    <section className="custom-container py-16">
+    <section className="custom-container py-16 animate-fadeInSlow">
       <div className="flex flex-col gap-2">
         <FilterHeader />
 
@@ -66,7 +66,7 @@ export const CategorySection = () => {
         </div>
 
         <div className="flex-1">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 gap-6">
             {displayedProducts.length > 0 ? (
               displayedProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />
